@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="WebRunDragon.Forms.Main" %>
+
+<%@ Register Assembly="DevExpress.Web.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>Smart Asset</title>
+
+    <link href="../Css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/style.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../Scripts/global.js" type="text/javascript"></script>    
+    <script src="../Scripts/awesomplete.min.js" type="text/javascript"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="formMaster" runat="server">
+        
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <table style="width: 100%" border="0">
+                        <tr>
+                            <td style="width: 239px; height: 68px"><a href="../">
+                                <img src="../Images/logo.png" width="229" /></a> </td>
+                            <td style="color: #000000; text-align: center; vertical-align: middle; font-size: 24px; font-weight: bold">SMART ASSET WEB</td>
+                            <td style="width: 168px; vertical-align: top">
+                               <%-- <div style="text-align: right; padding: 3px">
+                                    <a href="../Forms/HuongDanSuDung.aspx" target="_blank">Hướng dẫn sử dụng</a>
+                                </div>--%>
+                                <div style="text-align: right; padding: 3px">
+                                    <a href="../Actions/FileDownloadAction.ashx?id=1" target="_blank">Hướng dẫn sử dụng</a>
+                                </div>
+
+                                <div style="text-align: right; padding: 3px">
+                                    <dx:ASPxLabel ForeColor="#415698" Font-Bold="true" runat="server" ID="lblUserFullName"></dx:ASPxLabel>
+                                </div>
+                                <div style="text-align: right; padding: 3px">
+                                    <dx:ASPxHyperLink runat="server" ID="lnkLogout" NavigateUrl="../Actions/Logout.ashx" Text="Thoát"></dx:ASPxHyperLink>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table style="width: 100%">
+                        <tr>
+                            <td style="vertical-align: top; width: 239px">
+                                <dx:ASPxNavBar ID="nvbMain" runat="server" EnableTheming="True"   Theme="BlackGlass" Width="229px">
+                                </dx:ASPxNavBar>
+                            </td>
+                            <td style="vertical-align: top">
+                                <div>
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+
+    </form>
+</body>
+</html>

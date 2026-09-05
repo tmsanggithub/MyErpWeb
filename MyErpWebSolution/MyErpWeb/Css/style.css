@@ -1,0 +1,230 @@
+﻿body {
+    background: #FAFAFA;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#525252;
+	margin:0;
+}
+
+.dxnb-itemSelected {
+    background-color:yellowgreen !important;
+    color:red !important;
+}
+
+
+.tblPopupUpdateForm td {
+    height:22px;
+}
+
+.cssIndex{
+    z-index:-1;
+}
+
+.cssIndexContent{
+    z-index:100000;
+}
+
+
+/* -------------------- NEW CSS - ----------------------*/
+
+ 
+.col-center-header{position: absolute;
+    top: 15px;
+    width: 100%;
+    text-align: center;
+    }
+.col-center-header h1{
+     font-size: 35px;
+     color: #000;
+     height:70px; 
+     margin-bottom:0;
+     margin-top: 15px;    
+}
+.col-center-header.link{
+    font-size: 35px;
+     color: #000;
+     height:20px;
+     text-align: center;
+}
+.section-header .col-right-header a:hover{color:#000;} 
+.section-header.fixed{
+    position: sticky;
+    width: 100%;
+    z-index: 999;
+	top:0;
+   box-shadow: 0px 2px 5px rgb (0 0 0 / 15%);
+}
+.section-header.fixed .col-right-header .content{height: 55px;}
+.section-header.fixed  .logo{}
+.left-content_menu a:hover{color:#F39423;} 
+.container{padding: 0 20px; 
+    margin: 0 auto;
+    position: relative;}
+   
+.logo{height: 100px; text-align: left; } 
+.logo img{max-height: 100%; margin-top:15px;}
+.left-logo{text-align: center; margin-top: 10px;}
+.left-logo img{max-height: 80px;}
+.section-header{background: linear-gradient(179.28deg, #ccc 0.45%, #e4e4e4 99.21%); position: relative;height:100px; position: relative;z-index:2;}
+.col-right-header{position: absolute; right: 20px; top:0; height: 100%;}
+.col-right-header .content{ height: 100%;align-items: center}
+.col-right-header .user-guide {margin-right: 10px;}
+.col-right-header .user-guide a{color: #2E5096;font-size: 14px;} 
+.col-right-header .user{text-transform: uppercase; font-weight:600; margin-right: 10px; color: #2E5096;font-size: 14px;}
+.col-right-header .login-logout a{color: #2E5096; font-size: 14px;}
+.dark_bg_black{
+    background-color: rgba(0,0,0,.8);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1001;
+    display: none;
+    -webkit-tap-highlight-color: transparent;
+}
+    .left-content_menu.active {
+    transform: translateX(0);
+    transition: 0.5s;
+}
+#left_menu_sidebar{width:0;}
+#left_menu_sidebar.active{width: 265px;}/*do rong menu*/
+ #left_menu_sidebar.active .left-content_menu{	
+     /*position: fixed; /*giu cung menu*/
+     position: absolute; /*cuon menu*/
+
+                                                  width: 265px;/*do rong menu*/
+                                                  
+                                                  
+                                                   left:0;
+    margin-right: 52px;
+}
+.dxgvControl_BlackGlass {transition: 1.5s;}
+.left-content_menu {
+    transition: 0.5s;
+    top: 0px;
+    left: 0;
+    z-index: 1111;
+    width: 300px;
+    max-width: 265px; /*do rong menu*/
+    height: 100%;
+	position: fixed;
+	left: -265px; /*do rong menu*/
+    z-index: 1;
+} 
+.left-list-link-menu-left {
+    will-change: transform;
+    transition: 0.35s;
+    top: 0;
+    left: 0;
+    padding-top:40px;
+}
+#left-list-link-menu-left-1 {
+    transition: 0.35s;
+    left: 0;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+    overflow-y: visible;
+    max-height: calc(100vh - 150px); /*canh khoang cach ben duoi menu*/
+}
+.left-list-link-menu-left ul li{list-style:none; 
+    
+      padding-left:15px;  /*khoang cach ben trai menu so voi man hinh*/
+
+
+}
+.left-list-link-menu-left ul li.lmenu-label {
+    padding-left: 0px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 10px;
+    position: relative;
+    margin-top: 10px;
+    color: #000;
+    padding-top: 20px;
+    text-transform: uppercase;
+    
+}
+.left-list-link-menu-left ul li.lmenu-label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    font-size: 1px;
+    left: 40px;
+    right: 40px;
+    border-top: 1px solid #e4e4e4;
+    border-top: 1px solid var(--bg-color-mono-4);
+    top: 0;
+}
+.left-list-link-menu-left li a {
+    background-color: #fff;
+    color: #000;
+    height: 25px;   line-height: 25px;  /*khoang cach cac item menu*/
+    
+    padding-left: 0;
+    font-size: 15px;
+    font-weight: 500!important;
+    text-decoration:none;
+
+}
+.hamburger-menu{cursor: pointer; position: absolute; width: 30px; height: 30px; z-index: 999; top: 5px; right:5px;}
+
+.hamburger-menu.hide{right:-40px;box-shadow: 0px 7px 8px rgb(188 188 188 / 25%); background: #fff;} 
+.hamburger-menu{
+    right:15px; /*nut an hien menu*/
+        top:0; /*nut an hien menu*/
+                box-shadow: 0px 7px 8px rgb(188 188 188 / 25%); background: #fff;
+                
+
+} 
+.hamburger-menu .arrow {
+  border: solid #333;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+  top: 10px;
+}
+.hamburger-menu:hover .arrow{border-color: #000;}
+.hamburger-menu .right1 {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  left:2px;
+  display:none;
+}
+
+.hamburger-menu .right2 {
+ transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  left: -3px;
+  display:none;
+}
+
+.hamburger-menu .left1 {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 10px;
+}
+.hamburger-menu .left2 {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 5px;
+}
+.hamburger-menu.hide .left1, .hamburger-menu.hide .left2{display:none;}
+.hamburger-menu.hide .right1, .hamburger-menu.hide .right2{display:inline-block;}
+.box-content-showdown {
+    box-shadow: 0px 7px 8px rgb(188 188 188 / 25%);
+    padding: 10px 30px;
+    background: #fff !important;
+    border: none !important;
+    padding:100px 0 0 0;
+}
+.box-content-showdown tr td{line-height: 40px; font-size: 14px; border-color: #ccc;} 
+.box-content-showdown tr td:first-child{min-width: 20px; text-align: center;}
+#ContentPlaceHolder1_gridIssues_DXHeadersRow0 td{line-height: 30px; border-color: transparent;}
+#ContentPlaceHolder1_gridIssues_DXHeadersRow0 #ContentPlaceHolder1_gridIssues_col3 tr td{text-align: left;}
+.dxgvDataRow_BlackGlass td:nth-child(3){text-align: left;}

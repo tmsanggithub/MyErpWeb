@@ -1,0 +1,3359 @@
+%PDF-1.4
+%âãÏÓ
+%
+%wPDF by WPCubed GmbH V3.53[134217760]
+%
+%
+1 0 obj<</Type/Metadata/Subtype/XML/Length 1424 >>
+stream
+<?xpacket begin="ï»¿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="3.1-701">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about=""
+ xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+ <xmp:CreatorTool>wPDF - http://www.wptools.de</xmp:CreatorTool>
+ <xmp:CreateDate>2022-09-27T00:11:32Z</xmp:CreateDate>
+ <xmp:ModifyDate>2022-09-27T00:11:32Z</xmp:ModifyDate>
+ <xmp:MetadataDate>2022-09-27T00:11:32Z</xmp:MetadataDate>
+</rdf:Description>
+<rdf:Description rdf:about=""
+ xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <dc:format>application/pdf</dc:format>
+ <dc:title><rdf:Alt>
+  <rdf:li xml:lang="x-default"/>
+</rdf:Alt></dc:title>
+ <dc:description><rdf:Alt>
+  <rdf:li xml:lang="x-default"/>
+</rdf:Alt></dc:description>
+ <dc:subject>
+ <rdf:Bag>
+  <rdf:li/>
+ </rdf:Bag>
+</dc:subject>
+ <dc:creator><rdf:Seq>
+  <rdf:li xml:lang="x-default"/>
+</rdf:Seq></dc:creator>
+</rdf:Description>
+<rdf:Description rdf:about=""
+ xmlns:xapMM="http://ns.adobe.com/xap/1.0/mm/">
+ <xapMM:VersionID>1</xapMM:VersionID>
+ <xapMM:DocumentID>a93ee7ec52c4eb4fb42b55a28bfc7a31</xapMM:DocumentID>
+ <xapMM:InstanceID>a93ee7ec52c4eb4fb42b55a28bfc7a31</xapMM:InstanceID>
+</rdf:Description>
+<rdf:Description rdf:about=""
+ xmlns:pdf="http://ns.adobe.com/pdf/1.3/">
+ <pdf:Keywords/>
+ <pdf:Producer>wPDF3 by WPCubed GmbH</pdf:Producer>
+</rdf:Description>
+</rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="w"?>
+endstream
+endobj
+2 0 obj<<
+/Creator(wPDF - http://www.wptools.de)
+/Author()
+/Title()
+/Subject()
+/Keywords()
+/CreationDate(D:20220927001132Z)
+/ModDate(D:20220927001132Z)
+/Producer(wPDF3 by WPCubed GmbH)
+>> endobj
+4 0 obj<</Length 20464 >>
+stream
+q q Q q 0.12 0 0 0.12 0 792 cm q 0.573 0.816 0.314 rg 783 -600 480 -156 re f Q 0.573 0.816 0.314 rg 783 -600 480 -156 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 117 Tf 0 Ts  0 g 783 -726 Td(QLTaiSan)Tj
+/F2 92 Tf 0 -113 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -862 76 -133 re f Q 0.859 0.898 0.945 rg 783 -862 76 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 783 -970 Td(1:)Tj
+ET q 0.859 0.898 0.945 rg 859 -862 345 -133 re f Q 0.859 0.898 0.945 rg 859 -862 345 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 859 -970 Td( )Tj
+ET 0.859 0.898 0.945 rg 886 -862 318 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 886 -970 Td(1.Nh?p)Tj
+ET q 0.859 0.898 0.945 rg 1204 -862 193 -133 re f Q 0.859 0.898 0.945 rg 1204 -862 193 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1204 -970 Td( )Tj
+ET 0.859 0.898 0.945 rg 1231 -862 166 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1231 -970 Td(kho)Tj
+/F2 92 Tf -448 -108 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -1101 126 -110 re f Q 0.922 0.945 0.867 rg 783 -1101 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -1191 Td(1.1:)Tj
+ET q 0.922 0.945 0.867 rg 909 -1101 202 -110 re f Q 0.922 0.945 0.867 rg 909 -1101 202 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -1191 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -1101 179 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -1191 Td(Load)Tj
+ET q 0.922 0.945 0.867 rg 1111 -1101 395 -110 re f Q 0.922 0.945 0.867 rg 1111 -1101 395 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1111 -1191 Td( )Tj
+ET 0.922 0.945 0.867 rg 1134 -1101 372 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1134 -1191 Td(DMTaiSan)Tj
+ET q 0.922 0.945 0.867 rg 1506 -1101 100 -110 re f Q 0.922 0.945 0.867 rg 1506 -1101 100 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1506 -1191 Td( )Tj
+ET 0.922 0.945 0.867 rg 1529 -1101 77 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1529 -1191 Td(t?)Tj
+ET q 0.922 0.945 0.867 rg 1606 -1101 231 -110 re f Q 0.922 0.945 0.867 rg 1606 -1101 231 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1606 -1191 Td( )Tj
+ET 0.922 0.945 0.867 rg 1629 -1101 208 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1629 -1191 Td(cache)Tj
+/F2 92 Tf -846 -103 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -1317 126 -110 re f Q 0.922 0.945 0.867 rg 783 -1317 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -1407 Td(1.2:)Tj
+ET q 0.922 0.945 0.867 rg 909 -1317 176 -110 re f Q 0.922 0.945 0.867 rg 909 -1317 176 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -1407 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -1317 153 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -1407 Td(Luu:)Tj
+ET q 0.922 0.945 0.867 rg 1085 -1317 952 -110 re f Q 0.922 0.945 0.867 rg 1085 -1317 952 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1085 -1407 Td( )Tj
+ET 0.922 0.945 0.867 rg 1108 -1317 929 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1108 -1407 Td(Kho-TaiSan-TrangThai-SL)Tj
+/F2 92 Tf -325 -103 Td( )Tj
+ET q 1 1 1 rg 783 -1533 168 -100 re f Q 1 1 1 rg 783 -1533 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -1614 Td(1.2.1:)Tj
+ET q 1 1 1 rg 951 -1533 188 -100 re f Q 1 1 1 rg 951 -1533 188 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -1614 Td( )Tj
+ET 1 1 1 rg 971 -1533 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -1614 Td(KI?m)Tj
+ET q 1 1 1 rg 1139 -1533 109 -100 re f Q 1 1 1 rg 1139 -1533 109 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1139 -1614 Td( )Tj
+ET 1 1 1 rg 1159 -1533 89 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1159 -1614 Td(tra)Tj
+ET q 1 1 1 rg 1248 -1533 99 -100 re f Q 1 1 1 rg 1248 -1533 99 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1248 -1614 Td( )Tj
+ET 1 1 1 rg 1268 -1533 79 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1268 -1614 Td(có)Tj
+ET q 1 1 1 rg 1347 -1533 205 -100 re f Q 1 1 1 rg 1347 -1533 205 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1347 -1614 Td( )Tj
+ET 1 1 1 rg 1367 -1533 185 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1367 -1614 Td(phi?u)Tj
+ET q 1 1 1 rg 1552 -1533 186 -100 re f Q 1 1 1 rg 1552 -1533 186 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1552 -1614 Td( )Tj
+ET 1 1 1 rg 1572 -1533 166 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1572 -1614 Td(Ki?m)Tj
+ET q 1 1 1 rg 1738 -1533 96 -100 re f Q 1 1 1 rg 1738 -1533 96 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1738 -1614 Td( )Tj
+ET 1 1 1 rg 1758 -1533 76 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1758 -1614 Td(kê)Tj
+ET q 1 1 1 rg 1834 -1533 142 -100 re f Q 1 1 1 rg 1834 -1533 142 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1834 -1614 Td( )Tj
+ET 1 1 1 rg 1854 -1533 122 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1854 -1614 Td(ch?)Tj
+ET q 1 1 1 rg 1976 -1533 206 -100 re f Q 1 1 1 rg 1976 -1533 206 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1976 -1614 Td( )Tj
+ET 1 1 1 rg 1996 -1533 186 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1996 -1614 Td(duy?t)Tj
+ET q 1 1 1 rg 2182 -1533 101 -100 re f Q 1 1 1 rg 2182 -1533 101 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 2182 -1614 Td( )Tj
+ET 1 1 1 rg 2202 -1533 81 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 2202 -1614 Td(ko)Tj
+/F2 92 Tf  0 g -1419 -102 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -1739 126 -110 re f Q 0.922 0.945 0.867 rg 783 -1739 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -1829 Td(1.3:)Tj
+ET q 0.922 0.945 0.867 rg 909 -1739 239 -110 re f Q 0.922 0.945 0.867 rg 909 -1739 239 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -1829 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -1739 216 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -1829 Td(Duy?t)Tj
+/F2 92 Tf -149 -103 Td( )Tj
+ET q 1 1 1 rg 783 -1955 168 -100 re f Q 1 1 1 rg 783 -1955 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -2036 Td(1.3.1:)Tj
+ET q 1 1 1 rg 951 -1955 188 -100 re f Q 1 1 1 rg 951 -1955 188 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -2036 Td( )Tj
+ET 1 1 1 rg 971 -1955 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -2036 Td(KI?m)Tj
+ET q 1 1 1 rg 1139 -1955 109 -100 re f Q 1 1 1 rg 1139 -1955 109 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1139 -2036 Td( )Tj
+ET 1 1 1 rg 1159 -1955 89 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1159 -2036 Td(tra)Tj
+ET q 1 1 1 rg 1248 -1955 99 -100 re f Q 1 1 1 rg 1248 -1955 99 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1248 -2036 Td( )Tj
+ET 1 1 1 rg 1268 -1955 79 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1268 -2036 Td(có)Tj
+ET q 1 1 1 rg 1347 -1955 205 -100 re f Q 1 1 1 rg 1347 -1955 205 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1347 -2036 Td( )Tj
+ET 1 1 1 rg 1367 -1955 185 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1367 -2036 Td(phi?u)Tj
+ET q 1 1 1 rg 1552 -1955 186 -100 re f Q 1 1 1 rg 1552 -1955 186 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1552 -2036 Td( )Tj
+ET 1 1 1 rg 1572 -1955 166 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1572 -2036 Td(Ki?m)Tj
+ET q 1 1 1 rg 1738 -1955 96 -100 re f Q 1 1 1 rg 1738 -1955 96 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1738 -2036 Td( )Tj
+ET 1 1 1 rg 1758 -1955 76 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1758 -2036 Td(kê)Tj
+ET q 1 1 1 rg 1834 -1955 142 -100 re f Q 1 1 1 rg 1834 -1955 142 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1834 -2036 Td( )Tj
+ET 1 1 1 rg 1854 -1955 122 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1854 -2036 Td(ch?)Tj
+ET q 1 1 1 rg 1976 -1955 206 -100 re f Q 1 1 1 rg 1976 -1955 206 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1976 -2036 Td( )Tj
+ET 1 1 1 rg 1996 -1955 186 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1996 -2036 Td(duy?t)Tj
+ET q 1 1 1 rg 2182 -1955 101 -100 re f Q 1 1 1 rg 2182 -1955 101 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 2182 -2036 Td( )Tj
+ET 1 1 1 rg 2202 -1955 81 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 2202 -2036 Td(ko)Tj
+/F2 92 Tf  0 g -1419 -102 Td( )Tj
+ET q 1 1 1 rg 783 -2161 168 -100 re f Q 1 1 1 rg 783 -2161 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -2242 Td(1.3.2:)Tj
+ET q 1 1 1 rg 951 -2161 183 -100 re f Q 1 1 1 rg 951 -2161 183 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -2242 Td( )Tj
+ET 1 1 1 rg 971 -2161 163 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -2242 Td(Tang)Tj
+ET q 1 1 1 rg 1134 -2161 95 -100 re f Q 1 1 1 rg 1134 -2161 95 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1134 -2242 Td( )Tj
+ET 1 1 1 rg 1154 -2161 75 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1154 -2242 Td(SL)Tj
+ET q 1 1 1 rg 1229 -2161 201 -100 re f Q 1 1 1 rg 1229 -2161 201 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1229 -2242 Td( )Tj
+ET 1 1 1 rg 1249 -2161 181 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1249 -2242 Td(trong)Tj
+ET q 1 1 1 rg 1430 -2161 150 -100 re f Q 1 1 1 rg 1430 -2161 150 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1430 -2242 Td( )Tj
+ET 1 1 1 rg 1450 -2161 130 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1450 -2242 Td(Kho)Tj
+/F2 92 Tf  0 g -667 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td(+)Tj
+54 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(T&#7890;N)Tj
+464 0 Td( )Tj
+26 0 Td(KHO:)Tj
+225 0 Td( )Tj
+26 0 Td(Kho-TaiSan-TrangThai)Tj
+-971 -106 Td( )Tj
+ET q 1 1 1 rg 783 -2685 168 -100 re f Q 1 1 1 rg 783 -2685 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -2766 Td(1.3.3:)Tj
+ET q 1 1 1 rg 951 -2685 146 -100 re f Q 1 1 1 rg 951 -2685 146 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -2766 Td( )Tj
+ET 1 1 1 rg 971 -2685 126 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -2766 Td(Xóa)Tj
+ET q 1 1 1 rg 1097 -2685 209 -100 re f Q 1 1 1 rg 1097 -2685 209 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1097 -2766 Td( )Tj
+ET 1 1 1 rg 1117 -2685 189 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1117 -2766 Td(cache)Tj
+ET q 1 1 1 rg 1306 -2685 131 -100 re f Q 1 1 1 rg 1306 -2685 131 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1306 -2766 Td( )Tj
+ET 1 1 1 rg 1326 -2685 111 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1326 -2766 Td(t?n)Tj
+ET q 1 1 1 rg 1437 -2685 143 -100 re f Q 1 1 1 rg 1437 -2685 143 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1437 -2766 Td( )Tj
+ET 1 1 1 rg 1457 -2685 123 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1457 -2766 Td(kho)Tj
+/F2 92 Tf  0 g -674 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Cache)Tj
+265 0 Td( )Tj
+26 0 Td(TonKo)Tj
+-467 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -3209 247 -122 re f Q 0.859 0.898 0.945 rg 783 -3209 247 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -3308 Td(Cache)Tj
+ET q 0.859 0.898 0.945 rg 1030 -3209 286 -122 re f Q 0.859 0.898 0.945 rg 1030 -3209 286 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1030 -3308 Td( )Tj
+ET 0.859 0.898 0.945 rg 1055 -3209 261 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1055 -3308 Td(TonKo)Tj
+/F2 92 Tf  0 g -272 -106 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Xóa)Tj
+163 0 Td( )Tj
+26 0 Td(cache)Tj
+245 0 Td( )Tj
+26 0 Td(t?n)Tj
+128 0 Td( )Tj
+26 0 Td(kho )Tj
+-764 -106 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Xóa)Tj
+163 0 Td( )Tj
+26 0 Td(cache)Tj
+245 0 Td( )Tj
+26 0 Td(t?n)Tj
+128 0 Td( )Tj
+26 0 Td(kho )Tj
+-790 -106 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Xóa)Tj
+163 0 Td( )Tj
+26 0 Td(cache)Tj
+245 0 Td( )Tj
+26 0 Td(t?n)Tj
+128 0 Td( )Tj
+26 0 Td(kho )Tj
+-790 -106 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Xóa)Tj
+163 0 Td( )Tj
+26 0 Td(cache)Tj
+245 0 Td( )Tj
+26 0 Td(t?n)Tj
+128 0 Td( )Tj
+26 0 Td(kho )Tj
+-790 -106 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Xóa)Tj
+163 0 Td( )Tj
+26 0 Td(cache)Tj
+245 0 Td( )Tj
+26 0 Td(t?n)Tj
+128 0 Td( )Tj
+26 0 Td(Kho)Tj
+-790 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -4179 76 -133 re f Q 0.859 0.898 0.945 rg 783 -4179 76 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 783 -4287 Td(2:)Tj
+ET q 0.859 0.898 0.945 rg 859 -4179 323 -133 re f Q 0.859 0.898 0.945 rg 859 -4179 323 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 859 -4287 Td( )Tj
+ET 0.859 0.898 0.945 rg 886 -4179 296 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 886 -4287 Td(2.Kiem)Tj
+ET q 0.859 0.898 0.945 rg 1182 -4179 129 -133 re f Q 0.859 0.898 0.945 rg 1182 -4179 129 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1182 -4287 Td( )Tj
+ET 0.859 0.898 0.945 rg 1209 -4179 102 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1209 -4287 Td(ke)Tj
+ET q 0.859 0.898 0.945 rg 1311 -4179 346 -133 re f Q 0.859 0.898 0.945 rg 1311 -4179 346 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1311 -4287 Td( )Tj
+ET 0.859 0.898 0.945 rg 1338 -4179 319 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1338 -4287 Td(TS-Kho)Tj
+/F2 92 Tf -555 -108 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -4418 126 -110 re f Q 0.922 0.945 0.867 rg 783 -4418 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -4508 Td(2.1:)Tj
+ET q 0.922 0.945 0.867 rg 909 -4418 202 -110 re f Q 0.922 0.945 0.867 rg 909 -4418 202 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -4508 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -4418 179 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -4508 Td(Load)Tj
+ET q 0.922 0.945 0.867 rg 1111 -4418 163 -110 re f Q 0.922 0.945 0.867 rg 1111 -4418 163 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1111 -4508 Td( )Tj
+ET 0.922 0.945 0.867 rg 1134 -4418 140 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1134 -4508 Td(T?n)Tj
+ET q 0.922 0.945 0.867 rg 1274 -4418 160 -110 re f Q 0.922 0.945 0.867 rg 1274 -4418 160 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1274 -4508 Td( )Tj
+ET 0.922 0.945 0.867 rg 1297 -4418 137 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1297 -4508 Td(kho)Tj
+ET q 0.922 0.945 0.867 rg 1434 -4418 113 -110 re f Q 0.922 0.945 0.867 rg 1434 -4418 113 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1434 -4508 Td( )Tj
+ET 0.922 0.945 0.867 rg 1457 -4418 90 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1457 -4508 Td(tài)Tj
+ET q 0.922 0.945 0.867 rg 1547 -4418 147 -110 re f Q 0.922 0.945 0.867 rg 1547 -4418 147 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1547 -4508 Td( )Tj
+ET 0.922 0.945 0.867 rg 1570 -4418 124 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1570 -4508 Td(s?n)Tj
+ET q 0.922 0.945 0.867 rg 1694 -4418 150 -110 re f Q 0.922 0.945 0.867 rg 1694 -4418 150 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1694 -4508 Td( )Tj
+ET 0.922 0.945 0.867 rg 1717 -4418 127 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1717 -4508 Td(c?a)Tj
+ET q 0.922 0.945 0.867 rg 1844 -4418 212 -110 re f Q 0.922 0.945 0.867 rg 1844 -4418 212 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1844 -4508 Td( )Tj
+ET 0.922 0.945 0.867 rg 1867 -4418 189 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1867 -4508 Td(1Kho)Tj
+ET q 0.922 0.945 0.867 rg 2056 -4418 199 -110 re f Q 0.922 0.945 0.867 rg 2056 -4418 199 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 2056 -4508 Td( )Tj
+ET 0.922 0.945 0.867 rg 2079 -4418 176 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 2079 -4508 Td(from)Tj
+ET q 0.922 0.945 0.867 rg 2255 -4418 231 -110 re f Q 0.922 0.945 0.867 rg 2255 -4418 231 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 2255 -4508 Td( )Tj
+ET 0.922 0.945 0.867 rg 2278 -4418 208 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 2278 -4508 Td(cache)Tj
+/F2 92 Tf -1495 -103 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -4634 126 -110 re f Q 0.922 0.945 0.867 rg 783 -4634 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -4724 Td(2.2:)Tj
+ET q 0.922 0.945 0.867 rg 909 -4634 176 -110 re f Q 0.922 0.945 0.867 rg 909 -4634 176 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -4724 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -4634 153 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -4724 Td(Luu:)Tj
+ET q 0.922 0.945 0.867 rg 1085 -4634 934 -110 re f Q 0.922 0.945 0.867 rg 1085 -4634 934 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1085 -4724 Td( )Tj
+ET 0.922 0.945 0.867 rg 1108 -4634 911 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1108 -4724 Td(Kho-TaiSan-TrangTrai-SL)Tj
+/F2 92 Tf -325 -103 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -4850 126 -110 re f Q 0.922 0.945 0.867 rg 783 -4850 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -4940 Td(2.3:)Tj
+ET q 0.922 0.945 0.867 rg 909 -4850 239 -110 re f Q 0.922 0.945 0.867 rg 909 -4850 239 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -4940 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -4850 216 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -4940 Td(Duy?t)Tj
+/F2 92 Tf -149 -103 Td( )Tj
+ET q 1 1 1 rg 783 -5066 168 -100 re f Q 1 1 1 rg 783 -5066 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -5147 Td(2.3.1:)Tj
+ET q 1 1 1 rg 951 -5066 148 -100 re f Q 1 1 1 rg 951 -5066 148 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -5147 Td( )Tj
+ET 1 1 1 rg 971 -5066 128 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -5147 Td(C?p)Tj
+ET q 1 1 1 rg 1099 -5066 167 -100 re f Q 1 1 1 rg 1099 -5066 167 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1099 -5147 Td( )Tj
+ET 1 1 1 rg 1119 -5066 147 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1119 -5147 Td(nh?t)Tj
+ET q 1 1 1 rg 1266 -5066 171 -100 re f Q 1 1 1 rg 1266 -5066 171 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1266 -5147 Td( )Tj
+ET 1 1 1 rg 1286 -5066 151 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1286 -5147 Td(sl=sl)Tj
+ET q 1 1 1 rg 1437 -5066 179 -100 re f Q 1 1 1 rg 1437 -5066 179 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1437 -5147 Td( )Tj
+ET 1 1 1 rg 1457 -5066 159 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1457 -5147 Td(ki?m)Tj
+ET q 1 1 1 rg 1616 -5066 96 -100 re f Q 1 1 1 rg 1616 -5066 96 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1616 -5147 Td( )Tj
+ET 1 1 1 rg 1636 -5066 76 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1636 -5147 Td(kê)Tj
+/F2 92 Tf  0 g -853 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td(+/-)Tj
+111 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(T&#7890;N)Tj
+464 0 Td( )Tj
+26 0 Td(KHO:)Tj
+225 0 Td( )Tj
+26 0 Td(Kho-TaiSan-TrangThai)Tj
+-1028 -106 Td( )Tj
+ET q 1 1 1 rg 783 -5590 168 -100 re f Q 1 1 1 rg 783 -5590 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -5671 Td(2.3.2:)Tj
+ET q 1 1 1 rg 951 -5590 146 -100 re f Q 1 1 1 rg 951 -5590 146 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -5671 Td( )Tj
+ET 1 1 1 rg 971 -5590 126 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -5671 Td(Xóa)Tj
+ET q 1 1 1 rg 1097 -5590 209 -100 re f Q 1 1 1 rg 1097 -5590 209 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1097 -5671 Td( )Tj
+ET 1 1 1 rg 1117 -5590 189 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1117 -5671 Td(cache)Tj
+ET q 1 1 1 rg 1306 -5590 131 -100 re f Q 1 1 1 rg 1306 -5590 131 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1306 -5671 Td( )Tj
+ET 1 1 1 rg 1326 -5590 111 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1326 -5671 Td(t?n)Tj
+ET q 1 1 1 rg 1437 -5590 143 -100 re f Q 1 1 1 rg 1437 -5590 143 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1437 -5671 Td( )Tj
+ET 1 1 1 rg 1457 -5590 123 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1457 -5671 Td(kho)Tj
+/F2 92 Tf  0 g -674 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+ET Q Q 
+endstream
+endobj
+5 0 obj<</Length 22462 >>
+stream
+q q Q q 0.12 0 0 0.12 0 792 cm 
+BT 1 0 0 1 0 0 Tm
+/F2 92 Tf 0 Ts  0 g 783 -683 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Cache)Tj
+265 0 Td( )Tj
+26 0 Td(TonKo)Tj
+-467 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -812 186 -122 re f Q 0.859 0.898 0.945 rg 783 -812 186 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -911 Td(T?N)Tj
+ET q 0.859 0.898 0.945 rg 969 -812 232 -122 re f Q 0.859 0.898 0.945 rg 969 -812 232 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 969 -911 Td( )Tj
+ET 0.859 0.898 0.945 rg 994 -812 207 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 994 -911 Td(KHO:)Tj
+ET q 0.859 0.898 0.945 rg 1201 -812 925 -122 re f Q 0.859 0.898 0.945 rg 1201 -812 925 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1201 -911 Td( )Tj
+ET 0.859 0.898 0.945 rg 1226 -812 900 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1226 -911 Td(Kho-TaiSan-TrangThai)Tj
+/F2 92 Tf  0 g -443 -106 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td(+)Tj
+54 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Tang)Tj
+209 0 Td( )Tj
+26 0 Td(SL)Tj
+112 0 Td( )Tj
+26 0 Td(trong)Tj
+210 0 Td( )Tj
+26 0 Td(Kho )Tj
+-839 -106 Td(+/-)Tj
+111 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(C?p)Tj
+168 0 Td( )Tj
+26 0 Td(nh?t)Tj
+179 0 Td( )Tj
+26 0 Td(sl=sl)Tj
+186 0 Td( )Tj
+26 0 Td(ki?m)Tj
+194 0 Td( )Tj
+26 0 Td(kê )Tj
+-1118 -106 Td(-)Tj
+31 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Gi?m)Tj
+220 0 Td( )Tj
+26 0 Td(SL)Tj
+112 0 Td( )Tj
+26 0 Td(trong)Tj
+210 0 Td( )Tj
+26 0 Td(Kho )Tj
+-827 -106 Td(-)Tj
+31 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Gi?m)Tj
+220 0 Td( )Tj
+26 0 Td(t?n)Tj
+128 0 Td( )Tj
+26 0 Td(kho )Tj
+-607 -106 Td(+)Tj
+54 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Tang)Tj
+209 0 Td( )Tj
+26 0 Td(nh?p)Tj
+204 0 Td( )Tj
+26 0 Td(Kho)Tj
+-695 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -1782 76 -133 re f Q 0.859 0.898 0.945 rg 783 -1782 76 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 783 -1890 Td(3:)Tj
+ET q 0.859 0.898 0.945 rg 859 -1782 377 -133 re f Q 0.859 0.898 0.945 rg 859 -1782 377 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 859 -1890 Td( )Tj
+ET 0.859 0.898 0.945 rg 886 -1782 350 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 886 -1890 Td(3.Thanh)Tj
+ET q 0.859 0.898 0.945 rg 1236 -1782 99 -133 re f Q 0.859 0.898 0.945 rg 1236 -1782 99 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1236 -1890 Td( )Tj
+ET 0.859 0.898 0.945 rg 1263 -1782 72 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1263 -1890 Td(lý)Tj
+/F2 92 Tf -480 -108 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -2021 126 -110 re f Q 0.922 0.945 0.867 rg 783 -2021 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -2111 Td(3.1:)Tj
+ET q 0.922 0.945 0.867 rg 909 -2021 202 -110 re f Q 0.922 0.945 0.867 rg 909 -2021 202 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -2111 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -2021 179 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -2111 Td(Load)Tj
+ET q 0.922 0.945 0.867 rg 1111 -2021 125 -110 re f Q 0.922 0.945 0.867 rg 1111 -2021 125 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1111 -2111 Td( )Tj
+ET 0.922 0.945 0.867 rg 1134 -2021 102 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1134 -2111 Td(DS)Tj
+ET q 0.922 0.945 0.867 rg 1236 -2021 147 -110 re f Q 0.922 0.945 0.867 rg 1236 -2021 147 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1236 -2111 Td( )Tj
+ET 0.922 0.945 0.867 rg 1259 -2021 124 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1259 -2111 Td(t?n)Tj
+ET q 0.922 0.945 0.867 rg 1383 -2021 160 -110 re f Q 0.922 0.945 0.867 rg 1383 -2021 160 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1383 -2111 Td( )Tj
+ET 0.922 0.945 0.867 rg 1406 -2021 137 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1406 -2111 Td(kho)Tj
+ET q 0.922 0.945 0.867 rg 1543 -2021 100 -110 re f Q 0.922 0.945 0.867 rg 1543 -2021 100 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1543 -2111 Td( )Tj
+ET 0.922 0.945 0.867 rg 1566 -2021 77 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1566 -2111 Td(t?)Tj
+ET q 0.922 0.945 0.867 rg 1643 -2021 231 -110 re f Q 0.922 0.945 0.867 rg 1643 -2021 231 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1643 -2111 Td( )Tj
+ET 0.922 0.945 0.867 rg 1666 -2021 208 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1666 -2111 Td(cache)Tj
+/F2 92 Tf -883 -103 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -2237 126 -110 re f Q 0.922 0.945 0.867 rg 783 -2237 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -2327 Td(3.2:)Tj
+ET q 0.922 0.945 0.867 rg 909 -2237 158 -110 re f Q 0.922 0.945 0.867 rg 909 -2237 158 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -2327 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -2237 135 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -2327 Td(Luu)Tj
+ET q 0.922 0.945 0.867 rg 1067 -2237 97 -110 re f Q 0.922 0.945 0.867 rg 1067 -2237 97 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1067 -2327 Td( )Tj
+ET 0.922 0.945 0.867 rg 1090 -2237 74 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1090 -2327 Td(tt:)Tj
+ET q 0.922 0.945 0.867 rg 1164 -2237 934 -110 re f Q 0.922 0.945 0.867 rg 1164 -2237 934 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1164 -2327 Td( )Tj
+ET 0.922 0.945 0.867 rg 1187 -2237 911 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1187 -2327 Td(Kho-TaiSan-TrangTrai-SL)Tj
+/F2 92 Tf -404 -103 Td( )Tj
+ET q 1 1 1 rg 783 -2453 168 -100 re f Q 1 1 1 rg 783 -2453 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -2534 Td(3.2.1:)Tj
+ET q 1 1 1 rg 951 -2453 188 -100 re f Q 1 1 1 rg 951 -2453 188 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -2534 Td( )Tj
+ET 1 1 1 rg 971 -2453 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -2534 Td(KI?m)Tj
+ET q 1 1 1 rg 1139 -2453 109 -100 re f Q 1 1 1 rg 1139 -2453 109 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1139 -2534 Td( )Tj
+ET 1 1 1 rg 1159 -2453 89 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1159 -2534 Td(tra)Tj
+ET q 1 1 1 rg 1248 -2453 99 -100 re f Q 1 1 1 rg 1248 -2453 99 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1248 -2534 Td( )Tj
+ET 1 1 1 rg 1268 -2453 79 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1268 -2534 Td(có)Tj
+ET q 1 1 1 rg 1347 -2453 205 -100 re f Q 1 1 1 rg 1347 -2453 205 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1347 -2534 Td( )Tj
+ET 1 1 1 rg 1367 -2453 185 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1367 -2534 Td(phi?u)Tj
+ET q 1 1 1 rg 1552 -2453 186 -100 re f Q 1 1 1 rg 1552 -2453 186 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1552 -2534 Td( )Tj
+ET 1 1 1 rg 1572 -2453 166 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1572 -2534 Td(Ki?m)Tj
+ET q 1 1 1 rg 1738 -2453 96 -100 re f Q 1 1 1 rg 1738 -2453 96 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1738 -2534 Td( )Tj
+ET 1 1 1 rg 1758 -2453 76 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1758 -2534 Td(kê)Tj
+ET q 1 1 1 rg 1834 -2453 142 -100 re f Q 1 1 1 rg 1834 -2453 142 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1834 -2534 Td( )Tj
+ET 1 1 1 rg 1854 -2453 122 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1854 -2534 Td(ch?)Tj
+ET q 1 1 1 rg 1976 -2453 206 -100 re f Q 1 1 1 rg 1976 -2453 206 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1976 -2534 Td( )Tj
+ET 1 1 1 rg 1996 -2453 186 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1996 -2534 Td(duy?t)Tj
+ET q 1 1 1 rg 2182 -2453 101 -100 re f Q 1 1 1 rg 2182 -2453 101 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 2182 -2534 Td( )Tj
+ET 1 1 1 rg 2202 -2453 81 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 2202 -2534 Td(ko)Tj
+/F2 92 Tf  0 g -1419 -102 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -2659 126 -110 re f Q 0.922 0.945 0.867 rg 783 -2659 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -2749 Td(3.3:)Tj
+ET q 0.922 0.945 0.867 rg 909 -2659 239 -110 re f Q 0.922 0.945 0.867 rg 909 -2659 239 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -2749 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -2659 216 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -2749 Td(Duy?t)Tj
+/F2 92 Tf -149 -103 Td( )Tj
+ET q 1 1 1 rg 783 -2875 168 -100 re f Q 1 1 1 rg 783 -2875 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -2956 Td(3.3.1:)Tj
+ET q 1 1 1 rg 951 -2875 219 -100 re f Q 1 1 1 rg 951 -2875 219 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -2956 Td( )Tj
+ET 1 1 1 rg 971 -2875 199 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -2956 Td(Check)Tj
+ET q 1 1 1 rg 1170 -2875 99 -100 re f Q 1 1 1 rg 1170 -2875 99 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1170 -2956 Td( )Tj
+ET 1 1 1 rg 1190 -2875 79 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1190 -2956 Td(có)Tj
+ET q 1 1 1 rg 1269 -2875 188 -100 re f Q 1 1 1 rg 1269 -2875 188 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1269 -2956 Td( )Tj
+ET 1 1 1 rg 1289 -2875 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1289 -2956 Td(dang)Tj
+ET q 1 1 1 rg 1457 -2875 142 -100 re f Q 1 1 1 rg 1457 -2875 142 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1457 -2956 Td( )Tj
+ET 1 1 1 rg 1477 -2875 122 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1477 -2956 Td(ch?)Tj
+ET q 1 1 1 rg 1599 -2875 206 -100 re f Q 1 1 1 rg 1599 -2875 206 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1599 -2956 Td( )Tj
+ET 1 1 1 rg 1619 -2875 186 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1619 -2956 Td(duy?t)Tj
+ET q 1 1 1 rg 1805 -2875 179 -100 re f Q 1 1 1 rg 1805 -2875 179 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1805 -2956 Td( )Tj
+ET 1 1 1 rg 1825 -2875 159 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1825 -2956 Td(ki?m)Tj
+ET q 1 1 1 rg 1984 -2875 96 -100 re f Q 1 1 1 rg 1984 -2875 96 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1984 -2956 Td( )Tj
+ET 1 1 1 rg 2004 -2875 76 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 2004 -2956 Td(kê)Tj
+/F2 92 Tf  0 g -1221 -102 Td( )Tj
+ET q 1 1 1 rg 783 -3081 168 -100 re f Q 1 1 1 rg 783 -3081 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -3162 Td(3.3.2:)Tj
+ET q 1 1 1 rg 951 -3081 193 -100 re f Q 1 1 1 rg 951 -3081 193 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -3162 Td( )Tj
+ET 1 1 1 rg 971 -3081 173 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -3162 Td(Gi?m)Tj
+ET q 1 1 1 rg 1144 -3081 95 -100 re f Q 1 1 1 rg 1144 -3081 95 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1144 -3162 Td( )Tj
+ET 1 1 1 rg 1164 -3081 75 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1164 -3162 Td(SL)Tj
+ET q 1 1 1 rg 1239 -3081 201 -100 re f Q 1 1 1 rg 1239 -3081 201 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1239 -3162 Td( )Tj
+ET 1 1 1 rg 1259 -3081 181 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1259 -3162 Td(trong)Tj
+ET q 1 1 1 rg 1440 -3081 150 -100 re f Q 1 1 1 rg 1440 -3081 150 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1440 -3162 Td( )Tj
+ET 1 1 1 rg 1460 -3081 130 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1460 -3162 Td(Kho)Tj
+/F2 92 Tf  0 g -677 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td(-)Tj
+31 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(T&#7890;N)Tj
+464 0 Td( )Tj
+26 0 Td(KHO:)Tj
+225 0 Td( )Tj
+26 0 Td(Kho-TaiSan-TrangThai)Tj
+-948 -106 Td( )Tj
+ET q 1 1 1 rg 783 -3605 168 -100 re f Q 1 1 1 rg 783 -3605 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -3686 Td(3.3.3:)Tj
+ET q 1 1 1 rg 951 -3605 146 -100 re f Q 1 1 1 rg 951 -3605 146 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -3686 Td( )Tj
+ET 1 1 1 rg 971 -3605 126 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -3686 Td(Xóa)Tj
+ET q 1 1 1 rg 1097 -3605 209 -100 re f Q 1 1 1 rg 1097 -3605 209 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1097 -3686 Td( )Tj
+ET 1 1 1 rg 1117 -3605 189 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1117 -3686 Td(cache)Tj
+ET q 1 1 1 rg 1306 -3605 131 -100 re f Q 1 1 1 rg 1306 -3605 131 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1306 -3686 Td( )Tj
+ET 1 1 1 rg 1326 -3605 111 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1326 -3686 Td(t?n)Tj
+ET q 1 1 1 rg 1437 -3605 143 -100 re f Q 1 1 1 rg 1437 -3605 143 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1437 -3686 Td( )Tj
+ET 1 1 1 rg 1457 -3605 123 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1457 -3686 Td(kho)Tj
+/F2 92 Tf  0 g -674 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Cache)Tj
+265 0 Td( )Tj
+26 0 Td(TonKo)Tj
+-467 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -4129 76 -133 re f Q 0.859 0.898 0.945 rg 783 -4129 76 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 783 -4237 Td(4:)Tj
+ET q 0.859 0.898 0.945 rg 859 -4129 268 -133 re f Q 0.859 0.898 0.945 rg 859 -4129 268 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 859 -4237 Td( )Tj
+ET 0.859 0.898 0.945 rg 886 -4129 241 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 886 -4237 Td(4.Bàn)Tj
+ET q 0.859 0.898 0.945 rg 1127 -4129 220 -133 re f Q 0.859 0.898 0.945 rg 1127 -4129 220 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1127 -4237 Td( )Tj
+ET 0.859 0.898 0.945 rg 1154 -4129 193 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1154 -4237 Td(giao)Tj
+/F2 92 Tf -371 -108 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -4368 126 -110 re f Q 0.922 0.945 0.867 rg 783 -4368 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -4458 Td(4.1:)Tj
+ET q 0.922 0.945 0.867 rg 909 -4368 202 -110 re f Q 0.922 0.945 0.867 rg 909 -4368 202 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -4458 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -4368 179 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -4458 Td(Load)Tj
+ET q 0.922 0.945 0.867 rg 1111 -4368 147 -110 re f Q 0.922 0.945 0.867 rg 1111 -4368 147 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1111 -4458 Td( )Tj
+ET 0.922 0.945 0.867 rg 1134 -4368 124 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1134 -4458 Td(t?n)Tj
+ET q 0.922 0.945 0.867 rg 1258 -4368 167 -110 re f Q 0.922 0.945 0.867 rg 1258 -4368 167 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1258 -4458 Td( )Tj
+ET 0.922 0.945 0.867 rg 1281 -4368 144 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1281 -4458 Td(Kho)Tj
+ET q 0.922 0.945 0.867 rg 1425 -4368 111 -110 re f Q 0.922 0.945 0.867 rg 1425 -4368 111 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1425 -4458 Td( )Tj
+ET 0.922 0.945 0.867 rg 1448 -4368 88 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1448 -4458 Td(TS)Tj
+ET q 0.922 0.945 0.867 rg 1536 -4368 100 -110 re f Q 0.922 0.945 0.867 rg 1536 -4368 100 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1536 -4458 Td( )Tj
+ET 0.922 0.945 0.867 rg 1559 -4368 77 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1559 -4458 Td(t?)Tj
+ET q 0.922 0.945 0.867 rg 1636 -4368 231 -110 re f Q 0.922 0.945 0.867 rg 1636 -4368 231 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1636 -4458 Td( )Tj
+ET 0.922 0.945 0.867 rg 1659 -4368 208 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1659 -4458 Td(cache)Tj
+/F2 92 Tf -876 -103 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -4584 126 -110 re f Q 0.922 0.945 0.867 rg 783 -4584 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -4674 Td(4.2:)Tj
+ET q 0.922 0.945 0.867 rg 909 -4584 176 -110 re f Q 0.922 0.945 0.867 rg 909 -4584 176 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -4674 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -4584 153 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -4674 Td(Luu:)Tj
+ET q 0.922 0.945 0.867 rg 1085 -4584 1165 -110 re f Q 0.922 0.945 0.867 rg 1085 -4584 1165 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1085 -4674 Td( )Tj
+ET 0.922 0.945 0.867 rg 1108 -4584 1142 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1108 -4674 Td(Kho-TaiSan-TrangTrai-SL-Nhan)Tj
+ET q 0.922 0.945 0.867 rg 2250 -4584 206 -110 re f Q 0.922 0.945 0.867 rg 2250 -4584 206 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 2250 -4674 Td( )Tj
+ET 0.922 0.945 0.867 rg 2273 -4584 183 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 2273 -4674 Td(vien-)Tj
+ET q 0.922 0.945 0.867 rg 2456 -4584 95 -110 re f Q 0.922 0.945 0.867 rg 2456 -4584 95 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 2456 -4674 Td( )Tj
+ET 0.922 0.945 0.867 rg 2479 -4584 72 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 2479 -4674 Td(Vi)Tj
+ET q 0.922 0.945 0.867 rg 2551 -4584 100 -110 re f Q 0.922 0.945 0.867 rg 2551 -4584 100 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 2551 -4674 Td( )Tj
+ET 0.922 0.945 0.867 rg 2574 -4584 77 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 2574 -4674 Td(tri)Tj
+/F2 92 Tf -1791 -103 Td( )Tj
+ET q 1 1 1 rg 783 -4800 168 -100 re f Q 1 1 1 rg 783 -4800 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -4881 Td(4.2.1:)Tj
+ET q 1 1 1 rg 951 -4800 208 -100 re f Q 1 1 1 rg 951 -4800 208 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -4881 Td( )Tj
+ET 1 1 1 rg 971 -4800 188 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -4881 Td(check)Tj
+ET q 1 1 1 rg 1159 -4800 99 -100 re f Q 1 1 1 rg 1159 -4800 99 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1159 -4881 Td( )Tj
+ET 1 1 1 rg 1179 -4800 79 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1179 -4881 Td(có)Tj
+ET q 1 1 1 rg 1258 -4800 188 -100 re f Q 1 1 1 rg 1258 -4800 188 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1258 -4881 Td( )Tj
+ET 1 1 1 rg 1278 -4800 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1278 -4881 Td(dang)Tj
+ET q 1 1 1 rg 1446 -4800 179 -100 re f Q 1 1 1 rg 1446 -4800 179 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1446 -4881 Td( )Tj
+ET 1 1 1 rg 1466 -4800 159 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1466 -4881 Td(ki?m)Tj
+ET q 1 1 1 rg 1625 -4800 96 -100 re f Q 1 1 1 rg 1625 -4800 96 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1625 -4881 Td( )Tj
+ET 1 1 1 rg 1645 -4800 76 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1645 -4881 Td(kê)Tj
+ET q 1 1 1 rg 1721 -4800 77 -100 re f Q 1 1 1 rg 1721 -4800 77 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1721 -4881 Td( )Tj
+ET 1 1 1 rg 1741 -4800 57 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1741 -4881 Td(ts)Tj
+ET q 1 1 1 rg 1798 -4800 184 -100 re f Q 1 1 1 rg 1798 -4800 184 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1798 -4881 Td( )Tj
+ET 1 1 1 rg 1818 -4800 164 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1818 -4881 Td(nhân)Tj
+ET q 1 1 1 rg 1982 -4800 155 -100 re f Q 1 1 1 rg 1982 -4800 155 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1982 -4881 Td( )Tj
+ET 1 1 1 rg 2002 -4800 135 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 2002 -4881 Td(viên)Tj
+/F2 92 Tf  0 g -1219 -102 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -5006 126 -110 re f Q 0.922 0.945 0.867 rg 783 -5006 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -5096 Td(4.3:)Tj
+ET q 0.922 0.945 0.867 rg 909 -5006 239 -110 re f Q 0.922 0.945 0.867 rg 909 -5006 239 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -5096 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -5006 216 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -5096 Td(Duy?t)Tj
+/F2 92 Tf -149 -103 Td( )Tj
+ET q 1 1 1 rg 783 -5222 168 -100 re f Q 1 1 1 rg 783 -5222 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -5303 Td(4.3.1:)Tj
+ET q 1 1 1 rg 951 -5222 193 -100 re f Q 1 1 1 rg 951 -5222 193 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -5303 Td( )Tj
+ET 1 1 1 rg 971 -5222 173 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -5303 Td(Gi?m)Tj
+ET q 1 1 1 rg 1144 -5222 131 -100 re f Q 1 1 1 rg 1144 -5222 131 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1144 -5303 Td( )Tj
+ET 1 1 1 rg 1164 -5222 111 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1164 -5303 Td(t?n)Tj
+ET q 1 1 1 rg 1275 -5222 143 -100 re f Q 1 1 1 rg 1275 -5222 143 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1275 -5303 Td( )Tj
+ET 1 1 1 rg 1295 -5222 123 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1295 -5303 Td(kho)Tj
+/F2 92 Tf  0 g -512 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td(-)Tj
+31 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(T&#7890;N)Tj
+464 0 Td( )Tj
+26 0 Td(KHO:)Tj
+225 0 Td( )Tj
+26 0 Td(Kho-TaiSan-TrangThai)Tj
+-948 -106 Td( )Tj
+ET q 1 1 1 rg 783 -5746 168 -100 re f Q 1 1 1 rg 783 -5746 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -5827 Td(4.3.2:)Tj
+ET q 1 1 1 rg 951 -5746 183 -100 re f Q 1 1 1 rg 951 -5746 183 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -5827 Td( )Tj
+ET 1 1 1 rg 971 -5746 163 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -5827 Td(Tang)Tj
+ET q 1 1 1 rg 1134 -5746 131 -100 re f Q 1 1 1 rg 1134 -5746 131 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1134 -5827 Td( )Tj
+ET 1 1 1 rg 1154 -5746 111 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1154 -5827 Td(t?n)Tj
+ET q 1 1 1 rg 1265 -5746 143 -100 re f Q 1 1 1 rg 1265 -5746 143 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1265 -5827 Td( )Tj
+ET 1 1 1 rg 1285 -5746 123 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1285 -5827 Td(kho)Tj
+ET q 1 1 1 rg 1408 -5746 123 -100 re f Q 1 1 1 rg 1408 -5746 123 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1408 -5827 Td( )Tj
+ET 1 1 1 rg 1428 -5746 103 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1428 -5827 Td(NV)Tj
+/F2 92 Tf  0 g -645 -102 Td( )Tj
+ET Q Q 
+endstream
+endobj
+6 0 obj<</Length 17071 >>
+stream
+q q Q q 0.12 0 0 0.12 0 792 cm 
+BT 1 0 0 1 0 0 Tm
+/F3 92 Tf 0 Ts  0 g 783 -683 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td(+)Tj
+54 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(T&#7890;N)Tj
+464 0 Td( )Tj
+26 0 Td(KHO)Tj
+199 0 Td( )Tj
+26 0 Td(NV)Tj
+-945 -106 Td( )Tj
+ET q 1 1 1 rg 783 -918 168 -100 re f Q 1 1 1 rg 783 -918 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -999 Td(4.3.3:)Tj
+ET q 1 1 1 rg 951 -918 146 -100 re f Q 1 1 1 rg 951 -918 146 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -999 Td( )Tj
+ET 1 1 1 rg 971 -918 126 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -999 Td(Xóa)Tj
+ET q 1 1 1 rg 1097 -918 209 -100 re f Q 1 1 1 rg 1097 -918 209 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1097 -999 Td( )Tj
+ET 1 1 1 rg 1117 -918 189 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1117 -999 Td(cache)Tj
+ET q 1 1 1 rg 1306 -918 131 -100 re f Q 1 1 1 rg 1306 -918 131 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1306 -999 Td( )Tj
+ET 1 1 1 rg 1326 -918 111 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1326 -999 Td(t?n)Tj
+ET q 1 1 1 rg 1437 -918 143 -100 re f Q 1 1 1 rg 1437 -918 143 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1437 -999 Td( )Tj
+ET 1 1 1 rg 1457 -918 123 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1457 -999 Td(kho)Tj
+/F2 92 Tf  0 g -674 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Cache)Tj
+265 0 Td( )Tj
+26 0 Td(TonKo)Tj
+-467 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -1442 186 -122 re f Q 0.859 0.898 0.945 rg 783 -1442 186 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -1541 Td(T?N)Tj
+ET q 0.859 0.898 0.945 rg 969 -1442 212 -122 re f Q 0.859 0.898 0.945 rg 969 -1442 212 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 969 -1541 Td( )Tj
+ET 0.859 0.898 0.945 rg 994 -1442 187 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 994 -1541 Td(KHO)Tj
+ET q 0.859 0.898 0.945 rg 1181 -1442 151 -122 re f Q 0.859 0.898 0.945 rg 1181 -1442 151 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1181 -1541 Td( )Tj
+ET 0.859 0.898 0.945 rg 1206 -1442 126 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1206 -1541 Td(NV)Tj
+/F2 92 Tf  0 g -423 -106 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td(+)Tj
+54 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Tang)Tj
+209 0 Td( )Tj
+26 0 Td(t?n)Tj
+128 0 Td( )Tj
+26 0 Td(kho)Tj
+148 0 Td( )Tj
+26 0 Td(NV )Tj
+-793 -106 Td(-)Tj
+31 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Gi?m)Tj
+220 0 Td( )Tj
+26 0 Td(t?n)Tj
+128 0 Td( )Tj
+26 0 Td(kho)Tj
+148 0 Td( )Tj
+26 0 Td(NV )Tj
+-781 -106 Td(+/-)Tj
+111 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(C?p)Tj
+168 0 Td( )Tj
+26 0 Td(nh?t)Tj
+179 0 Td( )Tj
+26 0 Td(SL=SL)Tj
+278 0 Td( )Tj
+26 0 Td(ki?m)Tj
+194 0 Td( )Tj
+26 0 Td(kê;)Tj
+-1210 -106 Td( )Tj
+ET q 1 1 1 rg 783 -2200 168 -100 re f Q 1 1 1 rg 783 -2200 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -2281 Td(4.3.4:)Tj
+ET q 1 1 1 rg 951 -2200 146 -100 re f Q 1 1 1 rg 951 -2200 146 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -2281 Td( )Tj
+ET 1 1 1 rg 971 -2200 126 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -2281 Td(Xóa)Tj
+ET q 1 1 1 rg 1097 -2200 209 -100 re f Q 1 1 1 rg 1097 -2200 209 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1097 -2281 Td( )Tj
+ET 1 1 1 rg 1117 -2200 189 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1117 -2281 Td(cache)Tj
+ET q 1 1 1 rg 1306 -2200 131 -100 re f Q 1 1 1 rg 1306 -2200 131 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1306 -2281 Td( )Tj
+ET 1 1 1 rg 1326 -2200 111 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1326 -2281 Td(t?n)Tj
+ET q 1 1 1 rg 1437 -2200 143 -100 re f Q 1 1 1 rg 1437 -2200 143 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1437 -2281 Td( )Tj
+ET 1 1 1 rg 1457 -2200 123 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1457 -2281 Td(kho)Tj
+ET q 1 1 1 rg 1580 -2200 123 -100 re f Q 1 1 1 rg 1580 -2200 123 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1580 -2281 Td( )Tj
+ET 1 1 1 rg 1600 -2200 103 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1600 -2281 Td(NV)Tj
+/F2 92 Tf  0 g -817 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Cache)Tj
+265 0 Td( )Tj
+26 0 Td(TonKhoNV)Tj
+-467 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -2724 76 -133 re f Q 0.859 0.898 0.945 rg 783 -2724 76 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 783 -2832 Td(5:)Tj
+ET q 0.859 0.898 0.945 rg 859 -2724 269 -133 re f Q 0.859 0.898 0.945 rg 859 -2724 269 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 859 -2832 Td( )Tj
+ET 0.859 0.898 0.945 rg 886 -2724 242 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 886 -2832 Td(5.Thu)Tj
+ET q 0.859 0.898 0.945 rg 1128 -2724 167 -133 re f Q 0.859 0.898 0.945 rg 1128 -2724 167 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1128 -2832 Td( )Tj
+ET 0.859 0.898 0.945 rg 1155 -2724 140 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1155 -2832 Td(h?i)Tj
+/F2 92 Tf -372 -108 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -2963 126 -110 re f Q 0.922 0.945 0.867 rg 783 -2963 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -3053 Td(5.1:)Tj
+ET q 0.922 0.945 0.867 rg 909 -2963 202 -110 re f Q 0.922 0.945 0.867 rg 909 -2963 202 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -3053 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -2963 179 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -3053 Td(Load)Tj
+ET q 0.922 0.945 0.867 rg 1111 -2963 147 -110 re f Q 0.922 0.945 0.867 rg 1111 -2963 147 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1111 -3053 Td( )Tj
+ET 0.922 0.945 0.867 rg 1134 -2963 124 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1134 -3053 Td(t?n)Tj
+ET q 0.922 0.945 0.867 rg 1258 -2963 167 -110 re f Q 0.922 0.945 0.867 rg 1258 -2963 167 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1258 -3053 Td( )Tj
+ET 0.922 0.945 0.867 rg 1281 -2963 144 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1281 -3053 Td(Kho)Tj
+ET q 0.922 0.945 0.867 rg 1425 -2963 137 -110 re f Q 0.922 0.945 0.867 rg 1425 -2963 137 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1425 -3053 Td( )Tj
+ET 0.922 0.945 0.867 rg 1448 -2963 114 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1448 -3053 Td(NV)Tj
+ET q 0.922 0.945 0.867 rg 1562 -2963 100 -110 re f Q 0.922 0.945 0.867 rg 1562 -2963 100 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1562 -3053 Td( )Tj
+ET 0.922 0.945 0.867 rg 1585 -2963 77 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1585 -3053 Td(t?)Tj
+ET q 0.922 0.945 0.867 rg 1662 -2963 231 -110 re f Q 0.922 0.945 0.867 rg 1662 -2963 231 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1662 -3053 Td( )Tj
+ET 0.922 0.945 0.867 rg 1685 -2963 208 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1685 -3053 Td(cache)Tj
+/F2 92 Tf -902 -103 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -3179 126 -110 re f Q 0.922 0.945 0.867 rg 783 -3179 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -3269 Td(5.2:)Tj
+ET q 0.922 0.945 0.867 rg 909 -3179 176 -110 re f Q 0.922 0.945 0.867 rg 909 -3179 176 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -3269 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -3179 153 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -3269 Td(Luu:)Tj
+ET q 0.922 0.945 0.867 rg 1085 -3179 221 -110 re f Q 0.922 0.945 0.867 rg 1085 -3179 221 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1085 -3269 Td( )Tj
+ET 0.922 0.945 0.867 rg 1108 -3179 198 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1108 -3269 Td(Nhân)Tj
+ET q 0.922 0.945 0.867 rg 1306 -3179 917 -110 re f Q 0.922 0.945 0.867 rg 1306 -3179 917 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1306 -3269 Td( )Tj
+ET 0.922 0.945 0.867 rg 1329 -3179 894 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1329 -3269 Td(viên-TaiSan-TrangTrai-v?)Tj
+ET q 0.922 0.945 0.867 rg 2223 -3179 100 -110 re f Q 0.922 0.945 0.867 rg 2223 -3179 100 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 2223 -3269 Td( )Tj
+ET 0.922 0.945 0.867 rg 2246 -3179 77 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 2246 -3269 Td(trí)Tj
+/F2 92 Tf -1463 -103 Td( )Tj
+ET q 1 1 1 rg 783 -3395 168 -100 re f Q 1 1 1 rg 783 -3395 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -3476 Td(5.2.1:)Tj
+ET q 1 1 1 rg 951 -3395 208 -100 re f Q 1 1 1 rg 951 -3395 208 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -3476 Td( )Tj
+ET 1 1 1 rg 971 -3395 188 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -3476 Td(check)Tj
+ET q 1 1 1 rg 1159 -3395 99 -100 re f Q 1 1 1 rg 1159 -3395 99 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1159 -3476 Td( )Tj
+ET 1 1 1 rg 1179 -3395 79 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1179 -3476 Td(có)Tj
+ET q 1 1 1 rg 1258 -3395 188 -100 re f Q 1 1 1 rg 1258 -3395 188 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1258 -3476 Td( )Tj
+ET 1 1 1 rg 1278 -3395 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1278 -3476 Td(dang)Tj
+ET q 1 1 1 rg 1446 -3395 179 -100 re f Q 1 1 1 rg 1446 -3395 179 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1446 -3476 Td( )Tj
+ET 1 1 1 rg 1466 -3395 159 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1466 -3476 Td(ki?m)Tj
+ET q 1 1 1 rg 1625 -3395 96 -100 re f Q 1 1 1 rg 1625 -3395 96 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1625 -3476 Td( )Tj
+ET 1 1 1 rg 1645 -3395 76 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1645 -3476 Td(kê)Tj
+ET q 1 1 1 rg 1721 -3395 77 -100 re f Q 1 1 1 rg 1721 -3395 77 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1721 -3476 Td( )Tj
+ET 1 1 1 rg 1741 -3395 57 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1741 -3476 Td(ts)Tj
+ET q 1 1 1 rg 1798 -3395 184 -100 re f Q 1 1 1 rg 1798 -3395 184 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1798 -3476 Td( )Tj
+ET 1 1 1 rg 1818 -3395 164 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1818 -3476 Td(nhân)Tj
+ET q 1 1 1 rg 1982 -3395 155 -100 re f Q 1 1 1 rg 1982 -3395 155 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1982 -3476 Td( )Tj
+ET 1 1 1 rg 2002 -3395 135 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 2002 -3476 Td(viên)Tj
+/F2 92 Tf  0 g -1219 -102 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -3601 126 -110 re f Q 0.922 0.945 0.867 rg 783 -3601 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -3691 Td(5.3:)Tj
+ET q 0.922 0.945 0.867 rg 909 -3601 239 -110 re f Q 0.922 0.945 0.867 rg 909 -3601 239 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -3691 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -3601 216 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -3691 Td(Duy?t)Tj
+/F2 92 Tf -149 -103 Td( )Tj
+ET q 1 1 1 rg 783 -3817 168 -100 re f Q 1 1 1 rg 783 -3817 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -3898 Td(5.3.1:)Tj
+ET q 1 1 1 rg 951 -3817 183 -100 re f Q 1 1 1 rg 951 -3817 183 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -3898 Td( )Tj
+ET 1 1 1 rg 971 -3817 163 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -3898 Td(Tang)Tj
+ET q 1 1 1 rg 1134 -3817 186 -100 re f Q 1 1 1 rg 1134 -3817 186 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1134 -3898 Td( )Tj
+ET 1 1 1 rg 1154 -3817 166 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1154 -3898 Td(nh?p)Tj
+ET q 1 1 1 rg 1320 -3817 150 -100 re f Q 1 1 1 rg 1320 -3817 150 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1320 -3898 Td( )Tj
+ET 1 1 1 rg 1340 -3817 130 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1340 -3898 Td(Kho)Tj
+/F2 92 Tf  0 g -557 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td(+)Tj
+54 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(T&#7890;N)Tj
+464 0 Td( )Tj
+26 0 Td(KHO:)Tj
+225 0 Td( )Tj
+26 0 Td(Kho-TaiSan-TrangThai)Tj
+-971 -106 Td( )Tj
+ET q 1 1 1 rg 783 -4341 168 -100 re f Q 1 1 1 rg 783 -4341 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -4422 Td(5.3.2:)Tj
+ET q 1 1 1 rg 951 -4341 193 -100 re f Q 1 1 1 rg 951 -4341 193 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -4422 Td( )Tj
+ET 1 1 1 rg 971 -4341 173 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -4422 Td(Gi?m)Tj
+ET q 1 1 1 rg 1144 -4341 131 -100 re f Q 1 1 1 rg 1144 -4341 131 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1144 -4422 Td( )Tj
+ET 1 1 1 rg 1164 -4341 111 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1164 -4422 Td(t?n)Tj
+ET q 1 1 1 rg 1275 -4341 143 -100 re f Q 1 1 1 rg 1275 -4341 143 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1275 -4422 Td( )Tj
+ET 1 1 1 rg 1295 -4341 123 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1295 -4422 Td(kho)Tj
+ET q 1 1 1 rg 1418 -4341 123 -100 re f Q 1 1 1 rg 1418 -4341 123 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1418 -4422 Td( )Tj
+ET 1 1 1 rg 1438 -4341 103 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1438 -4422 Td(NV)Tj
+/F2 92 Tf  0 g -655 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td(-)Tj
+31 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(T&#7890;N)Tj
+464 0 Td( )Tj
+26 0 Td(KHO)Tj
+199 0 Td( )Tj
+26 0 Td(NV)Tj
+-922 -106 Td( )Tj
+ET q 1 1 1 rg 783 -4865 168 -100 re f Q 1 1 1 rg 783 -4865 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -4946 Td(5.3.3:)Tj
+ET q 1 1 1 rg 951 -4865 146 -100 re f Q 1 1 1 rg 951 -4865 146 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -4946 Td( )Tj
+ET 1 1 1 rg 971 -4865 126 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -4946 Td(Xóa)Tj
+ET q 1 1 1 rg 1097 -4865 209 -100 re f Q 1 1 1 rg 1097 -4865 209 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1097 -4946 Td( )Tj
+ET 1 1 1 rg 1117 -4865 189 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1117 -4946 Td(cache)Tj
+ET q 1 1 1 rg 1306 -4865 131 -100 re f Q 1 1 1 rg 1306 -4865 131 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1306 -4946 Td( )Tj
+ET 1 1 1 rg 1326 -4865 111 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1326 -4946 Td(t?n)Tj
+ET q 1 1 1 rg 1437 -4865 150 -100 re f Q 1 1 1 rg 1437 -4865 150 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1437 -4946 Td( )Tj
+ET 1 1 1 rg 1457 -4865 130 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1457 -4946 Td(Kho)Tj
+/F2 92 Tf  0 g -674 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Cache)Tj
+265 0 Td( )Tj
+26 0 Td(TonKo)Tj
+-467 -106 Td( )Tj
+ET q 1 1 1 rg 783 -5389 168 -100 re f Q 1 1 1 rg 783 -5389 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -5470 Td(5.3.4:)Tj
+ET q 1 1 1 rg 951 -5389 146 -100 re f Q 1 1 1 rg 951 -5389 146 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -5470 Td( )Tj
+ET 1 1 1 rg 971 -5389 126 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -5470 Td(Xóa)Tj
+ET q 1 1 1 rg 1097 -5389 209 -100 re f Q 1 1 1 rg 1097 -5389 209 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1097 -5470 Td( )Tj
+ET 1 1 1 rg 1117 -5389 189 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1117 -5470 Td(cache)Tj
+ET q 1 1 1 rg 1306 -5389 131 -100 re f Q 1 1 1 rg 1306 -5389 131 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1306 -5470 Td( )Tj
+ET 1 1 1 rg 1326 -5389 111 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1326 -5470 Td(t?n)Tj
+ET q 1 1 1 rg 1437 -5389 150 -100 re f Q 1 1 1 rg 1437 -5389 150 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1437 -5470 Td( )Tj
+ET 1 1 1 rg 1457 -5389 130 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1457 -5470 Td(Kho)Tj
+ET q 1 1 1 rg 1587 -5389 123 -100 re f Q 1 1 1 rg 1587 -5389 123 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1587 -5470 Td( )Tj
+ET 1 1 1 rg 1607 -5389 103 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1607 -5470 Td(NV)Tj
+/F2 92 Tf  0 g -824 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Cache)Tj
+265 0 Td( )Tj
+26 0 Td(TonKhoNV)Tj
+-467 -106 Td( )Tj
+ET Q Q 
+endstream
+endobj
+7 0 obj<</Length 38016 >>
+stream
+q q Q q 0.12 0 0 0.12 0 792 cm q 0.859 0.898 0.945 rg 783 -600 76 -133 re f Q 0.859 0.898 0.945 rg 783 -600 76 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 783 -708 Td(6:)Tj
+ET q 0.859 0.898 0.945 rg 859 -600 323 -133 re f Q 0.859 0.898 0.945 rg 859 -600 323 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 859 -708 Td( )Tj
+ET 0.859 0.898 0.945 rg 886 -600 296 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 886 -708 Td(6.Kiem)Tj
+ET q 0.859 0.898 0.945 rg 1182 -600 129 -133 re f Q 0.859 0.898 0.945 rg 1182 -600 129 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1182 -708 Td( )Tj
+ET 0.859 0.898 0.945 rg 1209 -600 102 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1209 -708 Td(ke)Tj
+ET q 0.859 0.898 0.945 rg 1311 -600 229 -133 re f Q 0.859 0.898 0.945 rg 1311 -600 229 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1311 -708 Td( )Tj
+ET 0.859 0.898 0.945 rg 1338 -600 202 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1338 -708 Td(theo)Tj
+ET q 0.859 0.898 0.945 rg 1540 -600 267 -133 re f Q 0.859 0.898 0.945 rg 1540 -600 267 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1540 -708 Td( )Tj
+ET 0.859 0.898 0.945 rg 1567 -600 240 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1567 -708 Td(Nhan)Tj
+ET q 0.859 0.898 0.945 rg 1807 -600 222 -133 re f Q 0.859 0.898 0.945 rg 1807 -600 222 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1807 -708 Td( )Tj
+ET 0.859 0.898 0.945 rg 1834 -600 195 -133 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 100 Tf 0 Ts  0 g 1834 -708 Td(Vien)Tj
+/F2 92 Tf -1051 -108 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -839 126 -110 re f Q 0.922 0.945 0.867 rg 783 -839 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -929 Td(6.1:)Tj
+ET q 0.922 0.945 0.867 rg 909 -839 202 -110 re f Q 0.922 0.945 0.867 rg 909 -839 202 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -929 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -839 179 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -929 Td(Load)Tj
+ET q 0.922 0.945 0.867 rg 1111 -839 147 -110 re f Q 0.922 0.945 0.867 rg 1111 -839 147 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1111 -929 Td( )Tj
+ET 0.922 0.945 0.867 rg 1134 -839 124 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1134 -929 Td(t?n)Tj
+ET q 0.922 0.945 0.867 rg 1258 -839 167 -110 re f Q 0.922 0.945 0.867 rg 1258 -839 167 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1258 -929 Td( )Tj
+ET 0.922 0.945 0.867 rg 1281 -839 144 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1281 -929 Td(Kho)Tj
+ET q 0.922 0.945 0.867 rg 1425 -839 137 -110 re f Q 0.922 0.945 0.867 rg 1425 -839 137 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1425 -929 Td( )Tj
+ET 0.922 0.945 0.867 rg 1448 -839 114 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1448 -929 Td(NV)Tj
+ET q 0.922 0.945 0.867 rg 1562 -839 100 -110 re f Q 0.922 0.945 0.867 rg 1562 -839 100 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1562 -929 Td( )Tj
+ET 0.922 0.945 0.867 rg 1585 -839 77 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1585 -929 Td(t?)Tj
+ET q 0.922 0.945 0.867 rg 1662 -839 231 -110 re f Q 0.922 0.945 0.867 rg 1662 -839 231 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1662 -929 Td( )Tj
+ET 0.922 0.945 0.867 rg 1685 -839 208 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1685 -929 Td(cache)Tj
+/F2 92 Tf -902 -103 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -1055 126 -110 re f Q 0.922 0.945 0.867 rg 783 -1055 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -1145 Td(6.2:)Tj
+ET q 0.922 0.945 0.867 rg 909 -1055 176 -110 re f Q 0.922 0.945 0.867 rg 909 -1055 176 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -1145 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -1055 153 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -1145 Td(Luu:)Tj
+ET q 0.922 0.945 0.867 rg 1085 -1055 1366 -110 re f Q 0.922 0.945 0.867 rg 1085 -1055 1366 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1085 -1145 Td( )Tj
+ET 0.922 0.945 0.867 rg 1108 -1055 1343 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 1108 -1145 Td(NhanVien-TaiSan-TrangThai-ViTri-SL)Tj
+/F2 92 Tf -325 -103 Td( )Tj
+ET q 0.922 0.945 0.867 rg 783 -1271 126 -110 re f Q 0.922 0.945 0.867 rg 783 -1271 126 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 783 -1361 Td(6.3:)Tj
+ET q 0.922 0.945 0.867 rg 909 -1271 239 -110 re f Q 0.922 0.945 0.867 rg 909 -1271 239 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 909 -1361 Td( )Tj
+ET 0.922 0.945 0.867 rg 932 -1271 216 -110 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 83 Tf 0 Ts  0 g 932 -1361 Td(Duy?t)Tj
+/F2 92 Tf -149 -103 Td( )Tj
+ET q 1 1 1 rg 783 -1487 168 -100 re f Q 1 1 1 rg 783 -1487 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -1568 Td(6.3.1:)Tj
+ET q 1 1 1 rg 951 -1487 148 -100 re f Q 1 1 1 rg 951 -1487 148 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -1568 Td( )Tj
+ET 1 1 1 rg 971 -1487 128 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -1568 Td(C?p)Tj
+ET q 1 1 1 rg 1099 -1487 167 -100 re f Q 1 1 1 rg 1099 -1487 167 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1099 -1568 Td( )Tj
+ET 1 1 1 rg 1119 -1487 147 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1119 -1568 Td(nh?t)Tj
+ET q 1 1 1 rg 1266 -1487 221 -100 re f Q 1 1 1 rg 1266 -1487 221 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1266 -1568 Td( )Tj
+ET 1 1 1 rg 1286 -1487 201 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1286 -1568 Td(SL=SL)Tj
+ET q 1 1 1 rg 1487 -1487 179 -100 re f Q 1 1 1 rg 1487 -1487 179 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1487 -1568 Td( )Tj
+ET 1 1 1 rg 1507 -1487 159 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1507 -1568 Td(ki?m)Tj
+ET q 1 1 1 rg 1666 -1487 96 -100 re f Q 1 1 1 rg 1666 -1487 96 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1666 -1568 Td( )Tj
+ET 1 1 1 rg 1686 -1487 76 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1686 -1568 Td(kê)Tj
+/F2 92 Tf  0 g -903 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td(+/-)Tj
+111 0 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(T&#7890;N)Tj
+464 0 Td( )Tj
+26 0 Td(KHO)Tj
+199 0 Td( )Tj
+26 0 Td(NV)Tj
+-1002 -106 Td( )Tj
+ET q 1 1 1 rg 783 -2011 168 -100 re f Q 1 1 1 rg 783 -2011 168 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 783 -2092 Td(6.3.2:)Tj
+ET q 1 1 1 rg 951 -2011 146 -100 re f Q 1 1 1 rg 951 -2011 146 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 951 -2092 Td( )Tj
+ET 1 1 1 rg 971 -2011 126 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 971 -2092 Td(Xoa)Tj
+ET q 1 1 1 rg 1097 -2011 209 -100 re f Q 1 1 1 rg 1097 -2011 209 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1097 -2092 Td( )Tj
+ET 1 1 1 rg 1117 -2011 189 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1117 -2092 Td(cache)Tj
+ET q 1 1 1 rg 1306 -2011 131 -100 re f Q 1 1 1 rg 1306 -2011 131 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1306 -2092 Td( )Tj
+ET 1 1 1 rg 1326 -2011 111 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1326 -2092 Td(t?n)Tj
+ET q 1 1 1 rg 1437 -2011 143 -100 re f Q 1 1 1 rg 1437 -2011 143 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1437 -2092 Td( )Tj
+ET 1 1 1 rg 1457 -2011 123 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1457 -2092 Td(kho)Tj
+ET q 1 1 1 rg 1580 -2011 98 -100 re f Q 1 1 1 rg 1580 -2011 98 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1580 -2092 Td( )Tj
+ET 1 1 1 rg 1600 -2011 78 -100 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 75 Tf 0 Ts 0.149 0.149 0.149 rg 1600 -2092 Td(nv)Tj
+/F2 92 Tf  0 g -817 -102 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Cache)Tj
+265 0 Td( )Tj
+26 0 Td(TonKhoNV)Tj
+-467 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -2535 247 -122 re f Q 0.859 0.898 0.945 rg 783 -2535 247 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -2634 Td(Cache)Tj
+ET q 0.859 0.898 0.945 rg 1030 -2535 464 -122 re f Q 0.859 0.898 0.945 rg 1030 -2535 464 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1030 -2634 Td( )Tj
+ET 0.859 0.898 0.945 rg 1055 -2535 439 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1055 -2634 Td(TonKhoNV)Tj
+/F2 92 Tf  0 g -272 -106 Td( )Tj
+/F3 92 Tf 0 -106 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections:)Tj
+/F2 92 Tf -318 -106 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Xóa)Tj
+163 0 Td( )Tj
+26 0 Td(cache)Tj
+245 0 Td( )Tj
+26 0 Td(t?n)Tj
+128 0 Td( )Tj
+26 0 Td(kho)Tj
+148 0 Td( )Tj
+26 0 Td(NV )Tj
+-938 -106 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Xóa)Tj
+163 0 Td( )Tj
+26 0 Td(cache)Tj
+245 0 Td( )Tj
+26 0 Td(t?n)Tj
+128 0 Td( )Tj
+26 0 Td(Kho)Tj
+163 0 Td( )Tj
+26 0 Td(NV )Tj
+-979 -106 Td( )Tj
+26 0 Td(----)Tj
+124 0 Td( )Tj
+26 0 Td(Xoa)Tj
+163 0 Td( )Tj
+26 0 Td(cache)Tj
+245 0 Td( )Tj
+26 0 Td(t?n)Tj
+128 0 Td( )Tj
+26 0 Td(kho)Tj
+148 0 Td( )Tj
+26 0 Td(nv)Tj
+-964 -106 Td( )Tj
+/F3 92 Tf 0 -106 Td(Summary)Tj
+419 0 Td( )Tj
+26 0 Td(of)Tj
+87 0 Td( )Tj
+26 0 Td(Mental)Tj
+292 0 Td( )Tj
+26 0 Td(Connections)Tj
+556 0 Td( )Tj
+26 0 Td(in)Tj
+82 0 Td( )Tj
+26 0 Td(map:)Tj
+/F2 92 Tf -1566 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -3505 201 -122 re f Q 0.859 0.898 0.945 rg 783 -3505 201 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -3604 Td(Tang)Tj
+ET q 0.859 0.898 0.945 rg 984 -3505 117 -122 re f Q 0.859 0.898 0.945 rg 984 -3505 117 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 984 -3604 Td( )Tj
+ET 0.859 0.898 0.945 rg 1009 -3505 92 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1009 -3604 Td(SL)Tj
+ET q 0.859 0.898 0.945 rg 1101 -3505 248 -122 re f Q 0.859 0.898 0.945 rg 1101 -3505 248 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1101 -3604 Td( )Tj
+ET 0.859 0.898 0.945 rg 1126 -3505 223 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1126 -3604 Td(trong)Tj
+ET q 0.859 0.898 0.945 rg 1349 -3505 184 -122 re f Q 0.859 0.898 0.945 rg 1349 -3505 184 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1349 -3604 Td( )Tj
+ET 0.859 0.898 0.945 rg 1374 -3505 159 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1374 -3604 Td(Kho)Tj
+ET q 0.859 0.898 0.945 rg 1533 -3505 125 -122 re f Q 0.859 0.898 0.945 rg 1533 -3505 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1533 -3604 Td( )Tj
+ET 0.859 0.898 0.945 rg 1558 -3505 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1558 -3604 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1658 -3505 88 -122 re f Q 0.859 0.898 0.945 rg 1658 -3505 88 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1658 -3604 Td( )Tj
+ET 0.859 0.898 0.945 rg 1683 -3505 63 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1683 -3604 Td(+)Tj
+ET q 0.859 0.898 0.945 rg 1746 -3505 125 -122 re f Q 0.859 0.898 0.945 rg 1746 -3505 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1746 -3604 Td( )Tj
+ET 0.859 0.898 0.945 rg 1771 -3505 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1771 -3604 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1871 -3505 211 -122 re f Q 0.859 0.898 0.945 rg 1871 -3505 211 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1871 -3604 Td( )Tj
+ET 0.859 0.898 0.945 rg 1896 -3505 186 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1896 -3604 Td(T?N)Tj
+ET q 0.859 0.898 0.945 rg 2082 -3505 232 -122 re f Q 0.859 0.898 0.945 rg 2082 -3505 232 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2082 -3604 Td( )Tj
+ET 0.859 0.898 0.945 rg 2107 -3505 207 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2107 -3604 Td(KHO:)Tj
+ET q 0.859 0.898 0.945 rg 2314 -3505 925 -122 re f Q 0.859 0.898 0.945 rg 2314 -3505 925 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2314 -3604 Td( )Tj
+ET 0.859 0.898 0.945 rg 2339 -3505 900 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2339 -3604 Td(Kho-TaiSan-TrangThai)Tj
+/F2 92 Tf  0 g -1556 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -3733 155 -122 re f Q 0.859 0.898 0.945 rg 783 -3733 155 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -3832 Td(Xóa)Tj
+ET q 0.859 0.898 0.945 rg 938 -3733 258 -122 re f Q 0.859 0.898 0.945 rg 938 -3733 258 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 938 -3832 Td( )Tj
+ET 0.859 0.898 0.945 rg 963 -3733 233 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 963 -3832 Td(cache)Tj
+ET q 0.859 0.898 0.945 rg 1196 -3733 162 -122 re f Q 0.859 0.898 0.945 rg 1196 -3733 162 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1196 -3832 Td( )Tj
+ET 0.859 0.898 0.945 rg 1221 -3733 137 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1221 -3832 Td(t?n)Tj
+ET q 0.859 0.898 0.945 rg 1358 -3733 177 -122 re f Q 0.859 0.898 0.945 rg 1358 -3733 177 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1358 -3832 Td( )Tj
+ET 0.859 0.898 0.945 rg 1383 -3733 152 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1383 -3832 Td(kho)Tj
+ET q 0.859 0.898 0.945 rg 1535 -3733 125 -122 re f Q 0.859 0.898 0.945 rg 1535 -3733 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1535 -3832 Td( )Tj
+ET 0.859 0.898 0.945 rg 1560 -3733 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1560 -3832 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1660 -3733 125 -122 re f Q 0.859 0.898 0.945 rg 1660 -3733 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1660 -3832 Td( )Tj
+ET 0.859 0.898 0.945 rg 1685 -3733 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1685 -3832 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1785 -3733 272 -122 re f Q 0.859 0.898 0.945 rg 1785 -3733 272 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1785 -3832 Td( )Tj
+ET 0.859 0.898 0.945 rg 1810 -3733 247 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1810 -3832 Td(Cache)Tj
+ET q 0.859 0.898 0.945 rg 2057 -3733 286 -122 re f Q 0.859 0.898 0.945 rg 2057 -3733 286 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2057 -3832 Td( )Tj
+ET 0.859 0.898 0.945 rg 2082 -3733 261 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2082 -3832 Td(TonKo)Tj
+/F2 92 Tf  0 g -1299 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -3961 158 -122 re f Q 0.859 0.898 0.945 rg 783 -3961 158 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -4060 Td(C?p)Tj
+ET q 0.859 0.898 0.945 rg 941 -3961 207 -122 re f Q 0.859 0.898 0.945 rg 941 -3961 207 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 941 -4060 Td( )Tj
+ET 0.859 0.898 0.945 rg 966 -3961 182 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 966 -4060 Td(nh?t)Tj
+ET q 0.859 0.898 0.945 rg 1148 -3961 210 -122 re f Q 0.859 0.898 0.945 rg 1148 -3961 210 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1148 -4060 Td( )Tj
+ET 0.859 0.898 0.945 rg 1173 -3961 185 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1173 -4060 Td(sl=sl)Tj
+ET q 0.859 0.898 0.945 rg 1358 -3961 220 -122 re f Q 0.859 0.898 0.945 rg 1358 -3961 220 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1358 -4060 Td( )Tj
+ET 0.859 0.898 0.945 rg 1383 -3961 195 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1383 -4060 Td(ki?m)Tj
+ET q 0.859 0.898 0.945 rg 1578 -3961 119 -122 re f Q 0.859 0.898 0.945 rg 1578 -3961 119 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1578 -4060 Td( )Tj
+ET 0.859 0.898 0.945 rg 1603 -3961 94 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1603 -4060 Td(kê)Tj
+ET q 0.859 0.898 0.945 rg 1697 -3961 125 -122 re f Q 0.859 0.898 0.945 rg 1697 -3961 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1697 -4060 Td( )Tj
+ET 0.859 0.898 0.945 rg 1722 -3961 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1722 -4060 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1822 -3961 161 -122 re f Q 0.859 0.898 0.945 rg 1822 -3961 161 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1822 -4060 Td( )Tj
+ET 0.859 0.898 0.945 rg 1847 -3961 136 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1847 -4060 Td(+/-)Tj
+ET q 0.859 0.898 0.945 rg 1983 -3961 125 -122 re f Q 0.859 0.898 0.945 rg 1983 -3961 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1983 -4060 Td( )Tj
+ET 0.859 0.898 0.945 rg 2008 -3961 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2008 -4060 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 2108 -3961 211 -122 re f Q 0.859 0.898 0.945 rg 2108 -3961 211 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2108 -4060 Td( )Tj
+ET 0.859 0.898 0.945 rg 2133 -3961 186 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2133 -4060 Td(T?N)Tj
+ET q 0.859 0.898 0.945 rg 2319 -3961 232 -122 re f Q 0.859 0.898 0.945 rg 2319 -3961 232 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2319 -4060 Td( )Tj
+ET 0.859 0.898 0.945 rg 2344 -3961 207 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2344 -4060 Td(KHO:)Tj
+ET q 0.859 0.898 0.945 rg 2551 -3961 925 -122 re f Q 0.859 0.898 0.945 rg 2551 -3961 925 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2551 -4060 Td( )Tj
+ET 0.859 0.898 0.945 rg 2576 -3961 900 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2576 -4060 Td(Kho-TaiSan-TrangThai)Tj
+/F2 92 Tf  0 g -1793 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -4189 155 -122 re f Q 0.859 0.898 0.945 rg 783 -4189 155 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -4288 Td(Xóa)Tj
+ET q 0.859 0.898 0.945 rg 938 -4189 258 -122 re f Q 0.859 0.898 0.945 rg 938 -4189 258 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 938 -4288 Td( )Tj
+ET 0.859 0.898 0.945 rg 963 -4189 233 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 963 -4288 Td(cache)Tj
+ET q 0.859 0.898 0.945 rg 1196 -4189 162 -122 re f Q 0.859 0.898 0.945 rg 1196 -4189 162 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1196 -4288 Td( )Tj
+ET 0.859 0.898 0.945 rg 1221 -4189 137 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1221 -4288 Td(t?n)Tj
+ET q 0.859 0.898 0.945 rg 1358 -4189 177 -122 re f Q 0.859 0.898 0.945 rg 1358 -4189 177 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1358 -4288 Td( )Tj
+ET 0.859 0.898 0.945 rg 1383 -4189 152 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1383 -4288 Td(kho)Tj
+ET q 0.859 0.898 0.945 rg 1535 -4189 125 -122 re f Q 0.859 0.898 0.945 rg 1535 -4189 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1535 -4288 Td( )Tj
+ET 0.859 0.898 0.945 rg 1560 -4189 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1560 -4288 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1660 -4189 125 -122 re f Q 0.859 0.898 0.945 rg 1660 -4189 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1660 -4288 Td( )Tj
+ET 0.859 0.898 0.945 rg 1685 -4189 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1685 -4288 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1785 -4189 272 -122 re f Q 0.859 0.898 0.945 rg 1785 -4189 272 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1785 -4288 Td( )Tj
+ET 0.859 0.898 0.945 rg 1810 -4189 247 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1810 -4288 Td(Cache)Tj
+ET q 0.859 0.898 0.945 rg 2057 -4189 286 -122 re f Q 0.859 0.898 0.945 rg 2057 -4189 286 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2057 -4288 Td( )Tj
+ET 0.859 0.898 0.945 rg 2082 -4189 261 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2082 -4288 Td(TonKo)Tj
+/F2 92 Tf  0 g -1299 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -4417 211 -122 re f Q 0.859 0.898 0.945 rg 783 -4417 211 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -4516 Td(Gi?m)Tj
+ET q 0.859 0.898 0.945 rg 994 -4417 117 -122 re f Q 0.859 0.898 0.945 rg 994 -4417 117 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 994 -4516 Td( )Tj
+ET 0.859 0.898 0.945 rg 1019 -4417 92 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1019 -4516 Td(SL)Tj
+ET q 0.859 0.898 0.945 rg 1111 -4417 248 -122 re f Q 0.859 0.898 0.945 rg 1111 -4417 248 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1111 -4516 Td( )Tj
+ET 0.859 0.898 0.945 rg 1136 -4417 223 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1136 -4516 Td(trong)Tj
+ET q 0.859 0.898 0.945 rg 1359 -4417 184 -122 re f Q 0.859 0.898 0.945 rg 1359 -4417 184 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1359 -4516 Td( )Tj
+ET 0.859 0.898 0.945 rg 1384 -4417 159 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1384 -4516 Td(Kho)Tj
+ET q 0.859 0.898 0.945 rg 1543 -4417 125 -122 re f Q 0.859 0.898 0.945 rg 1543 -4417 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1543 -4516 Td( )Tj
+ET 0.859 0.898 0.945 rg 1568 -4417 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1568 -4516 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1668 -4417 62 -122 re f Q 0.859 0.898 0.945 rg 1668 -4417 62 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1668 -4516 Td( )Tj
+ET 0.859 0.898 0.945 rg 1693 -4417 37 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1693 -4516 Td(-)Tj
+ET q 0.859 0.898 0.945 rg 1730 -4417 125 -122 re f Q 0.859 0.898 0.945 rg 1730 -4417 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1730 -4516 Td( )Tj
+ET 0.859 0.898 0.945 rg 1755 -4417 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1755 -4516 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1855 -4417 211 -122 re f Q 0.859 0.898 0.945 rg 1855 -4417 211 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1855 -4516 Td( )Tj
+ET 0.859 0.898 0.945 rg 1880 -4417 186 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1880 -4516 Td(T?N)Tj
+ET q 0.859 0.898 0.945 rg 2066 -4417 232 -122 re f Q 0.859 0.898 0.945 rg 2066 -4417 232 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2066 -4516 Td( )Tj
+ET 0.859 0.898 0.945 rg 2091 -4417 207 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2091 -4516 Td(KHO:)Tj
+ET q 0.859 0.898 0.945 rg 2298 -4417 925 -122 re f Q 0.859 0.898 0.945 rg 2298 -4417 925 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2298 -4516 Td( )Tj
+ET 0.859 0.898 0.945 rg 2323 -4417 900 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2323 -4516 Td(Kho-TaiSan-TrangThai)Tj
+/F2 92 Tf  0 g -1540 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -4645 155 -122 re f Q 0.859 0.898 0.945 rg 783 -4645 155 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -4744 Td(Xóa)Tj
+ET q 0.859 0.898 0.945 rg 938 -4645 258 -122 re f Q 0.859 0.898 0.945 rg 938 -4645 258 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 938 -4744 Td( )Tj
+ET 0.859 0.898 0.945 rg 963 -4645 233 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 963 -4744 Td(cache)Tj
+ET q 0.859 0.898 0.945 rg 1196 -4645 162 -122 re f Q 0.859 0.898 0.945 rg 1196 -4645 162 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1196 -4744 Td( )Tj
+ET 0.859 0.898 0.945 rg 1221 -4645 137 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1221 -4744 Td(t?n)Tj
+ET q 0.859 0.898 0.945 rg 1358 -4645 177 -122 re f Q 0.859 0.898 0.945 rg 1358 -4645 177 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1358 -4744 Td( )Tj
+ET 0.859 0.898 0.945 rg 1383 -4645 152 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1383 -4744 Td(kho)Tj
+ET q 0.859 0.898 0.945 rg 1535 -4645 125 -122 re f Q 0.859 0.898 0.945 rg 1535 -4645 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1535 -4744 Td( )Tj
+ET 0.859 0.898 0.945 rg 1560 -4645 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1560 -4744 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1660 -4645 125 -122 re f Q 0.859 0.898 0.945 rg 1660 -4645 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1660 -4744 Td( )Tj
+ET 0.859 0.898 0.945 rg 1685 -4645 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1685 -4744 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1785 -4645 272 -122 re f Q 0.859 0.898 0.945 rg 1785 -4645 272 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1785 -4744 Td( )Tj
+ET 0.859 0.898 0.945 rg 1810 -4645 247 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1810 -4744 Td(Cache)Tj
+ET q 0.859 0.898 0.945 rg 2057 -4645 286 -122 re f Q 0.859 0.898 0.945 rg 2057 -4645 286 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2057 -4744 Td( )Tj
+ET 0.859 0.898 0.945 rg 2082 -4645 261 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2082 -4744 Td(TonKo)Tj
+/F2 92 Tf  0 g -1299 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -4873 211 -122 re f Q 0.859 0.898 0.945 rg 783 -4873 211 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -4972 Td(Gi?m)Tj
+ET q 0.859 0.898 0.945 rg 994 -4873 162 -122 re f Q 0.859 0.898 0.945 rg 994 -4873 162 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 994 -4972 Td( )Tj
+ET 0.859 0.898 0.945 rg 1019 -4873 137 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1019 -4972 Td(t?n)Tj
+ET q 0.859 0.898 0.945 rg 1156 -4873 177 -122 re f Q 0.859 0.898 0.945 rg 1156 -4873 177 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1156 -4972 Td( )Tj
+ET 0.859 0.898 0.945 rg 1181 -4873 152 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1181 -4972 Td(kho)Tj
+ET q 0.859 0.898 0.945 rg 1333 -4873 125 -122 re f Q 0.859 0.898 0.945 rg 1333 -4873 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1333 -4972 Td( )Tj
+ET 0.859 0.898 0.945 rg 1358 -4873 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1358 -4972 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1458 -4873 62 -122 re f Q 0.859 0.898 0.945 rg 1458 -4873 62 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1458 -4972 Td( )Tj
+ET 0.859 0.898 0.945 rg 1483 -4873 37 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1483 -4972 Td(-)Tj
+ET q 0.859 0.898 0.945 rg 1520 -4873 125 -122 re f Q 0.859 0.898 0.945 rg 1520 -4873 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1520 -4972 Td( )Tj
+ET 0.859 0.898 0.945 rg 1545 -4873 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1545 -4972 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1645 -4873 211 -122 re f Q 0.859 0.898 0.945 rg 1645 -4873 211 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1645 -4972 Td( )Tj
+ET 0.859 0.898 0.945 rg 1670 -4873 186 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1670 -4972 Td(T?N)Tj
+ET q 0.859 0.898 0.945 rg 1856 -4873 232 -122 re f Q 0.859 0.898 0.945 rg 1856 -4873 232 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1856 -4972 Td( )Tj
+ET 0.859 0.898 0.945 rg 1881 -4873 207 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1881 -4972 Td(KHO:)Tj
+ET q 0.859 0.898 0.945 rg 2088 -4873 925 -122 re f Q 0.859 0.898 0.945 rg 2088 -4873 925 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2088 -4972 Td( )Tj
+ET 0.859 0.898 0.945 rg 2113 -4873 900 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2113 -4972 Td(Kho-TaiSan-TrangThai)Tj
+/F2 92 Tf  0 g -1330 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -5101 201 -122 re f Q 0.859 0.898 0.945 rg 783 -5101 201 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -5200 Td(Tang)Tj
+ET q 0.859 0.898 0.945 rg 984 -5101 162 -122 re f Q 0.859 0.898 0.945 rg 984 -5101 162 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 984 -5200 Td( )Tj
+ET 0.859 0.898 0.945 rg 1009 -5101 137 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1009 -5200 Td(t?n)Tj
+ET q 0.859 0.898 0.945 rg 1146 -5101 177 -122 re f Q 0.859 0.898 0.945 rg 1146 -5101 177 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1146 -5200 Td( )Tj
+ET 0.859 0.898 0.945 rg 1171 -5101 152 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1171 -5200 Td(kho)Tj
+ET q 0.859 0.898 0.945 rg 1323 -5101 151 -122 re f Q 0.859 0.898 0.945 rg 1323 -5101 151 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1323 -5200 Td( )Tj
+ET 0.859 0.898 0.945 rg 1348 -5101 126 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1348 -5200 Td(NV)Tj
+ET q 0.859 0.898 0.945 rg 1474 -5101 125 -122 re f Q 0.859 0.898 0.945 rg 1474 -5101 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1474 -5200 Td( )Tj
+ET 0.859 0.898 0.945 rg 1499 -5101 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1499 -5200 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1599 -5101 88 -122 re f Q 0.859 0.898 0.945 rg 1599 -5101 88 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1599 -5200 Td( )Tj
+ET 0.859 0.898 0.945 rg 1624 -5101 63 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1624 -5200 Td(+)Tj
+ET q 0.859 0.898 0.945 rg 1687 -5101 125 -122 re f Q 0.859 0.898 0.945 rg 1687 -5101 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1687 -5200 Td( )Tj
+ET 0.859 0.898 0.945 rg 1712 -5101 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1712 -5200 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1812 -5101 211 -122 re f Q 0.859 0.898 0.945 rg 1812 -5101 211 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1812 -5200 Td( )Tj
+ET 0.859 0.898 0.945 rg 1837 -5101 186 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1837 -5200 Td(T?N)Tj
+ET q 0.859 0.898 0.945 rg 2023 -5101 212 -122 re f Q 0.859 0.898 0.945 rg 2023 -5101 212 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2023 -5200 Td( )Tj
+ET 0.859 0.898 0.945 rg 2048 -5101 187 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2048 -5200 Td(KHO)Tj
+ET q 0.859 0.898 0.945 rg 2235 -5101 151 -122 re f Q 0.859 0.898 0.945 rg 2235 -5101 151 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2235 -5200 Td( )Tj
+ET 0.859 0.898 0.945 rg 2260 -5101 126 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2260 -5200 Td(NV)Tj
+/F2 92 Tf  0 g -1477 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -5329 155 -122 re f Q 0.859 0.898 0.945 rg 783 -5329 155 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -5428 Td(Xóa)Tj
+ET q 0.859 0.898 0.945 rg 938 -5329 258 -122 re f Q 0.859 0.898 0.945 rg 938 -5329 258 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 938 -5428 Td( )Tj
+ET 0.859 0.898 0.945 rg 963 -5329 233 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 963 -5428 Td(cache)Tj
+ET q 0.859 0.898 0.945 rg 1196 -5329 162 -122 re f Q 0.859 0.898 0.945 rg 1196 -5329 162 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1196 -5428 Td( )Tj
+ET 0.859 0.898 0.945 rg 1221 -5329 137 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1221 -5428 Td(t?n)Tj
+ET q 0.859 0.898 0.945 rg 1358 -5329 177 -122 re f Q 0.859 0.898 0.945 rg 1358 -5329 177 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1358 -5428 Td( )Tj
+ET 0.859 0.898 0.945 rg 1383 -5329 152 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1383 -5428 Td(kho)Tj
+ET q 0.859 0.898 0.945 rg 1535 -5329 125 -122 re f Q 0.859 0.898 0.945 rg 1535 -5329 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1535 -5428 Td( )Tj
+ET 0.859 0.898 0.945 rg 1560 -5329 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1560 -5428 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1660 -5329 125 -122 re f Q 0.859 0.898 0.945 rg 1660 -5329 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1660 -5428 Td( )Tj
+ET 0.859 0.898 0.945 rg 1685 -5329 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1685 -5428 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1785 -5329 272 -122 re f Q 0.859 0.898 0.945 rg 1785 -5329 272 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1785 -5428 Td( )Tj
+ET 0.859 0.898 0.945 rg 1810 -5329 247 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1810 -5428 Td(Cache)Tj
+ET q 0.859 0.898 0.945 rg 2057 -5329 286 -122 re f Q 0.859 0.898 0.945 rg 2057 -5329 286 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2057 -5428 Td( )Tj
+ET 0.859 0.898 0.945 rg 2082 -5329 261 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2082 -5428 Td(TonKo)Tj
+/F2 92 Tf  0 g -1299 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -5557 155 -122 re f Q 0.859 0.898 0.945 rg 783 -5557 155 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -5656 Td(Xóa)Tj
+ET q 0.859 0.898 0.945 rg 938 -5557 258 -122 re f Q 0.859 0.898 0.945 rg 938 -5557 258 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 938 -5656 Td( )Tj
+ET 0.859 0.898 0.945 rg 963 -5557 233 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 963 -5656 Td(cache)Tj
+ET q 0.859 0.898 0.945 rg 1196 -5557 162 -122 re f Q 0.859 0.898 0.945 rg 1196 -5557 162 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1196 -5656 Td( )Tj
+ET 0.859 0.898 0.945 rg 1221 -5557 137 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1221 -5656 Td(t?n)Tj
+ET q 0.859 0.898 0.945 rg 1358 -5557 177 -122 re f Q 0.859 0.898 0.945 rg 1358 -5557 177 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1358 -5656 Td( )Tj
+ET 0.859 0.898 0.945 rg 1383 -5557 152 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1383 -5656 Td(kho)Tj
+ET q 0.859 0.898 0.945 rg 1535 -5557 151 -122 re f Q 0.859 0.898 0.945 rg 1535 -5557 151 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1535 -5656 Td( )Tj
+ET 0.859 0.898 0.945 rg 1560 -5557 126 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1560 -5656 Td(NV)Tj
+ET q 0.859 0.898 0.945 rg 1686 -5557 125 -122 re f Q 0.859 0.898 0.945 rg 1686 -5557 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1686 -5656 Td( )Tj
+ET 0.859 0.898 0.945 rg 1711 -5557 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1711 -5656 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1811 -5557 125 -122 re f Q 0.859 0.898 0.945 rg 1811 -5557 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1811 -5656 Td( )Tj
+ET 0.859 0.898 0.945 rg 1836 -5557 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1836 -5656 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1936 -5557 272 -122 re f Q 0.859 0.898 0.945 rg 1936 -5557 272 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1936 -5656 Td( )Tj
+ET 0.859 0.898 0.945 rg 1961 -5557 247 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1961 -5656 Td(Cache)Tj
+ET q 0.859 0.898 0.945 rg 2208 -5557 464 -122 re f Q 0.859 0.898 0.945 rg 2208 -5557 464 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2208 -5656 Td( )Tj
+ET 0.859 0.898 0.945 rg 2233 -5557 439 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2233 -5656 Td(TonKhoNV)Tj
+/F2 92 Tf  0 g -1450 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -5785 201 -122 re f Q 0.859 0.898 0.945 rg 783 -5785 201 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -5884 Td(Tang)Tj
+ET q 0.859 0.898 0.945 rg 984 -5785 230 -122 re f Q 0.859 0.898 0.945 rg 984 -5785 230 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 984 -5884 Td( )Tj
+ET 0.859 0.898 0.945 rg 1009 -5785 205 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1009 -5884 Td(nh?p)Tj
+ET q 0.859 0.898 0.945 rg 1214 -5785 184 -122 re f Q 0.859 0.898 0.945 rg 1214 -5785 184 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1214 -5884 Td( )Tj
+ET 0.859 0.898 0.945 rg 1239 -5785 159 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1239 -5884 Td(Kho)Tj
+ET q 0.859 0.898 0.945 rg 1398 -5785 125 -122 re f Q 0.859 0.898 0.945 rg 1398 -5785 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1398 -5884 Td( )Tj
+ET 0.859 0.898 0.945 rg 1423 -5785 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1423 -5884 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1523 -5785 88 -122 re f Q 0.859 0.898 0.945 rg 1523 -5785 88 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1523 -5884 Td( )Tj
+ET 0.859 0.898 0.945 rg 1548 -5785 63 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1548 -5884 Td(+)Tj
+ET q 0.859 0.898 0.945 rg 1611 -5785 125 -122 re f Q 0.859 0.898 0.945 rg 1611 -5785 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1611 -5884 Td( )Tj
+ET 0.859 0.898 0.945 rg 1636 -5785 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1636 -5884 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1736 -5785 211 -122 re f Q 0.859 0.898 0.945 rg 1736 -5785 211 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1736 -5884 Td( )Tj
+ET 0.859 0.898 0.945 rg 1761 -5785 186 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1761 -5884 Td(T?N)Tj
+ET q 0.859 0.898 0.945 rg 1947 -5785 232 -122 re f Q 0.859 0.898 0.945 rg 1947 -5785 232 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1947 -5884 Td( )Tj
+ET 0.859 0.898 0.945 rg 1972 -5785 207 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1972 -5884 Td(KHO:)Tj
+ET q 0.859 0.898 0.945 rg 2179 -5785 925 -122 re f Q 0.859 0.898 0.945 rg 2179 -5785 925 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2179 -5884 Td( )Tj
+ET 0.859 0.898 0.945 rg 2204 -5785 900 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2204 -5884 Td(Kho-TaiSan-TrangThai)Tj
+ET Q Q 
+endstream
+endobj
+8 0 obj<</Length 13552 >>
+stream
+q q Q q 0.12 0 0 0.12 0 792 cm 
+BT 1 0 0 1 0 0 Tm
+/F2 92 Tf 0 Ts  0 g 783 -683 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -706 211 -122 re f Q 0.859 0.898 0.945 rg 783 -706 211 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -805 Td(Gi?m)Tj
+ET q 0.859 0.898 0.945 rg 994 -706 162 -122 re f Q 0.859 0.898 0.945 rg 994 -706 162 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 994 -805 Td( )Tj
+ET 0.859 0.898 0.945 rg 1019 -706 137 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1019 -805 Td(t?n)Tj
+ET q 0.859 0.898 0.945 rg 1156 -706 177 -122 re f Q 0.859 0.898 0.945 rg 1156 -706 177 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1156 -805 Td( )Tj
+ET 0.859 0.898 0.945 rg 1181 -706 152 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1181 -805 Td(kho)Tj
+ET q 0.859 0.898 0.945 rg 1333 -706 151 -122 re f Q 0.859 0.898 0.945 rg 1333 -706 151 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1333 -805 Td( )Tj
+ET 0.859 0.898 0.945 rg 1358 -706 126 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1358 -805 Td(NV)Tj
+ET q 0.859 0.898 0.945 rg 1484 -706 125 -122 re f Q 0.859 0.898 0.945 rg 1484 -706 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1484 -805 Td( )Tj
+ET 0.859 0.898 0.945 rg 1509 -706 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1509 -805 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1609 -706 62 -122 re f Q 0.859 0.898 0.945 rg 1609 -706 62 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1609 -805 Td( )Tj
+ET 0.859 0.898 0.945 rg 1634 -706 37 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1634 -805 Td(-)Tj
+ET q 0.859 0.898 0.945 rg 1671 -706 125 -122 re f Q 0.859 0.898 0.945 rg 1671 -706 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1671 -805 Td( )Tj
+ET 0.859 0.898 0.945 rg 1696 -706 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1696 -805 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1796 -706 211 -122 re f Q 0.859 0.898 0.945 rg 1796 -706 211 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1796 -805 Td( )Tj
+ET 0.859 0.898 0.945 rg 1821 -706 186 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1821 -805 Td(T?N)Tj
+ET q 0.859 0.898 0.945 rg 2007 -706 212 -122 re f Q 0.859 0.898 0.945 rg 2007 -706 212 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2007 -805 Td( )Tj
+ET 0.859 0.898 0.945 rg 2032 -706 187 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2032 -805 Td(KHO)Tj
+ET q 0.859 0.898 0.945 rg 2219 -706 151 -122 re f Q 0.859 0.898 0.945 rg 2219 -706 151 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2219 -805 Td( )Tj
+ET 0.859 0.898 0.945 rg 2244 -706 126 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2244 -805 Td(NV)Tj
+/F2 92 Tf  0 g -1461 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -934 155 -122 re f Q 0.859 0.898 0.945 rg 783 -934 155 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -1033 Td(Xóa)Tj
+ET q 0.859 0.898 0.945 rg 938 -934 258 -122 re f Q 0.859 0.898 0.945 rg 938 -934 258 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 938 -1033 Td( )Tj
+ET 0.859 0.898 0.945 rg 963 -934 233 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 963 -1033 Td(cache)Tj
+ET q 0.859 0.898 0.945 rg 1196 -934 162 -122 re f Q 0.859 0.898 0.945 rg 1196 -934 162 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1196 -1033 Td( )Tj
+ET 0.859 0.898 0.945 rg 1221 -934 137 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1221 -1033 Td(t?n)Tj
+ET q 0.859 0.898 0.945 rg 1358 -934 184 -122 re f Q 0.859 0.898 0.945 rg 1358 -934 184 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1358 -1033 Td( )Tj
+ET 0.859 0.898 0.945 rg 1383 -934 159 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1383 -1033 Td(Kho)Tj
+ET q 0.859 0.898 0.945 rg 1542 -934 125 -122 re f Q 0.859 0.898 0.945 rg 1542 -934 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1542 -1033 Td( )Tj
+ET 0.859 0.898 0.945 rg 1567 -934 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1567 -1033 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1667 -934 125 -122 re f Q 0.859 0.898 0.945 rg 1667 -934 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1667 -1033 Td( )Tj
+ET 0.859 0.898 0.945 rg 1692 -934 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1692 -1033 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1792 -934 272 -122 re f Q 0.859 0.898 0.945 rg 1792 -934 272 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1792 -1033 Td( )Tj
+ET 0.859 0.898 0.945 rg 1817 -934 247 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1817 -1033 Td(Cache)Tj
+ET q 0.859 0.898 0.945 rg 2064 -934 286 -122 re f Q 0.859 0.898 0.945 rg 2064 -934 286 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2064 -1033 Td( )Tj
+ET 0.859 0.898 0.945 rg 2089 -934 261 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2089 -1033 Td(TonKo)Tj
+/F2 92 Tf  0 g -1306 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -1162 155 -122 re f Q 0.859 0.898 0.945 rg 783 -1162 155 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -1261 Td(Xóa)Tj
+ET q 0.859 0.898 0.945 rg 938 -1162 258 -122 re f Q 0.859 0.898 0.945 rg 938 -1162 258 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 938 -1261 Td( )Tj
+ET 0.859 0.898 0.945 rg 963 -1162 233 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 963 -1261 Td(cache)Tj
+ET q 0.859 0.898 0.945 rg 1196 -1162 162 -122 re f Q 0.859 0.898 0.945 rg 1196 -1162 162 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1196 -1261 Td( )Tj
+ET 0.859 0.898 0.945 rg 1221 -1162 137 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1221 -1261 Td(t?n)Tj
+ET q 0.859 0.898 0.945 rg 1358 -1162 184 -122 re f Q 0.859 0.898 0.945 rg 1358 -1162 184 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1358 -1261 Td( )Tj
+ET 0.859 0.898 0.945 rg 1383 -1162 159 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1383 -1261 Td(Kho)Tj
+ET q 0.859 0.898 0.945 rg 1542 -1162 151 -122 re f Q 0.859 0.898 0.945 rg 1542 -1162 151 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1542 -1261 Td( )Tj
+ET 0.859 0.898 0.945 rg 1567 -1162 126 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1567 -1261 Td(NV)Tj
+ET q 0.859 0.898 0.945 rg 1693 -1162 125 -122 re f Q 0.859 0.898 0.945 rg 1693 -1162 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1693 -1261 Td( )Tj
+ET 0.859 0.898 0.945 rg 1718 -1162 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1718 -1261 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1818 -1162 125 -122 re f Q 0.859 0.898 0.945 rg 1818 -1162 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1818 -1261 Td( )Tj
+ET 0.859 0.898 0.945 rg 1843 -1162 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1843 -1261 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1943 -1162 272 -122 re f Q 0.859 0.898 0.945 rg 1943 -1162 272 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1943 -1261 Td( )Tj
+ET 0.859 0.898 0.945 rg 1968 -1162 247 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1968 -1261 Td(Cache)Tj
+ET q 0.859 0.898 0.945 rg 2215 -1162 464 -122 re f Q 0.859 0.898 0.945 rg 2215 -1162 464 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2215 -1261 Td( )Tj
+ET 0.859 0.898 0.945 rg 2240 -1162 439 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2240 -1261 Td(TonKhoNV)Tj
+/F2 92 Tf  0 g -1457 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -1390 158 -122 re f Q 0.859 0.898 0.945 rg 783 -1390 158 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -1489 Td(C?p)Tj
+ET q 0.859 0.898 0.945 rg 941 -1390 207 -122 re f Q 0.859 0.898 0.945 rg 941 -1390 207 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 941 -1489 Td( )Tj
+ET 0.859 0.898 0.945 rg 966 -1390 182 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 966 -1489 Td(nh?t)Tj
+ET q 0.859 0.898 0.945 rg 1148 -1390 272 -122 re f Q 0.859 0.898 0.945 rg 1148 -1390 272 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1148 -1489 Td( )Tj
+ET 0.859 0.898 0.945 rg 1173 -1390 247 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1173 -1489 Td(SL=SL)Tj
+ET q 0.859 0.898 0.945 rg 1420 -1390 220 -122 re f Q 0.859 0.898 0.945 rg 1420 -1390 220 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1420 -1489 Td( )Tj
+ET 0.859 0.898 0.945 rg 1445 -1390 195 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1445 -1489 Td(ki?m)Tj
+ET q 0.859 0.898 0.945 rg 1640 -1390 119 -122 re f Q 0.859 0.898 0.945 rg 1640 -1390 119 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1640 -1489 Td( )Tj
+ET 0.859 0.898 0.945 rg 1665 -1390 94 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1665 -1489 Td(kê)Tj
+ET q 0.859 0.898 0.945 rg 1759 -1390 125 -122 re f Q 0.859 0.898 0.945 rg 1759 -1390 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1759 -1489 Td( )Tj
+ET 0.859 0.898 0.945 rg 1784 -1390 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1784 -1489 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1884 -1390 161 -122 re f Q 0.859 0.898 0.945 rg 1884 -1390 161 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1884 -1489 Td( )Tj
+ET 0.859 0.898 0.945 rg 1909 -1390 136 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1909 -1489 Td(+/-)Tj
+ET q 0.859 0.898 0.945 rg 2045 -1390 125 -122 re f Q 0.859 0.898 0.945 rg 2045 -1390 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2045 -1489 Td( )Tj
+ET 0.859 0.898 0.945 rg 2070 -1390 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2070 -1489 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 2170 -1390 211 -122 re f Q 0.859 0.898 0.945 rg 2170 -1390 211 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2170 -1489 Td( )Tj
+ET 0.859 0.898 0.945 rg 2195 -1390 186 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2195 -1489 Td(T?N)Tj
+ET q 0.859 0.898 0.945 rg 2381 -1390 212 -122 re f Q 0.859 0.898 0.945 rg 2381 -1390 212 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2381 -1489 Td( )Tj
+ET 0.859 0.898 0.945 rg 2406 -1390 187 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2406 -1489 Td(KHO)Tj
+ET q 0.859 0.898 0.945 rg 2593 -1390 151 -122 re f Q 0.859 0.898 0.945 rg 2593 -1390 151 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2593 -1489 Td( )Tj
+ET 0.859 0.898 0.945 rg 2618 -1390 126 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2618 -1489 Td(NV)Tj
+/F2 92 Tf  0 g -1835 -106 Td( )Tj
+ET q 0.859 0.898 0.945 rg 783 -1618 155 -122 re f Q 0.859 0.898 0.945 rg 783 -1618 155 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 783 -1717 Td(Xoa)Tj
+ET q 0.859 0.898 0.945 rg 938 -1618 258 -122 re f Q 0.859 0.898 0.945 rg 938 -1618 258 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 938 -1717 Td( )Tj
+ET 0.859 0.898 0.945 rg 963 -1618 233 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 963 -1717 Td(cache)Tj
+ET q 0.859 0.898 0.945 rg 1196 -1618 162 -122 re f Q 0.859 0.898 0.945 rg 1196 -1618 162 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1196 -1717 Td( )Tj
+ET 0.859 0.898 0.945 rg 1221 -1618 137 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1221 -1717 Td(t?n)Tj
+ET q 0.859 0.898 0.945 rg 1358 -1618 177 -122 re f Q 0.859 0.898 0.945 rg 1358 -1618 177 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1358 -1717 Td( )Tj
+ET 0.859 0.898 0.945 rg 1383 -1618 152 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1383 -1717 Td(kho)Tj
+ET q 0.859 0.898 0.945 rg 1535 -1618 121 -122 re f Q 0.859 0.898 0.945 rg 1535 -1618 121 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1535 -1717 Td( )Tj
+ET 0.859 0.898 0.945 rg 1560 -1618 96 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1560 -1717 Td(nv)Tj
+ET q 0.859 0.898 0.945 rg 1656 -1618 125 -122 re f Q 0.859 0.898 0.945 rg 1656 -1618 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1656 -1717 Td( )Tj
+ET 0.859 0.898 0.945 rg 1681 -1618 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1681 -1717 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1781 -1618 125 -122 re f Q 0.859 0.898 0.945 rg 1781 -1618 125 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1781 -1717 Td( )Tj
+ET 0.859 0.898 0.945 rg 1806 -1618 100 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1806 -1717 Td(->)Tj
+ET q 0.859 0.898 0.945 rg 1906 -1618 272 -122 re f Q 0.859 0.898 0.945 rg 1906 -1618 272 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1906 -1717 Td( )Tj
+ET 0.859 0.898 0.945 rg 1931 -1618 247 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 1931 -1717 Td(Cache)Tj
+ET q 0.859 0.898 0.945 rg 2178 -1618 464 -122 re f Q 0.859 0.898 0.945 rg 2178 -1618 464 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2178 -1717 Td( )Tj
+ET 0.859 0.898 0.945 rg 2203 -1618 439 -122 re f 
+BT 1 0 0 1 0 0 Tm
+/F1 92 Tf 0 Ts 0.149 0.149 0.149 rg 2203 -1717 Td(TonKhoNV)Tj
+/F2 92 Tf  0 g -1420 -106 Td( )Tj
+ET Q Q 
+endstream
+endobj
+3 0 obj<<
+/Type/Encoding/Differences
+[128 /Euro]/BaseEncoding/WinAnsiEncoding
+>> endobj
+9 0 obj
+[ 646 646 97 646 646 646 646 646 646 646 646 646 646 646 646 646 646 646 646
+646 646 274 284 392 591 539 818 800 230 302 302 417 684 217 400 217 390 539
+539 539 539 539 539 539 539 539 539 217 217 684 684 684 448 955 645 573 619
+701 506 488 686 710 266 357 580 471 898 748 754 560 754 598 531 524 687 621
+934 590 553 570 302 379 302 684 415 268 509 588 462 589 523 313 589 566 242
+242 497 242 861 566 586 588 589 348 424 339 566 479 723 459 484 452 302 239
+302 684 311 539 646 229 539 377 733 375 375 371 1210 531 316 931 646 570 646
+646 229 229 377 377 406 500 1000 337 773 424 316 928 646 452 553 274 284 539
+539 556 539 239 448 414 890 392 506 684 400 890 415 377 684 366 366 282 577
+458 217 205 351 431 506 906 931 952 448 645 645 645 645 645 645 860 619 506
+506 506 506 266 266 266 266 701 748 754 754 754 754 754 684 754 687 687 687
+687 553 560 544 509 509 509 509 509 509 832 462 523 523 523 523 242 242 242
+242 559 566 586 586 586 586 586 684 586 566 566 566 566 484 588 484 ]
+endobj
+10 0 obj<<
+/Type/FontDescriptor
+/FontName/SegoeUI
+/Ascent 728
+/CapHeight 500
+/Descent -210
+/Flags 32
+/FontMatrix [0.001 0 0 0.001 0 0]
+/FontBBox [-573 -411 1999 1298]
+/ItalicAngle 0
+/StemV 0
+/AvgWidth 539
+/Leading 330
+/MaxWidth 0
+/XHeight 250
+>> endobj
+11 0 obj<<
+/Type/Font
+/Subtype/TrueType
+/BaseFont/SegoeUI
+/Encoding 3 0 R
+/FirstChar 11
+/LastChar 255
+/Widths 9 0 R
+/FontDescriptor 10 0 R
+>> endobj
+12 0 obj
+[ 750 750 278 278 355 556 556 889 667 191 333 333 389 584 278 333 278 278 556
+556 556 556 556 556 556 556 556 556 278 278 584 584 584 556 1015 667 667 722
+722 667 611 778 722 278 500 667 556 833 722 778 667 778 722 667 611 722 667
+944 667 667 611 278 278 278 469 556 333 556 556 500 556 556 278 556 556 222
+222 500 222 833 556 556 556 556 333 500 278 556 500 722 500 500 500 334 260
+334 584 750 556 750 222 556 333 1000 556 556 333 1000 667 333 1000 750 611 750
+750 222 222 333 333 350 556 1000 333 1000 500 333 944 750 500 667 278 333 556
+556 556 556 260 556 333 737 370 556 584 333 737 552 400 549 333 333 333 576
+537 333 333 333 365 556 834 834 834 611 667 667 667 667 667 667 1000 722 667
+667 667 667 278 278 278 278 722 722 778 778 778 778 778 584 778 722 722 722
+722 667 667 611 556 556 556 556 556 556 889 500 556 556 556 556 278 278 278
+278 556 556 556 556 556 556 556 549 611 556 556 556 556 500 556 500 ]
+endobj
+13 0 obj<<
+/Type/FontDescriptor
+/FontName/Arial
+/Ascent 728
+/CapHeight 500
+/Descent -210
+/Flags 32
+/FontMatrix [0.001 0 0 0.001 0 0]
+/FontBBox [-665 -325 2000 1040]
+/ItalicAngle 0
+/StemV 0
+/AvgWidth 441
+/Leading 150
+/MaxWidth 0
+/XHeight 250
+>> endobj
+14 0 obj<<
+/Type/Font
+/Subtype/TrueType
+/BaseFont/Arial
+/Encoding 3 0 R
+/FirstChar 30
+/LastChar 255
+/Widths 12 0 R
+/FontDescriptor 13 0 R
+>> endobj
+15 0 obj
+[ 750 750 278 333 474 556 556 889 722 238 333 333 389 584 278 333 278 278 556
+556 556 556 556 556 556 556 556 556 333 333 584 584 584 611 975 722 722 722
+722 667 611 778 722 278 556 722 611 833 722 778 667 778 722 667 611 722 667
+944 667 667 611 333 278 333 584 556 333 556 611 556 611 556 333 611 611 278
+278 556 278 889 611 611 611 611 389 556 333 611 556 778 556 556 500 389 280
+389 584 750 556 750 278 556 500 1000 556 556 333 1000 667 333 1000 750 611 750
+750 278 278 500 500 350 556 1000 333 1000 556 333 944 750 500 667 278 333 556
+556 556 556 280 556 333 737 370 556 584 333 737 552 400 549 333 333 333 576
+556 333 333 333 365 556 834 834 834 611 722 722 722 722 722 722 1000 722 667
+667 667 667 278 278 278 278 722 722 778 778 778 778 778 584 778 722 722 722
+722 667 667 611 556 556 556 556 556 556 889 556 556 556 556 556 278 278 278
+278 611 611 611 611 611 611 611 549 611 611 611 611 611 556 611 556 ]
+endobj
+16 0 obj<<
+/Type/FontDescriptor
+/FontName/Arial,Bold
+/Ascent 728
+/CapHeight 500
+/Descent -210
+/Flags 32
+/FontMatrix [0.001 0 0 0.001 0 0]
+/FontBBox [-628 -376 2000 1056]
+/ItalicAngle 0
+/StemV 0
+/AvgWidth 479
+/Leading 150
+/MaxWidth 0
+/XHeight 250
+>> endobj
+17 0 obj<<
+/Type/Font
+/Subtype/TrueType
+/BaseFont/Arial,Bold
+/Encoding 3 0 R
+/FirstChar 30
+/LastChar 255
+/Widths 15 0 R
+/FontDescriptor 16 0 R
+>> endobj
+18 0 obj<<
+/ProcSet [/PDF/Text/ImageC]
+/Font << /F1 11 0 R
+/F2 14 0 R
+/F3 17 0 R >>
+>> endobj
+19 0 obj<<
+/Type/Page
+/Parent 20 0 R
+/Resources 18 0 R
+/MediaBox [0 0 612.000 792.000]
+/Contents 4 0 R
+>> endobj
+21 0 obj<<
+/Type/Page
+/Parent 20 0 R
+/Resources 18 0 R
+/MediaBox [0 0 612.000 792.000]
+/Contents 5 0 R
+>> endobj
+22 0 obj<<
+/Type/Page
+/Parent 20 0 R
+/Resources 18 0 R
+/MediaBox [0 0 612.000 792.000]
+/Contents 6 0 R
+>> endobj
+23 0 obj<<
+/Type/Page
+/Parent 20 0 R
+/Resources 18 0 R
+/MediaBox [0 0 612.000 792.000]
+/Contents 7 0 R
+>> endobj
+24 0 obj<<
+/Type/Page
+/Parent 20 0 R
+/Resources 18 0 R
+/MediaBox [0 0 612.000 792.000]
+/Contents 8 0 R
+>> endobj
+20 0 obj<<
+/Type/Pages
+/Kids [ 19 0 R
+21 0 R
+22 0 R
+23 0 R
+24 0 R ]
+/Count 5
+>> endobj
+25 0 obj<<
+/Title(\376\377\000Q\000L\000T\000a\000i\000S\000a\000n)
+/Dest [ 19 0 R /XYZ 18 783 0]
+/Parent 26 0 R /First 27 0 R /Last 28 0 R /Count -66
+>> endobj
+27 0 obj<<
+/Title(\376\377\0001\0001\000.\000N\000h\000?\000p\000 \000k\000h\000o)
+
+/Parent 25 0 R /Next 29 0 R /First 30 0 R /Last 31 0 R /Count -8
+>> endobj
+30 0 obj<<
+/Title(\376\377\0001\000.\0001\000L\000o\000a\000d\000 \000D\000M\000T\000a\000i\000S\000a\000n\000 \000t\000?\000 \000c\000a\000c\000h\000e)
+
+/Parent 27 0 R /Next 32 0 R
+>> endobj
+32 0 obj<<
+/Title(\376\377\0001\000.\0002\000L\000u\000u\000:\000 \000K\000h\000o\000-\000T\000a\000i\000S\000a\000n\000-\000T\000r\000a\000n\000g\000T\000h\000a\000i\000-\000S\000L)
+
+/Parent 27 0 R /Next 33 0 R /First 34 0 R /Prev 30 0 R /Last 34 0 R /Count -1
+>> endobj
+34 0 obj<<
+/Title(\376\377\0001\000.\0002\000.\0001\000K\000I\000?\000m\000 \000t\000r\000a\000 \000c\000\363\000 \000p\000h\000i\000?\000u\000 \000K\000i\000?\000m\000 \000k\000\352\000 \000c\000h\000?\000 \000d\000u\000y\000?\000t\000 \000k\000o)
+
+/Parent 32 0 R
+>> endobj
+33 0 obj<<
+/Title(\376\377\0001\000.\0003\000D\000u\000y\000?\000t)
+
+/Parent 27 0 R /Next 31 0 R /First 35 0 R /Prev 32 0 R /Last 36 0 R /Count -3
+>> endobj
+35 0 obj<<
+/Title(\376\377\0001\000.\0003\000.\0001\000K\000I\000?\000m\000 \000t\000r\000a\000 \000c\000\363\000 \000p\000h\000i\000?\000u\000 \000K\000i\000?\000m\000 \000k\000\352\000 \000c\000h\000?\000 \000d\000u\000y\000?\000t\000 \000k\000o)
+
+/Parent 33 0 R /Next 37 0 R
+>> endobj
+37 0 obj<<
+/Title(\376\377\0001\000.\0003\000.\0002\000T\000a\000n\000g\000 \000S\000L\000 \000t\000r\000o\000n\000g\000 \000K\000h\000o)
+
+/Parent 33 0 R /Next 36 0 R /Prev 35 0 R
+>> endobj
+36 0 obj<<
+/Title(\376\377\0001\000.\0003\000.\0003\000X\000\363\000a\000 \000c\000a\000c\000h\000e\000 \000t\000?\000n\000 \000k\000h\000o)
+
+/Parent 33 0 R /Prev 37 0 R
+>> endobj
+31 0 obj<<
+/Title(\376\377\000C\000a\000c\000h\000e\000 \000T\000o\000n\000K\000o)
+/Dest [ 19 0 R /XYZ 19 746 0]
+/Parent 27 0 R /Prev 33 0 R
+>> endobj
+29 0 obj<<
+/Title(\376\377\0002\0002\000.\000K\000i\000e\000m\000 \000k\000e\000 \000T\000S\000-\000K\000h\000o)
+
+/Parent 25 0 R /Next 38 0 R /First 39 0 R /Prev 27 0 R /Last 40 0 R /Count -5
+>> endobj
+39 0 obj<<
+/Title(\376\377\0002\000.\0001\000L\000o\000a\000d\000 \000T\000?\000n\000 \000k\000h\000o\000 \000t\000\340\000i\000 \000s\000?\000n\000 \000c\000?\000a\000 \0001\000K\000h\000o\000 \000f\000r\000o\000m\000 \000c\000a\000c\000h\000e)
+
+/Parent 29 0 R /Next 41 0 R
+>> endobj
+41 0 obj<<
+/Title(\376\377\0002\000.\0002\000L\000u\000u\000:\000 \000K\000h\000o\000-\000T\000a\000i\000S\000a\000n\000-\000T\000r\000a\000n\000g\000T\000r\000a\000i\000-\000S\000L)
+
+/Parent 29 0 R /Next 40 0 R /Prev 39 0 R
+>> endobj
+40 0 obj<<
+/Title(\376\377\0002\000.\0003\000D\000u\000y\000?\000t)
+
+/Parent 29 0 R /First 42 0 R /Prev 41 0 R /Last 43 0 R /Count -2
+>> endobj
+42 0 obj<<
+/Title(\376\377\0002\000.\0003\000.\0001\000C\000?\000p\000 \000n\000h\000?\000t\000 \000s\000l\000=\000s\000l\000 \000k\000i\000?\000m\000 \000k\000\352)
+
+/Parent 40 0 R /Next 43 0 R
+>> endobj
+43 0 obj<<
+/Title(\376\377\0002\000.\0003\000.\0002\000X\000\363\000a\000 \000c\000a\000c\000h\000e\000 \000t\000?\000n\000 \000k\000h\000o)
+
+/Parent 40 0 R /Prev 42 0 R
+>> endobj
+38 0 obj<<
+/Title(\376\377\000T\000?\000N\000 \000K\000H\000O\000:\000 \000K\000h\000o\000-\000T\000a\000i\000S\000a\000n\000-\000T\000r\000a\000n\000g\000T\000h\000a\000i)
+/Dest [ 21 0 R /XYZ 31 780 0]
+/Parent 25 0 R /Next 44 0 R /Prev 29 0 R
+>> endobj
+44 0 obj<<
+/Title(\376\377\0003\0003\000.\000T\000h\000a\000n\000h\000 \000l\000\375)
+
+/Parent 25 0 R /Next 45 0 R /First 46 0 R /Prev 38 0 R /Last 47 0 R /Count -7
+>> endobj
+46 0 obj<<
+/Title(\376\377\0003\000.\0001\000L\000o\000a\000d\000 \000D\000S\000 \000t\000?\000n\000 \000k\000h\000o\000 \000t\000?\000 \000c\000a\000c\000h\000e)
+
+/Parent 44 0 R /Next 48 0 R
+>> endobj
+48 0 obj<<
+/Title(\376\377\0003\000.\0002\000L\000u\000u\000 \000t\000t\000:\000 \000K\000h\000o\000-\000T\000a\000i\000S\000a\000n\000-\000T\000r\000a\000n\000g\000T\000r\000a\000i\000-\000S\000L)
+
+/Parent 44 0 R /Next 47 0 R /First 49 0 R /Prev 46 0 R /Last 49 0 R /Count -1
+>> endobj
+49 0 obj<<
+/Title(\376\377\0003\000.\0002\000.\0001\000K\000I\000?\000m\000 \000t\000r\000a\000 \000c\000\363\000 \000p\000h\000i\000?\000u\000 \000K\000i\000?\000m\000 \000k\000\352\000 \000c\000h\000?\000 \000d\000u\000y\000?\000t\000 \000k\000o)
+
+/Parent 48 0 R
+>> endobj
+47 0 obj<<
+/Title(\376\377\0003\000.\0003\000D\000u\000y\000?\000t)
+
+/Parent 44 0 R /First 50 0 R /Prev 48 0 R /Last 51 0 R /Count -3
+>> endobj
+50 0 obj<<
+/Title(\376\377\0003\000.\0003\000.\0001\000C\000h\000e\000c\000k\000 \000c\000\363\000 \000d\000a\000n\000g\000 \000c\000h\000?\000 \000d\000u\000y\000?\000t\000 \000k\000i\000?\000m\000 \000k\000\352)
+
+/Parent 47 0 R /Next 52 0 R
+>> endobj
+52 0 obj<<
+/Title(\376\377\0003\000.\0003\000.\0002\000G\000i\000?\000m\000 \000S\000L\000 \000t\000r\000o\000n\000g\000 \000K\000h\000o)
+
+/Parent 47 0 R /Next 51 0 R /Prev 50 0 R
+>> endobj
+51 0 obj<<
+/Title(\376\377\0003\000.\0003\000.\0003\000X\000\363\000a\000 \000c\000a\000c\000h\000e\000 \000t\000?\000n\000 \000k\000h\000o)
+
+/Parent 47 0 R /Prev 52 0 R
+>> endobj
+45 0 obj<<
+/Title(\376\377\0004\0004\000.\000B\000\340\000n\000 \000g\000i\000a\000o)
+
+/Parent 25 0 R /Next 53 0 R /First 54 0 R /Prev 44 0 R /Last 55 0 R /Count -9
+>> endobj
+54 0 obj<<
+/Title(\376\377\0004\000.\0001\000L\000o\000a\000d\000 \000t\000?\000n\000 \000K\000h\000o\000 \000T\000S\000 \000t\000?\000 \000c\000a\000c\000h\000e)
+
+/Parent 45 0 R /Next 56 0 R
+>> endobj
+56 0 obj<<
+/Title(\376\377\0004\000.\0002\000L\000u\000u\000:\000 \000K\000h\000o\000-\000T\000a\000i\000S\000a\000n\000-\000T\000r\000a\000n\000g\000T\000r\000a\000i\000-\000S\000L\000-\000N\000h\000a\000n\000 \000v\000i\000e\000n\000-\000 \000V\000i\000 \000t\000r\000i)
+
+/Parent 45 0 R /Next 55 0 R /First 57 0 R /Prev 54 0 R /Last 57 0 R /Count -1
+>> endobj
+57 0 obj<<
+/Title(\376\377\0004\000.\0002\000.\0001\000c\000h\000e\000c\000k\000 \000c\000\363\000 \000d\000a\000n\000g\000 \000k\000i\000?\000m\000 \000k\000\352\000 \000t\000s\000 \000n\000h\000\342\000n\000 \000v\000i\000\352\000n)
+
+/Parent 56 0 R
+>> endobj
+55 0 obj<<
+/Title(\376\377\0004\000.\0003\000D\000u\000y\000?\000t)
+
+/Parent 45 0 R /First 58 0 R /Prev 56 0 R /Last 59 0 R /Count -5
+>> endobj
+58 0 obj<<
+/Title(\376\377\0004\000.\0003\000.\0001\000G\000i\000?\000m\000 \000t\000?\000n\000 \000k\000h\000o)
+
+/Parent 55 0 R /Next 60 0 R
+>> endobj
+60 0 obj<<
+/Title(\376\377\0004\000.\0003\000.\0002\000T\000a\000n\000g\000 \000t\000?\000n\000 \000k\000h\000o\000 \000N\000V)
+
+/Parent 55 0 R /Next 61 0 R /Prev 58 0 R
+>> endobj
+61 0 obj<<
+/Title(\376\377\0004\000.\0003\000.\0003\000X\000\363\000a\000 \000c\000a\000c\000h\000e\000 \000t\000?\000n\000 \000k\000h\000o)
+
+/Parent 55 0 R /Next 59 0 R /First 62 0 R /Prev 60 0 R /Last 62 0 R /Count -1
+>> endobj
+62 0 obj<<
+/Title(\376\377\000T\000?\000N\000 \000K\000H\000O\000 \000N\000V)
+/Dest [ 22 0 R /XYZ 19 771 0]
+/Parent 61 0 R
+>> endobj
+59 0 obj<<
+/Title(\376\377\0004\000.\0003\000.\0004\000X\000\363\000a\000 \000c\000a\000c\000h\000e\000 \000t\000?\000n\000 \000k\000h\000o\000 \000N\000V)
+
+/Parent 55 0 R /Prev 61 0 R
+>> endobj
+53 0 obj<<
+/Title(\376\377\0005\0005\000.\000T\000h\000u\000 \000h\000?\000i)
+
+/Parent 25 0 R /Next 28 0 R /First 63 0 R /Prev 45 0 R /Last 64 0 R /Count -8
+>> endobj
+63 0 obj<<
+/Title(\376\377\0005\000.\0001\000L\000o\000a\000d\000 \000t\000?\000n\000 \000K\000h\000o\000 \000N\000V\000 \000t\000?\000 \000c\000a\000c\000h\000e)
+
+/Parent 53 0 R /Next 65 0 R
+>> endobj
+65 0 obj<<
+/Title(\376\377\0005\000.\0002\000L\000u\000u\000:\000 \000N\000h\000\342\000n\000 \000v\000i\000\352\000n\000-\000T\000a\000i\000S\000a\000n\000-\000T\000r\000a\000n\000g\000T\000r\000a\000i\000-\000v\000?\000 \000t\000r\000\355)
+
+/Parent 53 0 R /Next 64 0 R /First 66 0 R /Prev 63 0 R /Last 66 0 R /Count -1
+>> endobj
+66 0 obj<<
+/Title(\376\377\0005\000.\0002\000.\0001\000c\000h\000e\000c\000k\000 \000c\000\363\000 \000d\000a\000n\000g\000 \000k\000i\000?\000m\000 \000k\000\352\000 \000t\000s\000 \000n\000h\000\342\000n\000 \000v\000i\000\352\000n)
+
+/Parent 65 0 R
+>> endobj
+64 0 obj<<
+/Title(\376\377\0005\000.\0003\000D\000u\000y\000?\000t)
+
+/Parent 53 0 R /First 67 0 R /Prev 65 0 R /Last 68 0 R /Count -4
+>> endobj
+67 0 obj<<
+/Title(\376\377\0005\000.\0003\000.\0001\000T\000a\000n\000g\000 \000n\000h\000?\000p\000 \000K\000h\000o)
+
+/Parent 64 0 R /Next 69 0 R
+>> endobj
+69 0 obj<<
+/Title(\376\377\0005\000.\0003\000.\0002\000G\000i\000?\000m\000 \000t\000?\000n\000 \000k\000h\000o\000 \000N\000V)
+
+/Parent 64 0 R /Next 70 0 R /Prev 67 0 R
+>> endobj
+70 0 obj<<
+/Title(\376\377\0005\000.\0003\000.\0003\000X\000\363\000a\000 \000c\000a\000c\000h\000e\000 \000t\000?\000n\000 \000K\000h\000o)
+
+/Parent 64 0 R /Next 68 0 R /Prev 69 0 R
+>> endobj
+68 0 obj<<
+/Title(\376\377\0005\000.\0003\000.\0004\000X\000\363\000a\000 \000c\000a\000c\000h\000e\000 \000t\000?\000n\000 \000K\000h\000o\000 \000N\000V)
+
+/Parent 64 0 R /Prev 70 0 R
+>> endobj
+28 0 obj<<
+/Title(\376\377\0006\0006\000.\000K\000i\000e\000m\000 \000k\000e\000 \000t\000h\000e\000o\000 \000N\000h\000a\000n\000 \000V\000i\000e\000n)
+
+/Parent 25 0 R /First 71 0 R /Prev 53 0 R /Last 72 0 R /Count -22
+>> endobj
+71 0 obj<<
+/Title(\376\377\0006\000.\0001\000L\000o\000a\000d\000 \000t\000?\000n\000 \000K\000h\000o\000 \000N\000V\000 \000t\000?\000 \000c\000a\000c\000h\000e)
+
+/Parent 28 0 R /Next 73 0 R
+>> endobj
+73 0 obj<<
+/Title(\376\377\0006\000.\0002\000L\000u\000u\000:\000 \000N\000h\000a\000n\000V\000i\000e\000n\000-\000T\000a\000i\000S\000a\000n\000-\000T\000r\000a\000n\000g\000T\000h\000a\000i\000-\000V\000i\000T\000r\000i\000-\000S\000L)
+
+/Parent 28 0 R /Next 72 0 R /Prev 71 0 R
+>> endobj
+72 0 obj<<
+/Title(\376\377\0006\000.\0003\000D\000u\000y\000?\000t)
+
+/Parent 28 0 R /First 74 0 R /Prev 73 0 R /Last 75 0 R /Count -19
+>> endobj
+74 0 obj<<
+/Title(\376\377\0006\000.\0003\000.\0001\000C\000?\000p\000 \000n\000h\000?\000t\000 \000S\000L\000=\000S\000L\000 \000k\000i\000?\000m\000 \000k\000\352)
+
+/Parent 72 0 R /Next 75 0 R
+>> endobj
+75 0 obj<<
+/Title(\376\377\0006\000.\0003\000.\0002\000X\000o\000a\000 \000c\000a\000c\000h\000e\000 \000t\000?\000n\000 \000k\000h\000o\000 \000n\000v)
+
+/Parent 72 0 R /First 76 0 R /Prev 74 0 R /Last 77 0 R /Count -17
+>> endobj
+76 0 obj<<
+/Title(\376\377\000C\000a\000c\000h\000e\000 \000T\000o\000n\000K\000h\000o\000N\000V)
+/Dest [ 23 0 R /XYZ 21 756 0]
+/Parent 75 0 R /Next 78 0 R
+>> endobj
+78 0 obj<<
+/Title(\376\377\000+)
+
+/Parent 75 0 R /Next 79 0 R /Prev 76 0 R
+>> endobj
+79 0 obj<<
+/Title(\376\377\000R\000o\000o\000t)
+
+/Parent 75 0 R /Next 80 0 R /Prev 78 0 R
+>> endobj
+80 0 obj<<
+/Title(\376\377\000+\000/\000-)
+
+/Parent 75 0 R /Next 81 0 R /Prev 79 0 R
+>> endobj
+81 0 obj<<
+/Title(\376\377\000R\000o\000o\000t)
+
+/Parent 75 0 R /Next 82 0 R /Prev 80 0 R
+>> endobj
+82 0 obj<<
+/Title(\376\377\000-)
+
+/Parent 75 0 R /Next 83 0 R /Prev 81 0 R
+>> endobj
+83 0 obj<<
+/Title(\376\377\000R\000o\000o\000t)
+
+/Parent 75 0 R /Next 84 0 R /Prev 82 0 R
+>> endobj
+84 0 obj<<
+/Title(\376\377\000-)
+
+/Parent 75 0 R /Next 85 0 R /Prev 83 0 R
+>> endobj
+85 0 obj<<
+/Title(\376\377\000+)
+
+/Parent 75 0 R /Next 86 0 R /Prev 84 0 R
+>> endobj
+86 0 obj<<
+/Title(\376\377\000R\000o\000o\000t)
+
+/Parent 75 0 R /Next 87 0 R /Prev 85 0 R
+>> endobj
+87 0 obj<<
+/Title(\376\377\000R\000o\000o\000t)
+
+/Parent 75 0 R /Next 88 0 R /Prev 86 0 R
+>> endobj
+88 0 obj<<
+/Title(\376\377\000+)
+
+/Parent 75 0 R /Next 89 0 R /Prev 87 0 R
+>> endobj
+89 0 obj<<
+/Title(\376\377\000-)
+
+/Parent 75 0 R /Next 90 0 R /Prev 88 0 R
+>> endobj
+90 0 obj<<
+/Title(\376\377\000R\000o\000o\000t)
+
+/Parent 75 0 R /Next 91 0 R /Prev 89 0 R
+>> endobj
+91 0 obj<<
+/Title(\376\377\000R\000o\000o\000t)
+
+/Parent 75 0 R /Next 92 0 R /Prev 90 0 R
+>> endobj
+92 0 obj<<
+/Title(\376\377\000+\000/\000-)
+
+/Parent 75 0 R /Next 77 0 R /Prev 91 0 R
+>> endobj
+77 0 obj<<
+/Title(\376\377\000R\000o\000o\000t)
+
+/Parent 75 0 R /Prev 92 0 R
+>> endobj
+26 0 obj<<
+/Count 67
+/First 25 0 R
+/Last 25 0 R
+>> endobj
+93 0 obj<<
+/Type/Catalog
+/Pages 20 0 R
+/Outlines 26 0 R
+/Metadata 1 0 R
+/PageMode/UseNone
+>> endobj
+xref
+0 94
+0000000000 65535 f
+0000000066 00000 n
+0000001569 00000 n
+0000113604 00000 n
+0000001769 00000 n
+0000022287 00000 n
+0000044803 00000 n
+0000061928 00000 n
+0000099998 00000 n
+0000113697 00000 n
+0000114700 00000 n
+0000114958 00000 n
+0000115115 00000 n
+0000116049 00000 n
+0000116305 00000 n
+0000116461 00000 n
+0000117394 00000 n
+0000117655 00000 n
+0000117816 00000 n
+0000117918 00000 n
+0000118528 00000 n
+0000118040 00000 n
+0000118162 00000 n
+0000118284 00000 n
+0000118406 00000 n
+0000118626 00000 n
+0000131083 00000 n
+0000118793 00000 n
+0000127990 00000 n
+0000120711 00000 n
+0000118958 00000 n
+0000120554 00000 n
+0000119156 00000 n
+0000119715 00000 n
+0000119434 00000 n
+0000119878 00000 n
+0000120368 00000 n
+0000120172 00000 n
+0000121998 00000 n
+0000120919 00000 n
+0000121451 00000 n
+0000121210 00000 n
+0000121601 00000 n
+0000121812 00000 n
+0000122258 00000 n
+0000124012 00000 n
+0000122439 00000 n
+0000123221 00000 n
+0000122647 00000 n
+0000122940 00000 n
+0000123371 00000 n
+0000123826 00000 n
+0000123630 00000 n
+0000126106 00000 n
+0000124193 00000 n
+0000125036 00000 n
+0000124401 00000 n
+0000124769 00000 n
+0000125186 00000 n
+0000125905 00000 n
+0000125344 00000 n
+0000125530 00000 n
+0000125766 00000 n
+0000126279 00000 n
+0000127091 00000 n
+0000126487 00000 n
+0000126824 00000 n
+0000127241 00000 n
+0000127789 00000 n
+0000127404 00000 n
+0000127590 00000 n
+0000128226 00000 n
+0000128730 00000 n
+0000128434 00000 n
+0000128881 00000 n
+0000129092 00000 n
+0000129328 00000 n
+0000130990 00000 n
+0000129500 00000 n
+0000129591 00000 n
+0000129697 00000 n
+0000129798 00000 n
+0000129904 00000 n
+0000129995 00000 n
+0000130101 00000 n
+0000130192 00000 n
+0000130283 00000 n
+0000130389 00000 n
+0000130495 00000 n
+0000130586 00000 n
+0000130677 00000 n
+0000130783 00000 n
+0000130889 00000 n
+0000131146 00000 n
+trailer
+<<
+/Size 94
+/Root 93 0 R
+/ID[<a93ee7ec52c4eb4fb42b55a28bfc7a31><a93ee7ec52c4eb4fb42b55a28bfc7a31>]
+/Info 2 0 R
+>>
+startxref
+131255
+%%EOF

@@ -1,0 +1,227 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.Master.cs" Inherits="WebRunDragon.Forms.Main" %>
+
+<%@ Register Assembly="DevExpress.Web.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>Smart Asset</title>
+
+    <link href="../Css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Css/style.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../Scripts/global.js" type="text/javascript"></script>
+    <script src="../Scripts/awesomplete.min.js" type="text/javascript"></script>
+
+    <script src="../Scripts/left-menu.js" type="text/javascript"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        .link {
+            height: 0px;
+        }
+
+        /* ========== HORIZONTAL MENU ========== */
+        #top_menu_navbar {
+            background-color: #1a6e3c; /*mau nen thanh ngang cua menu*/
+            width: 100%;
+            position: relative;
+            z-index: 9999;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #top_menu_navbar table {
+            width: auto;
+        }
+        /* Canh phải toàn bộ menu */
+        #top_menu_navbar .dxm-horizontal {
+            float: right !important;
+            display: block;
+        }
+        /* Item gốc nằm ngang - chữ trắng */
+        #top_menu_navbar .dxm-horizontal td.dxm-item a,
+        #top_menu_navbar .dxm-horizontal td.dxm-item span,
+        #top_menu_navbar .dxm-horizontal td.dxm-item td {
+            color: #aaa !important;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        #top_menu_navbar .dxm-horizontal td.dxm-item {
+            background-color: #1a1a1a !important;
+            border-right: 1px solid #444;
+        }
+        /* Hover item gốc */
+        #top_menu_navbar .dxm-horizontal td.dxm-item:hover,
+        #top_menu_navbar .dxm-horizontal td.dxm-item-selected {
+            background-color: #1a6e3c !important;
+        }
+        /* Dropdown popup */
+        .dxm-popupAction {
+            z-index: 99999 !important;
+        }
+        /* Tất cả text trong dropdown đổi thành đen */
+        .dxm-popup,
+        .dxm-popup table,
+        .dxm-popup td,
+        .dxm-popup a,
+        .dxm-popup span,
+        .dxm-popup div {
+            color: #000000 !important;
+            background-color: #ff6a00 !important; /*mau nen khung menu*/
+        }
+
+        .dxm-popup td.dxm-item {
+            border-bottom: 1px solid #ddd !important;
+        }
+
+        .dxm-popup td.dxm-item:hover,
+        .dxm-popup td.dxm-item:hover a,
+        .dxm-popup td.dxm-item:hover span,
+        .dxm-popup td.dxm-item:hover td {
+            background-color: #1a6e3c !important;
+            color: #ffd800 !important;
+        }
+
+        #main_content {
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        /* ===== BREADCRUMB ===== */
+        #breadcrumb_bar {
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ddd;
+            padding: 6px 15px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        #breadcrumb_bar a {
+            color: #1a6e3c;
+            text-decoration: none;
+        }
+
+        #breadcrumb_bar a:hover {
+            text-decoration: underline;
+        }
+
+        #breadcrumb_bar .bc-separator {
+            margin: 0 6px;
+            color: #aaa;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="formMaster" runat="server">
+
+        <%--  <table style="width: 100%">
+            <tr>
+                <td>
+                    <table style="width: 100%" border="0">
+                        <tr>
+                            <td style="width: 239px; height: 68px"><a href="../">
+                                <img src="../Images/logo.png" width="229" /></a> </td>
+                            <td style="color: #000000; text-align: center; vertical-align: middle; font-size: 24px; font-weight: bold">SMART ASSET WEB</td>
+                            <td style="width: 168px; vertical-align: top">
+                                 <div style="text-align: right; padding: 3px">
+                                    <a href="../Forms/HuongDanSuDung.aspx" target="_blank">Hướng dẫn sử dụng</a>
+                                </div>
+                                <div style="text-align: right; padding: 3px">
+                                    <a href="../Actions/FileDownloadAction.ashx?id=1" target="_blank">Hướng dẫn sử dụng</a>
+                                </div>
+
+                                <div style="text-align: right; padding: 3px">
+                                    <dx:ASPxLabel ForeColor="#415698" Font-Bold="true" runat="server" ID="lblUserFullName"></dx:ASPxLabel>
+                                </div>
+                                <div style="text-align: right; padding: 3px">
+                                    <dx:ASPxHyperLink runat="server" ID="lnkLogout" NavigateUrl="../Actions/Logout.ashx" Text="Thoát"></dx:ASPxHyperLink>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table style="width: 100%">
+                        <tr>
+                            <td style="vertical-align: top; width: 239px">
+                                <dx:ASPxNavBar ID="nvbMain" runat="server" EnableTheming="True" Theme="BlackGlass" Width="229px">
+                                </dx:ASPxNavBar>
+                            </td>
+                            <td style="vertical-align: top">
+                                <div>
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table> --%>
+
+
+        <section class="section-header">
+            <div class="container">
+
+                <div class="logo">
+                    <a href="../">
+                        <img src="../Images/logo.png" />
+                    </a>
+
+                </div>
+
+                <div class="col-center-header">
+                    <h1>RUN DRAGON ADMIN
+                        <dx:ASPxHyperLink runat="server" ID="lh" NavigateUrl="../Files/sDragonLienHe.html" Text="Liên hệ"></dx:ASPxHyperLink>
+                    </h1>
+                </div>
+
+                <div class="col-right-header">
+                    <div class="content" style="display: flex; align-items: center; gap: 15px; flex-wrap: nowrap;">
+                        <%--  <p class="user-guide"><a href="../Forms/HelpDeskGuide.aspx" target="_blank">Hướng dẫn sử dụng</a></p>--%>
+                        <span><a href="../Forms/HelpDeskGuide.aspx" target="_blank">Hướng dẫn sử dụng</a></span>
+                        <span>
+                            <dx:ASPxLabel ID="lblUserFullName" ClientInstanceName="lblUserFullName" runat="server"></dx:ASPxLabel>
+                        </span>
+                        <span>
+                            <dx:ASPxHyperLink runat="server" ID="lnkLogout" NavigateUrl="../Actions/Logout.ashx" Text="Thoát"></dx:ASPxHyperLink>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+       <%-- <div class="dark_bg_black"></div>--%>
+
+        <%-- Menu ngang --%>
+        <div id="top_menu_navbar">
+            <dx:ASPxMenu ID="nvbMain" runat="server" Orientation="Horizontal"
+                BackColor="#1a6e3c" ForeColor="white"   
+                ItemAutoWidth="True">
+            </dx:ASPxMenu>
+        </div>
+
+        <%-- Breadcrumb --%>
+        <div id="breadcrumb_bar">
+            <asp:Label ID="lblBreadcrumb" runat="server" Text=""></asp:Label>
+        </div>
+
+        <%-- Nội dung chính --%>
+        <div id="main_content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

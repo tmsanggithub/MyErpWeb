@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13C6D07C-7D29-4408-B582-48A8F60DC093}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebRunDragon</RootNamespace>
+    <AssemblyName>WebRunDragon</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.SpellChecker.v15.1.Core, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxScheduler.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.1.Web, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Forms\CDHoatDong.aspx" />
+    <Content Include="Forms\CDHoatDongHopLe.aspx" />
+    <Content Include="Forms\DMHoatDong.aspx" />
+    <Content Include="Forms\QLNhomChay.aspx" />
+    <Content Include="Forms\QLGiaiChayDuyetThamGia.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Actions\AuthenAction.ashx" />
+    <Content Include="Actions\CfgDataRightAction.ashx" />
+    <Content Include="Actions\CfgFunctionRightAction.ashx" />
+    <Content Include="Actions\CfgUserInfoAction.ashx" />
+    <Content Include="Actions\FileDownloadAction.ashx" />
+    <Content Include="Actions\logout.ashx" />
+    <Content Include="Actions\QLDanhMucAction.ashx" />
+    <Content Include="Actions\Timer.ashx" />
+    <Content Include="App_Data\Attachments\202211\UI_App_TaiSan.20221122.233905.pdf" />
+    <Content Include="App_Data\Attachments\202211\UI_App_TaiSan.20221124.124044.pdf" />
+    <Content Include="App_Data\Attachments\RecycleBin\202212\QLTaiSan2.20221204.095648.pdf" />
+    <Content Include="App_Data\Attachments\RecycleBin\202212\QLTaiSan2.20221204.095648_signed_1a9a5ea2-f9ad-4530-83cc-8a3b2a542340.pdf" />
+    <Content Include="App_Data\logging\rvweblog.log" />
+    <Content Include="App_Data\logging\soapmessage.log" />
+    <Content Include="App_Data\logging\SqlQuery.log" />
+    <Content Include="Forms\Main.Master" />
+    <Content Include="Forms\Main_new.Master" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Reports\DSReport.xsc">
+      <DependentUpon>DSReport.xsd</DependentUpon>
+    </Content>
+    <Content Include="Actions\QLNhomChayAction.ashx" />
+    <Content Include="Actions\CDHoatDongHopLeAction.ashx" />
+    <Content Include="Actions\QLGiaiChayDuyetThamGiaAction.ashx" />
+    <None Include="Properties\PublishProfiles\RunDragonWebAdmin.pubxml" />
+    <None Include="Reports\DSReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSReport1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Reports\DSReport.xss">
+      <DependentUpon>DSReport.xsd</DependentUpon>
+    </Content>
+    <None Include="Service References\AuthenService\AuthenService.wsdl" />
+    <Content Include="scripts\awesomplete.min.js" />
+    <Content Include="scripts\CDHoatDongHopLe.js" />
+    <Content Include="scripts\DataRightInfo.js" />
+    <Content Include="scripts\DMTaiSan.js" />
+    <Content Include="scripts\FunctionRightInfo.js" />
+    <Content Include="scripts\global.js" />
+    <Content Include="scripts\jquery-1.11.1.min.js" />
+    <None Include="scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="scripts\jquery-1.7.1.js" />
+    <Content Include="scripts\jquery-1.7.1.min.js" />
+    <Content Include="scripts\jquery-ui.min.js" />
+    <Content Include="scripts\left-menu - Copy.js" />
+    <Content Include="scripts\left-menu.js" />
+    <Content Include="scripts\QLNhomChay.js" />
+    <Content Include="scripts\QLGiaiChayDuyetThamGia.js" />
+    <Content Include="scripts\UserInfo.js" />
+    <Content Include="scripts\ViewPDF.js" />
+    <Content Include="scripts\WebUploadFile.js" />
+    <Content Include="Service References\AuthenService\WebAsset.AuthenService.checkAuthenResponse.datasource" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Attachments\201910\IMG_0668.20191030.144003.JPG" />
+    <Content Include="App_Data\Attachments\201910\IMG_0670.20191030.122425.JPG" />
+    <Content Include="App_Data\Attachments\201910\IMG_0680.20191030.122645.JPG" />
+    <Content Include="App_Data\Attachments\201910\IMG_0681.20191030.122738.JPG" />
+    <Content Include="App_Data\Attachments\201911\Kh1.20191119.151934.jpg" />
+    <Content Include="App_Data\Attachments\201911\KH2.20191119.154230.jpg" />
+    <Content Include="App_Data\Attachments\201911\logo7.20191113.143550.png" />
+    <Content Include="App_Data\Attachments\201912\MySoft.20191213.103052.png" />
+    <Content Include="App_Data\Attachments\201912\MySoftVN.20191213.104258.png" />
+    <Content Include="App_Data\Attachments\202211\ChuKy.20221122.230639.png" />
+    <Content Include="App_Data\Attachments\202211\ChuKy.20221123.181529.png" />
+    <Content Include="App_Data\Attachments\202211\ysnt.20221124.191528.png" />
+    <Content Include="App_Data\Attachments\RecycleBin\201910\IMG_0669.20191030.143937.JPG" />
+    <Content Include="App_Data\Attachments\RecycleBin\201910\IMG_0670.20191030.143802.JPG" />
+    <Content Include="App_Data\Attachments\RecycleBin\201911\30072019.20191113.143139.jpg" />
+    <Content Include="App_Data\Attachments\RecycleBin\201912\IMG_9417.20191213.095511.JPG" />
+    <Content Include="App_Data\Attachments\RecycleBin\201912\MySoft.20191212.081210.png" />
+    <Content Include="App_Data\Attachments\RecycleBin\202212\banner_ysnt.20221201.232952.jpg" />
+    <Content Include="App_Data\Attachments\RecycleBin\202212\Untitled.20221127.220314.png" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Forms\CfgDataRightInfo.aspx" />
+    <Content Include="Forms\CfgFunctionRightInfo.aspx" />
+    <Content Include="Forms\CfgHome.aspx" />
+    <Content Include="Forms\CfgLogin.aspx" />
+    <Content Include="Forms\CfgUserInfo.aspx" />
+    <Content Include="Forms\DMNhomChay.aspx" />
+    <Content Include="Forms\DMVanDongVien.aspx" />
+    <Content Include="Forms\HuongDanSuDung.aspx" />
+    <Content Include="Forms\InBaoCao.aspx" />
+    <Content Include="Forms\QLGiaiChay.aspx" />
+    <Content Include="Forms\QLTinTuc.aspx" />
+    <Content Include="Forms\webMasterDetail.aspx" />
+    <Content Include="Forms\WebUploadFile.aspx" />
+    <Content Include="frmDefault.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\icon-add.png" />
+    <Content Include="Images\icon-add16.png" />
+    <Content Include="Images\icon-approval.png" />
+    <Content Include="Images\icon-check.png" />
+    <Content Include="Images\icon-delete.png" />
+    <Content Include="Images\icon-delete24.png" />
+    <Content Include="Images\icon-down %282%29.png" />
+    <Content Include="Images\icon-down-pdf.png" />
+    <Content Include="Images\icon-down.png" />
+    <Content Include="Images\icon-edit.png" />
+    <Content Include="Images\icon-edit24.png" />
+    <Content Include="Images\icon-process.png" />
+    <Content Include="Images\icon-process16.png" />
+    <Content Include="Images\icon-process24.png" />
+    <Content Include="Images\icon-vie24w.png" />
+    <Content Include="Images\icon-view.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Libs\BouncyCastle.Crypto.dll" />
+    <Content Include="Libs\itextsharp.dll" />
+    <Content Include="Libs\log4net.dll" />
+    <Content Include="Libs\Newtonsoft.Json.dll" />
+    <Content Include="Libs\Zen.Barcode.Core.dll" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Actions\QLGiaiChayAction.ashx" />
+    <Content Include="Actions\QLTinTucAction.ashx" />
+    <None Include="Service References\AuthenService\configuration.svcinfo" />
+    <None Include="Service References\AuthenService\configuration91.svcinfo" />
+    <None Include="Service References\AuthenService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference1.cs</LastGenOutput>
+    </None>
+    <Content Include="scripts\QLGiaiChay.js" />
+    <Content Include="scripts\QLTinTuc.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\AuthenAction.ashx.cs">
+      <DependentUpon>AuthenAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\CDHoatDongHopLeAction.ashx.cs">
+      <DependentUpon>CDHoatDongHopLeAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\CfgDataRightAction.ashx.cs">
+      <DependentUpon>CfgDataRightAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\CfgFunctionRightAction.ashx.cs">
+      <DependentUpon>CfgFunctionRightAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\CfgUserInfoAction.ashx.cs">
+      <DependentUpon>CfgUserInfoAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\FileDownloadAction.ashx.cs">
+      <DependentUpon>FileDownloadAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\logout.ashx.cs">
+      <DependentUpon>logout.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\QLDanhMucAction.ashx.cs">
+      <DependentUpon>QLDanhMucAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\QLGiaiChayAction.ashx.cs">
+      <DependentUpon>QLGiaiChayAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\QLNhomChayAction.ashx.cs">
+      <DependentUpon>QLNhomChayAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\QLGiaiChayDuyetThamGiaAction.ashx.cs">
+      <DependentUpon>QLGiaiChayDuyetThamGiaAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\QLTinTucAction.ashx.cs">
+      <DependentUpon>QLTinTucAction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Actions\Timer.ashx.cs">
+      <DependentUpon>Timer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\vi-VN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vi-VN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\SysConfig.cs" />
+    <Compile Include="D:/DuAn/RunDragon/WebRunDragon/WebRunDragon/WebRunDragon/Helpers/\HtmlToImageHelper.cs">
+      <Link>HtmlToImageHelper.cs</Link>
+    </Compile>
+    <Compile Include="D:/DuAn/RunDragon/WebRunDragon/WebRunDragon/WebRunDragon/Helpers/\HtmlToImageHelper.cs">
+      <Link>HtmlToImageHelper.cs</Link>
+    </Compile>
+    <Compile Include="DataProcess\DatabaseManager.cs" />
+    <Compile Include="DataProcess\ProcessAttachment.cs" />
+    <Compile Include="DataProcess\ProcessCache.cs" />
+    <Compile Include="DataProcess\ProcessCfgDataRightAccess.cs" />
+    <Compile Include="DataProcess\ProcessCfgFunctionRightAccess.cs" />
+    <Compile Include="DataProcess\ProcessCfgUser.cs" />
+    <Compile Include="DataProcess\ProcessCommonEntities.cs" />
+    <Compile Include="DataProcess\ProcessDanhMuc.cs" />
+    <Compile Include="DataProcess\ProcessFiles.cs" />
+    <Compile Include="DataProcess\ProcessGiaiChay.cs" />
+    <Compile Include="DataProcess\ProcessHoatDongHopLe.cs" />
+    <Compile Include="DataProcess\ProcessNhomChay.cs" />
+    <Compile Include="DataProcess\ProcessNotifyFCM.cs" />
+    <Compile Include="DataProcess\ProcessTinTuc.cs" />
+    <Compile Include="DataProcess\ProcessUtils.cs" />
+    <Compile Include="DataProcess\PropcessGiaiChayDuyetThamGia.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\EnAccessRightInfo.cs" />
+    <Compile Include="Entity\EnSignQRCode.cs" />
+    <Compile Include="Entity\EnUserInfo.cs" />
+    <Compile Include="Forms\CDHoatDong.aspx.cs">
+      <DependentUpon>CDHoatDong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CDHoatDong.aspx.designer.cs">
+      <DependentUpon>CDHoatDong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CDHoatDongHopLe.aspx.cs">
+      <DependentUpon>CDHoatDongHopLe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CDHoatDongHopLe.aspx.designer.cs">
+      <DependentUpon>CDHoatDongHopLe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CfgDataRightInfo.aspx.cs">
+      <DependentUpon>CfgDataRightInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CfgDataRightInfo.aspx.designer.cs">
+      <DependentUpon>CfgDataRightInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CfgFunctionRightInfo.aspx.cs">
+      <DependentUpon>CfgFunctionRightInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CfgFunctionRightInfo.aspx.designer.cs">
+      <DependentUpon>CfgFunctionRightInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CfgHome.aspx.cs">
+      <DependentUpon>CfgHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CfgHome.aspx.designer.cs">
+      <DependentUpon>CfgHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CfgLogin.aspx.cs">
+      <DependentUpon>CfgLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CfgLogin.aspx.designer.cs">
+      <DependentUpon>CfgLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CfgUserInfo.aspx.cs">
+      <DependentUpon>CfgUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CfgUserInfo.aspx.designer.cs">
+      <DependentUpon>CfgUserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DMHoatDong.aspx.cs">
+      <DependentUpon>DMHoatDong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DMHoatDong.aspx.designer.cs">
+      <DependentUpon>DMHoatDong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DMNhomChay.aspx.cs">
+      <DependentUpon>DMNhomChay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DMNhomChay.aspx.designer.cs">
+      <DependentUpon>DMNhomChay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DMVanDongVien.aspx.cs">
+      <DependentUpon>DMVanDongVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DMVanDongVien.aspx.designer.cs">
+      <DependentUpon>DMVanDongVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HuongDanSuDung.aspx.cs">
+      <DependentUpon>HuongDanSuDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\HuongDanSuDung.aspx.designer.cs">
+      <DependentUpon>HuongDanSuDung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InBaoCao.aspx.cs">
+      <DependentUpon>InBaoCao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\InBaoCao.aspx.designer.cs">
+      <DependentUpon>InBaoCao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QLGiaiChay.aspx.cs">
+      <DependentUpon>QLGiaiChay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\QLGiaiChay.aspx.designer.cs">
+      <DependentUpon>QLGiaiChay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QLNhomChay.aspx.cs">
+      <DependentUpon>QLNhomChay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\QLNhomChay.aspx.designer.cs">
+      <DependentUpon>QLNhomChay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QLGiaiChayDuyetThamGia.aspx.cs">
+      <DependentUpon>QLGiaiChayDuyetThamGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\QLGiaiChayDuyetThamGia.aspx.designer.cs">
+      <DependentUpon>QLGiaiChayDuyetThamGia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QLTinTuc.aspx.cs">
+      <DependentUpon>QLTinTuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\QLTinTuc.aspx.designer.cs">
+      <DependentUpon>QLTinTuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\webMasterDetail.aspx.cs">
+      <DependentUpon>webMasterDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\webMasterDetail.aspx.designer.cs">
+      <DependentUpon>webMasterDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WebUploadFile.aspx.cs">
+      <DependentUpon>WebUploadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WebUploadFile.aspx.designer.cs">
+      <DependentUpon>WebUploadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDefault.aspx.cs">
+      <DependentUpon>frmDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmDefault.aspx.designer.cs">
+      <DependentUpon>frmDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Reports\DSReport.cs">
+      <DependentUpon>DSReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DSReport.Designer.cs">
+      <DependentUpon>DSReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptThanhToan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptThanhToan.Designer.cs">
+      <DependentUpon>rptThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AuthenService\Reference.cs" />
+    <Compile Include="Service References\AuthenService\Reference1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ActionUtil.cs" />
+    <Compile Include="Utils\Constants.cs" />
+    <Compile Include="Utils\MailUtil.cs" />
+    <Compile Include="Utils\NumberUtil.cs" />
+    <Compile Include="Utils\OtherUtils.cs" />
+    <Compile Include="Utils\StringUtil.cs" />
+    <Compile Include="Utils\UserUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>en-US.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\vi-VN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>vi-VN.Designer.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\rptThanhToan.resx">
+      <DependentUpon>rptThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\Attachments\202212\" />
+    <Folder Include="App_Data\UploadTemp\" />
+    <Folder Include="Css\" />
+    <Folder Include="Files\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>18551</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:18551/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
