@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using DevExpress.Xpo.DB.Helpers;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -6,6 +7,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using WebRunDragon.Forms;
 using WebRunDragon.Utils;
 
 namespace WebRunDragon.DataProcess
@@ -38,7 +40,43 @@ namespace WebRunDragon.DataProcess
                 return null;
             }
         }
-        public DataTable TraCuuDanhMucHoatDong(DateTime tuNgay, DateTime denNgay, string userLogin)
+
+        public DataTable LoadUserDangKy4Combo(string userLogin)
+        {
+            try
+            {
+                
+
+                BusinessMemCache cache = new BusinessMemCache();
+                var keyCache = "LoadDanhMuc4ComboFromCacheFromCache_app_user_registed";
+                var objCache = cache.GetMemCachedItem(keyCache);
+                if (objCache != null)
+                {
+                    return (DataTable)objCache;
+                }
+
+                string sql = @"select r.id as id_runner, r.id_strava, r.staff_no_vdsc as code, r.full_name as name
+                               from app_user_registed r
+                               where (r.is_deleted = 0 or r.is_deleted is null)
+                               order by r.full_name";
+
+                var dtRet =DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, sql, CommandType.Text, null);
+
+                if (dtRet != null)
+                {
+                    cache.AddToMemCache(keyCache, dtRet, MyCachePriority.Default);
+                }
+
+                return dtRet;
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".LoadUserDangKy4Combo() Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                return null;
+            }
+        }
+        public DataTable TraCuuDanhMucHoatDongBK(DateTime tuNgay, DateTime denNgay, string userLogin, int idGiaiChay)
         {
             try
             {
@@ -46,6 +84,7 @@ namespace WebRunDragon.DataProcess
                 param.Add("TuNgay", tuNgay);
                 param.Add("DenNgay", denNgay);
                 param.Add("UserLogin", userLogin);
+                param.Add("IdGiaiChay", idGiaiChay);
                 return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, "SP_ql_activities_Search", CommandType.StoredProcedure, param);
             }
             catch (Exception ex)
@@ -55,7 +94,66 @@ namespace WebRunDragon.DataProcess
                 return null;
             }
         }
-        public DataTable TraCuuDanhMucHoatDongSum(DateTime tuNgay, DateTime denNgay, string userLogin)
+
+        public bool AddHoatDongThuCong(int idRace, string idStrava, int idRunner, DateTime startDate, decimal totalDistanceMet, decimal totalDistanceMetValid, string idActivities, int valid, out string message, out int idInertNew)
+        {
+            message = "";
+            idInertNew = 0;
+            try
+            {
+                string sql = @"insert into ql_activities
+                                (id_race, id_strava, id_runner,date, start_date, total_distance_met, total_distance_met_valid, id_activities, created_by, created_time, valid, isdeleted, total_moving_time, average_speed_second_on_km,external_id)
+                               values
+                                (@id_race, @id_strava, @id_runner,@date, @start_date, @total_distance_met, @total_distance_met_valid, @id_activities, 'admin_import', getdate(), @valid, 0,0, 0,'web_created');
+                               select scope_identity();";
+
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("id_race", idRace);
+                param.Add("id_strava", idStrava);
+                param.Add("id_runner", idRunner);
+                param.Add("date", startDate);
+                param.Add("start_date", startDate);
+                param.Add("total_distance_met", totalDistanceMet);
+                param.Add("total_distance_met_valid", totalDistanceMetValid);
+                param.Add("id_activities", idActivities);
+                param.Add("valid", valid);
+
+                idInertNew = Utils.NumberUtil.ParseToInt(DatabaseManager.ExecuteScalarSql(DatabaseManager.CNN_STRING_HELPDESK, sql, CommandType.Text, param) + "");
+                if (idInertNew <= 0)
+                {
+                    message = "Thất bại trong quá trình lưu dữ liệu";
+                }
+
+                return idInertNew > 0;
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".AddHoatDongThuCong Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                logger.Error(ex);
+                message = "lỗi Exception: " + ex.Message;
+                return false;
+            }
+        }
+        public DataTable TraCuuDanhMucHoatDong(string userLogin, int idGiaiChay)
+        {
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                //  param.Add("TuNgay", tuNgay);
+                //  param.Add("DenNgay", denNgay);
+                param.Add("UserLogin", userLogin);
+                param.Add("IdGiaiChay", idGiaiChay);
+                return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, "SP_ql_activities_Search", CommandType.StoredProcedure, param);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".TraCuuDanhMucHoatDong() Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                return null;
+            }
+        }
+        public DataTable TraCuuDanhMucHoatDongSum(DateTime tuNgay, DateTime denNgay, string userLogin, int idGiaiChay)
         {
             try
             {
@@ -63,11 +161,92 @@ namespace WebRunDragon.DataProcess
                 param.Add("TuNgay", tuNgay);
                 param.Add("DenNgay", denNgay);
                 param.Add("UserLogin", userLogin);
+                param.Add("IdGiaiChay", idGiaiChay);
                 return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, "SP_ql_activities_Search_sum", CommandType.StoredProcedure, param);
             }
             catch (Exception ex)
             {
                 logger.Error(className.ToString() + ".TraCuuDanhMucHoatDong() Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                return null;
+            }
+        }
+        public DataTable TraCuuDanhXepHangTheoDoi(string userLogin, int idGiaiChay)
+        {
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("UserLogin", userLogin);
+                param.Add("IdGiaiChay", idGiaiChay);
+                return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, "SP_bc_xephang_doi_Search", CommandType.StoredProcedure, param);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".TraCuuDanhMucHoatDong() Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                return null;
+            }
+        }
+        public DataTable TraCuuDanhXepHangTheoAllVDV(string userLogin, int idGiaiChay)
+        {
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("UserLogin", userLogin);
+                param.Add("IdGiaiChay", idGiaiChay);
+                return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, "SP_bc_xephang_allvdv_Search", CommandType.StoredProcedure, param);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".TraCuuDanhMucHoatDong() Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                return null;
+            }
+        }
+        public DataTable TraCuuDanhXepHangTheoNam(string userLogin, int idGiaiChay)
+        {
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("UserLogin", userLogin);
+                param.Add("IdGiaiChay", idGiaiChay);
+                return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, "SP_bc_xephang_nam_Search", CommandType.StoredProcedure, param);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".TraCuuDanhMucHoatDong() Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                return null;
+            }
+        }
+        public DataTable TraCuuDanhXepHangTheoNu(string userLogin, int idGiaiChay)
+        {
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("UserLogin", userLogin);
+                param.Add("IdGiaiChay", idGiaiChay);
+                return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, "SP_bc_xephang_nu_Search", CommandType.StoredProcedure, param);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".TraCuuDanhMucHoatDong() Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                return null;
+            }
+        }
+        public DataTable TraCuuDanhXepHangTheoTuan(string userLogin, int idGiaiChay)
+        {
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("UserLogin", userLogin);
+                param.Add("IdGiaiChay", idGiaiChay);
+                return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, "sp_bc_xephang_tuan", CommandType.StoredProcedure, param);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".TraCuuDanhXepHangTheoTuan() Error: ");
                 logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
                 return null;
             }
@@ -204,6 +383,27 @@ namespace WebRunDragon.DataProcess
                 return null;
             }
         }
+
+        public DataTable TraCuuDanhMucTestImg( string userLogin)
+        {
+            try
+            {
+                //Dictionary<string, object> param = new Dictionary<string, object>();
+                //param.Add("TuNgay", tuNgay);
+                //param.Add("DenNgay", denNgay);
+                //param.Add("UserLogin", userLogin);
+                //param.Add("IdGiaiChay", idGiaiChay);
+                return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, "select id,ma_hang_hoa, ten_hang_hoa, image_url, don_gia from dm_hang_hoa", CommandType.Text,null);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".TraCuuDanhMucHoatDong() Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                return null;
+            }
+        }
+
+
         public JObject GetDanhMucByID(int ID, string tableName)
         {
             Dictionary<string, object> param = new Dictionary<string, object>();
@@ -215,6 +415,12 @@ namespace WebRunDragon.DataProcess
                     from QL_ACTIVITIES ac
                     inner join  [dbo].[app_user_registed] u on ac.[id_runner]=u.id
                     where ac.id=@Id and (ac.IsDeleted=0 or ac.IsDeleted is null)";
+            }
+            else if (tableName.ToUpper() == "DMCONFIG")
+            {
+                sql = @"select lh.ID, lh.para_type NhomConfig, lh.para_code MaConfig,lh.para_value GiaTriConfig ,lh.Description GhiChu
+                    	from app_params_config lh	
+                    where lh.id=@Id and (lh.is_deleted=0 or lh.is_deleted is null)";
             }
             else if (tableName.ToUpper() == "APP_USER_REGISTED")
             {
@@ -238,6 +444,7 @@ namespace WebRunDragon.DataProcess
             message = "";
             try
             {
+                if (tableName == "DMHOATDONG") { tableName = "ql_activities"; }
                 string contrainKeyOfTable = GetTableInfo(tableName).MaDM;
                 if (contrainKeyOfTable + "" == "")
                 {
@@ -246,7 +453,17 @@ namespace WebRunDragon.DataProcess
                 }
 
                 string sqlDelete = "update " + tableName + " set IsDeleted=1 , " + contrainKeyOfTable + " = " + contrainKeyOfTable + " + CONVERT(varchar(10),id), DeletedBy=@UserLogin, DeletedTime=GETDATE() where ID=@Id";
+                if (tableName.ToUpper() == "ql_activities".ToUpper())
+                {
+                    sqlDelete = @"
+INSERT INTO [dbo].[ql_activities_his]
+           (id_master,[id_race], [id_strava], [id_runner], [date], [total_moving_time], [total_distance_met], [average_speed_second_on_km], [valid], [sport_type], [time_zone], [splits], [visibility], [cheat], [id_activities], [start_date], [created_by], [created_time], [updated_by], [updated_time], [status], [reason], [total_distance_met_valid], [moving_time_str], [name], [external_id], [IsDeleted], [description_change], [map], [invalid_week], [total_elapsed_time])
+SELECT id, [id_race], [id_strava], [id_runner], [date], [total_moving_time], [total_distance_met], [average_speed_second_on_km], [valid], [sport_type], [time_zone], [splits], [visibility], [cheat], [id_activities], [start_date], [created_by], [created_time], [updated_by], [updated_time], [status], [reason], [total_distance_met_valid], [moving_time_str], [name], [external_id], [IsDeleted], [description_change], [map], [invalid_week], [total_elapsed_time]
+FROM ql_activities_his
+WHERE id = @Id;
+delete from " + tableName + "  where ID=@Id ;";
 
+                }
                 Dictionary<string, object> param = new Dictionary<string, object>();
                 param.Add("Id", id);
                 param.Add("UserLogin", userLoginId);
@@ -1008,6 +1225,45 @@ namespace WebRunDragon.DataProcess
             }
         }
 
+        public bool UpdaeDanhMucConfig(int id, string ma, string ten, string ghiChu, string userLoginId, out string message, out int idInertNew)
+        {
+            message = ""; idInertNew = id;
+            try
+            {
+
+                Dictionary<string, object> param = new Dictionary<string, object>();
+
+                param.Add("MaConfig", ma);
+                param.Add("GiaTriConfig", ten);
+                param.Add("GhiChu", ghiChu);
+                param.Add("ID", id);
+                param.Add("UserLogin", userLoginId);
+                int retCode = Utils.NumberUtil.ParseToInt(DatabaseManager.ExecuteScalarSql(DatabaseManager.CNN_STRING_HELPDESK, "SP_DMConfig_Update", System.Data.CommandType.StoredProcedure, param) + "");
+                if (retCode == -2)
+                {
+                    message = "Không tồn tại ID trong dữ liệu";
+                }
+                else if (retCode == -3)
+                {
+                    message = "Đã tồn tại mã " + ma;
+                }
+                else if (retCode == 0)
+                {
+                    message = "Thất bại trong quá trình lưu dữ liệu";
+                }
+                else
+                    idInertNew = retCode;
+                return retCode > 0;
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".UpdaeDanhMucConfig Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                logger.Error(ex);
+                message = "lổi Exception: " + ex.Message;
+                return false;
+            }
+        }
 
         public bool UpdateHoatDong(int id, int hopLe, decimal quangDuongHopLe, string ghiChuThayDoi, string userLogin, out string message, out int idInertNew)
         {
@@ -1182,7 +1438,7 @@ namespace WebRunDragon.DataProcess
             cfgBranches, cfgDepartments, cfgUsersHCQT, cfgUsers, DMTrangThaiTaiSan, DMTrangThaiTaiSanNhapKhoThuHoi,
             dm_run_group, app_user_registed,
             ql_race, ql_news, cd_race_and_run_group, cd_race_and_run_group_and_user,
-            cd_activities, ql_activities,
+            cd_activities, ql_activities,DmHoatDong,
             DMTaiSan, DMLoaiTaiSan, DMNhomTaiSan, DMDonViTinh,
             DMNhaSanXuat, DMNhaCungCap, DMNhaCungCapNhom,
             DMHinhThucSuDungTaiSan, DMLoaiThanhToan, DMLoaiHopDong, CfThoiHanHopDong,
@@ -1213,7 +1469,8 @@ namespace WebRunDragon.DataProcess
             QLNhapKhoSanPham, QLNhapKhoSanPhamCT,
             QLBanGiaoSanPham, QLBanGiaoSanPhamCT,
             QLDangKyGuiThu, QLDangKyGuiThuChiPhi,
-            ql_race_group_user_register
+            ql_race_group_user_register,
+            ql_nghi_phep
         }
 
         public enum eTenColumMasterID
@@ -1266,6 +1523,10 @@ namespace WebRunDragon.DataProcess
             else if (tenDanhMuc.ToUpper() == "cfgUsersHCQT".ToUpper())
             {
                 info.TableName = "cfgUsers"; info.ID = "ID"; info.MaDM = "UserName"; info.TenDM = "FullName";
+            }
+            else if (tenDanhMuc.ToUpper() == "ql_activities".ToUpper())
+            {
+                info.TableName = "ql_activities"; info.ID = "ID"; info.MaDM = "id_strava"; info.TenDM = "total_distance_met_valid";
             }
 
             return info;

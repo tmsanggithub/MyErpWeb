@@ -11,7 +11,7 @@ namespace WebRunDragon.Forms
 {
 
 
-    public partial class DMHoatDong
+    public partial class DMTuan
     {
 
         /// <summary>
@@ -33,13 +33,13 @@ namespace WebRunDragon.Forms
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// cbGiaiChay control.
+        /// txtKeyword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxComboBox cbGiaiChay;
+        protected global::DevExpress.Web.ASPxTextBox txtKeyword;
 
         /// <summary>
         /// btnSearch control.
@@ -51,13 +51,13 @@ namespace WebRunDragon.Forms
         protected global::DevExpress.Web.ASPxButton btnSearch;
 
         /// <summary>
-        /// gridHoatDong control.
+        /// gridTuan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView gridHoatDong;
+        protected global::DevExpress.Web.ASPxGridView gridTuan;
 
         /// <summary>
         /// popUpdateForm control.
@@ -78,130 +78,49 @@ namespace WebRunDragon.Forms
         protected global::DevExpress.Web.PopupControlContentControl PopupControlContentControl1;
 
         /// <summary>
-        /// cbGiaiChayPopup control.
+        /// cbNhanVien control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxComboBox cbGiaiChayPopup;
+        protected global::DevExpress.Web.ASPxComboBox cbNhanVien;
 
         /// <summary>
-        /// cbNguoiDungDangKy control.
+        /// txtTuan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxComboBox cbNguoiDungDangKy;
+        protected global::DevExpress.Web.ASPxTextBox txtTuan;
 
         /// <summary>
-        /// txtIdStrava control.
+        /// deNgayNghiTu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtIdStrava;
+        protected global::DevExpress.Web.ASPxDateEdit deNgayNghiTu;
 
         /// <summary>
-        /// txtMaNhanVien control.
+        /// deNgayNghiDen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtMaNhanVien;
+        protected global::DevExpress.Web.ASPxDateEdit deNgayNghiDen;
 
         /// <summary>
-        /// txtTenNhanVien control.
+        /// txtGhiChu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtTenNhanVien;
-
-        /// <summary>
-        /// deNgayHoatDong control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxDateEdit deNgayHoatDong;
-
-        /// <summary>
-        /// txtIdActivities control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtIdActivities;
-
-        /// <summary>
-        /// txtMaHoatDong control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtMaHoatDong;
-
-        /// <summary>
-        /// txtTongQuangDuong control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtTongQuangDuong;
-
-        /// <summary>
-        /// ckHopLe control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxCheckBox ckHopLe;
-
-        /// <summary>
-        /// txtQuanDuongHopLe control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtQuanDuongHopLe;
-
-        /// <summary>
-        /// txtGhiChuThayDoi control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxMemo txtGhiChuThayDoi;
-
-        /// <summary>
-        /// txtCreatedBy control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtCreatedBy;
-
-        /// <summary>
-        /// txtCreatedTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtCreatedTime;
+        protected global::DevExpress.Web.ASPxMemo txtGhiChu;
 
         /// <summary>
         /// btnSaveEdit control.
@@ -247,24 +166,6 @@ namespace WebRunDragon.Forms
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnCancelDelete;
-
-        /// <summary>
-        /// gridExporter control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxGridViewExporter gridExporter;
-
-        /// <summary>
-        /// btnExcel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxButton btnExcel;
 
         /// <summary>
         /// txtObjectId control.

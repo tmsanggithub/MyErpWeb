@@ -1,8 +1,28 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Forms/Main.Master" AutoEventWireup="true" CodeBehind="DMHoatDong.aspx.cs" Inherits="WebRunDragon.Forms.DMHoatDong" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Forms/Main.Master" AutoEventWireup="true" CodeBehind="DMHoatDong.aspx.cs" Inherits="WebRunDragon.Forms.DMHoatDong" ResponseEncoding="utf-8" %>
 
 <%@ Register Assembly="DevExpress.Web.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .waiting-cursor {
+            cursor: wait !important;
+        }
+    </style>
+    <script type="text/javascript">
+        function pageLoad() {
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            // Khi bắt đầu PostBack: hiện waiting cursor, disable nút
+            prm.add_beginRequest(function () {
+                document.body.style.cursor = 'wait';
+                btnSearch.SetEnabled(false);
+            });
+            // Khi PostBack xong: khôi phục
+            prm.add_endRequest(function () {
+                document.body.style.cursor = 'default';
+                btnSearch.SetEnabled(true);
+            });
+        }
+    </script>
 </asp:Content>
 
 
@@ -16,23 +36,27 @@
                 <table>
                     <tr>
                         <tr>
-                            <td>Từ ngày</td>
+                            <td style="width: 50px">
+                                <div style="display: <%=GetRight(1)%>; float: right; margin-top: 10px; cursor: pointer; width: 45px;"
+                                    onclick="openAddForm()" title="Thêm mới">
+                                    <img src="../Images/icon-add.png" />&nbsp;
+                                </div>
+                            </td>
+                            <td>Gải chạy</td>
                             <td>
-                                <dx:ASPxDateEdit ID="deNgayDieuChinhTu" ClientInstanceName="deNgayDieuChinhTu" runat="server"></dx:ASPxDateEdit>
+                                <dx:ASPxComboBox ID="cbGiaiChay" ClientInstanceName="cbGiaiChay" runat="server" ValueField="id" TextFormatString="{1}" Style="width: 100%">
+                                    <%--<ClientSideEvents ValueChanged="function(s, e) { cbGiaiChayValueChanged(); }" />--%>
+                                    <Columns>
+                                        <dx:ListBoxColumn Caption="ID" FieldName="id" Name="id" Visible="false" />
+                                        <dx:ListBoxColumn Caption="Mã" FieldName="code" Name="code" />
+                                        <dx:ListBoxColumn Caption="Tên" FieldName="name" Name="name" />
+                                    </Columns>
+                                    <ClearButton Visibility="Auto"></ClearButton>
+                                </dx:ASPxComboBox>
                             </td>
 
                             <td>
-                                <dx:ASPxButton ID="btnSearch" ClientInstanceName="btnSearch" runat="server" Text="Tìm kiếm" Style="margin-left: 0px" OnClick="btnSearch_Click" Theme="Office2003Blue" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Đến ngày</td>
-                            <td>
-                                <dx:ASPxDateEdit ID="deNgayDieuChinhDen" ClientInstanceName="deNgayDieuChinhDen" runat="server"></dx:ASPxDateEdit>
-                            </td>
-
-                            <td>
-                                <dx:ASPxButton ID="btnSearchSum" ClientInstanceName="btnSearchSum" runat="server" Text="Tìm kiếm (Sum KM)" Style="margin-left: 0px" OnClick="btnSearchSum_Click" Theme="Office2003Blue" />
+                                <dx:ASPxButton ID="btnSearch" ClientInstanceName="btnSearch" runat="server" Text="Tìm kiếm" Style="margin-left: 0px" OnClick="btnSearch_Click" Theme="Office2003Blue" />
                             </td>
                         </tr>
                 </table>
@@ -64,17 +88,20 @@
                                             </dataitemtemplate>
                                         </DataItemTemplate>
                                     </dx:GridViewDataTextColumn>
-                                    <%-- <dx:GridViewDataTextColumn Caption="Xóa" VisibleIndex="0" Width="35px">
+                                    <dx:GridViewDataTextColumn Caption="Xóa" VisibleIndex="0" Width="35px">
                                         <DataItemTemplate>
-                                            <dataitemtemplate>                    
-                                                <div style=" display: <%#GetRight(3) %>;  cursor: pointer" onclick="OpenDeleteForm('<%#Eval("ID") %>','<%#Eval("TenHoatDong") %>')" title="Xóa">
-                                                   <img src="../Images/icon-delete.png" />
-                                                </div>                                        
+                                            <dataitemtemplate>
+                                                <div style="display: <%#GetRight(3) %>; cursor: pointer" onclick="OpenDeleteForm('<%#Eval("ID") %>','<%#Eval("full_name") %>','<%#Eval("created_by") %>')" title="Xóa">
+                                                    <img src="../Images/icon-delete.png" />
+                                                </div>
                                             </dataitemtemplate>
                                         </DataItemTemplate>
-                                    </dx:GridViewDataTextColumn>--%>
+                                    </dx:GridViewDataTextColumn>
 
                                     <dx:GridViewDataTextColumn Caption="ID" FieldName="ID" VisibleIndex="0" Visible="false" />
+                                    <dx:GridViewDataTextColumn Caption="NV/KH" FieldName="user_type" VisibleIndex="1" Width="100px">
+                                        <Settings AutoFilterCondition="Contains" />
+                                    </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Đội" FieldName="group_name" VisibleIndex="1" Width="100px">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
@@ -165,7 +192,7 @@
         </asp:UpdatePanel>
     </div>
     <div>
-        <dx:ASPxPopupControl ClientInstanceName="popUpdateForm" ID="popUpdateForm" Width="550px" Height="300px"
+        <dx:ASPxPopupControl ClientInstanceName="popUpdateForm" ID="popUpdateForm" Width="750px" Height="650px"
             ScrollBars="Auto" HeaderText="Thông tin loại chạy" runat="server"
             PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter"
             AllowDragging="True" CloseAction="CloseButton" CloseOnEscape="True" Modal="True" Theme="PlasticBlue">
@@ -177,7 +204,42 @@
 
                     <table class="tblPopupUpdateForm" style="width: 100%">
 
+                        <tr>
+                            <td>Giải chạy</td>
+                            <td>
+                                <dx:ASPxComboBox ID="cbGiaiChayPopup" ClientInstanceName="cbGiaiChayPopup" runat="server" ValueField="id" TextFormatString="{1}" Style="width: 100%">
+                                    <Columns>
+                                        <dx:ListBoxColumn Caption="ID" FieldName="id" Name="id" Visible="false" />
+                                        <dx:ListBoxColumn Caption="Mã" FieldName="code" Name="code" />
+                                        <dx:ListBoxColumn Caption="Tên" FieldName="name" Name="name" />
+                                    </Columns>
+                                    <ClearButton Visibility="Auto"></ClearButton>
+                                </dx:ASPxComboBox>
+                            </td>
+                        </tr>
 
+                        <tr>
+                            <td>Người dùng</td>
+                            <td>
+                                <dx:ASPxComboBox ID="cbNguoiDungDangKy" ClientInstanceName="cbNguoiDungDangKy" runat="server" ValueField="id_runner" TextField="name" Style="width: 100%">
+                                    <ClientSideEvents ValueChanged="function(s, e) { updateThongTinNguoiDung(); }" />
+                                    <Columns>
+                                        <dx:ListBoxColumn Caption="ID Runner" FieldName="id_runner" Name="id_runner" />
+                                        <dx:ListBoxColumn Caption="ID Strava" FieldName="id_strava" Name="id_strava" />
+                                        <dx:ListBoxColumn Caption="Mã" FieldName="code" Name="code" />
+                                        <dx:ListBoxColumn Caption="Tên" FieldName="name" Name="name" />
+                                    </Columns>
+                                    <ClearButton Visibility="Auto"></ClearButton>
+                                </dx:ASPxComboBox>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>ID Strava</td>
+                            <td>
+                                <dx:ASPxTextBox ID="txtIdStrava" ClientInstanceName="txtIdStrava" runat="server" Width="100%" ClientEnabled="false"></dx:ASPxTextBox>
+                            </td>
+                        </tr>
                         <tr>
                             <td>Mã nhân viên</td>
                             <td>
@@ -190,10 +252,34 @@
                                 <dx:ASPxTextBox ID="txtTenNhanVien" ClientInstanceName="txtTenNhanVien" runat="server" Width="100%"></dx:ASPxTextBox>
                             </td>
                         </tr>
+
+
+                        <tr>
+                            <td>Ngày</td>
+                            <td>
+                                <dx:ASPxDateEdit ID="deNgayHoatDong" ClientInstanceName="deNgayHoatDong" runat="server" Width="100%">
+                                    <ClearButton Visibility="Auto"></ClearButton>
+                                </dx:ASPxDateEdit>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ID hoạt động</td>
+                            <td>
+                                <dx:ASPxTextBox ID="txtIdActivities" ClientInstanceName="txtIdActivities" runat="server" Width="100%"></dx:ASPxTextBox>
+                            </td>
+                        </tr>
+
                         <tr>
                             <td>Mã hoạt động</td>
                             <td>
                                 <dx:ASPxTextBox ID="txtMaHoatDong" ClientInstanceName="txtMaHoatDong" runat="server" Width="50%"></dx:ASPxTextBox>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Tổng quãng đường (m)</td>
+                            <td>
+                                <dx:ASPxTextBox ID="txtTongQuangDuong" ClientInstanceName="txtTongQuangDuong" runat="server" Width="100%"></dx:ASPxTextBox>
                             </td>
                         </tr>
                         <tr>
@@ -212,6 +298,21 @@
                             <td>Ghi chú thay đổi</td>
                             <td>
                                 <dx:ASPxMemo ID="txtGhiChuThayDoi" ClientInstanceName="txtGhiChuThayDoi" runat="server" TextMode="MultiLine" Width="100%" Height="45px"></dx:ASPxMemo>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Created By</td>
+                            <td>
+                                <dx:ASPxTextBox ID="txtCreatedBy" ClientInstanceName="txtCreatedBy" runat="server" Width="100%" ClientEnabled="false"></dx:ASPxTextBox>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Created Time</td>
+                            <td>
+                                <dx:ASPxTextBox ID="txtCreatedTime" ClientInstanceName="txtCreatedTime" runat="server" Width="100%" ClientEnabled="false"></dx:ASPxTextBox>
                             </td>
                         </tr>
                         <tr>
@@ -254,7 +355,7 @@
                 <dx:PopupControlContentControl runat="server">
                     <table style="width: 100%">
                         <tr>
-                            <td colspan="3">Bạn có chắc chắn xóa nhóm chạy [<span id="spTopicName" style="font-weight: bold; color: red"></span>] ?</td>
+                            <td colspan="3">Bạn có chắc chắn xóa hoạt động [<span id="spTopicName" style="font-weight: bold; color: red"></span>] ?</td>
                         </tr>
                         <tr>
                             <td colspan="3"></td>
@@ -294,10 +395,41 @@
 
         function openAddForm() {
             clearForm("");
+            setControlMode("");
             popUpdateForm.Show();
         }
 
+        function setControlMode(readEditApproval) {
+            var mode = (readEditApproval || "").toUpperCase();
+            var isEditOnly = mode === "EDITONLY";
+            var isReadOnly = mode === "READONLY";
+            var isAddNew = !isEditOnly && !isReadOnly;
+
+            cbGiaiChayPopup.SetEnabled(isAddNew);
+            cbNguoiDungDangKy.SetEnabled(isAddNew);
+            deNgayHoatDong.SetEnabled(isAddNew);
+            txtTongQuangDuong.SetEnabled(isAddNew);
+            txtIdActivities.SetEnabled(isAddNew);
+            txtMaNhanVien.SetEnabled(isAddNew);
+            txtTenNhanVien.SetEnabled(isAddNew);
+            txtMaHoatDong.SetEnabled(isAddNew);
+
+            txtQuanDuongHopLe.SetEnabled(isAddNew || isEditOnly);
+            ckHopLe.SetEnabled(isAddNew || isEditOnly);
+            txtGhiChuThayDoi.SetEnabled(isAddNew || isEditOnly);
+
+            btnSaveEdit.SetVisible(!isReadOnly);
+        }
+
         function clearForm(readEdit) {
+            cbGiaiChayPopup.SetValue(cbGiaiChay.GetValue());
+            cbNguoiDungDangKy.SetValue(null);
+            txtIdStrava.SetText("");
+            deNgayHoatDong.SetValue(null);
+            txtTongQuangDuong.SetText("");
+            txtIdActivities.SetText("");
+            txtCreatedBy.SetText("admin_import");
+            txtCreatedTime.SetText((new Date()).toLocaleString());
             txtMaNhanVien.SetText("");
             txtTenNhanVien.SetText("");
             //  txtMaHoatDong.SetEnabled(false);
@@ -305,12 +437,39 @@
             txtMaHoatDong.SetText("");
             ckHopLe.SetValue(false);
             txtGhiChuThayDoi.SetText("");
+
             txtObjectId.Set('hidden_value', "0");
         }
 
+        function updateThongTinNguoiDung() {
+            var item = cbNguoiDungDangKy.GetSelectedItem();
+            if (!item) {
+                txtIdStrava.SetText("");
+                txtMaNhanVien.SetText("");
+                txtTenNhanVien.SetText("");
+                return;
+            }
+
+            txtIdStrava.SetText(item.GetColumnText(1));
+            txtMaNhanVien.SetText(item.GetColumnText(2));
+            txtTenNhanVien.SetText(item.GetColumnText(3));
+        }
+
         function saveHoatDong() {
-            if (txtMaHoatDong.GetText() + "" == "") {
-                alert("Chưa nhập Mã hoạt động");
+            if (cbGiaiChayPopup.GetValue() == null || cbGiaiChayPopup.GetValue() == "") {
+                alert("Chưa chọn giải chạy");
+                return;
+            }
+            if (cbNguoiDungDangKy.GetValue() == null || cbNguoiDungDangKy.GetValue() == "") {
+                alert("Chưa chọn người dùng");
+                return;
+            }
+            if (deNgayHoatDong.GetValue() == null) {
+                alert("Chưa nhập ngày hoạt động");
+                return;
+            }
+            if (txtIdActivities.GetText() + "" == "") {
+                alert("Chưa nhập ID hoạt động");
                 return;
             }
             if (txtGhiChuThayDoi.GetText() + "" == "") {
@@ -321,7 +480,13 @@
             var data = "mode=AddOrUpdate";
             data += "&id=" + txtObjectId.Get("hidden_value");
             data += "&tableName=ql_activities";
+            data += "&IDRace=" + cbGiaiChayPopup.GetValue();
+            data += "&IDRunner=" + cbNguoiDungDangKy.GetValue();
+            data += "&IDStrava=" + txtIdStrava.GetText();
+            data += "&NgayHoatDong=" + deNgayHoatDong.GetText();
+            data += "&TongQuangDuong=" + txtTongQuangDuong.GetValue();
             data += "&QuangDuongHopLe=" + txtQuanDuongHopLe.GetValue();
+            data += "&IDActivities=" + txtIdActivities.GetText();
             data += "&HopLe=" + ckHopLe.GetValue();
             data += "&GhiChuThayDoi=" + txtGhiChuThayDoi.GetText();
 
@@ -343,6 +508,7 @@
 
                         txtObjectId.Set('hidden_value', data.id);
                         gridHoatDong.PerformCallback();
+                        popUpdateForm.Hide();
                     }
                     else {
 
@@ -361,6 +527,9 @@
 
 
             clearForm(readEditApproval);
+            setControlMode(readEditApproval);
+
+
 
             $.ajax({
                 type: "POST",
@@ -373,6 +542,14 @@
                 success: function (data) {
                     if (data.success) {
                         txtObjectId.Set('hidden_value', ID);
+                        cbGiaiChayPopup.SetValue(data.entity.id_race);
+                        cbNguoiDungDangKy.SetValue(data.entity.id_runner);
+                        txtIdStrava.SetText(data.entity.id_strava);
+                        deNgayHoatDong.SetText(data.entity.date);
+                        txtTongQuangDuong.SetText(data.entity.total_distance_met);
+                        txtIdActivities.SetText(data.entity.id_activities);
+                        txtCreatedBy.SetText(data.entity.created_by);
+                        txtCreatedTime.SetText(data.entity.created_time);
                         txtMaNhanVien.SetText(data.entity.staff_no_vdsc);
                         txtTenNhanVien.SetText(data.entity.full_name);
                         txtMaHoatDong.SetText(data.entity.id_activities);
@@ -385,36 +562,37 @@
             });
         }
 
-        //function OpenDeleteForm(ID, fullName) {
-        //    txtObjectId.Set('hidden_value', ID);
-        //    $("#spTopicName").html(fullName);
-        //    popupConfirmDelete.Show();
-        //}
+        function OpenDeleteForm(ID, fullName, createdBy) {
+            if ((createdBy + '').toLowerCase() != 'admin_import') {
+                alert('Chỉ cho phép xóa hoạt động có created_by = admin_import');
+                return;
+            }
+            txtObjectId.Set('hidden_value', ID);
+            $("#spTopicName").html(fullName);
+            popupConfirmDelete.Show();
+        }
 
-        //function DoDelete() {
-        //    btnConfirmDelete.SetEnabled(false);
-        //    $.ajax({
-        //        type: "POST",
-        //        async: true,
-        //        url: "../Actions/QLDanhMucAction.ashx",
-        //        dataType: "json",
-        //        data: "mode=delete&tableName=dm_run_group&id=" + txtObjectId.Get('hidden_value'),
-        //        complete: function () {
-        //            btnConfirmDelete.SetEnabled(true);
-        //            popupConfirmDelete.Hide();
-        //        },
-        //        timeout: 30000,
-        //        success: function (data) {
-        //            if (data.success) {
-        //                gridHoatDong.PerformCallback();
-        //            }
-        //            else {
-
-        //            }
-        //            alert(data.message);
-        //        }
-        //    });
-        //}
+        function DoDelete() {
+            btnConfirmDelete.SetEnabled(false);
+            $.ajax({
+                type: "POST",
+                async: true,
+                url: "../Actions/QLDanhMucAction.ashx",
+                dataType: "json",
+                data: "mode=delete&tableName=DMHoatDong&id=" + txtObjectId.Get('hidden_value'),
+                complete: function () {
+                    btnConfirmDelete.SetEnabled(true);
+                    popupConfirmDelete.Hide();
+                },
+                timeout: 30000,
+                success: function (data) {
+                    if (data.success) {
+                        gridHoatDong.PerformCallback();
+                    }
+                    alert(data.message);
+                }
+            });
+        }
     </script>
 
 </asp:Content>

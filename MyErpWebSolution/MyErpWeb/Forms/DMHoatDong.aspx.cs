@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebRunDragon.Config;
+using WebRunDragon.DataProcess;
 
 namespace WebRunDragon.Forms
 {
@@ -13,6 +14,40 @@ namespace WebRunDragon.Forms
         private static readonly log4net.ILog logger = log4net.LogManager.GetLogger(typeof(DMHoatDong));
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+                // Lưu lại giá trị user đang chọn TRƯỚC KHI DataBind() reset nó
+                Session["DMHoatDong_cbGiaiChayValue"] = cbGiaiChay.Value;
+                Session["DMHoatDong_cbGiaiChayPopupValue"] = cbGiaiChayPopup.Value;
+                Session["DMHoatDong_cbNguoiDungDangKyValue"] = cbNguoiDungDangKy.Value;
+            }
+
+            // Luôn bind DataSource để UI hiển thị items (kể cả PostBack)
+            cbGiaiChay.DataSource = DataProcess.ProcessDanhMuc.getInstance().LoadDanhMuc4ComboFromCache(ProcessDanhMuc.eTenDanhMuc.ql_race + "", Utils.UserUtil.GetSessionUserId());
+            cbGiaiChay.DataBind();
+
+            cbGiaiChayPopup.DataSource = DataProcess.ProcessDanhMuc.getInstance().LoadDanhMuc4ComboFromCache(ProcessDanhMuc.eTenDanhMuc.ql_race + "", Utils.UserUtil.GetSessionUserId());
+            cbGiaiChayPopup.DataBind();
+
+            cbNguoiDungDangKy.DataSource = DataProcess.ProcessDanhMuc.getInstance().LoadUserDangKy4Combo(Utils.UserUtil.GetSessionUserId());
+            cbNguoiDungDangKy.DataBind();
+
+            if (IsPostBack && Session["DMHoatDong_cbGiaiChayValue"] != null)
+            {
+                // Khôi phục lại giá trị đã chọn sau khi DataBind()
+                cbGiaiChay.Value = Session["DMHoatDong_cbGiaiChayValue"];
+            }
+
+            if (IsPostBack && Session["DMHoatDong_cbGiaiChayPopupValue"] != null)
+            {
+                cbGiaiChayPopup.Value = Session["DMHoatDong_cbGiaiChayPopupValue"];
+            }
+
+            if (IsPostBack && Session["DMHoatDong_cbNguoiDungDangKyValue"] != null)
+            {
+                cbNguoiDungDangKy.Value = Session["DMHoatDong_cbNguoiDungDangKyValue"];
+            }
+
             if (!IsPostBack)
             {
                 if (Utils.ActionUtil.CanRead(Utils.UserUtil.GetSessionUserId(), typeof(Forms.DMHoatDong).Name.ToUpper())
@@ -27,18 +62,12 @@ namespace WebRunDragon.Forms
                     Response.Redirect(Config.SysConfig.URL_ERROR_FORBIDDEN);
                 }
             }
-            else
-            {
-
-            }
         }
 
         private void BindControl()
         {
             try
             {
-                deNgayDieuChinhTu.Date = DateTime.Now.AddDays(-30);
-                deNgayDieuChinhDen.Date = DateTime.Now;
                 //InitData();
                 LoadDataSource();
 
@@ -55,22 +84,17 @@ namespace WebRunDragon.Forms
         }
         protected void btnSearchSum_Click(object sender, EventArgs e)
         {
-            LoadDataSourceSum();
+            LoadDataSource();
         }
-        private void LoadDataSourceSum()
-        {
 
-            var dt = DataProcess.ProcessDanhMuc.getInstance().TraCuuDanhMucHoatDongSum(deNgayDieuChinhTu.Date, deNgayDieuChinhDen.Date, Utils.UserUtil.GetSessionUserId() + "");
-            Session["ssDMHoatDong"] = dt;
-            gridHoatDong.DataBind();
-        }
         protected void gridHoatDong_CustomCallback(object sender, DevExpress.Web.ASPxGridViewCustomCallbackEventArgs e)
         {
             LoadDataSource();
         }
         protected void gridHoatDong_PageIndexChanged(object sender, EventArgs e)
         {
-            LoadDataSource();
+            // Chỉ bind lại từ Session, không query DB lại
+            gridHoatDong.DataBind();
         }
         protected void gridHoatDong_DataBinding(object sender, EventArgs e)
         {
@@ -79,9 +103,16 @@ namespace WebRunDragon.Forms
         }
         private void LoadDataSource()
         {
-
-            var dt = DataProcess.ProcessDanhMuc.getInstance().TraCuuDanhMucHoatDong(deNgayDieuChinhTu.Date, deNgayDieuChinhDen.Date, Utils.UserUtil.GetSessionUserId() + "");
-            Session["ssDMHoatDong"] = dt;
+            int idGiaiChay = Utils.NumberUtil.ParseToInt(cbGiaiChay.Value + "");
+            if (idGiaiChay > 0)
+            {
+                var dt = DataProcess.ProcessDanhMuc.getInstance().TraCuuDanhMucHoatDong(Utils.UserUtil.GetSessionUserId() + "", idGiaiChay);
+                Session["ssDMHoatDong"] = dt;
+            }
+            else
+            {
+                Session["ssDMHoatDong"] = null;
+            }
             gridHoatDong.DataBind();
         }
         protected void btnExcel_Click(object sender, EventArgs e)

@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebRunDragon.Forms
-{
-
-
-    public partial class Main
-    {
-
+namespace WebRunDragon.Forms {
+    
+    
+    public partial class Main {
+        
         /// <summary>
         /// head control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace WebRunDragon.Forms
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-
+        
         /// <summary>
         /// formMaster control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace WebRunDragon.Forms
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm formMaster;
-
+        
         /// <summary>
         /// lh control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace WebRunDragon.Forms
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxHyperLink lh;
-
+        
         /// <summary>
         /// lblUserFullName control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace WebRunDragon.Forms
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel lblUserFullName;
-
+        
         /// <summary>
         /// lnkLogout control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace WebRunDragon.Forms
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxHyperLink lnkLogout;
-
+        
         /// <summary>
         /// nvbMain control.
         /// </summary>
@@ -66,17 +64,8 @@ namespace WebRunDragon.Forms
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxMenu nvbMain;
-
-        /// <summary>
-        /// lblBreadcrumb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBreadcrumb;
-
+        protected global::DevExpress.Web.ASPxNavBar nvbMain;
+        
         /// <summary>
         /// ContentPlaceHolder1 control.
         /// </summary>

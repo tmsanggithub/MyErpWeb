@@ -170,7 +170,7 @@
                                                 <td style="width: 80px">Giải chạy</td>
                                                 <td colspan="3">
                                                     <dx:ASPxComboBox ID="cbGiaiChay" ClientInstanceName="cbGiaiChay" runat="server" ValueField="id" TextFormatString="{1}" Style="width: 100%">
-                                                        <ClientSideEvents ValueChanged="function(s, e) { cbGiaiChayValueChanged(); }" />
+                                                        <%--<ClientSideEvents ValueChanged="function(s, e) { cbGiaiChayValueChanged(); }" />--%>
                                                         <Columns>
                                                             <dx:ListBoxColumn Caption="ID" FieldName="id" Name="id" Visible="false" />
                                                             <dx:ListBoxColumn Caption="Mã" FieldName="code" Name="code" />

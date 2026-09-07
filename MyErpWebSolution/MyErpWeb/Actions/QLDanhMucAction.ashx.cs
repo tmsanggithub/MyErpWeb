@@ -1,12 +1,13 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
-using System.Web.UI;
 using System.Web.SessionState;
-using WebRunDragon.Forms;
+using System.Web.UI;
 using WebRunDragon.DataProcess;
+using WebRunDragon.Forms;
 
 namespace WebRunDragon.Actions
 {
@@ -57,7 +58,31 @@ namespace WebRunDragon.Actions
 
                         }
                         else
-                            success = DataProcess.ProcessDanhMuc.getInstance().DeleteDanhMucByIDCheckConstrainKey(id, tableName, sessionUserId, out message);
+                        {
+                            if (tableName == DataProcess.ProcessDanhMuc.eTenDanhMuc.DmHoatDong.ToString().ToUpper())
+                            {
+                                tableName = "QL_ACTIVITIES";
+                                var entity = DataProcess.ProcessDanhMuc.getInstance().GetDanhMucByID(id, tableName);
+                                if (entity == null)
+                                {
+                                    success = false;
+                                    message = "Không tìm thấy hoạt động cần xóa";
+                                }
+                                else if ((entity["created_by"] + "").ToLower() != "admin_import")
+                                {
+                                    success = false;
+                                    message = "Chỉ cho phép xóa hoạt động có created_by = admin_import";
+                                }
+                                else
+                                {
+                                    success = DataProcess.ProcessDanhMuc.getInstance().DeleteDanhMucByIDCheckConstrainKey(id, tableName, sessionUserId, out message);
+                                }
+                            }
+                            else
+                            {
+                                success = DataProcess.ProcessDanhMuc.getInstance().DeleteDanhMucByIDCheckConstrainKey(id, tableName, sessionUserId, out message);
+                            }
+                        }
                     }
                     else
                         message = "Bạn không có quyền xóa chức năng này";
@@ -65,8 +90,9 @@ namespace WebRunDragon.Actions
                 else if (mode == "AddOrUpdate".ToUpper())
                 {
 
-                    if ((Utils.ActionUtil.CanEdit(Utils.UserUtil.GetSessionUserId(), tableName.ToUpper()) && id > 0) ||
-                        (Utils.ActionUtil.CanCreate(Utils.UserUtil.GetSessionUserId(), tableName.ToUpper()) && id == 0))
+                    if ((Utils.ActionUtil.CanEdit(Utils.UserUtil.GetSessionUserId(), tableName.ToUpper()))// ||
+                                                                                                          //  (Utils.ActionUtil.CanCreate(Utils.UserUtil.GetSessionUserId(), tableName.ToUpper()) && id == 0)
+                        )
                     {
                         int idInsertNew = 0;
                         if (tableName == DataProcess.ProcessDanhMuc.eTenDanhMuc.DMDonViTinh.ToString().ToUpper() + "")
@@ -87,7 +113,7 @@ namespace WebRunDragon.Actions
                         else if (tableName == DataProcess.ProcessDanhMuc.eTenDanhMuc.app_user_registed.ToString().ToUpper() + "")
                         {
                             success = UdateDanhMucVanDongVien(id, context.Request.Form["MaVanDongVien"], context.Request.Form["TenHienThi"], context.Request.Form["TenDayDu"], context.Request.Form["GioiTinh"], context.Request.Form["UserType"], context.Request.Form["GhiChu"], sessionUserId, out message, out idInsertNew);
-                           
+
                         }
 
                         else if (tableName == DataProcess.ProcessDanhMuc.eTenDanhMuc.DMLoaiBaoHiem.ToString().ToUpper() + "")
@@ -111,10 +137,26 @@ namespace WebRunDragon.Actions
                             int hopLe = Utils.NumberUtil.ParseToBool(context.Request.Form["HopLe"]) ? 1 : 0;
                             decimal quangDuonhHopLe = Utils.NumberUtil.ParseToDecimal(context.Request.Form["QuangDuongHopLe"]);
                             string ghiChuThayDoi = context.Request.Form["GhiChuThayDoi"] + "";
+                            if (id > 0)
+                            {
+                                success = UpdateHoatDong(id, hopLe, quangDuonhHopLe, ghiChuThayDoi, sessionUserId, out message, out idInsertNew);
+                            }
+                            else
+                            {
+                                int idRace = Utils.NumberUtil.ParseToInt(context.Request.Form["IDRace"]);
+                                string idStrava = context.Request.Form["IDStrava"] + "";
+                                int idRunner = Utils.NumberUtil.ParseToInt(context.Request.Form["IDRunner"]);
+                                DateTime ngayHoatDong = Utils.NumberUtil.ParseToDate(context.Request.Form["NgayHoatDong"]);
+                                decimal tongQuangDuong = Utils.NumberUtil.ParseToDecimal(context.Request.Form["TongQuangDuong"]);
+                                string idActivities = context.Request.Form["IDActivities"] + "";
 
-                            success = UpdateHoatDong(id, hopLe, quangDuonhHopLe, ghiChuThayDoi, sessionUserId, out message, out idInsertNew);
+                                success = AddHoatDongThuCong(idRace, idStrava, idRunner, ngayHoatDong, tongQuangDuong, quangDuonhHopLe, idActivities, hopLe, out message, out idInsertNew);
+                            }
                         }
-
+                        else if (tableName == "DMCONFIG")
+                        {
+                            success = UdateDanhMucConfig(id, context.Request.Form["MaConfig"], context.Request.Form["GiaTriConfig"], context.Request.Form["GhiChu"], sessionUserId, out message, out idInsertNew);
+                        }
                         // truong hop them moi thi tra ve lại ID mới thêm vào database
                         if (id <= 0) id = idInsertNew;
                         if (success)
@@ -169,6 +211,34 @@ namespace WebRunDragon.Actions
             if (ret) { message = "Lưu thành công"; }
             return ret;
         }
+
+        public bool AddHoatDongThuCong(int idRace, string idStrava, int idRunner, DateTime ngayHoatDong, decimal tongQuangDuong, decimal quangDuongHopLe, string idActivities, int valid, out string message, out int idInsertUpdate)
+        {
+            message = ""; idInsertUpdate = 0;
+            bool ret = false;
+
+            if (idRace <= 0)
+            {
+                message = "Chưa chọn giải chạy";
+                return false;
+            }
+
+            if (idRunner <= 0 || idStrava + "" == "")
+            {
+                message = "Chưa chọn người dùng";
+                return false;
+            }
+
+            if (idActivities + "" == "")
+            {
+                message = "Chưa nhập ID hoạt động";
+                return false;
+            }
+
+            ret = DataProcess.ProcessDanhMuc.getInstance().AddHoatDongThuCong(idRace, idStrava, idRunner, ngayHoatDong, tongQuangDuong, quangDuongHopLe, idActivities, valid, out message, out idInsertUpdate);
+            if (ret) { message = "Lưu thành công"; }
+            return ret;
+        }
         public bool AddOrUdateDanhMucNhomChay(int id, string ma, string ten, string ghiChu, string userLogin, out string message, out int idInsertUpdate)
         {
             message = ""; idInsertUpdate = 0;
@@ -190,11 +260,12 @@ namespace WebRunDragon.Actions
             if (ret) { message = "Lưu thành công"; }
             return ret;
         }
-        public bool UdateDanhMucVanDongVien(int id, string ma, string tenHienThi,string tenDayDu,string gioiTinh, string userType, string ghiChu, string userLogin, out string message, out int idInsertUpdate)
+        public bool UdateDanhMucVanDongVien(int id, string ma, string tenHienThi, string tenDayDu, string gioiTinh, string userType, string ghiChu, string userLogin, out string message, out int idInsertUpdate)
         {
             message = ""; idInsertUpdate = 0;
             bool ret = false;
-            if (id <=0 ){
+            if (id <= 0)
+            {
                 message = "Không tìm thấy dữ liệu ID";
                 return false;
             }
@@ -220,7 +291,7 @@ namespace WebRunDragon.Actions
             }
 
 
-            ret = DataProcess.ProcessDanhMuc.getInstance().UpdateDanhMucVanDongVien(id, ma, tenHienThi, tenDayDu, gioiTinh,userType, ghiChu, userLogin, out message, out idInsertUpdate);
+            ret = DataProcess.ProcessDanhMuc.getInstance().UpdateDanhMucVanDongVien(id, ma, tenHienThi, tenDayDu, gioiTinh, userType, ghiChu, userLogin, out message, out idInsertUpdate);
 
             if (ret) { message = "Lưu thành công"; }
             return ret;
@@ -525,6 +596,177 @@ namespace WebRunDragon.Actions
             if (ret) { message = "Lưu thành công"; }
             return ret;
         }
+        public bool UdateDanhMucConfig(int id, string ma, string ten, string ghiChu, string userLogin, out string message, out int idInsertUpdate)
+        {
+            message = ""; idInsertUpdate = 0;
+            bool ret = false;
+            if (ma + "" == "")
+            {
+                message = "Chưa nhập Mã";
+                return false;
+            }
+            else if (ten + "" == "")
+            {
+                message = "Chưa nhập Tên";
+                return false;
+            }
+            if (!ValidateConfigRule(ma, ten, out message))
+            {
+                return false;
+            }
+
+            ret = DataProcess.ProcessDanhMuc.getInstance().UpdaeDanhMucConfig(id, ma, ten, ghiChu, userLogin, out message, out idInsertUpdate);
+
+            if (ret) { message = "Lưu thành công"; }
+            return ret;
+        }
+        public bool ValidateConfigRule(string key, string value, out string errorMessage)
+        {
+            errorMessage = null;
+
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                errorMessage = $"{key} không được để trống.";
+                return false;
+            }
+            Decimal decimalValue = 0;
+            Int32 pauseTime = 0;
+            bool boolValue = false;
+            TimeSpan temTimeSpan;
+            DateTime dateTemp;
+            switch (key)
+            {
+                // Decimal >= 0
+                case "soKmToiThieu":
+                case "soKmToiDaTrongNgay":
+                case "tocDoTrungBinhTu":
+                case "tocDoTrungBinhDen":
+                case "splitsPaceTu":
+                case "splitsPaceDen":
+
+                    if (!Decimal.TryParse(
+                        value,
+                        NumberStyles.Number,
+                        CultureInfo.InvariantCulture,
+                        out decimalValue))
+                    {
+                        errorMessage = $"{key} phải là số. Ví dụ: 3.00";
+                        return false;
+                    }
+
+                    if (decimalValue < 0 && key != "tocDoTrungBinhTu")
+                    {
+                        errorMessage = $"{key} phải lớn hơn hoặc bằng 0.";
+                        return false;
+                    }
+
+                    return true;
+
+
+                // Boolean
+                case "checkSplitsPace":
+                case "checkWorkTime":
+                case "raceOffline":
+                case "checkConfigTime":
+
+                    if (!bool.TryParse(value, out boolValue))
+                    {
+                        errorMessage = $"{key} phải có giá trị true hoặc false.";
+                        return false;
+                    }
+
+                    return true;
+
+
+                // Time HH:mm
+                case "workTimeAmFrom":
+                case "workTimeAmTo":
+                case "workTimePmFrom":
+                case "workTimePmTo":
+                case "configTimeAmFrom":
+                case "configTimeAmTo":
+
+                    if (!TimeSpan.TryParseExact(
+                        value,
+                        @"hh\:mm",
+                        CultureInfo.InvariantCulture,
+                        out temTimeSpan))
+                    {
+                        errorMessage = $"{key} phải đúng định dạng HH:mm. Ví dụ: 08:00";
+                        return false;
+                    }
+
+                    return true;
+
+
+                // Integer >= 0
+                case "pauseTime":
+
+                    if (!Int32.TryParse(value, out pauseTime))
+                    {
+                        errorMessage = $"{key} phải là số nguyên. Ví dụ: 14400";
+                        return false;
+                    }
+
+                    if (pauseTime < 0)
+                    {
+                        errorMessage = $"{key} phải lớn hơn hoặc bằng 0.";
+                        return false;
+                    }
+
+                    return true;
+
+
+                // Date yyyy-MM-dd
+                case "raceDateFrom":
+                case "raceDateTo":
+
+                    if (!DateTime.TryParseExact(
+                        value,
+                        "yyyy-MM-dd",
+                        CultureInfo.InvariantCulture,
+                        DateTimeStyles.None,
+                        out dateTemp))
+                    {
+                        errorMessage = $"{key} phải đúng định dạng yyyy-MM-dd. Ví dụ: 2026-05-25";
+                        return false;
+                    }
+
+                    return true;
+                case "LIST_HOLIDAY_DATE_ALL_RACE":
+
+                    string[] dates = value.Split(';');
+
+                    if (dates.Length == 0)
+                    {
+                        errorMessage = key + " không có dữ liệu ngày.";
+                        return false;
+                    }
+
+                    foreach (string item in dates)
+                    {
+                        DateTime dateValue;
+
+                        if (!DateTime.TryParseExact(
+                            item.Trim(),
+                            "yyyy-MM-dd",
+                            CultureInfo.InvariantCulture,
+                            DateTimeStyles.None,
+                            out dateValue))
+                        {
+                            errorMessage = key + " có ngày không đúng định dạng yyyy-MM-dd. Giá trị lỗi: " + item;
+                            return false;
+                        }
+                    }
+
+                    return true;
+                default:
+                    errorMessage = "";
+                    return true;
+            }
+        }
+
+
         #endregion tài sản
 
         public bool IsReusable

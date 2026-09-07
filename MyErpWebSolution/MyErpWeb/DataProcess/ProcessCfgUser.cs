@@ -126,7 +126,23 @@ namespace WebRunDragon.DataProcess
                         access.CanApprove = int.Parse(right["CanApprove"] + "");
                         access.CanSpecial = int.Parse(right["CanSpecial"] + "");
                         access.CanPrint = int.Parse(right["CanPrint"] + "");
-                        listAccessRight.Add(access.Code, access);
+
+                        if (listAccessRight.ContainsKey(access.Code))
+                        {
+                            var old = listAccessRight[access.Code];
+                            old.CanRead = old.CanRead == 1 || access.CanRead == 1 ? 1 : 0;
+                            old.CanCreate = old.CanCreate == 1 || access.CanCreate == 1 ? 1 : 0;
+                            old.CanEdit = old.CanEdit == 1 || access.CanEdit == 1 ? 1 : 0;
+                            old.CanDelete = old.CanDelete == 1 || access.CanDelete == 1 ? 1 : 0;
+                            old.CanApprove = old.CanApprove == 1 || access.CanApprove == 1 ? 1 : 0;
+                            old.CanSpecial = old.CanSpecial == 1 || access.CanSpecial == 1 ? 1 : 0;
+                            old.CanPrint = old.CanPrint == 1 || access.CanPrint == 1 ? 1 : 0;
+                            listAccessRight[access.Code] = old;
+                        }
+                        else
+                        {
+                            listAccessRight.Add(access.Code, access);
+                        }
                     }
                     userInfo.ListAccessRight = listAccessRight;
                     return userInfo;
@@ -216,7 +232,7 @@ namespace WebRunDragon.DataProcess
                 authenInfo["userId"] = userId;
                 authenInfo["userPwd"] = userPwd;
                 authenInfo["mode"] = authenMode;
-                if( userId.ToLower()=="thu.tnh" && userPwd == "123Run")
+                if( userId.ToLower()=="thu.tnh" && userPwd == "123")
                 {
                     retObject = new JObject();
                     retObject["success"] = true;
