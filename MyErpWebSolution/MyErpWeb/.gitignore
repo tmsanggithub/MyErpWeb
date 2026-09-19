@@ -1,0 +1,57 @@
+# Visual Studio / .NET ignore rules
+# See https://github.com/github/gitignore/blob/main/VisualStudio.gitignore for reference
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS workspace
+.vs/
+
+# Build folders
+**/bin/
+**/obj/
+
+# NuGet packages folder (if you keep packages in repo)
+packages/
+*.nupkg
+
+# Publish profiles
+**/Properties/PublishProfiles/
+
+# App_Data logging folder (example from project)
+**/App_Data/logging/
+
+# Specific project folders
+MyErpWebSolution/MyErpWeb/App_Data/logging/
+MyErpWebSolution/MyErpWeb/Properties/PublishProfiles/
+
+# Solution-level folders to ignore (explicit)
+MyErpWebSolution/.vs/
+MyErpWebSolution/packages/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# NPM
+node_modules/
+npm-debug.log
+
+# Logs
+*.log
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Visual Studio Code
+.vscode/
+
+# Others
+*.tmp
+*.temp
+
+# End of file
