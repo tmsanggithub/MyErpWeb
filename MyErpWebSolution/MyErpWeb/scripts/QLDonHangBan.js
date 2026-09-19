@@ -1,8 +1,86 @@
-﻿function openAddForm() {
-    // Open detail form in a new tab for add
+﻿
+// Open detail form in a new tab for add; if a tab already opened reuse and focus it
+window.openAddForm = function () {
     var url = 'QLDonHangBanCT.aspx';
-    window.open(url, '_blank');
-}
+    var winName = 'QLDonHangBanCT_new';
+    try {
+        var w = window.open(url, winName);
+        if (w) {
+            try { w.focus(); } catch (e) { }
+        } else {
+            // fallback
+            window.open(url, '_blank');
+        }
+    } catch (e) {
+        window.open(url, '_blank');
+    }
+};
+
+// Adjust grid page size to fit viewport more accurately
+(function () {
+    var resizeTimer = null;
+    function adjustGridPageSize() {
+        try {
+            if (typeof gridQLDonHangBan === 'undefined' || !gridQLDonHangBan.GetMainElement) return;
+            var mainEl = gridQLDonHangBan.GetMainElement();
+            if (!mainEl) return;
+
+            // compute available vertical space from grid top to viewport bottom
+            var rect = mainEl.getBoundingClientRect();
+            var viewportH = window.innerHeight || document.documentElement.clientHeight;
+            var bottomMargin = 10; // allow space for footer/controls
+            var available = viewportH - rect.top - bottomMargin;
+
+            // fallback to element height when rect.top is weird
+            if (!available || available < 120) available = mainEl.clientHeight || mainEl.offsetHeight || 400;
+
+            // measure header/filter/pager and a data row inside the grid
+            var headerEl = mainEl.querySelector('.dxgvHeader, .dxgvTableHeader');
+            var filterEl = mainEl.querySelector('.dxgvFilterRow');
+            var pagerEl = mainEl.querySelector('.dxgvPager');
+            var rowEl = mainEl.querySelector('.dxgvDataRow, tr.dxgvDataRow');
+
+            var headerH = headerEl ? headerEl.offsetHeight : 40;
+            var filterH = filterEl ? filterEl.offsetHeight : 0;
+            var pagerH = pagerEl ? pagerEl.offsetHeight : 40;
+            var rowH = rowEl ? rowEl.offsetHeight : 36;
+
+            var usable = available - headerH - filterH - pagerH - 12;
+            if (usable <= 0) return;
+
+            var rows = Math.floor(usable / rowH);
+            if (rows < 5) rows = 5;
+            if (rows > 200) rows = 200;
+
+            // avoid repeated callbacks with same value
+            if (window._gridQLDonHangBanLastPageSize === rows) return;
+            window._gridQLDonHangBanLastPageSize = rows;
+
+            try { gridQLDonHangBan.PerformCallback('PAGESIZE|' + rows); } catch (e) { console.error('PerformCallback error', e); }
+        } catch (e) { console.error('adjustGridPageSize error', e); }
+    }
+
+    function scheduleAdjust() {
+        if (resizeTimer) clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(adjustGridPageSize, 150);
+    }
+
+    // run on initial load and on resize
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        setTimeout(adjustGridPageSize, 300);
+    } else {
+        window.addEventListener('load', function () { setTimeout(adjustGridPageSize, 300); });
+    }
+    window.addEventListener('resize', scheduleAdjust);
+
+    // also try to adjust after DevExpress callbacks finish (if available)
+    try {
+        if (typeof gridQLDonHangBan !== 'undefined' && gridQLDonHangBan) {
+            try { gridQLDonHangBan.ClientSideEvents = gridQLDonHangBan.ClientSideEvents || {}; } catch (e) { }
+            try { gridQLDonHangBan.EndCallback = function () { setTimeout(adjustGridPageSize, 50); }; } catch (e) { }
+        }
+    } catch (e) { }
+})();
 
 
 
@@ -53,11 +131,21 @@ function clearForm(ReadAddEditApproval, objStatus) {
 
 }
 
-function openEditForm(ID, xxxxx, readEditApproval) {
-    // Open edit form in a new tab so the user can continue editing there
+window.openEditForm = function (ID, xxxxx, readEditApproval) {
+    // Open edit form in a named tab so the user doesn't open duplicates; focus if exists
     var url = 'QLDonHangBanCT.aspx?id=' + encodeURIComponent(ID) + '&subMode=' + encodeURIComponent(readEditApproval);
-    window.open(url, '_blank');
-}
+    var winName = 'QLDonHangBanCT_' + (ID || 'new');
+    try {
+        var w = window.open(url, winName);
+        if (w) {
+            try { w.focus(); } catch (e) { }
+        } else {
+            window.open(url, '_blank');
+        }
+    } catch (e) {
+        window.open(url, '_blank');
+    }
+};
 
 function saveQLDonHangBan() {
 

@@ -220,25 +220,71 @@ namespace WebRunDragon.Forms
                 //        ASPxGridViewRight.DataBind();
                 //    }
                 //}
-                //else if (cmd == "UPD")
-                //{
-                //    int idx = -1;
-                //    int.TryParse(parts.Length > 1 ? parts[1] : "-1", out idx);
-                //    decimal so = 0;
-                //    decimal dg = 0;
-                //    decimal.TryParse(parts.Length > 2 ? parts[2] : "0", out so);
-                //    decimal.TryParse(parts.Length > 3 ? parts[3] : "0", out dg);
-                //    DataTable dt = Session["ssInvoiceDetails"] as DataTable;
-                //    if (dt != null && idx >= 0 && idx < dt.Rows.Count)
-                //    {
-                //        dt.Rows[idx]["so_luong"] = so;
-                //        dt.Rows[idx]["don_gia"] = dg;
-                //        dt.Rows[idx]["thanh_tien"] = so * dg;
-                //        Session["ssInvoiceDetails"] = dt;
-                //        ASPxGridViewRight.DataSource = dt;
-                //        ASPxGridViewRight.DataBind();
-                //    }
-                //}
+                else if (cmd == "UPD")
+                {
+                    int idx = -1;
+                    int.TryParse(parts.Length > 1 ? parts[1] : "-1", out idx);
+                    decimal so = 0;
+                    decimal dg = 0;
+                    decimal.TryParse(parts.Length > 2 ? parts[2] : "0", out so);
+                    decimal.TryParse(parts.Length > 3 ? parts[3] : "0", out dg);
+                    DataTable dt = Session["ssInvoiceDetails"] as DataTable;
+                    if (dt != null && idx >= 0 && idx < dt.Rows.Count)
+                    {
+                        try
+                        {
+                            // Update persisted detail in database when it has an id
+                            int detailId = Utils.NumberUtil.ParseToInt(dt.Rows[idx]["id"] + "");
+                            int idMaster = Utils.NumberUtil.ParseToInt(dt.Rows[idx]["id_hoa_don_ban"] + "");
+
+                            decimal thanhTien = so * dg;
+
+                            if (detailId > 0 && idMaster > 0)
+                            {
+                                // Persist change to DB
+                                string sql = "UPDATE ql_hoa_don_ban_ct SET so_luong = @so_luong, don_gia = @don_gia, thanh_tien = @thanh_tien, updatedby = @modifiedby, updatedtime = GETDATE() WHERE id = @id";
+                                SqlParameter[] pars = new SqlParameter[] {
+                                    new SqlParameter("@so_luong", so),
+                                    new SqlParameter("@don_gia", dg),
+                                    new SqlParameter("@thanh_tien", thanhTien),
+                                    new SqlParameter("@modifiedby", Utils.UserUtil.GetSessionUserId() + ""),
+                                    new SqlParameter("@id", detailId)
+                                };
+
+                                SqlConnection cnnUpd = null;
+                                SqlTransaction tranUpd = null;
+                                try
+                                {
+                                    cnnUpd = DatabaseManager.OpenSqlConnection(DatabaseManager.CNN_STRING_HELPDESK);
+                                    tranUpd = cnnUpd.BeginTransaction();
+                                    DatabaseManager.SQLExecuteNonQuery(sql, CommandType.Text, ref tranUpd, pars);
+                                    tranUpd.Commit();
+                                }
+                                catch (Exception ex)
+                                {
+                                    try { if (tranUpd != null) tranUpd.Rollback(); } catch { }
+                                    logger.Error("Error updating detail in DB: " + ex.Message + "\n" + ex.StackTrace);
+                                }
+                                finally
+                                {
+                                    try { if (cnnUpd != null) DatabaseManager.CloseDbConnection(cnnUpd); } catch { }
+                                }
+                            }
+
+                            // Update session copy and rebind so UI reflects changes immediately
+                            dt.Rows[idx]["so_luong"] = so;
+                            dt.Rows[idx]["don_gia"] = dg;
+                            dt.Rows[idx]["thanh_tien"] = thanhTien;
+                            Session["ssInvoiceDetails"] = dt;
+                            ASPxGridViewRight.DataSource = dt;
+                            ASPxGridViewRight.DataBind();
+                        }
+                        catch (Exception ex)
+                        {
+                            logger.Error("Error processing UPD callback: " + ex.Message + "\n" + ex.StackTrace);
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {

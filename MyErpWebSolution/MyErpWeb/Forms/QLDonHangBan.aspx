@@ -87,17 +87,17 @@
                                             </dataitemtemplate>
                                         </DataItemTemplate>
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Trạng thái" FieldName="TrangThai" VisibleIndex="0" Width="100px" FixedStyle="Left">
+                                    <dx:GridViewDataTextColumn Caption="Trạng thái" FieldName="TrangThai" VisibleIndex="0" Width="110px" FixedStyle="Left">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="ID" FieldName="ID" VisibleIndex="0" Width="40px" />
                                     <%--  <dx:GridViewDataTextColumn Caption="Chi nhánh" FieldName="BranchName" VisibleIndex="0" Width="40px" />--%>
 
-                                    <dx:GridViewDataTextColumn Caption="Ngày bán" FieldName="NgayBan" VisibleIndex="2" Width="150px">
+                                    <dx:GridViewDataTextColumn Caption="Ngày bán" FieldName="NgayBan" VisibleIndex="2" Width="100px">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
 
-                                    <dx:GridViewDataTextColumn Caption="Tên khách hàng" FieldName="TenKhachHang" VisibleIndex="2" Width="150px">
+                                    <dx:GridViewDataTextColumn Caption="Tên khách hàng" FieldName="TenKhachHang" VisibleIndex="2" Width="100%">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
 
@@ -106,10 +106,10 @@
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
 
-                                    <dx:GridViewDataTextColumn Caption="Người tạo" FieldName="Createdby" VisibleIndex="3" Width="350px">
+                                    <dx:GridViewDataTextColumn Caption="Người tạo" FieldName="Createdby" VisibleIndex="3" Width="100px">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Ngày tạo" FieldName="Createdtime" VisibleIndex="3" Width="100px">
+                                    <dx:GridViewDataTextColumn Caption="Ngày tạo" FieldName="Createdtime" VisibleIndex="3" Width="150px">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
 
