@@ -23,6 +23,99 @@ namespace WebRunDragon.DataProcess
                 _instance = new ProcessDanhMuc();
             return _instance;
         }
+
+        public bool AddOrUpdateKhachHang(int id, string soDienThoai, string tenKhachHang, string email, string diaChi, string phuongXa, string tinhThanhPho, string ghiChu, string userLogin, out string message, out int idInsertNew)
+        {
+            message = ""; idInsertNew = id;
+            try
+            {
+                if (string.IsNullOrWhiteSpace(soDienThoai))
+                {
+                    message = "Chưa nhập Số điện thoại";
+                    return false;
+                }
+
+                // normalize phone
+                string phone = soDienThoai.Trim();
+
+                // if insert, check duplicate phone
+                if (id <= 0)
+                {
+                    var pCheck = new Dictionary<string, object>() { { "@SoDienThoai", phone } };
+                    object obj = DatabaseManager.ExecuteScalarSql(DatabaseManager.CNN_STRING_HELPDESK, "SELECT id FROM dm_khach_hang WHERE SoDienThoai = @SoDienThoai AND ISNULL(isdeleted,0)=0", System.Data.CommandType.Text, pCheck);
+                    int existId = Utils.NumberUtil.ParseToInt(obj + "");
+                    if (existId > 0)
+                    {
+                        message = "Số điện thoại đã tồn tại";
+                        idInsertNew = existId;
+                        return false;
+                    }
+
+                    string sql = @"INSERT INTO dm_khach_hang (SoDienThoai, TenKhachHang, Email, DiaChi, PhuongXa, TinhThanhPho, GhiChu, status, isdeleted, createdby, createdtime)
+                                    VALUES (@SoDienThoai, @TenKhachHang, @Email, @DiaChi, @PhuongXa, @TinhThanhPho, @GhiChu, 'ACTIVE', 0, @CreatedBy, GETDATE());
+                                    SELECT SCOPE_IDENTITY();";
+
+                    var p = new Dictionary<string, object>(){
+                        {"@SoDienThoai", phone},
+                        {"@TenKhachHang", tenKhachHang ?? ""},
+                        {"@Email", email ?? ""},
+                        {"@DiaChi", diaChi ?? ""},
+                        {"@PhuongXa", phuongXa ?? ""},
+                        {"@TinhThanhPho", tinhThanhPho ?? ""},
+                        {"@GhiChu", ghiChu ?? ""},
+                        {"@CreatedBy", userLogin ?? ""}
+                    };
+
+                    object objId = DatabaseManager.ExecuteScalarSql(DatabaseManager.CNN_STRING_HELPDESK, sql, System.Data.CommandType.Text, p);
+                    int newId = Utils.NumberUtil.ParseToInt(objId + "");
+                    if (newId > 0)
+                    {
+                        idInsertNew = newId;
+                        message = "Lưu thành công";
+                        return true;
+                    }
+                    else
+                    {
+                        message = "Thất bại khi thêm khách hàng";
+                        return false;
+                    }
+                }
+                else
+                {
+                    // update
+                    var pUpd = new Dictionary<string, object>(){
+                        {"@ID", id},
+                        {"@SoDienThoai", phone},
+                        {"@TenKhachHang", tenKhachHang ?? ""},
+                        {"@Email", email ?? ""},
+                        {"@DiaChi", diaChi ?? ""},
+                        {"@PhuongXa", phuongXa ?? ""},
+                        {"@TinhThanhPho", tinhThanhPho ?? ""},
+                        {"@GhiChu", ghiChu ?? ""},
+                        {"@UpdatedBy", userLogin ?? ""}
+                    };
+                    string sql = "UPDATE dm_khach_hang SET SoDienThoai=@SoDienThoai, TenKhachHang=@TenKhachHang, Email=@Email, DiaChi=@DiaChi, PhuongXa=@PhuongXa, TinhThanhPho=@TinhThanhPho, GhiChu=@GhiChu, updated_by=@UpdatedBy, updated_time=GETDATE() WHERE id=@ID";
+                    int rows = DatabaseManager.ExecuteUpdateSql(DatabaseManager.CNN_STRING_HELPDESK, sql, System.Data.CommandType.Text, pUpd);
+                    if (rows > 0)
+                    {
+                        idInsertNew = id;
+                        message = "Cập nhật thành công";
+                        return true;
+                    }
+                    else
+                    {
+                        message = "Thất bại khi cập nhật khách hàng";
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className + ".AddOrUpdateKhachHang Error: " + ex.Message + "\n" + ex.StackTrace);
+                message = ex.Message;
+                return false;
+            }
+        }
         public DataTable TraCuuDanhMuc(string key4Search, string tableName, string userLogin)
         {
             try
@@ -307,6 +400,31 @@ namespace WebRunDragon.DataProcess
                 {
                     return (DataTable)objCache;
                 }
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("TableName", tableName);
+                param.Add("UserLogin", userLogin);
+                var dtRet = DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, "sp_Utils_LoadDanhMuc", CommandType.StoredProcedure, param);
+                if (dtRet != null)
+                {
+                    cache.AddToMemCache(keyCache, dtRet, MyCachePriority.Default);
+                }
+                return dtRet;
+
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".LoadDanhMuc4ComboFromCache() Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                return null;
+            }
+        }
+        public DataTable LoadDanhMuc4ComboNoCache(string tableName, string userLogin)
+        {
+            try
+            {
+                BusinessMemCache cache = new BusinessMemCache();
+                var keyCache = "LoadDanhMuc4ComboFromCacheFromCache_" + tableName + "_";
+               
                 Dictionary<string, object> param = new Dictionary<string, object>();
                 param.Add("TableName", tableName);
                 param.Add("UserLogin", userLogin);
@@ -1470,7 +1588,9 @@ delete from " + tableName + "  where ID=@Id ;";
             QLBanGiaoSanPham, QLBanGiaoSanPhamCT,
             QLDangKyGuiThu, QLDangKyGuiThuChiPhi,
             ql_race_group_user_register,
-            ql_nghi_phep
+            ql_nghi_phep,
+            ql_hoa_don_ban , ql_hoa_don_ban_ct, dm_khach_hang
+
         }
 
         public enum eTenColumMasterID

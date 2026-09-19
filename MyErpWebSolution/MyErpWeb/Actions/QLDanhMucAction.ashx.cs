@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Web;
+using System.Web.Caching;
 using System.Web.SessionState;
 using System.Web.UI;
 using WebRunDragon.DataProcess;
@@ -90,8 +91,8 @@ namespace WebRunDragon.Actions
                 else if (mode == "AddOrUpdate".ToUpper())
                 {
 
-                    if ((Utils.ActionUtil.CanEdit(Utils.UserUtil.GetSessionUserId(), tableName.ToUpper()))// ||
-                                                                                                          //  (Utils.ActionUtil.CanCreate(Utils.UserUtil.GetSessionUserId(), tableName.ToUpper()) && id == 0)
+                    if (tableName.ToUpper() == "DM_KHACH_HANG" || (Utils.ActionUtil.CanEdit(Utils.UserUtil.GetSessionUserId(), tableName.ToUpper()))// ||
+                                                                                                                                                    //  (Utils.ActionUtil.CanCreate(Utils.UserUtil.GetSessionUserId(), tableName.ToUpper()) && id == 0)
                         )
                     {
                         int idInsertNew = 0;
@@ -157,6 +158,22 @@ namespace WebRunDragon.Actions
                         {
                             success = UdateDanhMucConfig(id, context.Request.Form["MaConfig"], context.Request.Form["GiaTriConfig"], context.Request.Form["GhiChu"], sessionUserId, out message, out idInsertNew);
                         }
+                        else if (tableName == "DM_KHACH_HANG")
+                        {
+                            // Fields expected from client: SoDienThoai, TenKhachHang, Email, DiaChi, PhuongXa, TinhThanhPho, GhiChu
+                            string soDienThoai = context.Request.Form["SoDienThoai"] + "";
+                            string tenKhachHang = context.Request.Form["TenKhachHang"] + "";
+                            string email = context.Request.Form["Email"] + "";
+                            string diaChi = context.Request.Form["DiaChi"] + "";
+                            string phuongXa = context.Request.Form["PhuongXa"] + "";
+                            string tinhThanhPho = context.Request.Form["TinhThanhPho"] + "";
+                            string ghiChuKh = context.Request.Form["GhiChu"] + "";
+
+                            success = AddOrUdateDanhMucKhachHang(id, soDienThoai, tenKhachHang, email, diaChi, phuongXa, tinhThanhPho, ghiChuKh, sessionUserId, out message, out idInsertNew);
+                            var keyCache = "LoadDanhMuc4ComboFromCacheFromCache_dm_khach_hang_";
+                            BusinessMemCache cache = new BusinessMemCache();
+                            cache.RemoveMyCachedItem(keyCache);
+                        }
                         // truong hop them moi thi tra ve lại ID mới thêm vào database
                         if (id <= 0) id = idInsertNew;
                         if (success)
@@ -209,6 +226,24 @@ namespace WebRunDragon.Actions
             ret = DataProcess.ProcessDanhMuc.getInstance().AddOrUpdateDanhMucDonViTinh(id, ma, ten, ghiChu, userLogin, out message, out idInsertUpdate);
 
             if (ret) { message = "Lưu thành công"; }
+            return ret;
+        }
+
+        public bool AddOrUdateDanhMucKhachHang(int id, string soDienThoai, string tenKhachHang, string email, string diaChi, string phuongXa, string tinhThanhPho, string ghiChu, string userLogin, out string message, out int idInsertNew)
+        {
+            message = ""; idInsertNew = id;
+            bool ret = false;
+            try
+            {
+                ret = DataProcess.ProcessDanhMuc.getInstance().AddOrUpdateKhachHang(id, soDienThoai, tenKhachHang, email, diaChi, phuongXa, tinhThanhPho, ghiChu, userLogin, out message, out idInsertNew);
+                if (ret) message = "Lưu thành công";
+            }
+            catch (Exception ex)
+            {
+                logger.Error("AddOrUdateDanhMucKhachHang Error: ", ex);
+                message = ex.Message;
+                ret = false;
+            }
             return ret;
         }
 
