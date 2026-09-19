@@ -2,47 +2,16 @@
 // (client-only) we store newly added customer id in hidden field hddCustomerId
 
 // debug + preserve typed value across callback
-// client-side cache for cbKhachHang (key -> { items: [{id,text,phone}], ts })
-var _khachCache = {};
-var _khachCacheTTL = 5 * 60 * 1000; // cache 5 phút
+// no client-side cache
 var _cbKhachDebounce = null;
-var _cbDebounceMs = 180;
+var _cbDebounceMs = 5000; // debounce ms for PerformCallback
+var _cbMinChars = 3; // minimum trimmed characters to trigger callback
 window._cbKhachTyped = "";
 window._cbKhachLastRequest = "";
 
-// populate combo from an array of items { id, text, phone }
-function populateCbKhachFromArray(s, arr) {
-    try {
-        // Client-side populate is disabled because AddItem() loses multi-column
-        // layout of the server-rendered ASPxComboBox. We keep this function as a
-        // no-op to avoid accidental UI corruption; rely on server callback to
-        // return properly structured items.
-        try { console.log('[populateCbKhachFromArray] disabled - skipping client-side populate, arr.length=', (arr && arr.length) || 0); } catch(e){}
-        return;
-    } catch (err) {
-        console.error('[populateCbKhachFromArray] error', err);
-    }
-}
+// populateCbKhachFromArray removed (client-side AddItem breaks DevExpress multi-column)
 
-// read current combo items into array [{id,text,phone?}]
-function readComboItems(s) {
-    var arr = [];
-    try {
-        if (!s || !s.GetItemCount) return arr;
-        var cnt = s.GetItemCount();
-        for (var i = 0; i < cnt; i++) {
-            try {
-                var it = s.GetItem(i) || {};
-                var text = it.text || (it.GetText ? it.GetText() : '') || '';
-                var val = it.value || (it.GetValue ? it.GetValue() : '') || '';
-                // phone not available client-side from item object consistently; keep empty
-                arr.push({ id: val + "", text: text, phone: "" });
-            } catch (ex) { /* ignore item read errors */ }
-        }
-    } catch (err) { console.error('[readComboItems] error', err); }
-    try { console.log('[readComboItems] items read=', arr.length); } catch(e){}
-    return arr;
-}
+// readComboItems removed (no client-side cache)
 
 function cbKhachHang_KeyUp(s, e) {
     try {
@@ -64,31 +33,24 @@ function cbKhachHang_KeyUp(s, e) {
         // preserve raw input for restoring cursor/visual state
         window._cbKhachTypedRaw = typedRaw || "";
         window._cbKhachTyped = typed;
-        try { console.log('[cbKhachHang_KeyUp] typedRaw="' + typedRaw + '", trimmed="' + typed + '"'); } catch(e){}
-
-        // check cache
-        var cacheEntry = _khachCache[typed];
-        var now = Date.now();
-        if (cacheEntry && (now - cacheEntry.ts) < _khachCacheTTL) {
-            // cache hit detected, but do not client-populate because AddItem() loses
-            // multi-column structure of the server-bound combo and causes UI issues.
-            // Instead allow the normal debounced PerformCallback to request server data
-            // (keeps columns/format consistent). Log the cache hit for diagnostics.
-            try { console.log('[cbKhachHang_KeyUp] cache hit (ignored client-populate) for key="' + typed + '", items=', (cacheEntry.items && cacheEntry.items.length) || 0); } catch(e){}
-        }
+        // no client-side cache logic
 
         // otherwise debounce and request server
         // Only perform server callback when trimmed typed is non-empty. This avoids
         // clearing the input when user deletes all text (no server round-trip needed).
         window._cbKhachLastRequest = typed;
 
+        // do not call server for very short queries - reduces load and flicker
+        if ((typed || '').length < _cbMinChars) {
+            return;
+        }
+
         if (_cbKhachDebounce) clearTimeout(_cbKhachDebounce);
         _cbKhachDebounce = setTimeout(function () {
             try {
-                try { console.log('[cbKhachHang_KeyUp] performing PerformCallback, param="' + (window._cbKhachLastRequest || '') + '"'); } catch(e){}
                 if (s && s.PerformCallback) s.PerformCallback(window._cbKhachLastRequest || '');
             } catch (err) {
-                console.error('[cbKhachHang_KeyUp] PerformCallback error', err);
+                // ignore
             }
         }, _cbDebounceMs);
     } catch (err) {
@@ -101,7 +63,6 @@ function cbKhachHang_EndCallback(s, e) {
         // restore typed text (preserve raw input including spaces)
         var typedRaw = window._cbKhachTypedRaw !== undefined ? window._cbKhachTypedRaw : (window._cbKhachTyped || "");
         var inp = (s && s.GetInputElement) ? s.GetInputElement() : null;
-        try { console.log('[cbKhachHang_EndCallback] start storedTypedRaw="' + typedRaw + '", lastRequest="' + (window._cbKhachLastRequest || '') + '"'); } catch(e){}
         // If user cleared the input (raw is empty), avoid forcing SetText('') or
         // reopening the dropdown, because it can cause column-mapping/display issues
         // when client-side cache/items are incomplete. Leave control state as-is.
@@ -118,25 +79,9 @@ function cbKhachHang_EndCallback(s, e) {
             try { if (inp && inp.focus) inp.focus(); } catch (f) { }
         }
 
-        // read returned items (always) so we can decide to restore text and show dropdown
-        var key = window._cbKhachLastRequest !== undefined ? window._cbKhachLastRequest : (window._cbKhachTyped || '');
-        var items = [];
-        try {
-            items = readComboItems(s) || [];
-            try { console.log('[cbKhachHang_EndCallback] items read after callback=', items.length); } catch(e){}
-            if ((key || '').length > 0) {
-                _khachCache[key] = { items: items, ts: Date.now() };
-                try { console.log('[cbKhachHang_EndCallback] cached key="' + key + '", items=', (items && items.length) || 0); } catch(e){}
-            } else {
-                try { console.log('[cbKhachHang_EndCallback] key empty, skipping cache store'); } catch(e){}
-            }
-            try { console.log('[cbKhachHang_EndCallback] first item sample=', (items && items[0]) || null); } catch(e){}
-        } catch (ex) { console.warn('[cbKhachHang_EndCallback] cache store failed', ex); }
-
-        // restore text and show dropdown depending on returned items
+        // restore text and show dropdown
         try {
             if ((typedRaw || '').length > 0) {
-                // user typed something -> restore their raw text and show matches
                 try { if (s && s.SetText) s.SetText(typedRaw); } catch (ex) { }
                 if (inp && typeof inp.selectionStart !== "undefined") {
                     inp.selectionStart = inp.selectionEnd = (typedRaw || "").length;
@@ -145,16 +90,9 @@ function cbKhachHang_EndCallback(s, e) {
                 }
                 try { if (s && s.ShowDropDown) s.ShowDropDown(); } catch (ex) { }
             } else {
-                // user cleared input: if server returned items, set text to empty and show full list
-                if ((items || []).length > 0) {
-                    try { if (s && s.SetText) s.SetText(''); } catch (ex) { }
-                    try { if (s && s.ShowDropDown) s.ShowDropDown(); } catch (ex) { }
-                } else {
-                    // no items returned: keep focus but don't force dropdown
-                    try { if (inp && inp.focus) inp.focus(); } catch (f) { }
-                }
+                try { if (s && s.ShowDropDown) s.ShowDropDown(); } catch (ex) { }
             }
-        } catch (ex) { console.error('[cbKhachHang_EndCallback] restore/show error', ex); }
+        } catch (ex) { /* ignore */ }
     } catch (err) {
         console.error('[cbKhachHang_EndCallback] error', err);
     }
