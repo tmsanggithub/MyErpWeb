@@ -49,12 +49,36 @@ namespace WebRunDragon.Forms
         {
             try
             {
-                // reload datasource from DB (no cache) so newly added customers appear immediately
-                var dtRaw = DataProcess.ProcessDanhMuc.getInstance().LoadDanhMuc4ComboNoCache(ProcessDanhMuc.eTenDanhMuc.dm_khach_hang + "", Utils.UserUtil.GetSessionUserId());
-                cbKhachHang.DataSource = dtRaw;
-                // bind items only to avoid resetting editor in some situations
-                cbKhachHang.DataBindItems();
+                string param = (e.Parameter ?? "").ToString();
+                var dtRaw = DataProcess.ProcessDanhMuc.getInstance()
+                    .LoadDanhMuc4ComboNoCache(ProcessDanhMuc.eTenDanhMuc.dm_khach_hang + "", Utils.UserUtil.GetSessionUserId());
 
+                if (string.IsNullOrEmpty(param))
+                {
+                    cbKhachHang.DataSource = dtRaw;
+                    cbKhachHang.DataBindItems();
+                    return;
+                }
+
+                string paramNorm = WebRunDragon.Utils.StringUtil.UnicodeKhongDau(param).ToLower();
+                DataTable dtFiltered = dtRaw.Clone();
+
+                foreach (DataRow r in dtRaw.Rows)
+                {
+                    string ten = r.Table.Columns.Contains("TenKhachHang") ? (r["TenKhachHang"] + "") : "";
+                    string phone = r.Table.Columns.Contains("SoDienThoai") ? (r["SoDienThoai"] + "") : "";
+
+                    string tenNorm = WebRunDragon.Utils.StringUtil.UnicodeKhongDau(ten).ToLower();
+
+                    bool match = false;
+                    if (!string.IsNullOrEmpty(tenNorm) && tenNorm.IndexOf(paramNorm) >= 0) match = true;
+                    if (!match && !string.IsNullOrEmpty(phone) && phone.IndexOf(param) >= 0) match = true;
+
+                    if (match) dtFiltered.ImportRow(r);
+                }
+
+                cbKhachHang.DataSource = dtFiltered;
+                cbKhachHang.DataBindItems();
             }
             catch (System.Exception ex)
             {

@@ -167,14 +167,17 @@
 
 
                                 <label style="font-size: 13px">Khách hàng:</label>
-                                <dx:ASPxComboBox ID="cbKhachHang" ClientInstanceName="cbKhachHang" runat="server" ValueField="id" TextField="TenKhachHang" TextFormatString="{1}" Style="width: 100%" OnCallback="cbKhachHang_Callback" EnableCallbackMode="True" IncrementalFilteringMode="Contains">
-                                   
+                                <dx:ASPxComboBox ID="cbKhachHang" ClientInstanceName="cbKhachHang" runat="server"
+                                    ValueField="id" TextField="TenKhachHang" TextFormatString="{1}"
+                                    Style="width: 100%" OnCallback="cbKhachHang_Callback"
+                                    EnableCallbackMode="True" IncrementalFilteringMode="Contains">
                                     <Columns>
                                         <dx:ListBoxColumn Caption="ID" FieldName="id" Name="id" Visible="false" />
                                         <dx:ListBoxColumn Caption="Số điện thoại" FieldName="SoDienThoai" Name="SoDienThoai" />
                                         <dx:ListBoxColumn Caption="Tên" FieldName="TenKhachHang" Name="TenKhachHang" />
                                     </Columns>
                                     <ClearButton Visibility="Auto"></ClearButton>
+                                    <ClientSideEvents KeyUp="cbKhachHang_KeyUp" EndCallback="function(s,e){ cbKhachHang_EndCallback(s,e); }" />
                                 </dx:ASPxComboBox>
                             </div>
 

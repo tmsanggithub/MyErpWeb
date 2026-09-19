@@ -1,21 +1,163 @@
 ﻿// JavaScript moved from QLDonHangBanCT.aspx
 // (client-only) we store newly added customer id in hidden field hddCustomerId
 
+// debug + preserve typed value across callback
+// client-side cache for cbKhachHang (key -> { items: [{id,text,phone}], ts })
+var _khachCache = {};
+var _khachCacheTTL = 5 * 60 * 1000; // cache 5 phút
+var _cbKhachDebounce = null;
+var _cbDebounceMs = 180;
+window._cbKhachTyped = "";
+window._cbKhachLastRequest = "";
 
-function pageLoad() {
-    var prm = Sys.WebForms.PageRequestManager.getInstance();
-    // Khi bắt đầu PostBack: hiện waiting cursor, disable nút
-    prm.add_beginRequest(function () {
-        document.body.style.cursor = 'wait';
+// populate combo from an array of items { id, text, phone }
+function populateCbKhachFromArray(s, arr) {
+    try {
+        // Client-side populate is disabled because AddItem() loses multi-column
+        // layout of the server-rendered ASPxComboBox. We keep this function as a
+        // no-op to avoid accidental UI corruption; rely on server callback to
+        // return properly structured items.
+        try { console.log('[populateCbKhachFromArray] disabled - skipping client-side populate, arr.length=', (arr && arr.length) || 0); } catch(e){}
+        return;
+    } catch (err) {
+        console.error('[populateCbKhachFromArray] error', err);
+    }
+}
 
-        try { if (btnSearchSum && btnSearchSum.SetEnabled) btnSearchSum.SetEnabled(false); } catch (e) { }
-    });
-    // Khi PostBack xong: khôi phục
-    prm.add_endRequest(function () {
-        document.body.style.cursor = 'default';
+// read current combo items into array [{id,text,phone?}]
+function readComboItems(s) {
+    var arr = [];
+    try {
+        if (!s || !s.GetItemCount) return arr;
+        var cnt = s.GetItemCount();
+        for (var i = 0; i < cnt; i++) {
+            try {
+                var it = s.GetItem(i) || {};
+                var text = it.text || (it.GetText ? it.GetText() : '') || '';
+                var val = it.value || (it.GetValue ? it.GetValue() : '') || '';
+                // phone not available client-side from item object consistently; keep empty
+                arr.push({ id: val + "", text: text, phone: "" });
+            } catch (ex) { /* ignore item read errors */ }
+        }
+    } catch (err) { console.error('[readComboItems] error', err); }
+    try { console.log('[readComboItems] items read=', arr.length); } catch(e){}
+    return arr;
+}
 
-        try { if (btnSearchSum && btnSearchSum.SetEnabled) btnSearchSum.SetEnabled(true); } catch (e) { }
-    });
+function cbKhachHang_KeyUp(s, e) {
+    try {
+        // read typed value robustly
+        var typedRaw = ""; // raw value as user typed (preserve spaces)
+        try {
+            if (e && e.htmlEvent && e.htmlEvent.target && typeof e.htmlEvent.target.value !== 'undefined') {
+                typedRaw = e.htmlEvent.target.value;
+            } else {
+                var inp = (s && s.GetInputElement) ? s.GetInputElement() : null;
+                if (inp && typeof inp.value !== 'undefined') typedRaw = inp.value;
+                else if (s && s.GetText) typedRaw = s.GetText();
+            }
+        } catch (ex) {
+            typedRaw = (s && s.GetText && s.GetText()) || "";
+        }
+
+        var typed = (typedRaw || "").trim(); // use trimmed form for cache/key
+        // preserve raw input for restoring cursor/visual state
+        window._cbKhachTypedRaw = typedRaw || "";
+        window._cbKhachTyped = typed;
+        try { console.log('[cbKhachHang_KeyUp] typedRaw="' + typedRaw + '", trimmed="' + typed + '"'); } catch(e){}
+
+        // check cache
+        var cacheEntry = _khachCache[typed];
+        var now = Date.now();
+        if (cacheEntry && (now - cacheEntry.ts) < _khachCacheTTL) {
+            // cache hit detected, but do not client-populate because AddItem() loses
+            // multi-column structure of the server-bound combo and causes UI issues.
+            // Instead allow the normal debounced PerformCallback to request server data
+            // (keeps columns/format consistent). Log the cache hit for diagnostics.
+            try { console.log('[cbKhachHang_KeyUp] cache hit (ignored client-populate) for key="' + typed + '", items=', (cacheEntry.items && cacheEntry.items.length) || 0); } catch(e){}
+        }
+
+        // otherwise debounce and request server
+        // Only perform server callback when trimmed typed is non-empty. This avoids
+        // clearing the input when user deletes all text (no server round-trip needed).
+        window._cbKhachLastRequest = typed;
+
+        if (_cbKhachDebounce) clearTimeout(_cbKhachDebounce);
+        _cbKhachDebounce = setTimeout(function () {
+            try {
+                try { console.log('[cbKhachHang_KeyUp] performing PerformCallback, param="' + (window._cbKhachLastRequest || '') + '"'); } catch(e){}
+                if (s && s.PerformCallback) s.PerformCallback(window._cbKhachLastRequest || '');
+            } catch (err) {
+                console.error('[cbKhachHang_KeyUp] PerformCallback error', err);
+            }
+        }, _cbDebounceMs);
+    } catch (err) {
+        console.error('[cbKhachHang_KeyUp] error', err);
+    }
+}
+
+function cbKhachHang_EndCallback(s, e) {
+    try {
+        // restore typed text (preserve raw input including spaces)
+        var typedRaw = window._cbKhachTypedRaw !== undefined ? window._cbKhachTypedRaw : (window._cbKhachTyped || "");
+        var inp = (s && s.GetInputElement) ? s.GetInputElement() : null;
+        try { console.log('[cbKhachHang_EndCallback] start storedTypedRaw="' + typedRaw + '", lastRequest="' + (window._cbKhachLastRequest || '') + '"'); } catch(e){}
+        // If user cleared the input (raw is empty), avoid forcing SetText('') or
+        // reopening the dropdown, because it can cause column-mapping/display issues
+        // when client-side cache/items are incomplete. Leave control state as-is.
+        if ((typedRaw || '').length > 0) {
+            try { if (s && s.SetText) s.SetText(typedRaw); } catch (ex) { }
+            // place caret at end of raw typed text
+            if (inp && typeof inp.selectionStart !== "undefined") {
+                inp.selectionStart = inp.selectionEnd = (typedRaw || "").length;
+            } else {
+                try { if (inp && inp.focus) inp.focus(); } catch (f) { }
+            }
+        } else {
+            // keep focus on input but do not change text or selection
+            try { if (inp && inp.focus) inp.focus(); } catch (f) { }
+        }
+
+        // read returned items (always) so we can decide to restore text and show dropdown
+        var key = window._cbKhachLastRequest !== undefined ? window._cbKhachLastRequest : (window._cbKhachTyped || '');
+        var items = [];
+        try {
+            items = readComboItems(s) || [];
+            try { console.log('[cbKhachHang_EndCallback] items read after callback=', items.length); } catch(e){}
+            if ((key || '').length > 0) {
+                _khachCache[key] = { items: items, ts: Date.now() };
+                try { console.log('[cbKhachHang_EndCallback] cached key="' + key + '", items=', (items && items.length) || 0); } catch(e){}
+            } else {
+                try { console.log('[cbKhachHang_EndCallback] key empty, skipping cache store'); } catch(e){}
+            }
+            try { console.log('[cbKhachHang_EndCallback] first item sample=', (items && items[0]) || null); } catch(e){}
+        } catch (ex) { console.warn('[cbKhachHang_EndCallback] cache store failed', ex); }
+
+        // restore text and show dropdown depending on returned items
+        try {
+            if ((typedRaw || '').length > 0) {
+                // user typed something -> restore their raw text and show matches
+                try { if (s && s.SetText) s.SetText(typedRaw); } catch (ex) { }
+                if (inp && typeof inp.selectionStart !== "undefined") {
+                    inp.selectionStart = inp.selectionEnd = (typedRaw || "").length;
+                } else {
+                    try { if (inp && inp.focus) inp.focus(); } catch (f) { }
+                }
+                try { if (s && s.ShowDropDown) s.ShowDropDown(); } catch (ex) { }
+            } else {
+                // user cleared input: if server returned items, set text to empty and show full list
+                if ((items || []).length > 0) {
+                    try { if (s && s.SetText) s.SetText(''); } catch (ex) { }
+                    try { if (s && s.ShowDropDown) s.ShowDropDown(); } catch (ex) { }
+                } else {
+                    // no items returned: keep focus but don't force dropdown
+                    try { if (inp && inp.focus) inp.focus(); } catch (f) { }
+                }
+            }
+        } catch (ex) { console.error('[cbKhachHang_EndCallback] restore/show error', ex); }
+    } catch (err) {
+        console.error('[cbKhachHang_EndCallback] error', err);
+    }
 }
 
 // Combo end-callback handler to clear reloading flag and ensure selection
@@ -297,14 +439,14 @@ function saveAddCustomer() {
 
 // Save header + use session-stored details to persist via ASHX (moved from QLDonHangBan.js)
 function SaveTempCall() {
-        try {
-            var id = (typeof txtObjectId !== 'undefined' && txtObjectId.Get) ? txtObjectId.Get('hidden_value') : '0';
-            var idKh = '';
-            try { if (typeof hddCustomerId !== 'undefined' && hddCustomerId.Get) idKh = hddCustomerId.Get('hidden_value') || ''; } catch (e) { }
-            if (!idKh) {
-                try { if (typeof cbKhachHang !== 'undefined' && cbKhachHang.GetValue) idKh = cbKhachHang.GetValue(); } catch (e) { }
-            }
-            var ghiChu = (typeof memoNotes !== 'undefined' && memoNotes.GetText) ? memoNotes.GetText() : '';
+    try {
+        var id = (typeof txtObjectId !== 'undefined' && txtObjectId.Get) ? txtObjectId.Get('hidden_value') : '0';
+        var idKh = '';
+        try { if (typeof hddCustomerId !== 'undefined' && hddCustomerId.Get) idKh = hddCustomerId.Get('hidden_value') || ''; } catch (e) { }
+        if (!idKh) {
+            try { if (typeof cbKhachHang !== 'undefined' && cbKhachHang.GetValue) idKh = cbKhachHang.GetValue(); } catch (e) { }
+        }
+        var ghiChu = (typeof memoNotes !== 'undefined' && memoNotes.GetText) ? memoNotes.GetText() : '';
 
         var data = 'mode=SaveTemp';
         data += '&id=' + encodeURIComponent(id);
