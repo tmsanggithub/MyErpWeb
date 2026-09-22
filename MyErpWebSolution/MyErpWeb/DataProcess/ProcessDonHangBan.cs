@@ -443,8 +443,9 @@ namespace WebRunDragon.DataProcess
                                     ,ct.thanh_tien
                                     ,ct.ghi_chu
                                     ,hh.ma_hang_hoa
-                                    ,hh.ten_hang_hoa
+                                    ,hh.ten_hang_hoa, mt.trang_thai
                                 FROM [dbo].[ql_hoa_don_ban_ct] ct
+								inner join ql_hoa_don_ban mt on mt.id=ct.id_hoa_don_ban
                                 LEFT JOIN [dbo].[dm_hang_hoa] hh ON hh.id = ct.id_hang_hoa
                                 WHERE ct.id_hoa_don_ban = @id AND ISNULL(ct.isdeleted,0)=0";
 

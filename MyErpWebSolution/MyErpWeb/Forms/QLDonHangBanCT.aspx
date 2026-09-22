@@ -148,7 +148,7 @@
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Chọn" VisibleIndex="5" Width="35px">
                                         <DataItemTemplate>
-                                            <div style="display: <%#GetRight(3) %>; cursor: pointer" onclick="OpenAdd('<%# Eval("id") %>','<%# Eval("ma_hang_hoa") %>','<%# Eval("ten_hang_hoa") %>','<%# Eval("don_gia") %>');" title="Chọn">
+                                            <div class="btn-add-item" style="display: <%#GetRight(3) %>; cursor: pointer" onclick="OpenAdd('<%# Eval("id") %>','<%# Eval("ma_hang_hoa") %>','<%# Eval("ten_hang_hoa") %>','<%# Eval("don_gia") %>');" title="Chọn">
                                                 <img src="../Images/icon-add.png" />
                                             </div>
                                         </DataItemTemplate>
@@ -181,7 +181,7 @@
                                 </dx:ASPxComboBox>
                             </div>
 
-                            <div style="display: <%=GetRight(1)%>; float: right; margin-top: 10px; cursor: pointer; width: 45px;"
+                            <div class="btn-add-customer" style="display: <%=GetRight(1)%>; float: right; margin-top: 10px; cursor: pointer; width: 45px;"
                                 onclick="openAddCustomer()" title="Thêm mới">
                                 <img src="../Images/icon-add.png" />&nbsp;
                             </div>
@@ -199,7 +199,7 @@
                                 <Columns>
                                     <dx:GridViewDataTextColumn Caption="Xóa" VisibleIndex="0" Width="50px">
                                         <DataItemTemplate>
-                                            <div style="display: <%#GetRight(3) %>; cursor: pointer" onclick="DeleteRightRow('<%# Container.VisibleIndex %>');" title="Xóa">
+                                            <div class="btn-delete-item" style="<%# GetRightStyle(3, Eval("trang_thai")) %>" onclick="DeleteRightRow('<%# Container.VisibleIndex %>');" title="Xóa">
                                                 <img src="../Images/icon-delete.png" />
                                             </div>
                                         </DataItemTemplate>
@@ -215,12 +215,12 @@
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Số lượng" VisibleIndex="4" Width="10%">
                                         <DataItemTemplate>
-                                            <input id="so_<%# Container.VisibleIndex %>" type="text" value="<%# Eval("so_luong", "{0:N0}") %>" style="width: 90%; text-align: right;" onchange="UpdateRightCell('<%# Container.VisibleIndex %>','so_luong', this.value);" />
+                                            <input class="so-input" id="so_<%# Container.VisibleIndex %>" type="text" value="<%# Eval("so_luong", "{0:N0}") %>" style="width: 90%; text-align: right;" onchange="UpdateRightCell('<%# Container.VisibleIndex %>','so_luong', this.value);" />
                                         </DataItemTemplate>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Giá bán" VisibleIndex="5" Width="17.5%">
                                         <DataItemTemplate>
-                                            <input id="dg_<%# Container.VisibleIndex %>" type="text" value="<%# Eval("don_gia", "{0:N0}") %>" style="width: 90%; text-align: right;" onchange="UpdateRightCell('<%# Container.VisibleIndex %>','don_gia', this.value);" />
+                                            <input class="dg-input" id="dg_<%# Container.VisibleIndex %>" type="text" value="<%# Eval("don_gia", "{0:N0}") %>" style="width: 90%; text-align: right;" onchange="UpdateRightCell('<%# Container.VisibleIndex %>','don_gia', this.value);" />
                                         </DataItemTemplate>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Thành tiền" FieldName="thanh_tien" VisibleIndex="6" Width="17.5%">

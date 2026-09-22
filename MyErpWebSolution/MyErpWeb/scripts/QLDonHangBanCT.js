@@ -110,7 +110,19 @@ function getParameterByName(name) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+
+// ensure init runs on initial full load if pageLoad (MS AJAX) didn't fire
+try {
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        setTimeout(function () { try { initLoadFromQuery(); } catch (e) { console.error(e); } }, 50);
+    } else {
+        window.addEventListener('load', function () { try { initLoadFromQuery(); } catch (e) { console.error(e); } });
+    }
+} catch (e) { console.error(e); }
+
+
 function initLoadFromQuery() {
+    console.log("initLoadFromQuery begin");
     var id = getParameterByName('id');
     if (!id) return;
     // clear controls first
@@ -141,6 +153,9 @@ function initLoadFromQuery() {
                     if (typeof gridHangHoaRight !== 'undefined' && gridHangHoaRight.PerformCallback) gridHangHoaRight.PerformCallback('LOAD|' + id);
                     else if (typeof gridDonHangBanRight !== 'undefined' && gridDonHangBanRight.PerformCallback) gridDonHangBanRight.PerformCallback('LOAD|' + id);
                 } catch (e) { console.error('grid load error', e); }
+
+                setBtnStateFromStatus(ent.trang_thai);
+                console.log("initLoadFromQuery end" + ent.trang_thai);
             }
             else {
                 alert(resp ? (resp.message || 'Không thể tải dữ liệu') : 'Không thể tải dữ liệu');
@@ -151,15 +166,6 @@ function initLoadFromQuery() {
         }
     });
 }
-
-// ensure init runs on initial full load if pageLoad (MS AJAX) didn't fire
-try {
-    if (document.readyState === 'complete' || document.readyState === 'interactive') {
-        setTimeout(function () { try { initLoadFromQuery(); } catch (e) { console.error(e); } }, 50);
-    } else {
-        window.addEventListener('load', function () { try { initLoadFromQuery(); } catch (e) { console.error(e); } });
-    }
-} catch (e) { console.error(e); }
 
 function OpenAdd(id, ma, ten, price) {
     try {
@@ -438,3 +444,201 @@ function SaveTempCall() {
         });
     } catch (e) { console.error(e); }
 }
+
+function setBtnStateFromStatus(status) {
+        // enable/disable add/delete/add-customer UI elements based on allow
+        try {
+            var s = (status || '').toString().trim().toUpperCase();
+            var allow = (s === '' || s === 'NEW' || s === 'REJECT');
+
+            try { if (typeof btnPay !== 'undefined' && btnPay.SetEnabled) btnPay.SetEnabled(allow); } catch (e) { }
+            try { if (typeof btnSaveTemp !== 'undefined' && btnSaveTemp.SetEnabled) btnSaveTemp.SetEnabled(allow); } catch (e) { }
+            
+        var addItemEls = document.querySelectorAll('.btn-add-item');
+            for (var i = 0; i < addItemEls.length; i++) {
+                try {
+                    if (allow) {
+                        addItemEls[i].style.pointerEvents = '';
+                        addItemEls[i].style.opacity = '';
+                        addItemEls[i].style.cursor = '';
+                    } else {
+                        addItemEls[i].style.pointerEvents = 'none';
+                        addItemEls[i].style.opacity = '0.4';
+                        addItemEls[i].style.cursor = 'default';
+                    }
+                } catch (ie) { console.error('setBtnPayStateFromStatus addItemEls loop error', ie); }
+            }
+            
+            //var delEls = document.querySelectorAll('.btn-delete-item');
+            //for (var j = 0; j < delEls.length; j++) {
+            //    try {
+            //        if (allow) {
+            //            delEls[j].style.pointerEvents = '';
+            //            delEls[j].style.opacity = '';
+            //            delEls[j].style.cursor = '';
+            //        } else {
+            //            delEls[j].style.pointerEvents = 'none';
+            //            delEls[j].style.opacity = '0.4';
+            //            delEls[j].style.cursor = 'default';
+            //        }
+            //    } catch (de) { console.error('setBtnPayStateFromStatus delEls loop error', de); }
+            //}
+            
+            var custEls = document.querySelectorAll('.btn-add-customer');
+            for (var k = 0; k < custEls.length; k++) {
+                try {
+                    if (allow) {
+                        custEls[k].style.pointerEvents = '';
+                        custEls[k].style.opacity = '';
+                        custEls[k].style.cursor = '';
+                    } else {
+                        custEls[k].style.pointerEvents = 'none';
+                        custEls[k].style.opacity = '0.4';
+                        custEls[k].style.cursor = 'default';
+                    }
+                } catch (ce) { console.error('setBtnPayStateFromStatus custEls loop error', ce); }
+            }
+            // also disable/enable quantity and price inputs (so_*, dg_*) in right grid
+            try {
+                var qtys = [];
+                var usedGridForQty = false;
+                var rightMain = null;
+                if (typeof gridHangHoaRight !== 'undefined' && gridHangHoaRight.GetMainElement) {
+                    rightMain = gridHangHoaRight.GetMainElement();
+                    if (rightMain) {
+                        // try several selectors to find the inputs inside DevExpress grid structure
+                        qtys = rightMain.querySelectorAll('input.so-input, input[id^="so_"], input[onchange*="so_luong"]');
+                        usedGridForQty = true;
+                    }
+                }
+                if (!qtys || qtys.length === 0) {
+                    // fallback to global selectors
+                    qtys = document.querySelectorAll('input.so-input, input[id^="so_"], input[onchange*="so_luong"]');
+                }
+                // if grid main was present but no qty inputs found yet, retry shortly (grid may render async)
+                if (usedGridForQty && (!qtys || qtys.length === 0)) {
+                    window._setBtnRetryCount = (window._setBtnRetryCount || 0) + 1;
+                    if (window._setBtnRetryCount < 6) {
+                        setTimeout(function () { try { setBtnStateFromStatus(window._currentOrderStatus || status); } catch (e) { } }, 150);
+                        return;
+                    } else {
+                        // exhausted retries
+                        window._setBtnRetryCount = 0;
+                    }
+                }
+                // reset retry counter when we have results or not using gridMain
+                window._setBtnRetryCount = 0;
+
+                for (var qi = 0; qi < qtys.length; qi++) {
+                    try {
+                        var el = qtys[qi];
+                        el.disabled = !allow;
+                        try { el.readOnly = !allow; } catch (r) { }
+                        try { el.setAttribute('aria-disabled', (!allow).toString()); } catch (a) { }
+                        try { el.tabIndex = allow ? 0 : -1; } catch (t) { }
+                        el.style.opacity = allow ? '' : '0.6';
+                        el.style.pointerEvents = allow ? '' : 'none';
+
+                        if (!allow) {
+                            try { el.setAttribute('disabled','disabled'); } catch (e) { }
+                            // attach simple blocking handlers (assign to properties so we can remove later)
+                            el._old_onkeydown = el.onkeydown;
+                            el._old_onkeypress = el.onkeypress;
+                            el._old_onpaste = el.onpaste;
+                            el._old_onfocus = el.onfocus;
+                            el.onkeydown = function (ev) { ev.preventDefault(); ev.stopPropagation(); return false; };
+                            el.onkeypress = function (ev) { ev.preventDefault(); ev.stopPropagation(); return false; };
+                            el.onpaste = function (ev) { ev.preventDefault(); ev.stopPropagation(); return false; };
+                            el.onfocus = function (ev) { try { ev.target.blur(); } catch (e) { } };
+                        }
+                        else {
+                            try { el.removeAttribute('disabled'); } catch (e) { }
+                            try { el.onkeydown = el._old_onkeydown || null; } catch (e) { }
+                            try { el.onkeypress = el._old_onkeypress || null; } catch (e) { }
+                            try { el.onpaste = el._old_onpaste || null; } catch (e) { }
+                            try { el.onfocus = el._old_onfocus || null; } catch (e) { }
+                        }
+                    } catch (qex) { console.error('setBtnStateFromStatus qty update error', qex); }
+                }
+            } catch (qee) { }
+            // also disable/enable price (đơn giá) inputs (dg_*) in right grid
+            try {
+                var dgs = [];
+                var usedGridForDg = false;
+                var rightMainDg = null;
+                if (typeof gridHangHoaRight !== 'undefined' && gridHangHoaRight.GetMainElement) {
+                    rightMainDg = gridHangHoaRight.GetMainElement();
+                    if (rightMainDg) {
+                        dgs = rightMainDg.querySelectorAll('input.dg-input, input[id^="dg_"], input[onchange*="don_gia"]');
+                        usedGridForDg = true;
+                    }
+                }
+                if (!dgs || dgs.length === 0) {
+                    // fallback to global selectors
+                    dgs = document.querySelectorAll('input.dg-input, input[id^="dg_"], input[onchange*="don_gia"]');
+                }
+                // if grid main was present but no dg inputs found yet, retry shortly (grid may render async)
+                if (usedGridForDg && (!dgs || dgs.length === 0)) {
+                    window._setBtnRetryCountDg = (window._setBtnRetryCountDg || 0) + 1;
+                    if (window._setBtnRetryCountDg < 6) {
+                        setTimeout(function () { try { setBtnStateFromStatus(window._currentOrderStatus || status); } catch (e) { } }, 150);
+                        return;
+                    } else {
+                        // exhausted retries
+                        window._setBtnRetryCountDg = 0;
+                    }
+                }
+                // reset retry counter when we have results or not using gridMain
+                window._setBtnRetryCountDg = 0;
+
+                for (var di = 0; di < dgs.length; di++) {
+                    try {
+                        var elDg = dgs[di];
+                        elDg.disabled = !allow;
+                        try { elDg.readOnly = !allow; } catch (r) { }
+                        try { elDg.setAttribute('aria-disabled', (!allow).toString()); } catch (a) { }
+                        try { elDg.tabIndex = allow ? 0 : -1; } catch (t) { }
+                        elDg.style.opacity = allow ? '' : '0.6';
+                        elDg.style.pointerEvents = allow ? '' : 'none';
+
+                        if (!allow) {
+                            try { elDg.setAttribute('disabled', 'disabled'); } catch (e) { }
+                            elDg._old_onkeydown = elDg.onkeydown;
+                            elDg._old_onkeypress = elDg.onkeypress;
+                            elDg._old_onpaste = elDg.onpaste;
+                            elDg._old_onfocus = elDg.onfocus;
+                            elDg.onkeydown = function (ev) { ev.preventDefault(); ev.stopPropagation(); return false; };
+                            elDg.onkeypress = function (ev) { ev.preventDefault(); ev.stopPropagation(); return false; };
+                            elDg.onpaste = function (ev) { ev.preventDefault(); ev.stopPropagation(); return false; };
+                            elDg.onfocus = function (ev) { try { ev.target.blur(); } catch (e) { } };
+                        }
+                        else {
+                            try { elDg.removeAttribute('disabled'); } catch (e) { }
+                            try { elDg.onkeydown = elDg._old_onkeydown || null; } catch (e) { }
+                            try { elDg.onkeypress = elDg._old_onkeypress || null; } catch (e) { }
+                            try { elDg.onpaste = elDg._old_onpaste || null; } catch (e) { }
+                            try { elDg.onfocus = elDg._old_onfocus || null; } catch (e) { }
+                        }
+                    } catch (dex) { console.error('setBtnPayStateFromStatus dg update error', dex); }
+                }
+            } catch (dee) { console.error('setBtnPayStateFromStatus dgs selector error', dee); }
+
+            /*
+            // show divDuyetTuChoi only when status === 'SENDAPPROVAL'
+            try {
+                var div = document.getElementById('divDuyetTuChoi');
+                try { console.log('[QLDonHangBanCT] divDuyetTuChoi found:', !!div); } catch (e) { }
+                if (div) {
+                    try { console.log('[QLDonHangBanCT] applying visibility for', s); } catch (e) { }
+                    if (s === 'SENDAPPROVAL') div.style.display = '';
+                    else div.style.display = 'none';
+                }
+            } catch (err) { console.error('setBtnPayStateFromStatus divDuyetTuChoi error', err); }
+
+            */
+        } catch (e) {
+            console.error('setBtnPayStateFromStatus error', e);
+
+        }
+    }
+

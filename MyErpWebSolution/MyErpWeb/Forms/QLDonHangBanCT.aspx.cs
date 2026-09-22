@@ -312,6 +312,53 @@ namespace WebRunDragon.Forms
             gridExporter.DataBind();
             gridExporter.WriteXlsxToResponse();
         }
+        // Return inline style string for the cell, allowing server to render visible-but-non-clickable state
+        public string GetRightStyle(object Xem0Them1Sua2Xoa3Duyet5, object trangThai)
+        {
+            try
+            {
+                string op = (Xem0Them1Sua2Xoa3Duyet5 + "").Trim();
+                string tt = (trangThai ?? "").ToString().Trim().ToUpper();
+
+                // If operation is Delete, enforce per-row status rules: only allow delete when status is empty, NEW or REJECT
+                if (op == SysConfig.ValueDelete)
+                {
+                    if (!(tt == "" || tt == SysConfig.OBJ_STATUS_NEW || tt == "REJECT"))
+                    {
+                        // visible but not clickable
+                        return "display:inline;pointer-events:none;opacity:0.4;cursor:default";
+                    }
+                }
+            }
+            catch { }
+
+            // fallback to permission-based GetRight
+            try
+            {
+                var perm = GetRight(Xem0Them1Sua2Xoa3Duyet5);
+                if (perm == SysConfig.displayButton) return "display:inline;cursor:pointer";
+            }
+            catch { }
+            return "display:none";
+        }
+        // Overload: allow passing row's trang_thai so GetRight can decide per-row visibility
+        public string GetRight(object Xem0Them1Sua2Xoa3Duyet5, object trangThai)
+        {
+            try
+            {
+                string op = (Xem0Them1Sua2Xoa3Duyet5 + "").Trim();
+                string tt = (trangThai ?? "").ToString().Trim().ToUpper();
+                // If operation is Delete, enforce per-row status rules: only allow delete when status is empty, NEW or REJECT
+                if (op == SysConfig.ValueDelete)
+                {
+                    if (!(tt == "" || tt == SysConfig.OBJ_STATUS_NEW || tt == "SENDAPRROVAL"))
+                        return SysConfig.noDisplayButton;
+                }
+            }
+            catch { }
+            // fallback to existing permission-based GetRight
+            return GetRight(Xem0Them1Sua2Xoa3Duyet5);
+        }
         public string GetRight(object Xem0Them1Sua2Xoa3Duyet5)
         {
             string ret = "";
@@ -442,6 +489,6 @@ namespace WebRunDragon.Forms
             }
         }
 
-
+        
     }
 }
