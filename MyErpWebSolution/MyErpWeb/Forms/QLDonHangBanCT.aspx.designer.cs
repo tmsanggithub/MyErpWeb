@@ -51,13 +51,13 @@ namespace WebRunDragon.Forms
         protected global::DevExpress.Web.ASPxComboBox cbKhachHang;
 
         /// <summary>
-        /// ASPxGridViewRight control.
+        /// gridHangHoaRight control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridViewRight;
+        protected global::DevExpress.Web.ASPxGridView gridHangHoaRight;
 
         /// <summary>
         /// memoNotes control.
@@ -94,6 +94,33 @@ namespace WebRunDragon.Forms
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnPay;
+
+        /// <summary>
+        /// ASPxMemo1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxMemo ASPxMemo1;
+
+        /// <summary>
+        /// ASPxButton2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton ASPxButton2;
+
+        /// <summary>
+        /// ASPxButton3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton ASPxButton3;
 
         /// <summary>
         /// gridExporter control.

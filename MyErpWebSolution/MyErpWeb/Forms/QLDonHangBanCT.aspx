@@ -148,8 +148,8 @@
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Chọn" VisibleIndex="5" Width="35px">
                                         <DataItemTemplate>
-                                            <div class="btn-add-item" style="display: <%#GetRight(3) %>; cursor: pointer" onclick="OpenAdd('<%# Eval("id") %>','<%# Eval("ma_hang_hoa") %>','<%# Eval("ten_hang_hoa") %>','<%# Eval("don_gia") %>');" title="Chọn">
-                                                <img src="../Images/icon-add.png" />
+                                            <div class="btn-add-item" style="display: <%#GetRight(1) %>; cursor: pointer !important;" onclick="OpenAdd('<%# Eval("id") %>','<%# Eval("ma_hang_hoa") %>','<%# Eval("ten_hang_hoa") %>','<%# Eval("don_gia") %>');" title="Chọn">
+                                                <img src="../Images/icon-add.png" style="cursor: pointer;" />
                                             </div>
                                         </DataItemTemplate>
                                     </dx:GridViewDataTextColumn>
@@ -191,10 +191,10 @@
                         <label style="font-size: 13px">Hàng hóa:</label>
                         <!-- detail grid for selected items -->
                         <div style="overflow: auto; border: 1px solid #ddd; padding: 6px; background: #fafafa;">
-                            <dx:ASPxGridView ID="ASPxGridViewRight" ClientInstanceName="gridHangHoaRight" runat="server" Width="100%" AutoGenerateColumns="False" EnableTheming="True" Theme="PlasticBlue" KeyFieldName="id"
-                                OnCustomCallback="ASPxGridViewRight_CustomCallback"
-                                OnPageIndexChanged="ASPxGridViewRight_PageIndexChanged"
-                                OnDataBinding="ASPxGridViewRight_DataBinding">
+                            <dx:ASPxGridView ID="gridHangHoaRight" ClientInstanceName="gridHangHoaRight" runat="server" Width="100%" AutoGenerateColumns="False" EnableTheming="True" Theme="PlasticBlue" KeyFieldName="id"
+                                OnCustomCallback="gridHangHoaRight_CustomCallback"
+                                OnPageIndexChanged="gridHangHoaRight_PageIndexChanged"
+                                OnDataBinding="gridHangHoaRight_DataBinding">
 
                                 <Columns>
                                     <dx:GridViewDataTextColumn Caption="Xóa" VisibleIndex="0" Width="50px">
@@ -246,11 +246,27 @@
                         <div style="text-align: center; margin-top: 18px;">
                             <dx:ASPxButton ID="btnPrint" ClientInstanceName="btnPrint" runat="server" Text="In" Theme="Office2003Blue" />
                             &nbsp;
-                            <dx:ASPxButton ID="btnSaveTemp" ClientInstanceName="btnSaveTemp" runat="server" Text="Lưu" Theme="Office2003Blue">
-                                <ClientSideEvents Click="function(s,e){ SaveTempCall(); }" />
+                            <dx:ASPxButton ID="btnSaveTemp" ClientInstanceName="btnSave" runat="server" Text="Lưu" Theme="Office2003Blue" AutoPostBack="False">
+                                <ClientSideEvents Click="function(s,e){ e.processOnServer = false; Save(); }" />
                             </dx:ASPxButton>
                             &nbsp;
-                            <dx:ASPxButton ID="btnPay" ClientInstanceName="btnPay" runat="server" Text="Lưu và gửi duyệt" Theme="Office2003Blue" OnClick="btnPay_Click" />
+                            <dx:ASPxButton ID="btnPay" ClientInstanceName="btnPay" runat="server" Text="Gửi duyệt" Theme="Office2003Blue" AutoPostBack="False">
+                                <ClientSideEvents Click="function(s,e){ e.processOnServer = false; SendApproval(); }" />
+                            </dx:ASPxButton>
+                        </div>
+                        <div id="divDuyetTuChoi" style="position: fixed; bottom: 0; width: 100%; text-align: left; margin-bottom: 0px; display: none">
+                            <label style="font-size: 13px">Ghi chú duyệt/từ chối:</label>
+                            <dx:ASPxMemo ID="ASPxMemo1" ClientInstanceName="txtGhiChuDuyetTuChoi" runat="server" Width="100%" Height="30px"></dx:ASPxMemo>
+                            &nbsp;
+                            <dx:ASPxButton ID="ASPxButton2" ClientInstanceName="btnSaveReject" runat="server" Text="Từ chối" Theme="Office2003Blue" AutoPostBack="False">
+                                <ClientSideEvents Click="function(s,e){ e.processOnServer = false; Reject(); }" />
+                            </dx:ASPxButton>
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            <dx:ASPxButton ID="ASPxButton3" ClientInstanceName="btnSaveApproved" runat="server" Text="Duyệt" Theme="Office2003Blue" AutoPostBack="False">
+                                <ClientSideEvents Click="function(s,e){ e.processOnServer = false; Approval(); }" />
+                            </dx:ASPxButton>
                         </div>
                     </div>
                 </div>
@@ -265,6 +281,20 @@
     </asp:UpdatePanel>
 
 </asp:Content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

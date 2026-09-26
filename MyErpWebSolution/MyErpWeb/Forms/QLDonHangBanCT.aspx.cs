@@ -86,8 +86,6 @@ namespace WebRunDragon.Forms
             }
         }
 
-
-
         private void BindControl()
         {
             try
@@ -131,7 +129,7 @@ namespace WebRunDragon.Forms
 
         }
 
-        protected void ASPxGridViewRight_CustomCallback(object sender, DevExpress.Web.ASPxGridViewCustomCallbackEventArgs e)
+        protected void gridHangHoaRight_CustomCallback(object sender, DevExpress.Web.ASPxGridViewCustomCallbackEventArgs e)
         {
             try
             {
@@ -144,8 +142,8 @@ namespace WebRunDragon.Forms
                 //if (cmd == "REFRESH")
                 //{
                 //    DataTable dtRef = Session["ssInvoiceDetails"] as DataTable;
-                //    ASPxGridViewRight.DataSource = dtRef;
-                //    ASPxGridViewRight.DataBind();
+                //    gridHangHoaRight.DataSource = dtRef;
+                //    gridHangHoaRight.DataBind();
                 //    return;
                 //}
                 if (cmd == "LOAD")
@@ -156,8 +154,8 @@ namespace WebRunDragon.Forms
                     {
                         DataTable dtDetail = ProcessDonHangBan.getInstance().TraCuuDonHangBanChiTiet(idMaster, Utils.UserUtil.GetSessionUserId());
                         Session["ssInvoiceDetails"] = dtDetail;
-                        ASPxGridViewRight.DataSource = dtDetail;
-                        ASPxGridViewRight.DataBind();
+                        gridHangHoaRight.DataSource = dtDetail;
+                        gridHangHoaRight.DataBind();
                     }
                     return;
                 }
@@ -204,8 +202,8 @@ namespace WebRunDragon.Forms
 
                 //    Session["ssInvoiceDetails"] = dt;
 
-                //    ASPxGridViewRight.DataSource = dt;
-                //    ASPxGridViewRight.DataBind();
+                //    gridHangHoaRight.DataSource = dt;
+                //    gridHangHoaRight.DataBind();
                 //}
                 //else if (cmd == "DEL")
                 //{
@@ -216,8 +214,8 @@ namespace WebRunDragon.Forms
                 //    {
                 //        dt.Rows.RemoveAt(idx);
                 //        Session["ssInvoiceDetails"] = dt;
-                //        ASPxGridViewRight.DataSource = dt;
-                //        ASPxGridViewRight.DataBind();
+                //        gridHangHoaRight.DataSource = dt;
+                //        gridHangHoaRight.DataBind();
                 //    }
                 //}
                 else if (cmd == "UPD")
@@ -276,8 +274,8 @@ namespace WebRunDragon.Forms
                             dt.Rows[idx]["don_gia"] = dg;
                             dt.Rows[idx]["thanh_tien"] = thanhTien;
                             Session["ssInvoiceDetails"] = dt;
-                            ASPxGridViewRight.DataSource = dt;
-                            ASPxGridViewRight.DataBind();
+                            gridHangHoaRight.DataSource = dt;
+                            gridHangHoaRight.DataBind();
                         }
                         catch (Exception ex)
                         {
@@ -288,20 +286,20 @@ namespace WebRunDragon.Forms
             }
             catch (Exception ex)
             {
-                logger.Error("ASPxGridViewRight_CustomCallback error: " + ex.Message + "\n" + ex.StackTrace);
+                logger.Error("gridHangHoaRight_CustomCallback error: " + ex.Message + "\n" + ex.StackTrace);
             }
         }
 
-        protected void ASPxGridViewRight_PageIndexChanged(object sender, EventArgs e)
+        protected void gridHangHoaRight_PageIndexChanged(object sender, EventArgs e)
         {
             // Bind from session so paging works without re-querying DB
-            ASPxGridViewRight.DataSource = Session["ssInvoiceDetails"];
-            ASPxGridViewRight.DataBind();
+            gridHangHoaRight.DataSource = Session["ssInvoiceDetails"];
+            gridHangHoaRight.DataBind();
         }
 
-        protected void ASPxGridViewRight_DataBinding(object sender, EventArgs e)
+        protected void gridHangHoaRight_DataBinding(object sender, EventArgs e)
         {
-            ASPxGridViewRight.DataSource = Session["ssInvoiceDetails"];
+            gridHangHoaRight.DataSource = Session["ssInvoiceDetails"];
         }
 
         protected void btnExcel_Click(object sender, EventArgs e)
@@ -320,10 +318,10 @@ namespace WebRunDragon.Forms
                 string op = (Xem0Them1Sua2Xoa3Duyet5 + "").Trim();
                 string tt = (trangThai ?? "").ToString().Trim().ToUpper();
 
-                // If operation is Delete, enforce per-row status rules: only allow delete when status is empty, NEW or REJECT
+                // If operation is Delete, enforce per-row status rules: only allow delete when status is empty, NEW, EDIT or REJECT
                 if (op == SysConfig.ValueDelete)
                 {
-                    if (!(tt == "" || tt == SysConfig.OBJ_STATUS_NEW || tt == "REJECT"))
+                    if (!(tt == "" || tt == SysConfig.OBJ_STATUS_NEW || tt == SysConfig.OBJ_STATUS_EDIT || tt == SysConfig.OBJ_STATUS_RETURNED || tt == "REJECT"))
                     {
                         // visible but not clickable
                         return "display:inline;pointer-events:none;opacity:0.4;cursor:default";
@@ -351,7 +349,7 @@ namespace WebRunDragon.Forms
                 // If operation is Delete, enforce per-row status rules: only allow delete when status is empty, NEW or REJECT
                 if (op == SysConfig.ValueDelete)
                 {
-                    if (!(tt == "" || tt == SysConfig.OBJ_STATUS_NEW || tt == "SENDAPRROVAL"))
+                    if (!(tt == "" || tt == SysConfig.OBJ_STATUS_NEW || tt == SysConfig.OBJ_STATUS_RETURNED || tt == SysConfig.OBJ_STATUS_EDIT || tt == "SENDAPRROVAL"))
                         return SysConfig.noDisplayButton;
                 }
             }
@@ -405,90 +403,9 @@ namespace WebRunDragon.Forms
             }
             return ret;
         }
-
-        protected void btnSaveTemp_Click(object sender, EventArgs e)
-        {
-            SaveInvoice(false, "NEW");
-        }
-
-        protected void btnPay_Click(object sender, EventArgs e)
-        {
-            SaveInvoice(true, "SENDAPPROVAL");
-        }
-
-        private void SaveInvoice(bool isPay, string trangThai)
-        {
-            // Collect header data
-            DateTime ngayBan = DateTime.Now;
-            int idKhachHang = Utils.NumberUtil.ParseToInt(cbKhachHang.Value + "");
-            string ghiChu = memoNotes.Text + "";
-            string user = Utils.UserUtil.GetSessionUserId() + "";
-
-            SqlConnection cnn = null;
-            SqlTransaction tran = null;
-            try
-            {
-                cnn = DatabaseManager.OpenSqlConnection(DatabaseManager.CNN_STRING_HELPDESK);
-                tran = cnn.BeginTransaction();
-
-                string insertHeader = "INSERT INTO ql_hoa_don_ban (ngay_ban, id_khach_hang, ghi_chu,trang_thai, isdeleted, createdby, createdtime) OUTPUT INSERTED.id VALUES (@ngay_ban, @id_khach_hang, @ghi_chu,@trang_thai, 0, @createdby, GETDATE())";
-                SqlParameter[] parasHeader = new SqlParameter[] {
-                    new SqlParameter("@ngay_ban", ngayBan),
-                    new SqlParameter("@id_khach_hang", idKhachHang),
-                    new SqlParameter("@ghi_chu", ghiChu),
-                    new SqlParameter("@trang_thai", trangThai),
-                    new SqlParameter("@createdby", user)
-                };
-
-                object objId = DatabaseManager.SQLExecScalar(insertHeader, CommandType.Text, ref tran, parasHeader);
-                int idHoaDon = Utils.NumberUtil.ParseToInt(objId + "");
-
-                // iterate details from session-stored DataTable to avoid relying on grid field names
-                DataTable dt = Session["ssInvoiceDetails"] as DataTable;
-                if (dt != null)
-                {
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        int idHangHoa = Utils.NumberUtil.ParseToInt(dr["id_hang_hoa"] + "");
-                        decimal soLuong = Utils.NumberUtil.ParseToDecimal(dr["so_luong"]);
-                        decimal donGia = Utils.NumberUtil.ParseToDecimal(dr["don_gia"]);
-                        decimal thanhTien = soLuong * donGia;
-
-                        string insertDetail = "INSERT INTO ql_hoa_don_ban_ct (id_hoa_don_ban, id_hang_hoa, so_luong, don_gia, thanh_tien, ghi_chu, isdeleted, createdby, createdtime) VALUES (@id_hoa_don_ban, @id_hang_hoa, @so_luong, @don_gia, @thanh_tien, @ghi_chu, 0, @createdby, GETDATE())";
-                        SqlParameter[] parasDet = new SqlParameter[] {
-                            new SqlParameter("@id_hoa_don_ban", idHoaDon),
-                            new SqlParameter("@id_hang_hoa", idHangHoa),
-                            new SqlParameter("@so_luong", soLuong),
-                            new SqlParameter("@don_gia", donGia),
-                            new SqlParameter("@thanh_tien", thanhTien),
-                            new SqlParameter("@ghi_chu", dr["ghi_chu"] + ""),
-                            new SqlParameter("@createdby", user)
-                        };
-
-                        DatabaseManager.SQLExecuteNonQuery(insertDetail, CommandType.Text, ref tran, parasDet);
-                    }
-                }
-
-                tran.Commit();
-                // feedback
-                memoNotes.Text = "";
-                // clear session details and reload UI
-                // Session["ssInvoiceDetails"] = null;
-                ASPxGridViewRight.DataSource = null;
-                ASPxGridViewRight.DataBind();
-                LoadDataSourceSum();
-            }
-            catch (Exception ex)
-            {
-                if (tran != null) tran.Rollback();
-                logger.Error("SaveInvoice exception: " + ex.Message + "\n" + ex.StackTrace);
-            }
-            finally
-            {
-                if (cnn != null) DatabaseManager.CloseDbConnection(cnn);
-            }
-        }
-
+        
+     
+        
         
     }
 }

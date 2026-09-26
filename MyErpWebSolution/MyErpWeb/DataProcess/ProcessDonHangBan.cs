@@ -31,54 +31,57 @@ namespace WebRunDragon.DataProcess
                 cnn = DatabaseManager.OpenSqlConnection(DatabaseManager.CNN_STRING_HELPDESK);
                 tran = cnn.BeginTransaction();
 
-                // Insert header
-                string insertHeader = "INSERT INTO ql_hoa_don_ban (ngay_ban, id_khach_hang, ghi_chu,trang_thai, isdeleted, createdby, createdtime) OUTPUT INSERTED.id VALUES (@ngay_ban, @id_khach_hang, @ghi_chu, @trang_thai, 0, @createdby, GETDATE())";
-                SqlParameter[] parasHeader = new SqlParameter[] {
-                    new SqlParameter("@ngay_ban", DateTime.Now),
-                    new SqlParameter("@id_khach_hang", idKhachHang),
-                    new SqlParameter("@ghi_chu", ghiChu ?? ""),
-                       new SqlParameter("@trang_thai", trangThai),
-                    new SqlParameter("@createdby", userLogin)
-                };
-
-                object objId = DatabaseManager.SQLExecScalar(insertHeader, System.Data.CommandType.Text, ref tran, parasHeader);
-                int idHoaDon = Utils.NumberUtil.ParseToInt(objId + "");
-                if (idHoaDon <= 0)
+                if (id <= 0)
                 {
-                    tran.Rollback();
-                    message = "Không thể tạo hóa đơn";
-                    return false;
+                    // Thêm mới: trạng thái luôn là NEW
+                    string insertHeader = "INSERT INTO ql_hoa_don_ban (ngay_ban, id_khach_hang, ghi_chu,trang_thai, isdeleted, createdby, createdtime) OUTPUT INSERTED.id VALUES (@ngay_ban, @id_khach_hang, @ghi_chu, @trang_thai, 0, @createdby, GETDATE())";
+                    SqlParameter[] parasHeader = new SqlParameter[] {
+                        new SqlParameter("@ngay_ban", DateTime.Now),
+                        new SqlParameter("@id_khach_hang", idKhachHang),
+                        new SqlParameter("@ghi_chu", ghiChu ?? ""),
+                        new SqlParameter("@trang_thai", "NEW"),
+                        new SqlParameter("@createdby", userLogin)
+                    };
+
+                    object objId = DatabaseManager.SQLExecScalar(insertHeader, System.Data.CommandType.Text, ref tran, parasHeader);
+                    int idHoaDon = Utils.NumberUtil.ParseToInt(objId + "");
+                    if (idHoaDon <= 0)
+                    {
+                        tran.Rollback();
+                        message = "Không thể tạo hóa đơn";
+                        return false;
+                    }
+
+                    tran.Commit();
+                    idInsertNew = idHoaDon;
+                    message = "Lưu thành công";
+                    return true;
                 }
+                else
+                {
+                    // Cập nhật: trạng thái chuyển sang EDIT
+                    string updateHeader = "UPDATE ql_hoa_don_ban SET id_khach_hang=@id_khach_hang, ghi_chu=@ghi_chu, trang_thai=@trang_thai, updatedby=@updatedby, updatedtime=GETDATE() WHERE id=@id";
+                    SqlParameter[] parasHeader = new SqlParameter[] {
+                        new SqlParameter("@id", id),
+                        new SqlParameter("@id_khach_hang", idKhachHang),
+                        new SqlParameter("@ghi_chu", ghiChu ?? ""),
+                        new SqlParameter("@trang_thai", "EDIT"),
+                        new SqlParameter("@updatedby", userLogin)
+                    };
 
-                // Insert details
-                //if (chiTiets != null)
-                //{
-                //    foreach (DataRow dr in chiTiets.Rows)
-                //    {
-                //        int idHangHoa = Utils.NumberUtil.ParseToInt(dr["id_hang_hoa"] + "");
-                //        decimal soLuong = Utils.NumberUtil.ParseToDecimal(dr["so_luong"]);
-                //        decimal donGia = Utils.NumberUtil.ParseToDecimal(dr["don_gia"]);
-                //        decimal thanhTien = soLuong * donGia;
+                    int rows = DatabaseManager.SQLExecuteNonQuery(updateHeader, System.Data.CommandType.Text, ref tran, parasHeader);
+                    if (rows <= 0)
+                    {
+                        tran.Rollback();
+                        message = "Không thể cập nhật hóa đơn";
+                        return false;
+                    }
 
-                //        string insertDetail = "INSERT INTO ql_hoa_don_ban_ct (id_hoa_don_ban, id_hang_hoa, so_luong, don_gia, thanh_tien, ghi_chu, isdeleted, createdby, createdtime) VALUES (@id_hoa_don_ban, @id_hang_hoa, @so_luong, @don_gia, @thanh_tien, @ghi_chu, 0, @createdby, GETDATE())";
-                //        SqlParameter[] parasDet = new SqlParameter[] {
-                //            new SqlParameter("@id_hoa_don_ban", idHoaDon),
-                //            new SqlParameter("@id_hang_hoa", idHangHoa),
-                //            new SqlParameter("@so_luong", soLuong),
-                //            new SqlParameter("@don_gia", donGia),
-                //            new SqlParameter("@thanh_tien", thanhTien),
-                //            new SqlParameter("@ghi_chu", dr.Table.Columns.Contains("ghi_chu") ? (dr["ghi_chu"] + "") : ""),
-                //            new SqlParameter("@createdby", userLogin)
-                //        };
-
-                //        DatabaseManager.SQLExecuteNonQuery(insertDetail, System.Data.CommandType.Text, ref tran, parasDet);
-                //    }
-                //}
-
-                tran.Commit();
-                idInsertNew = idHoaDon;
-                message = "Lưu thành công";
-                return true;
+                    tran.Commit();
+                    idInsertNew = id;
+                    message = "Lưu thành công";
+                    return true;
+                }
             }
             catch (Exception ex)
             {
@@ -199,7 +202,7 @@ namespace WebRunDragon.DataProcess
                 param.Add("ID", id);
                 param.Add("UserLogin", userLoginId);
 
-                object objRet = DatabaseManager.ExecuteScalarSql(DatabaseManager.CNN_STRING_HELPDESK, "SP_QLDonHangBan_SendApproval", System.Data.CommandType.StoredProcedure, param) + "";
+                object objRet = DatabaseManager.ExecuteScalarSql(DatabaseManager.CNN_STRING_HELPDESK, "SP_ql_hoa_don_ban_send_approval", System.Data.CommandType.StoredProcedure, param) + "";
                 int retCode = Utils.NumberUtil.ParseToInt(objRet + "");
                 if (retCode == -2)
                 {
@@ -239,7 +242,7 @@ namespace WebRunDragon.DataProcess
                 SqlParameter para02 = new SqlParameter("GhiChu", ghiChu);
                 SqlParameter para03 = new SqlParameter("UserLogin", userLoginId);
                 SqlParameter[] paras = new SqlParameter[3] { para01, para02, para03 };
-                object objRet = DatabaseManager.SQLExecScalar("SP_QLDonHangBan_Approval", System.Data.CommandType.StoredProcedure, ref tran, paras);
+                object objRet = DatabaseManager.SQLExecScalar("SP_ql_hoa_don_ban_Approval", System.Data.CommandType.StoredProcedure, ref tran, paras);
 
 
                 int retCode = Utils.NumberUtil.ParseToInt(objRet + "");
@@ -330,7 +333,7 @@ namespace WebRunDragon.DataProcess
                 param.Add("GhiChu", ghiChu);
                 param.Add("UserLogin", userLoginId);
 
-                object objRet = DatabaseManager.ExecuteScalarSql(DatabaseManager.CNN_STRING_HELPDESK, "SP_QLDonHangBan_Reject", System.Data.CommandType.StoredProcedure, param) + "";
+                object objRet = DatabaseManager.ExecuteScalarSql(DatabaseManager.CNN_STRING_HELPDESK, "SP_ql_hoa_don_ban_Reject", System.Data.CommandType.StoredProcedure, param) + "";
                 int retCode = Utils.NumberUtil.ParseToInt(objRet + "");
                 if (retCode == -2)
                 {

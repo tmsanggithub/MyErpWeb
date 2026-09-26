@@ -12,6 +12,8 @@ namespace WebRunDragon.Config
         public static string DBTYPE_SQLSERVER = "SQLSERVER";
 
         public static string OBJ_STATUS_NEW = "NEW";
+
+        public static string OBJ_STATUS_EDIT = "EDIT";
         public static string OBJ_STATUS_RETURNED = "RETURNED";
 
         public static string SESSION_USERINFO = "SESSION_USERINFO";

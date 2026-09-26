@@ -55,7 +55,6 @@ namespace WebRunDragon.Actions
                     int idKhachHang = Utils.NumberUtil.ParseToInt(context.Request.Form["idKhachHang"] + "");
                     string ghiChu = context.Request.Form["ghiChu"] + "";
                     int idInsertNew = 0;
-                    string trangThai = "NEW";
                     success = false;
                     try
                     {
@@ -68,7 +67,7 @@ namespace WebRunDragon.Actions
                         else
                         {
                             string msg = "";
-                            success = DataProcess.ProcessDonHangBan.getInstance().SaveHoaDonBan(Utils.NumberUtil.ParseToInt(context.Request.Form["id"] + ""), idKhachHang, ghiChu, trangThai, sessionUserId, out msg, out idInsertNew);
+                            success = DataProcess.ProcessDonHangBan.getInstance().SaveHoaDonBan(Utils.NumberUtil.ParseToInt(context.Request.Form["id"] + ""), idKhachHang, ghiChu, null, sessionUserId, out msg, out idInsertNew);
                             message = msg;
                             if (success)
                             {
