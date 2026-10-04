@@ -51,7 +51,7 @@ namespace WebRunDragon.Utils
                             + System.IO.Path.DirectorySeparatorChar
                             + (language.Equals(Constants.en_US) ? RESOURCE_EN : RESOURCE_VI);
 
-            ResXResourceReader rs = new System.Resources.ResXResourceReader(filePath);
+            System.Resources.ResXResourceReader rs = new System.Resources.ResXResourceReader(filePath);
 
             IEnumerable<DictionaryEntry> enumerator = rs.OfType<DictionaryEntry>();
             foreach (DictionaryEntry entry in enumerator)

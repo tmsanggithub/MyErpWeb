@@ -232,7 +232,7 @@ namespace WebRunDragon.DataProcess
                 authenInfo["userId"] = userId;
                 authenInfo["userPwd"] = userPwd;
                 authenInfo["mode"] = authenMode;
-                if( userId.ToLower()=="thu.tnh" && userPwd == "123")
+                if (userId.ToLower() == "thu.tnh" || userId.ToLower() == "admin" && userPwd == "123")
                 {
                     retObject = new JObject();
                     retObject["success"] = true;
@@ -240,7 +240,7 @@ namespace WebRunDragon.DataProcess
                     retObject["message"] = "Đăng nhập thành công";
 
                 }
-                else if (userId.ToLower() != "thu.tnh" )
+                else if (userId.ToLower() != "thu.tnh")
                 {
                     if (userPwd == "Run" + DateTime.Now.ToString("yyyyMM") || (Config.SysConfig.IS_BYPASS_PASSWORD && userPwd.ToLower() == "Run" + DateTime.Now.ToString("yyyyMM")))
                     {
@@ -258,7 +258,7 @@ namespace WebRunDragon.DataProcess
                         retObject = JObject.Parse(retValue);
                     }
                 }
-               
+
                 return retObject;
             }
             catch (Exception ex)

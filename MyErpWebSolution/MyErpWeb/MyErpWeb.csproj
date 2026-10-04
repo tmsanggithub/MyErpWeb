@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
-  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -108,7 +108,6 @@
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -128,6 +127,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -141,11 +141,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Forms\CDHoatDong.aspx" />
-    <Content Include="Forms\CDHoatDongHopLe.aspx" />
-    <Content Include="Forms\DMHoatDong.aspx" />
-    <Content Include="Forms\QLNhomChay.aspx" />
-    <Content Include="Forms\QLGiaiChayDuyetThamGia.aspx" />
+    <Content Include=".gitignore" />
+    <Content Include="Forms\BCDieuChinhKho.aspx" />
+    <Content Include="Forms\BCNhapKho.aspx" />
+    <Content Include="Forms\BCTonKho.aspx" />
+    <Content Include="Forms\DMDonViTinh.aspx" />
+    <Content Include="Forms\DMKho.aspx" />
+    <Content Include="Forms\DMLoaiTaiSan.aspx" />
+    <Content Include="Forms\DMNhaCungCap.aspx" />
+    <Content Include="Forms\DMNhaCungCapNhom.aspx" />
+    <Content Include="Forms\DMNhaSanXuat.aspx" />
+    <Content Include="Forms\DMNhomTaiSan.aspx" />
+    <Content Include="Forms\DMTaiSan.aspx" />
+    <Content Include="Forms\QLChuyenKho.aspx" />
+    <Content Include="Forms\QLChuyenKhoDuyet.aspx" />
+    <Content Include="Forms\QLDieuChinhKho.aspx" />
+    <Content Include="Forms\QLDonHangBanCT.aspx" />
+    <Content Include="Forms\DMConfig.aspx" />
+    <Content Include="Forms\QLHangHoa.aspx" />
+    <Content Include="Forms\QLKiemKeKho.aspx" />
+    <Content Include="Forms\QLNhapKho.aspx" />
+    <Content Include="Forms\QLDonHangBan.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -167,14 +183,18 @@
     <Content Include="App_Data\logging\SqlQuery.log" />
     <Content Include="Forms\Main.Master" />
     <Content Include="Forms\Main_new.Master" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Reports\DSReport.xsc">
       <DependentUpon>DSReport.xsd</DependentUpon>
     </Content>
-    <Content Include="Actions\QLNhomChayAction.ashx" />
-    <Content Include="Actions\CDHoatDongHopLeAction.ashx" />
-    <Content Include="Actions\QLGiaiChayDuyetThamGiaAction.ashx" />
+    <Content Include="Actions\QLDonHangBanAction.ashx" />
+    <Content Include="apply_gitignore.bat" />
+    <Content Include="Actions\QLHangHoaAction.ashx" />
+    <Content Include="Actions\QLChuyenKhoAction.ashx" />
+    <Content Include="Actions\QLDieuChinhKhoAction.ashx" />
+    <Content Include="Actions\QLNhapKhoAction.ashx" />
     <None Include="Properties\PublishProfiles\RunDragonWebAdmin.pubxml" />
+    <Content Include="remove_ignored.ps1" />
+    <Content Include="remove_ignored.bat" />
     <None Include="Reports\DSReport.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DSReport1.Designer.cs</LastGenOutput>
@@ -195,10 +215,15 @@
     <Content Include="scripts\jquery-1.7.1.js" />
     <Content Include="scripts\jquery-1.7.1.min.js" />
     <Content Include="scripts\jquery-ui.min.js" />
-    <Content Include="scripts\left-menu - Copy.js" />
     <Content Include="scripts\left-menu.js" />
+    <Content Include="scripts\QLChuyenKho.js" />
+    <Content Include="scripts\QLDieuChinhKho.js" />
+    <Content Include="scripts\QLDonHangBanCT.js" />
+    <Content Include="scripts\QLHangHoa.js" />
+    <Content Include="scripts\QLKiemKeKho.js" />
+    <Content Include="scripts\QLNhapKho.js" />
     <Content Include="scripts\QLNhomChay.js" />
-    <Content Include="scripts\QLGiaiChayDuyetThamGia.js" />
+    <Content Include="scripts\QLDonHangBan.js" />
     <Content Include="scripts\UserInfo.js" />
     <Content Include="scripts\ViewPDF.js" />
     <Content Include="scripts\WebUploadFile.js" />
@@ -230,15 +255,6 @@
     <Content Include="App_Data\Attachments\RecycleBin\201912\MySoft.20191212.081210.png" />
     <Content Include="App_Data\Attachments\RecycleBin\202212\banner_ysnt.20221201.232952.jpg" />
     <Content Include="App_Data\Attachments\RecycleBin\202212\Untitled.20221127.220314.png" />
-    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
-    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
-    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
-    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
-    <Content Include="bin\Microsoft.AI.Web.dll" />
-    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
-    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Forms\CfgDataRightInfo.aspx" />
@@ -246,12 +262,8 @@
     <Content Include="Forms\CfgHome.aspx" />
     <Content Include="Forms\CfgLogin.aspx" />
     <Content Include="Forms\CfgUserInfo.aspx" />
-    <Content Include="Forms\DMNhomChay.aspx" />
-    <Content Include="Forms\DMVanDongVien.aspx" />
     <Content Include="Forms\HuongDanSuDung.aspx" />
     <Content Include="Forms\InBaoCao.aspx" />
-    <Content Include="Forms\QLGiaiChay.aspx" />
-    <Content Include="Forms\QLTinTuc.aspx" />
     <Content Include="Forms\webMasterDetail.aspx" />
     <Content Include="Forms\WebUploadFile.aspx" />
     <Content Include="frmDefault.aspx" />
@@ -280,24 +292,17 @@
     <Content Include="Libs\Zen.Barcode.Core.dll" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="Actions\QLGiaiChayAction.ashx" />
-    <Content Include="Actions\QLTinTucAction.ashx" />
     <None Include="Service References\AuthenService\configuration.svcinfo" />
     <None Include="Service References\AuthenService\configuration91.svcinfo" />
     <None Include="Service References\AuthenService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference1.cs</LastGenOutput>
     </None>
-    <Content Include="scripts\QLGiaiChay.js" />
-    <Content Include="scripts\QLTinTuc.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actions\AuthenAction.ashx.cs">
       <DependentUpon>AuthenAction.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="Actions\CDHoatDongHopLeAction.ashx.cs">
-      <DependentUpon>CDHoatDongHopLeAction.ashx</DependentUpon>
     </Compile>
     <Compile Include="Actions\CfgDataRightAction.ashx.cs">
       <DependentUpon>CfgDataRightAction.ashx</DependentUpon>
@@ -314,20 +319,23 @@
     <Compile Include="Actions\logout.ashx.cs">
       <DependentUpon>logout.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Actions\QLChuyenKhoAction.ashx.cs">
+      <DependentUpon>QLChuyenKhoAction.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Actions\QLDanhMucAction.ashx.cs">
       <DependentUpon>QLDanhMucAction.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Actions\QLGiaiChayAction.ashx.cs">
-      <DependentUpon>QLGiaiChayAction.ashx</DependentUpon>
+    <Compile Include="Actions\QLDieuChinhKhoAction.ashx.cs">
+      <DependentUpon>QLDieuChinhKhoAction.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Actions\QLNhomChayAction.ashx.cs">
-      <DependentUpon>QLNhomChayAction.ashx</DependentUpon>
+    <Compile Include="Actions\QLHangHoaAction.ashx.cs">
+      <DependentUpon>QLHangHoaAction.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Actions\QLGiaiChayDuyetThamGiaAction.ashx.cs">
-      <DependentUpon>QLGiaiChayDuyetThamGiaAction.ashx</DependentUpon>
+    <Compile Include="Actions\QLNhapKhoAction.ashx.cs">
+      <DependentUpon>QLNhapKhoAction.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Actions\QLTinTucAction.ashx.cs">
-      <DependentUpon>QLTinTucAction.ashx</DependentUpon>
+    <Compile Include="Actions\QLDonHangBanAction.ashx.cs">
+      <DependentUpon>QLDonHangBanAction.ashx</DependentUpon>
     </Compile>
     <Compile Include="Actions\Timer.ashx.cs">
       <DependentUpon>Timer.ashx</DependentUpon>
@@ -355,14 +363,23 @@
     <Compile Include="DataProcess\ProcessCfgDataRightAccess.cs" />
     <Compile Include="DataProcess\ProcessCfgFunctionRightAccess.cs" />
     <Compile Include="DataProcess\ProcessCfgUser.cs" />
+    <Compile Include="DataProcess\ProcessChuyenLKho.cs" />
     <Compile Include="DataProcess\ProcessCommonEntities.cs" />
     <Compile Include="DataProcess\ProcessDanhMuc.cs" />
+    <Compile Include="DataProcess\ProcessDieuChinhKho.cs" />
     <Compile Include="DataProcess\ProcessFiles.cs" />
     <Compile Include="DataProcess\ProcessGiaiChay.cs" />
+    <Compile Include="DataProcess\ProcessHangHoa.cs" />
     <Compile Include="DataProcess\ProcessHoatDongHopLe.cs" />
+    <Compile Include="DataProcess\ProcessImportTaiSan.cs" />
+    <Compile Include="DataProcess\ProcessKiemKeKho.cs" />
+    <Compile Include="DataProcess\ProcessNghiPhep.cs" />
+    <Compile Include="DataProcess\ProcessNhapKho.cs" />
     <Compile Include="DataProcess\ProcessNhomChay.cs" />
     <Compile Include="DataProcess\ProcessNotifyFCM.cs" />
+    <Compile Include="DataProcess\ProcessDonHangBan.cs" />
     <Compile Include="DataProcess\ProcessTinTuc.cs" />
+    <Compile Include="DataProcess\ProcessTonKho.cs" />
     <Compile Include="DataProcess\ProcessUtils.cs" />
     <Compile Include="DataProcess\PropcessGiaiChayDuyetThamGia.cs" />
     <Compile Include="Default.aspx.cs">
@@ -375,19 +392,26 @@
     <Compile Include="Entity\EnAccessRightInfo.cs" />
     <Compile Include="Entity\EnSignQRCode.cs" />
     <Compile Include="Entity\EnUserInfo.cs" />
-    <Compile Include="Forms\CDHoatDong.aspx.cs">
-      <DependentUpon>CDHoatDong.aspx</DependentUpon>
+    <Compile Include="Forms\BCDieuChinhKho.aspx.cs">
+      <DependentUpon>BCDieuChinhKho.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\CDHoatDong.aspx.designer.cs">
-      <DependentUpon>CDHoatDong.aspx</DependentUpon>
+    <Compile Include="Forms\BCDieuChinhKho.aspx.designer.cs">
+      <DependentUpon>BCDieuChinhKho.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CDHoatDongHopLe.aspx.cs">
-      <DependentUpon>CDHoatDongHopLe.aspx</DependentUpon>
+    <Compile Include="Forms\BCNhapKho.aspx.cs">
+      <DependentUpon>BCNhapKho.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\CDHoatDongHopLe.aspx.designer.cs">
-      <DependentUpon>CDHoatDongHopLe.aspx</DependentUpon>
+    <Compile Include="Forms\BCNhapKho.aspx.designer.cs">
+      <DependentUpon>BCNhapKho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BCTonKho.aspx.cs">
+      <DependentUpon>BCTonKho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\BCTonKho.aspx.designer.cs">
+      <DependentUpon>BCTonKho.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\CfgDataRightInfo.aspx.cs">
       <DependentUpon>CfgDataRightInfo.aspx</DependentUpon>
@@ -424,26 +448,96 @@
     <Compile Include="Forms\CfgUserInfo.aspx.designer.cs">
       <DependentUpon>CfgUserInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DMHoatDong.aspx.cs">
-      <DependentUpon>DMHoatDong.aspx</DependentUpon>
+    <Compile Include="Forms\DMDonViTinh.aspx.cs">
+      <DependentUpon>DMDonViTinh.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\DMHoatDong.aspx.designer.cs">
-      <DependentUpon>DMHoatDong.aspx</DependentUpon>
+    <Compile Include="Forms\DMDonViTinh.aspx.designer.cs">
+      <DependentUpon>DMDonViTinh.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DMNhomChay.aspx.cs">
-      <DependentUpon>DMNhomChay.aspx</DependentUpon>
+    <Compile Include="Forms\DMKho.aspx.cs">
+      <DependentUpon>DMKho.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\DMNhomChay.aspx.designer.cs">
-      <DependentUpon>DMNhomChay.aspx</DependentUpon>
+    <Compile Include="Forms\DMKho.aspx.designer.cs">
+      <DependentUpon>DMKho.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DMVanDongVien.aspx.cs">
-      <DependentUpon>DMVanDongVien.aspx</DependentUpon>
+    <Compile Include="Forms\DMLoaiTaiSan.aspx.cs">
+      <DependentUpon>DMLoaiTaiSan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\DMVanDongVien.aspx.designer.cs">
-      <DependentUpon>DMVanDongVien.aspx</DependentUpon>
+    <Compile Include="Forms\DMLoaiTaiSan.aspx.designer.cs">
+      <DependentUpon>DMLoaiTaiSan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DMNhaCungCap.aspx.cs">
+      <DependentUpon>DMNhaCungCap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DMNhaCungCap.aspx.designer.cs">
+      <DependentUpon>DMNhaCungCap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DMNhaCungCapNhom.aspx.cs">
+      <DependentUpon>DMNhaCungCapNhom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DMNhaCungCapNhom.aspx.designer.cs">
+      <DependentUpon>DMNhaCungCapNhom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DMNhaSanXuat.aspx.cs">
+      <DependentUpon>DMNhaSanXuat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DMNhaSanXuat.aspx.designer.cs">
+      <DependentUpon>DMNhaSanXuat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DMNhomTaiSan.aspx.cs">
+      <DependentUpon>DMNhomTaiSan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DMNhomTaiSan.aspx.designer.cs">
+      <DependentUpon>DMNhomTaiSan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DMTaiSan.aspx.cs">
+      <DependentUpon>DMTaiSan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DMTaiSan.aspx.designer.cs">
+      <DependentUpon>DMTaiSan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QLChuyenKho.aspx.cs">
+      <DependentUpon>QLChuyenKho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\QLChuyenKho.aspx.designer.cs">
+      <DependentUpon>QLChuyenKho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QLChuyenKhoDuyet.aspx.cs">
+      <DependentUpon>QLChuyenKhoDuyet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\QLChuyenKhoDuyet.aspx.designer.cs">
+      <DependentUpon>QLChuyenKhoDuyet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QLDieuChinhKho.aspx.cs">
+      <DependentUpon>QLDieuChinhKho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\QLDieuChinhKho.aspx.designer.cs">
+      <DependentUpon>QLDieuChinhKho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QLDonHangBanCT.aspx.cs">
+      <DependentUpon>QLDonHangBanCT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\QLDonHangBanCT.aspx.designer.cs">
+      <DependentUpon>QLDonHangBanCT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DMConfig.aspx.cs">
+      <DependentUpon>DMConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DMConfig.aspx.designer.cs">
+      <DependentUpon>DMConfig.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\HuongDanSuDung.aspx.cs">
       <DependentUpon>HuongDanSuDung.aspx</DependentUpon>
@@ -466,33 +560,33 @@
     <Compile Include="Forms\Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
-    <Compile Include="Forms\QLGiaiChay.aspx.cs">
-      <DependentUpon>QLGiaiChay.aspx</DependentUpon>
+    <Compile Include="Forms\QLHangHoa.aspx.cs">
+      <DependentUpon>QLHangHoa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\QLGiaiChay.aspx.designer.cs">
-      <DependentUpon>QLGiaiChay.aspx</DependentUpon>
+    <Compile Include="Forms\QLHangHoa.aspx.designer.cs">
+      <DependentUpon>QLHangHoa.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\QLNhomChay.aspx.cs">
-      <DependentUpon>QLNhomChay.aspx</DependentUpon>
+    <Compile Include="Forms\QLKiemKeKho.aspx.cs">
+      <DependentUpon>QLKiemKeKho.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\QLNhomChay.aspx.designer.cs">
-      <DependentUpon>QLNhomChay.aspx</DependentUpon>
+    <Compile Include="Forms\QLKiemKeKho.aspx.designer.cs">
+      <DependentUpon>QLKiemKeKho.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\QLGiaiChayDuyetThamGia.aspx.cs">
-      <DependentUpon>QLGiaiChayDuyetThamGia.aspx</DependentUpon>
+    <Compile Include="Forms\QLNhapKho.aspx.cs">
+      <DependentUpon>QLNhapKho.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\QLGiaiChayDuyetThamGia.aspx.designer.cs">
-      <DependentUpon>QLGiaiChayDuyetThamGia.aspx</DependentUpon>
+    <Compile Include="Forms\QLNhapKho.aspx.designer.cs">
+      <DependentUpon>QLNhapKho.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\QLTinTuc.aspx.cs">
-      <DependentUpon>QLTinTuc.aspx</DependentUpon>
+    <Compile Include="Forms\QLDonHangBan.aspx.cs">
+      <DependentUpon>QLDonHangBan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\QLTinTuc.aspx.designer.cs">
-      <DependentUpon>QLTinTuc.aspx</DependentUpon>
+    <Compile Include="Forms\QLDonHangBan.aspx.designer.cs">
+      <DependentUpon>QLDonHangBan.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\webMasterDetail.aspx.cs">
       <DependentUpon>webMasterDetail.aspx</DependentUpon>
@@ -518,9 +612,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Reports\DSReport.cs">
       <DependentUpon>DSReport.xsd</DependentUpon>
     </Compile>
@@ -544,8 +635,11 @@
     <Compile Include="Utils\MailUtil.cs" />
     <Compile Include="Utils\NumberUtil.cs" />
     <Compile Include="Utils\OtherUtils.cs" />
+    <Compile Include="Utils\ResourceLibraryClass.cs" />
+    <Compile Include="Utils\ResourceUtil.cs" />
     <Compile Include="Utils\StringUtil.cs" />
     <Compile Include="Utils\UserUtil.cs" />
+    <Compile Include="DataProcess\ProcessTuan.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\en-US.resx">
@@ -564,6 +658,7 @@
   <ItemGroup>
     <Folder Include="App_Data\Attachments\202212\" />
     <Folder Include="App_Data\UploadTemp\" />
+    <Folder Include="bin\" />
     <Folder Include="Css\" />
     <Folder Include="Files\" />
     <Folder Include="obj\Debug\TempPE\" />
@@ -600,8 +695,11 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <Target Name="EnsureCodeDomProviderXmlInBin" AfterTargets="Build">
+    <Copy SourceFiles="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml')" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

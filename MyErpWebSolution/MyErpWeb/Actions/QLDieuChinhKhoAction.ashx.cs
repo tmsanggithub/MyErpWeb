@@ -11,12 +11,11 @@ using WebRunDragon.Forms;
 namespace WebRunDragon.Actions
 {
     /// <summary>
-    /// Summary description for QLNhomChayAction
+    /// Summary description for QLDieuChinhKhoAction
     /// </summary>
-    public class QLNhomChayAction : IHttpHandler, IRequiresSessionState
+    public class QLDieuChinhKhoAction : IHttpHandler, IRequiresSessionState
     {
-
-        private static readonly log4net.ILog logger = log4net.LogManager.GetLogger(typeof(QLNhomChayAction));
+        private static readonly log4net.ILog logger = log4net.LogManager.GetLogger(typeof(QLDieuChinhKhoAction));
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "application/json";
@@ -36,11 +35,11 @@ namespace WebRunDragon.Actions
                 {
                     string subMode = context.Request.Form["subMode"].Trim().ToUpper();
 
-                    if (subMode == "EditOnly".ToUpper() && Utils.ActionUtil.CanEdit(Utils.UserUtil.GetSessionUserId(), typeof(QLNhomChay).Name.ToUpper())
-                        || subMode == "ReadOnly".ToUpper() && Utils.ActionUtil.CanRead(Utils.UserUtil.GetSessionUserId(), typeof(QLNhomChay).Name.ToUpper())
-                        || subMode == "ApprovalOnly".ToUpper() && Utils.ActionUtil.CanApprove(Utils.UserUtil.GetSessionUserId(), typeof(QLNhomChay).Name.ToUpper()))
+                    if (subMode == "EditOnly".ToUpper() && Utils.ActionUtil.CanEdit(Utils.UserUtil.GetSessionUserId(), typeof(QLDieuChinhKho).Name.ToUpper())
+                        || subMode == "ReadOnly".ToUpper() && Utils.ActionUtil.CanRead(Utils.UserUtil.GetSessionUserId(), typeof(QLDieuChinhKho).Name.ToUpper())
+                        || subMode == "ApprovalOnly".ToUpper() && Utils.ActionUtil.CanApprove(Utils.UserUtil.GetSessionUserId(), typeof(QLDieuChinhKho).Name.ToUpper()))
                     {
-                        JObject entity = DataProcess.ProcessNhomChay.getInstance().GetNhomChayByID(id);
+                        JObject entity = DataProcess.ProcessDieuChinhKho.getInstance().GetDieuChinhKhoByID(id);
                         success = entity != null;
                         retObject["entity"] = entity;
                     }
@@ -50,16 +49,15 @@ namespace WebRunDragon.Actions
                 else if (mode == "AddOrUpdate".ToUpper())
                 {
 
-                    if ((Utils.ActionUtil.CanEdit(Utils.UserUtil.GetSessionUserId(), typeof(QLNhomChay).Name.ToUpper()) && id > 0) ||
-                        (Utils.ActionUtil.CanCreate(Utils.UserUtil.GetSessionUserId(), typeof(QLNhomChay).Name.ToUpper()) && id == 0))
+                    if ((Utils.ActionUtil.CanEdit(Utils.UserUtil.GetSessionUserId(), typeof(QLDieuChinhKho).Name.ToUpper()) && id > 0) ||
+                        (Utils.ActionUtil.CanCreate(Utils.UserUtil.GetSessionUserId(), typeof(QLDieuChinhKho).Name.ToUpper()) && id == 0))
                     {
-                        //if (Utils.NumberUtil.ParseToInt(context.Request.Form["IDKhoNhap"]) <= 0)
-                        //{
-                        //    message = "Chưa chọn kho điều chỉnh";
-                        //    success = false;
-                        //}
-                        //else 
-                        if (0 == 1 && Utils.NumberUtil.ParseToInt(context.Request.Form["IDChiNhanh"]) <= 0)
+                        if (Utils.NumberUtil.ParseToInt(context.Request.Form["IDKhoNhap"]) <= 0)
+                        {
+                            message = "Chưa chọn kho điều chỉnh";
+                            success = false;
+                        }
+                        else if (Utils.NumberUtil.ParseToInt(context.Request.Form["IDChiNhanh"]) <= 0)
                         {
                             message = "Chưa nhập tên chi nhánh";
                             success = false;
@@ -71,19 +69,9 @@ namespace WebRunDragon.Actions
                         //}
                         else
                         {
-                            string content = context.Request.Form["RaceInfoHtml"] + "";
                             int idInsertUpdate = 0;
-                            success = AddOrUdateNhomChay(id
-
-                                , context.Request.Form["RaceCode"] + ""
-                                , context.Request.Form["RaceName"] + ""
-                                , Utils.NumberUtil.ParseToDate(context.Request.Form["TranDate"])
-                                  , Utils.NumberUtil.ParseToDate(context.Request.Form["FromDate"])
-                                    , Utils.NumberUtil.ParseToDate(context.Request.Form["ToDate"])
-                                , context.Request.Form["Description"] + ""
-                                , content
-
-                                , sessionUserId, out message, out idInsertUpdate);
+                            success = AddOrUdateDieuChinhKho(id, Utils.NumberUtil.ParseToInt(context.Request.Form["IDChiNhanh"]), Utils.NumberUtil.ParseToInt(context.Request.Form["IDKhoNhap"]), Utils.NumberUtil.ParseToDate(context.Request.Form["NgayPhieu"]), context.Request.Form["NhanSuPhieu"] + ""
+                                , context.Request.Form["GhiChu"], sessionUserId, out message, out idInsertUpdate);
                             if (success) { message = "Lưu thành công"; }
                             // truong hop them moi thi tra ve lại ID mới thêm vào database
                             if (id <= 0) id = idInsertUpdate;
@@ -95,9 +83,9 @@ namespace WebRunDragon.Actions
                 }
                 else if (mode == "DELETE")
                 {
-                    if (Utils.ActionUtil.CanDelete(sessionUserId, typeof(QLNhomChay).Name.ToUpper()))
+                    if (Utils.ActionUtil.CanDelete(sessionUserId, typeof(QLDieuChinhKho).Name.ToUpper()))
                     {
-                        success = DeleteNhomChay(id, sessionUserId, out message);
+                        success = DeleteDieuChinhKho(id, sessionUserId, out message);
                         if (success) { message = "Xóa thành công"; }
                     }
                     else
@@ -105,9 +93,9 @@ namespace WebRunDragon.Actions
                 }
                 else if (mode == "SendApproval".ToUpper())
                 {
-                    if (Utils.ActionUtil.CanCreate(sessionUserId, typeof(QLNhomChay).Name.ToUpper()) || Utils.ActionUtil.CanEdit(sessionUserId, typeof(QLNhomChay).Name.ToUpper()))
+                    if (Utils.ActionUtil.CanCreate(sessionUserId, typeof(QLDieuChinhKho).Name.ToUpper()) || Utils.ActionUtil.CanEdit(sessionUserId, typeof(QLDieuChinhKho).Name.ToUpper()))
                     {
-                        success = SendApprovalNhomChay(id, sessionUserId, out message);
+                        success = SendApprovalDieuChinhKho(id, sessionUserId, out message);
                         if (success) { message = "Gửi duyệt thành công"; }
                     }
                     else
@@ -115,19 +103,46 @@ namespace WebRunDragon.Actions
                 }
                 else if (mode == "Approval".ToUpper())
                 {
-                    if (Utils.ActionUtil.CanApprove(sessionUserId, typeof(QLNhomChay).Name.ToUpper()))
+                    if (Utils.ActionUtil.CanApprove(sessionUserId, typeof(QLDieuChinhKho).Name.ToUpper()))
                     {
-                        success = ApprovalNhomChay(id, context.Request.Form["GhiChuDuyet"] + "", sessionUserId, out message);
+                        success = ApprovalDieuChinhKho(id, context.Request.Form["GhiChuDuyet"] + "", sessionUserId, out message);
                         if (success) { message = "Duyệt thành công"; }
                     }
                     else
                         message = "Bạn không có quyền duyệt (hoặc từ chối) chức năng này";
                 }
+                /*
+                else if (mode == "ApprovalCheck".ToUpper())
+                {
+                    if (Utils.ActionUtil.CanApprove(sessionUserId, typeof(QLDieuChinhKho).Name.ToUpper()))
+                    {
+                        //1.false và mesage!=""---> Cấm duyệt, return
+                        //2.true và mesage!=""----> Cảnh báo, Are you sure
+                        //3.True va message=""---> Được phép duyệt                      
+                        success = true;
+                        DataTable dsTSThayDoi = DSTaiSanThayDoiKhiDuyet(id, sessionUserId);
+                        if (dsTSThayDoi != null && dsTSThayDoi.Rows.Count > 0)
+                        {
+                            success = true;
+
+                            message = "Tài sản:" + dsTSThayDoi.Rows[0]["TenTaiSan"] + ". Trạng thái (" + dsTSThayDoi.Rows[0]["TenTrangThaiTaiSanCu"] + ")\nCó số lượng tồn kho là " + dsTSThayDoi.Rows[0]["SoLuongTK"] + " đã khác lúc tạo yêu cầu là " + dsTSThayDoi.Rows[0]["SoLuongCu"] + ".\nNếu duyệt có thể ảnh hưởng đến số lượng tồn kho của tài sản theo trạng thái mới.\nLưu ý: SL thay đổi là " + dsTSThayDoi.Rows[0]["SoLuongThayDoi"] + ", SL tồn mới theo trạng thái là " + dsTSThayDoi.Rows[0]["SoLuongTKMoi"] + "\n";
+                        }
+                        else
+                        {
+                            success = true;
+                            message = "Kiểm tra thành công";
+                        }
+
+                    }
+                    else
+                        message = "Bạn không có quyền duyệt (hoặc từ chối) chức năng này";
+                }
+				*/
                 else if (mode == "Reject".ToUpper())
                 {
-                    if (Utils.ActionUtil.CanApprove(sessionUserId, typeof(QLNhomChay).Name.ToUpper()))
+                    if (Utils.ActionUtil.CanApprove(sessionUserId, typeof(QLDieuChinhKho).Name.ToUpper()))
                     {
-                        success = RejectNhomChay(id, context.Request.Form["GhiChuKhongDuyet"] + "", sessionUserId, out message);
+                        success = RejectDieuChinhKho(id, context.Request.Form["GhiChuKhongDuyet"] + "", sessionUserId, out message);
                         if (success) { message = "Từ chối thành công"; }
                     }
                     else
@@ -136,12 +151,27 @@ namespace WebRunDragon.Actions
                 else if (mode == "AddOrUpDateDetail".ToUpper())
                 {
 
-                    if ((Utils.ActionUtil.CanEdit(Utils.UserUtil.GetSessionUserId(), typeof(QLNhomChay).Name.ToUpper()) && id > 0) ||
-                        (Utils.ActionUtil.CanCreate(Utils.UserUtil.GetSessionUserId(), typeof(QLNhomChay).Name.ToUpper()) && id == 0))
+                    if ((Utils.ActionUtil.CanEdit(Utils.UserUtil.GetSessionUserId(), typeof(QLDieuChinhKho).Name.ToUpper()) && id > 0) ||
+                        (Utils.ActionUtil.CanCreate(Utils.UserUtil.GetSessionUserId(), typeof(QLDieuChinhKho).Name.ToUpper()) && id == 0))
                     {
-                        if (Utils.NumberUtil.ParseToInt(context.Request.Form["IDRunner"]) <= 0)
+                        if (Utils.NumberUtil.ParseToInt(context.Request.Form["IDTaiSanChiTiet"]) <= 0)
                         {
-                            message = "Chưa chọn nhóm chạy";
+                            message = "Chưa chọn tài sản nhập kho";
+                            success = false;
+                        }
+                        //else if (Utils.NumberUtil.ParseToInt(context.Request.Form["SoLuongMoi"]) < 0)
+                        //{
+                        //    message = "Chưa nhập số lượng mới";
+                        //    success = false;
+                        //}
+                        else if (Utils.NumberUtil.ParseToInt(context.Request.Form["SoLuongCu"]) > 0 && Utils.NumberUtil.ParseToInt(context.Request.Form["IDTrangThaiCu"]) <= 0)
+                        {
+                            message = "Chưa có trạng thái cũ của tài sản";
+                            success = false;
+                        }
+                        else if (Utils.NumberUtil.ParseToInt(context.Request.Form["IDTrangThaiMoi"]) <= 0)
+                        {
+                            message = "Chưa có trạng thái mới của tài sản";
                             success = false;
                         }
                         else
@@ -149,11 +179,22 @@ namespace WebRunDragon.Actions
                             int idInsertUpdate = 0;
                             int idMaster = Utils.NumberUtil.ParseToInt(context.Request.Form["IDMaster"]);
 
-                            success = AddOrUdateNhomChayChiTiet(id, idMaster
-                                , Utils.NumberUtil.ParseToInt(context.Request.Form["IDRunner"])
-                                , sessionUserId, out message, out idInsertUpdate);
-                            if (success) { message = "Lưu chi tiết thành công"; }
-
+                            if (Utils.NumberUtil.ParseToInt(context.Request.Form["IDTonKho"]) <= 0)
+                            {
+                                message = "Không tìm thấy sản phẩm tồn kho để thực hiện";
+                                success = false;
+                            }                            
+                            else
+                            {
+                                success = AddOrUdateDieuChinhKhoChiTiet(id, idMaster, Utils.NumberUtil.ParseToInt(context.Request.Form["IDTaiSanChiTiet"])
+                                    , Utils.NumberUtil.ParseToInt(context.Request.Form["IDTonKho"])
+                                    , Utils.NumberUtil.ParseToInt(context.Request.Form["SoLuongCu"])
+                                    , Utils.NumberUtil.ParseToInt(context.Request.Form["IDTrangThaiCu"])
+                                    , Utils.NumberUtil.ParseToInt(context.Request.Form["IDTrangThaiMoi"])
+                                    , Utils.NumberUtil.ParseToDecimal(context.Request.Form["SoLuongMoi"])
+                                    , context.Request.Form["GhiChuChiTiet"], sessionUserId, out message, out idInsertUpdate);
+                                if (success) { message = "Lưu chi tiết thành công"; }
+                            }
                             // truong hop them moi thi tra ve lại ID mới thêm vào database
                             if (id <= 0) id = idInsertUpdate;
                         }
@@ -164,10 +205,10 @@ namespace WebRunDragon.Actions
                 }
                 else if (mode == "DELETEDETAIL")
                 {
-                    if (Utils.ActionUtil.CanDelete(sessionUserId, typeof(QLNhomChay).Name.ToUpper()))
+                    if (Utils.ActionUtil.CanDelete(sessionUserId, typeof(QLDieuChinhKho).Name.ToUpper()))
                     {
                         int idMaster = Utils.NumberUtil.ParseToInt(context.Request.Form["IDMaster"]);
-                        success = DeleteNhomChayChiTiet(id, idMaster, sessionUserId, out message);
+                        success = DeleteDieuChinhKhoChiTiet(id, idMaster, sessionUserId, out message);
                         if (success) { message = "Xóa chi tiết tài sản thành công"; }
                     }
                     else
@@ -175,16 +216,15 @@ namespace WebRunDragon.Actions
                 }
                 else if (mode == "EDITDETAIL")
                 {
-                    if (Utils.ActionUtil.CanEdit(Utils.UserUtil.GetSessionUserId(), typeof(QLNhomChay).Name.ToUpper()))
+                    if (Utils.ActionUtil.CanEdit(Utils.UserUtil.GetSessionUserId(), typeof(QLDieuChinhKho).Name.ToUpper()))
                     {
-                        JObject entity = DataProcess.ProcessNhomChay.getInstance().GetNhomChayChiTietByID(id);
+                        JObject entity = DataProcess.ProcessDieuChinhKho.getInstance().GetDieuChinhKhoChiTietByID(id);
                         success = entity != null;
                         retObject["entity"] = entity;
                     }
                     else
                         message = "Bạn không có quyền thực hiện chức năng này";
                 }
-                #region lien quan tap tin
                 else if (mode == "deleteAttachment".ToUpper())
                 {
                     int attId = int.Parse(context.Request.Params["attId"]);
@@ -221,7 +261,7 @@ namespace WebRunDragon.Actions
                             }
                             else
                             {
-                                System.IO.File.Move(filepath, deletedPath);
+                                File.Move(filepath, deletedPath);
                             }
                         }
                         else
@@ -254,12 +294,7 @@ namespace WebRunDragon.Actions
 
                     }
                 }
-                else if (mode == "checkAtt".ToUpper())
-                {
-                    message = "";
-                    success = true;
-                }
-                #endregion ket thuc lien quan tap tin 
+                
                 else
                     message = "Invalid mode !";
 
@@ -280,53 +315,43 @@ namespace WebRunDragon.Actions
             }
             context.Response.Write(retObject.ToString());
         }
-        private bool AddOrUdateNhomChay(int id, string ma, string ten, DateTime ngayLap, DateTime tuNgay, DateTime denNgay, string ghiChu, string NoiDungNhomChay, string userLogin, out string message, out int idInsertNew)
-        {
-
-            return DataProcess.ProcessNhomChay.getInstance().AddOrUpdate(id, ma, ten, ngayLap, tuNgay, denNgay, ghiChu, NoiDungNhomChay, userLogin, out message, out idInsertNew);
-        }
-              
-        private bool DeleteNhomChay(int id, string userLogin, out string message)
-        {
-            message = "";
-            return DataProcess.ProcessNhomChay.getInstance().Delete(id, userLogin, out message);
-        }
-     
         
-        
-        private bool SendApprovalNhomChay(int id, string userLogin, out string message)
+        private bool AddOrUdateDieuChinhKho(int id, int idChiNhanh, int idKhoNhap, DateTime ngayPhieu, string NhanSuPhieu,  string ghiChu, string userLogin, out string message, out int idInsertNew)
+        {
+            return DataProcess.ProcessDieuChinhKho.getInstance().AddOrUpdate(id, idChiNhanh, idKhoNhap, ngayPhieu, NhanSuPhieu, ghiChu, userLogin, out message, out idInsertNew);
+        }
+        private bool DeleteDieuChinhKho(int id, string userLogin, out string message)
         {
             message = "";
-            return DataProcess.ProcessNhomChay.getInstance().SendApprovalNhomChay(id, userLogin, out message);
+            return DataProcess.ProcessDieuChinhKho.getInstance().Delete(id, userLogin, out message);
         }
-        private bool ApprovalNhomChay(int id, string ghiChu, string userLogin, out string message)
+        private bool SendApprovalDieuChinhKho(int id, string userLogin, out string message)
         {
             message = "";
-            return DataProcess.ProcessNhomChay.getInstance().ApprovalNhomChay(id, ghiChu, userLogin, out message);
+            return DataProcess.ProcessDieuChinhKho.getInstance().SendApprovalDieuChinhKho(id, userLogin, out message);
         }
-        private bool RejectNhomChay(int id, string ghiChu, string userLogin, out string message)
+        private bool ApprovalDieuChinhKho(int id, string ghiChu, string userLogin, out string message)
         {
             message = "";
-            return DataProcess.ProcessNhomChay.getInstance().RejectNhomChay(id, ghiChu, userLogin, out message);
+            return DataProcess.ProcessDieuChinhKho.getInstance().ApprovalDieuChinhKho(id, ghiChu, userLogin, out message);
         }
-        private bool AddOrUdateNhomChayChiTiet(int id, int IDGiaiVaNhomChay, int IDRunner, string userLogin, out string message, out int idInsertNew)
-        {
-
-            return DataProcess.ProcessNhomChay.getInstance().AddOrUpdateNhomChayChiTiet(id, IDGiaiVaNhomChay, IDRunner, userLogin, out message, out idInsertNew);
-        }
-        private bool DeleteNhomChayChiTiet(int idCT, int idMaster, string userLogin, out string message)
+        private bool RejectDieuChinhKho(int id, string ghiChu, string userLogin, out string message)
         {
             message = "";
-            return DataProcess.ProcessNhomChay.getInstance().DeleteChiTietNhomChay(idCT, idMaster, userLogin, out message);
+            return DataProcess.ProcessDieuChinhKho.getInstance().RejectDieuChinhKho(id, ghiChu, userLogin, out message);
+        }
+        private bool AddOrUdateDieuChinhKhoChiTiet(int id, int IDDieuChinhKho, int idTaiSan, int IDTonKhoCu, int SoLuongCu, int idTrangThaiCu, int idTrangThaiMoi
+           , decimal SoLuongMoi, string GhiChuChiTiet, string userLogin, out string message, out int idInsertNew)
+        {
+            return DataProcess.ProcessDieuChinhKho.getInstance().AddOrUpdateDieuChinhKhoChiTiet(id, IDDieuChinhKho, idTaiSan, IDTonKhoCu, SoLuongCu, idTrangThaiCu, idTrangThaiMoi
+           , SoLuongMoi, GhiChuChiTiet, userLogin, out message, out idInsertNew);
+        }
+        private bool DeleteDieuChinhKhoChiTiet(int idCT, int idMaster, string userLogin, out string message)
+        {
+            message = "";
+            return DataProcess.ProcessDieuChinhKho.getInstance().DeleteChiTietDieuChinhKho(idCT, idMaster, userLogin, out message);
 
         }
-
-        //private DataTable DSTaiSanThayDoiKhiDuyet(int idMaster, string userLogin)
-        //{
-
-        //    return DataProcess.ProcessNhomChay.getInstance().DSTaiSanThayDoiSoLuongKhiDuyet(idMaster, userLogin);
-        //}
-
         public bool IsReusable
         {
             get
@@ -334,5 +359,7 @@ namespace WebRunDragon.Actions
                 return false;
             }
         }
+
+
     }
 }

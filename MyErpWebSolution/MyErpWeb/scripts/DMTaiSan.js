@@ -1,5 +1,4 @@
-﻿
-function openAddForm() {
+﻿function openAddForm() {
     clearForm("NewOnly");
     gridLichSuKyDuyet.PerformCallback(-1);
     popUpdateForm.Show();
@@ -10,23 +9,19 @@ function clearForm(readEdit, objStatus) {
     txtMaTaiSan.SetText(""); txtMaTaiSanCopy.SetText("");
     txtMaTaiSan.SetEnabled(true);
     txtTenTaiSan.SetText("");
-    // cbMaChiNhanh.SetValue("");
     cbDonViTinh.SetValue("");
-    cbLoaiTaiSan.SetValue("");
     cbNhomTaiSan.SetValue("");
-    cbNhaCungCap.SetValue("");
     cbNhaSanXuat.SetValue("");
+    cbViTri.SetValue("");
     txtSoSerialNumber.SetText("");
-    txtGiaTriTaiSan.SetText(0);
-    txtCauHinh.SetText("");
-    //txtSoPhieuBaoHanh.SetText("");
-    txtSoThangBaoHanh.SetText("");
-    //  txtChungNhanCOCQ.SetText("");
-    txtTyLeHaoMon.SetText("");
-    //txtSoThangHanSuDung.SetText("");
+    txtGiaTriTaiSan.SetValue(0);
+    txtTrongLuong.SetValue(0);
+    cbDonViTinhTrongLuong.SetValue("");
+    txtKichThuotDai.SetValue(0);
+    txtKichThuotRong.SetValue(0);
+    cbDonViTinhKichThuot.SetValue("");
 
     txtGhiChu.SetText("");
-    cbLoaiBaoHiem.SetValue("");
 
     btnSaveEdit.SetEnabled(false);
     btnGuiDuyet.SetEnabled(false);
@@ -89,22 +84,16 @@ function openEditForm(ID, fullName, readEditApproval) {
                 txtMaTaiSan.SetText(data.entity.MaTaiSan);
                 txtTenTaiSan.SetText(data.entity.TenTaiSan);
                 cbDonViTinh.SetValue(data.entity.IDDonViTinh);
-                cbLoaiTaiSan.SetValue(data.entity.IDLoaiTaiSan);
                 cbNhomTaiSan.SetValue(data.entity.IDNhomTaiSan);
-                cbNhaCungCap.SetValue(data.entity.IDNhaCungCap);
                 cbNhaSanXuat.SetValue(data.entity.IDNhaSanXuat);
-                cbLoaiBaoHiem.SetValue(data.entity.IDLoaiBaoHiem);
+                cbViTri.SetValue(data.entity.IDViTri);
                 txtSoSerialNumber.SetText(data.entity.SoSerialNumber);
                 txtGiaTriTaiSan.SetValue(data.entity.GiaTriTaiSan);
-                txtCauHinh.SetText(data.entity.CauHinh);
-                //txtSoPhieuBaoHanh.SetText(data.entity.SoPhieuBaoHanh);
-                txtSoThangBaoHanh.SetText(data.entity.SoThangBaoHanh);
-                //txtChungNhanCOCQ.SetText(data.entity.ChungNhanCOCQ);
-                txtTyLeHaoMon.SetText(data.entity.TyLeHaoMon);
-                //txtSoThangHanSuDung.SetText(data.entity.SoThangHanSuDung);
-                //deNamSanXuat.SetText(data.entity.NamSanXuat);
-                deNamDuaVaoSuDung.SetText(data.entity.NamDuaVaoSuDung);
-                deNgayHetHan.SetText(data.entity.NgayHetHan);
+                txtTrongLuong.SetValue(data.entity.TrongLuong);
+                cbDonViTinhTrongLuong.SetValue(data.entity.IdDonViTrongLuong);
+                txtKichThuotDai.SetValue(data.entity.KichThuotDai);
+                txtKichThuotRong.SetValue(data.entity.KichThuotRong);
+                cbDonViTinhKichThuot.SetValue(data.entity.IdDonViKichThuot);
                 txtGhiChu.SetText(data.entity.GhiChu);
                 gridLichSuKyDuyet.PerformCallback(txtObjectId.Get("hidden_value"));
                 gridDetails.PerformCallback(txtObjectId.Get("hidden_value"));
@@ -118,54 +107,35 @@ function openEditForm(ID, fullName, readEditApproval) {
 function saveTaiSan() {
 
     if (txtMaTaiSan.GetText() + "" == "") {
-        alert("Chưa nhập Mã TaiSan");
+        alert("Chưa nhập Mã TaiSan");
         return;
     }
     if (txtTenTaiSan.GetText() + "" == "") {
-        alert("Chưa nhập Tên TaiSan");
+        alert("Chưa nhập Tên TaiSan");
         return;
     }
     if (txtGhiChu.GetText() + "" == "") {
-        alert("Chưa nhập Ghi chú");
+        alert("Chưa nhập Ghi chú");
         return;
     }
     if (cbDonViTinh.GetValue() + "" == "null" || cbDonViTinh.GetValue() + "" == "") {
-        alert("Chưa nhập Đơn vị tính");
-        return;
-    }
-    if (cbLoaiTaiSan.GetValue() + "" == "null" || cbLoaiTaiSan.GetValue() + "" == "") {
-        alert("Chưa nhập Loại tài sản");
+        alert("Chưa nhập Đơn vị tính");
         return;
     }
     if (cbNhomTaiSan.GetValue() + "" == "null" || cbNhomTaiSan.GetValue() + "" == "") {
-        alert("Chưa nhập Nhóm tài sản");
+        alert("Chưa nhập Nhóm tài sản");
         return;
     }
-    if (cbLoaiBaoHiem.GetValue() + "" == "null" || cbLoaiBaoHiem.GetValue() + "" == "") {
-        alert("Chưa nhập Loại bảo hiểm");
-        return;
-    }
-    if (deNamDuaVaoSuDung.GetText() + "" == "null" || deNamDuaVaoSuDung.GetText() + "" == "") {
-        alert("Chưa nhập năm sử dụng");
+    if (cbViTri.GetValue() + "" == "null" || cbViTri.GetValue() + "" == "") {
+        alert("Chưa nhập Vị trí");
         return;
     }
     if (txtSoSerialNumber.GetText() == "") {
-        alert("Chưa nhập số serial (nếu không có nhập số 0)");
+        alert("Chưa nhập số serial (nếu không có nhập số 0)");
         return;
     }
-    if (parseFloat(txtGiaTriTaiSan.GetText()) < 0) {
+    if (parseFloat(txtGiaTriTaiSan.GetValue()) < 0) {
         alert("Giá trị tài sản không hợp lệ");
-        return;
-    }
-
-   // if (parseFloat(txtGiaTriTaiSan.GetValue()) >= 30000000 && cbNhomTaiSan.GetValue() + "" != "1") {
-   //     if (confirm("Giá trị tài sản >=30.000.000, bạn có muốn chuyển TS qua nhóm TSCĐ không?")) {
-   //         cbNhomTaiSan.SetValue(1);
-   //     }
-   // }
-
-    if (parseFloat(txtSoThangBaoHanh.GetText()) < 0) {
-        alert("Số tháng bảo hành không hợp lệ");
         return;
     }
 
@@ -176,24 +146,16 @@ function saveTaiSan() {
     data += "&MaTaiSan=" + txtMaTaiSan.GetText();
     data += "&TenTaiSan=" + encodeURIComponent(txtTenTaiSan.GetText());
     data += "&IDDonViTinh=" + cbDonViTinh.GetValue();
-    data += "&IDLoaiTaiSan=" + cbLoaiTaiSan.GetValue();
     data += "&IDNhomTaiSan=" + cbNhomTaiSan.GetValue();
     data += "&IDNhaSanXuat=" + cbNhaSanXuat.GetValue();
-    data += "&IDNhaCungCap=" + cbNhaCungCap.GetValue();
-    data += "&IDLoaiBaoHiem=" + cbLoaiBaoHiem.GetValue();
+    data += "&IDViTri=" + cbViTri.GetValue();
     data += "&SoSerialNumber=" + txtSoSerialNumber.GetText();
     data += "&GiaTriTaiSan=" + txtGiaTriTaiSan.GetValue();
-    data += "&CauHinh=" + encodeURIComponent(txtCauHinh.GetText());
-    // data += "&SoPhieuBaoHanh=" + txtSoPhieuBaoHanh.GetValue();
-    data += "&SoThangBaoHanh=" + txtSoThangBaoHanh.GetValue();
-    //data += "&SoThangHanSuDung=" + txtSoThangHanSuDung.GetValue();
-    data += "&TyLeHaoMon=" + txtTyLeHaoMon.GetText();
-    // data += "&ChungNhanCOCQ=" + txtChungNhanCOCQ.GetText();
-    // data += "&NamSanXuat=" + deNamSanXuat.GetDate().toJSON();
-    data += "&NamDuaVaoSuDung=" + deNamDuaVaoSuDung.GetDate().toJSON();
-    if (deNgayHetHan.GetText() + "" != "null" && deNgayHetHan.GetText() + "" != "") {
-        data += "&NgayHetHan=" + deNgayHetHan.GetDate().toJSON();
-    }
+    data += "&TrongLuong=" + txtTrongLuong.GetValue();
+    data += "&IdDonViTrongLuong=" + cbDonViTinhTrongLuong.GetValue();
+    data += "&KichThuotDai=" + txtKichThuotDai.GetValue();
+    data += "&KichThuotRong=" + txtKichThuotRong.GetValue();
+    data += "&IdDonViKichThuot=" + cbDonViTinhKichThuot.GetValue();
     data += "&GhiChu=" + encodeURIComponent(txtGhiChu.GetText());
 
 
@@ -210,7 +172,7 @@ function saveTaiSan() {
         },
         timeout: 30000,
         success: function (data) {
-            if (data.success) {;
+            if (data.success) {
                 txtMaTaiSan.SetEnabled(false);
                 txtObjectId.Set('hidden_value', data.id);
                 gridTaiSan.PerformCallback();
@@ -387,7 +349,7 @@ function UpdateGiaTriTaiSan() {
     data += "&tableName=DMTaiSan&id=" + txtObjectId.Get("hidden_value");
     data += "&GiaTriTaiSan=" + txtGiaTriTaiSan.GetValue();
     data += "&IDNhomTaiSan=" + cbNhomTaiSan.GetValue();
-    data += "&IDLoaiBaoHiem=" + cbLoaiBaoHiem.GetValue();
+    data += "&IDViTri=" + cbViTri.GetValue();
 
     $.ajax({
         type: "POST",
@@ -436,30 +398,20 @@ function SaoChepThongTinTaiSan() {
 
                 clearForm("NewOnly", data.entity.TrangThai);
 
-                //txtObjectId.Set('hidden_value', "0");
-
                 txtMaTaiSan.SetText(data.entity.MaTaiSan);
                 txtTenTaiSan.SetText(data.entity.TenTaiSan);
                 cbDonViTinh.SetValue(data.entity.IDDonViTinh);
-
-                cbLoaiTaiSan.SetValue(data.entity.IDLoaiTaiSan);
                 cbNhomTaiSan.SetValue(data.entity.IDNhomTaiSan);
-                cbNhaCungCap.SetValue(data.entity.IDNhaCungCap);
                 cbNhaSanXuat.SetValue(data.entity.IDNhaSanXuat);
-                cbLoaiBaoHiem.SetValue(data.entity.IDLoaiBaoHiem);
+                cbViTri.SetValue(data.entity.IDViTri);
 
                 txtSoSerialNumber.SetText(data.entity.SoSerialNumber);
                 txtGiaTriTaiSan.SetValue(data.entity.GiaTriTaiSan);
-                txtCauHinh.SetText(data.entity.CauHinh);
-                //txtSoPhieuBaoHanh.SetText(data.entity.SoPhieuBaoHanh);
-                txtSoThangBaoHanh.SetText(data.entity.SoThangBaoHanh);
-                // txtChungNhanCOCQ.SetText(data.entity.ChungNhanCOCQ);
-                txtTyLeHaoMon.SetText(data.entity.TyLeHaoMon);
-                //txtSoThangHanSuDung.SetText(data.entity.SoThangHanSuDung);
-
-                // deNamSanXuat.SetText(data.entity.NamSanXuat);
-                deNamDuaVaoSuDung.SetText(data.entity.NamDuaVaoSuDung);
-                deNgayHetHan.SetText(data.entity.NgayHetHan);
+                txtTrongLuong.SetValue(data.entity.TrongLuong);
+                cbDonViTinhTrongLuong.SetValue(data.entity.IdDonViTrongLuong);
+                txtKichThuotDai.SetValue(data.entity.KichThuotDai);
+                txtKichThuotRong.SetValue(data.entity.KichThuotRong);
+                cbDonViTinhKichThuot.SetValue(data.entity.IdDonViKichThuot);
 
                 txtGhiChu.SetText(data.entity.GhiChu);
 
@@ -479,7 +431,7 @@ function SaoChepThongTinTaiSan() {
 
 function openAddingFormDetail() {
     if (txtObjectId.Get("hidden_value") == "0") {
-        alert("Bạn vui lòng lưu cài đặt trước khi tạo chi tiết");
+        alert("Bạn vui lòng lưu cài đặt trước khi tạo chi tiết");
         return;
     }
 
@@ -491,17 +443,18 @@ function openAddingFormDetail() {
 
 function clearFormDetail(readEditDetail, objStatusDetail) {
     txtObjectDetailId.Set("hidden_value", "0");
-    txtGhiChuThayDoi.SetText("");
-    txtNoiDungThayDoi.SetText("");
-    txtGhiChuDuyetKhongDuyetThayDoi.SetText("");
-    deNgayThayDoi.SetDate(new Date());
+    cbDonViTinhCT.SetValue("");
+    txtGiaTriQuiDoi.SetText("0");
+    txtTenDonViCoBan.SetText("");
+
+    txtTenDonViCoBan.SetText(cbDonViTinh.GetText());
     gridDetails.PerformCallback(txtObjectId.Get("hidden_value"));
 
 
     btnSaveThayDoi.SetEnabled(false);
-    btnGuiDuyetThayDoi.SetEnabled(false);
-    btnApprovalThayDoi.SetEnabled(false);
-    btnRejectThayDoi.SetEnabled(false);
+    //btnGuiDuyetThayDoi.SetEnabled(false);
+    //btnApprovalThayDoi.SetEnabled(false);
+    //btnRejectThayDoi.SetEnabled(false);
 
     if (readEditDetail == "ReadOnly") {
 
@@ -509,13 +462,13 @@ function clearFormDetail(readEditDetail, objStatusDetail) {
     else if (readEditDetail == "NewOnly") {
         // phụ thuộc vào Quyền: chỉ hiện nút save và sendApproval
         btnSaveThayDoi.SetEnabled(true);
-        btnGuiDuyetThayDoi.SetEnabled(true);
+        //  btnGuiDuyetThayDoi.SetEnabled(true);
     }
     else if (readEditDetail == "EditOnly") {
         // phụ thuộc vào Trạng thái và Quyền
         if (objStatusDetail == "NEW" || objStatusDetail == "EDIT" || objStatusDetail == "RETURNED" || objStatusDetail == "") {
             btnSaveThayDoi.SetEnabled(true);
-            btnGuiDuyetThayDoi.SetEnabled(true);
+            //   btnGuiDuyetThayDoi.SetEnabled(true);
         }
         else { // các trạng thái còn lại ko enable
 
@@ -523,8 +476,8 @@ function clearFormDetail(readEditDetail, objStatusDetail) {
     }
     else if (readEditDetail == "ApprovalOnly") {
         if (objStatusDetail == "SENDAPPROVAL") {
-            btnApprovalThayDoi.SetEnabled(true);
-            btnRejectThayDoi.SetEnabled(true);
+            //  btnApprovalThayDoi.SetEnabled(true);
+            //  btnRejectThayDoi.SetEnabled(true);
         }
     }
 
@@ -533,22 +486,15 @@ function clearFormDetail(readEditDetail, objStatusDetail) {
 
 function saveQLTaiSanThayDoiCT() {
 
-    if (txtNoiDungThayDoi.GetText() == "") {
-        alert("Vui lòng nhập nội dung thay đổi");
-        return;
-    }
-    if (deNgayThayDoi.GetText() + "" == "null" || deNgayThayDoi.GetText() + "" == "") {
-        alert("Chưa nhập ngày thay đổi");
-        return;
-    }
+
     btnSaveThayDoi.SetEnabled(false);
     var data = "mode=AddOrUpdateThayDoiTS";
     data += "&tableName=DMTaiSanCT";
     data += "&ID=" + txtObjectDetailId.Get("hidden_value");
     data += "&IDMaster=" + txtObjectId.Get("hidden_value");
-    data += "&NoiDungThayDoi=" + txtNoiDungThayDoi.GetText();
-    data += "&GhiChuThayDoi=" + txtGhiChuThayDoi.GetText();
-    data += "&NgayThayDoi=" + deNgayThayDoi.GetDate().toJSON();
+    data += "&IdDonViTinh=" + cbDonViTinhCT.GetText();
+    data += "&GiaTriQuiDoiSoVoiDonViCoBan=" + txtGiaTriQuiDoi.GetText();
+
     //data += "&NamSanXuat=" + deNamSanXuat.GetDate().toJSON();
 
     $.ajax({
@@ -575,7 +521,7 @@ function saveQLTaiSanThayDoiCT() {
 }
 
 function openEditFormDetail(ID, noiDungThayDoi, readEditApproval) {
-
+    alert("aa:" + cbDonViTinh.GetText());
     $.ajax({
         type: "POST",
         async: true,
@@ -592,9 +538,10 @@ function openEditFormDetail(ID, noiDungThayDoi, readEditApproval) {
 
                 txtObjectDetailId.Set("hidden_value", data.entity.ID);
 
-                txtNoiDungThayDoi.SetValue(data.entity.NoiDungThayDoi);
-                txtGhiChuThayDoi.SetValue(data.entity.GhiChu);
-                deNgayThayDoi.SetText(data.entity.NgayThayDoi);
+                cbDonViTinhCT.SetValue(data.entity.IdDonViTinh);
+                txtGiaTriQuiDoi.SetValue(data.entity.GiaTriQuiDoiSoVoiDonViCoBan);
+               
+                txtTenDonViCoBan.SetText(cbDonViTinh.GetText());
                 popUpdateDetail.Show();
 
             }
@@ -750,5 +697,3 @@ function RejectThayDoiTaiSan() {
         }
     });
 }
-
-
