@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebRunDragon.Forms {
-    
-    
-    public partial class QLNhapKho {
-        
+namespace WebRunDragon.Forms
+{
+
+
+    public partial class QLNhapKho
+    {
+
         /// <summary>
         /// ScriptManager1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
+
         /// <summary>
         /// UpdatePanel1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
-        
+
         /// <summary>
         /// btnSearch control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnSearch;
-        
+
         /// <summary>
         /// gridQLNhapKho control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView gridQLNhapKho;
-        
+
         /// <summary>
         /// SqlDataSourceNhapKho control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceNhapKho;
-        
+
         /// <summary>
         /// popUpdateForm control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPopupControl popUpdateForm;
-        
+
         /// <summary>
         /// PopupControlContentControl1 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.PopupControlContentControl PopupControlContentControl1;
-        
+
         /// <summary>
         /// ASPxTabControl1 control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPageControl ASPxTabControl1;
-        
+
         /// <summary>
         /// cbMaChiNhanh control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxComboBox cbMaChiNhanh;
-        
+
         /// <summary>
         /// deNgayNhap control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxDateEdit deNgayNhap;
-        
+
         /// <summary>
         /// txtSoPhieuNhap control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtSoPhieuNhap;
-        
+
         /// <summary>
         /// cbKhoNhap control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxComboBox cbKhoNhap;
-        
+
         /// <summary>
         /// cbNhanVienPhieu control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxComboBox cbNhanVienPhieu;
-        
+
         /// <summary>
         /// txtGhiChu control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtGhiChu;
-        
+
         /// <summary>
         /// gridDetails control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView gridDetails;
-        
+
         /// <summary>
         /// btnEditDetail control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.GridViewCommandColumnCustomButton btnEditDetail;
-        
+
         /// <summary>
         /// btnEDeleteDetail control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.GridViewCommandColumnCustomButton btnEDeleteDetail;
-        
+
         /// <summary>
         /// SqlDataSourceTaiSan control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceTaiSan;
-        
+
         /// <summary>
         /// btnSaveEdit control.
         /// </summary>
@@ -182,7 +184,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnSaveEdit;
-        
+
         /// <summary>
         /// btnGuiDuyet control.
         /// </summary>
@@ -191,7 +193,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnGuiDuyet;
-        
+
         /// <summary>
         /// btnCancelEdit control.
         /// </summary>
@@ -200,7 +202,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnCancelEdit;
-        
+
         /// <summary>
         /// txtGhiChuDuyetKhongDuyet control.
         /// </summary>
@@ -209,7 +211,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxMemo txtGhiChuDuyetKhongDuyet;
-        
+
         /// <summary>
         /// btnDuyet control.
         /// </summary>
@@ -218,7 +220,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnDuyet;
-        
+
         /// <summary>
         /// btnKhongDuyet control.
         /// </summary>
@@ -227,7 +229,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnKhongDuyet;
-        
+
         /// <summary>
         /// gridLichSuKyDuyet control.
         /// </summary>
@@ -236,7 +238,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView gridLichSuKyDuyet;
-        
+
         /// <summary>
         /// FileUpload1 control.
         /// </summary>
@@ -245,7 +247,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
-        
+
         /// <summary>
         /// lbThongBaoImport control.
         /// </summary>
@@ -254,7 +256,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel lbThongBaoImport;
-        
+
         /// <summary>
         /// btnUploadImport control.
         /// </summary>
@@ -263,7 +265,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnUploadImport;
-        
+
         /// <summary>
         /// btnSaveTSImport control.
         /// </summary>
@@ -272,7 +274,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnSaveTSImport;
-        
+
         /// <summary>
         /// btnTraCuuImport control.
         /// </summary>
@@ -281,7 +283,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnTraCuuImport;
-        
+
         /// <summary>
         /// btnXoaImport control.
         /// </summary>
@@ -290,7 +292,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnXoaImport;
-        
+
         /// <summary>
         /// gridImportTaiSan control.
         /// </summary>
@@ -299,7 +301,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView gridImportTaiSan;
-        
+
         /// <summary>
         /// popupConfirmDelete control.
         /// </summary>
@@ -308,7 +310,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPopupControl popupConfirmDelete;
-        
+
         /// <summary>
         /// btnConfirmDelete control.
         /// </summary>
@@ -317,7 +319,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnConfirmDelete;
-        
+
         /// <summary>
         /// btnCancelDelete control.
         /// </summary>
@@ -326,7 +328,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnCancelDelete;
-        
+
         /// <summary>
         /// popUpdateDetail control.
         /// </summary>
@@ -335,7 +337,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPopupControl popUpdateDetail;
-        
+
         /// <summary>
         /// PopupControlContentControl2 control.
         /// </summary>
@@ -344,7 +346,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.PopupControlContentControl PopupControlContentControl2;
-        
+
         /// <summary>
         /// gridDanhSachTaiSan control.
         /// </summary>
@@ -353,7 +355,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxGridView gridDanhSachTaiSan;
-        
+
         /// <summary>
         /// cbTaiSanNhapKho control.
         /// </summary>
@@ -362,7 +364,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxComboBox cbTaiSanNhapKho;
-        
+
         /// <summary>
         /// lbMaTaiSan control.
         /// </summary>
@@ -371,7 +373,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel lbMaTaiSan;
-        
+
         /// <summary>
         /// lbSoSerialNumber control.
         /// </summary>
@@ -380,16 +382,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxLabel lbSoSerialNumber;
-        
-        /// <summary>
-        /// lbCauHinhTaiSan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxLabel lbCauHinhTaiSan;
-        
+
         /// <summary>
         /// txtSoLuong control.
         /// </summary>
@@ -398,16 +391,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxSpinEdit txtSoLuong;
-        
-        /// <summary>
-        /// cbTrangThaiTaiSan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxComboBox cbTrangThaiTaiSan;
-        
+
         /// <summary>
         /// txtGhiChuChiTiet control.
         /// </summary>
@@ -416,7 +400,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtGhiChuChiTiet;
-        
+
         /// <summary>
         /// btnSaveDetail control.
         /// </summary>
@@ -425,7 +409,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnSaveDetail;
-        
+
         /// <summary>
         /// btnCancelSaveDetail control.
         /// </summary>
@@ -434,7 +418,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnCancelSaveDetail;
-        
+
         /// <summary>
         /// popConfirmDeleteDetail control.
         /// </summary>
@@ -443,7 +427,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPopupControl popConfirmDeleteDetail;
-        
+
         /// <summary>
         /// PopupControlContentControl3 control.
         /// </summary>
@@ -452,7 +436,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.PopupControlContentControl PopupControlContentControl3;
-        
+
         /// <summary>
         /// btnConfirmDeleteDetail control.
         /// </summary>
@@ -461,7 +445,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnConfirmDeleteDetail;
-        
+
         /// <summary>
         /// btnCancelDeleteDetail control.
         /// </summary>
@@ -470,7 +454,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnCancelDeleteDetail;
-        
+
         /// <summary>
         /// txtObjectId control.
         /// </summary>
@@ -479,7 +463,7 @@ namespace WebRunDragon.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxHiddenField txtObjectId;
-        
+
         /// <summary>
         /// txtObjectDetailId control.
         /// </summary>

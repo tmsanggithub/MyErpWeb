@@ -50,63 +50,63 @@
                                 <Columns>
                                     <dx:GridViewDataTextColumn Caption="Xem" VisibleIndex="0" Width="35px" FixedStyle="Left">
                                         <DataItemTemplate>
-                                            <dataitemtemplate>                    
-                                                <div style=" display: <%#GetRight(0) %>;  cursor: pointer" onclick="openEditForm('<%#Eval("ID") %>','<%#Eval("TrangThai") %>','ReadOnly')" title="Xem thông tin">
-                                                 <img src="../Images/icon-view.png" />
-                                                </div>                                        
+                                            <dataitemtemplate>
+                                                <div style="display: <%#GetRight(0) %>; cursor: pointer" onclick="openEditForm('<%#Eval("ID") %>','<%#Eval("TrangThai") %>','ReadOnly')" title="Xem thông tin">
+                                                    <img src="../Images/icon-view.png" />
+                                                </div>
                                             </dataitemtemplate>
                                         </DataItemTemplate>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Sửa" VisibleIndex="0" Width="35px" FixedStyle="Left">
                                         <DataItemTemplate>
-                                            <dataitemtemplate>                    
-                                                <div style=" display: <%#GetRight(2) %>;  cursor: pointer" onclick="openEditForm('<%#Eval("ID") %>','<%#Eval("TrangThai") %>','EditOnly')" title="Chỉnh sửa thông tin">
-                                                   <img src="../Images/icon-edit.png" />
-                                                </div>                                        
+                                            <dataitemtemplate>
+                                                <div style="display: <%#GetRight(2) %>; cursor: pointer" onclick="openEditForm('<%#Eval("ID") %>','<%#Eval("TrangThai") %>','EditOnly')" title="Chỉnh sửa thông tin">
+                                                    <img src="../Images/icon-edit.png" />
+                                                </div>
                                             </dataitemtemplate>
                                         </DataItemTemplate>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Xóa" VisibleIndex="0" Width="35px" FixedStyle="Left">
                                         <DataItemTemplate>
-                                            <dataitemtemplate>                    
-                                                <div style=" display: <%#GetRight(3) %>;  cursor: pointer" onclick="OpenDeleteForm('<%#Eval("ID") %>','<%#Eval("SoPhieu") %>')" title="Xóa">
-                                                   <img src="../Images/icon-delete.png" />
-                                                </div>                                        
+                                            <dataitemtemplate>
+                                                <div style="display: <%#GetRight(3) %>; cursor: pointer" onclick="OpenDeleteForm('<%#Eval("ID") %>','<%#Eval("SoPhieu") %>')" title="Xóa">
+                                                    <img src="../Images/icon-delete.png" />
+                                                </div>
                                             </dataitemtemplate>
                                         </DataItemTemplate>
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Duyệt" VisibleIndex="0" Width="40px" FixedStyle="Left">
                                         <DataItemTemplate>
-                                            <dataitemtemplate>                    
-                                                <div style=" display: <%#GetRight(5) %>;  cursor: pointer" onclick="openEditForm('<%#Eval("ID") %>','<%#Eval("TrangThai") %>','ApprovalOnly')" title="Duyệt">
-                                                   <img src="../Images/icon-approval.png" />
-                                                </div>                                        
+                                            <dataitemtemplate>
+                                                <div style="display: <%#GetRight(5) %>; cursor: pointer" onclick="openEditForm('<%#Eval("ID") %>','<%#Eval("TrangThai") %>','ApprovalOnly')" title="Duyệt">
+                                                    <img src="../Images/icon-approval.png" />
+                                                </div>
                                             </dataitemtemplate>
                                         </DataItemTemplate>
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Trạng thái" FieldName="TrangThai"  Width="120px" VisibleIndex="0" FixedStyle="Left">
+                                    <dx:GridViewDataTextColumn Caption="Trạng thái" FieldName="TrangThai" Width="120px" VisibleIndex="0" FixedStyle="Left">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="ID" FieldName="ID" VisibleIndex="0" Width="40px" />
-                                    <dx:GridViewDataTextColumn Caption="Chi nhánh" FieldName="TenChiNhanh"  Width="150px" VisibleIndex="0">
+                                    <dx:GridViewDataTextColumn Caption="Chi nhánh" FieldName="TenChiNhanh" Width="150px" VisibleIndex="0">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Kho nhập" FieldName="TenKho"  Width="150px" VisibleIndex="2">
+                                    <dx:GridViewDataTextColumn Caption="Kho nhập" FieldName="TenKho" Width="150px" VisibleIndex="2">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Số phiếu" FieldName="SoPhieu"  Width="150px" VisibleIndex="3">
+                                    <dx:GridViewDataTextColumn Caption="Số phiếu" FieldName="SoPhieu" Width="150px" VisibleIndex="3">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Ngày nhập" FieldName="NgayPhieu"  Width="100px" VisibleIndex="5">
+                                    <dx:GridViewDataTextColumn Caption="Ngày nhập" FieldName="NgayPhieu" Width="100px" VisibleIndex="5">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Nhân sự lập" FieldName="TenNhanVien" Width="200px" VisibleIndex="6">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Người duyệt" FieldName="NguoiDuyet"  Width="150px" VisibleIndex="7">
+                                    <dx:GridViewDataTextColumn Caption="Người duyệt" FieldName="NguoiDuyet" Width="150px" VisibleIndex="7">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Ghi chú" FieldName="GhiChu"  Width="500px" VisibleIndex="9">
+                                    <dx:GridViewDataTextColumn Caption="Ghi chú" FieldName="GhiChu" Width="500px" VisibleIndex="9">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
 
@@ -268,17 +268,17 @@
                                                             <dx:GridViewDataTextColumn Caption="Số S/N" FieldName="SoSerialNumber" Width="200px" VisibleIndex="9">
                                                                 <Settings AutoFilterCondition="Contains" />
                                                             </dx:GridViewDataTextColumn>
-                                                            <dx:GridViewDataTextColumn Caption="Cấu hình" FieldName="CauHinh" Width="200px" VisibleIndex="10" />
-                                                            <dx:GridViewDataTextColumn Caption="Nhà cung cấp" FieldName="TenNhaCungCap" VisibleIndex="11" Width="300px">
+                                                            <%--  <dx:GridViewDataTextColumn Caption="Cấu hình" FieldName="CauHinh" Width="200px" VisibleIndex="10" />--%>
+                                                            <%-- <dx:GridViewDataTextColumn Caption="Nhà cung cấp" FieldName="TenNhaCungCap" VisibleIndex="11" Width="300px">
                                                                 <Settings AutoFilterCondition="Contains" />
-                                                            </dx:GridViewDataTextColumn>
-                                                            <dx:GridViewDataTextColumn Caption="Nhà sản xuất" FieldName="TenNhaSanXuat" VisibleIndex="11" Width="150px">
+                                                            </dx:GridViewDataTextColumn>--%>
+                                                            <%-- <dx:GridViewDataTextColumn Caption="Nhà sản xuất" FieldName="TenNhaSanXuat" VisibleIndex="11" Width="150px">
                                                                 <Settings AutoFilterCondition="Contains" />
-                                                            </dx:GridViewDataTextColumn>
-                                                            <dx:GridViewDataTextColumn Caption="Số tháng BH" FieldName="SoThangBaoHanh" VisibleIndex="13" Width="50px" />
+                                                            </dx:GridViewDataTextColumn>--%>
+                                                            <%--<dx:GridViewDataTextColumn Caption="Số tháng BH" FieldName="SoThangBaoHanh" VisibleIndex="13" Width="50px" />
                                                             <dx:GridViewDataTextColumn Caption="Hạn sử dụng(tháng)" FieldName="SoThangHanSuDung" VisibleIndex="14" Width="50px" />
-                                                            <%--    <dx:GridViewDataTextColumn Caption="Thời gian hết hạn sd" FieldName="ThoiGianHetHanSuDung" VisibleIndex="14" Width="110px" />--%>
-                                                            <dx:GridViewDataTextColumn Caption="Loại bảo hiểm" FieldName="ViTri" VisibleIndex="14" Width="120px">
+                                                         
+                                                              <dx:GridViewDataTextColumn Caption="Loại bảo hiểm" FieldName="ViTri" VisibleIndex="14" Width="120px">
                                                                 <Settings AutoFilterCondition="Contains" />
                                                             </dx:GridViewDataTextColumn>
                                                             <dx:GridViewDataTextColumn Caption="Ghi chú TS" FieldName="GhiChuTS" VisibleIndex="16" Width="200px">
@@ -286,8 +286,7 @@
                                                             </dx:GridViewDataTextColumn>
                                                             <dx:GridViewDataTextColumn Caption="Ghi chú" FieldName="GhiChuChiTiet" Width="350px" VisibleIndex="16">
                                                                 <Settings AutoFilterCondition="Contains" />
-                                                            </dx:GridViewDataTextColumn>
-
+                                                            </dx:GridViewDataTextColumn>--%>
                                                         </Columns>
                                                         <SettingsPager PageSize="10"></SettingsPager>
                                                         <Settings ShowFooter="False" />
@@ -535,11 +534,11 @@
                                     <Columns>
                                         <dx:GridViewDataTextColumn Caption="Chọn" Width="30px" VisibleIndex="0">
                                             <DataItemTemplate>
-                                                <dataitemtemplate>                    
-                                                    <div style=" cursor: pointer" onclick="openChonTaiSanNhapKho('<%# Eval("ID") %>','<%# Eval("MaTaiSan") %>','<%# Eval("SoSerialNumber") %>','<%# Eval("CauHinh") %>','','')" title="Chọn">
+                                                <dataitemtemplate>
+                                                    <div style="cursor: pointer" onclick="openChonTaiSanNhapKho('<%# Eval("ID") %>','<%# Eval("MaTaiSan") %>','<%# Eval("SoSerialNumber") %>','<%# Eval("CauHinh") %>','','')" title="Chọn">
                                                         <img src="../Images/icon-check.png" />
-                                                    </div>                               
-                                                 </dataitemtemplate>
+                                                    </div>
+                                                </dataitemtemplate>
                                             </DataItemTemplate>
                                         </dx:GridViewDataTextColumn>
 
@@ -554,9 +553,7 @@
                                         <dx:GridViewDataTextColumn Caption="Số S/N" FieldName="SoSerialNumber" VisibleIndex="6" Width="150px">
                                             <Settings AutoFilterCondition="Contains" />
                                         </dx:GridViewDataTextColumn>
-                                        <dx:GridViewDataTextColumn Caption="Cấu hình" FieldName="CauHinh" VisibleIndex="7" Width="200px">
-                                            <Settings AutoFilterCondition="Contains" />
-                                        </dx:GridViewDataTextColumn>
+
 
                                         <%--  <dx:GridViewDataTextColumn Caption="Nhóm tài sản" FieldName="TenNhomTaiSan" VisibleIndex="8" Width="150px">
                                             <Settings AutoFilterCondition="Contains" />
@@ -615,7 +612,7 @@
                                                         <dx:ListBoxColumn Caption="Mã" FieldName="MaTaiSan" Name="MaTaiSan" Width="140px" />
                                                         <dx:ListBoxColumn Caption="Tên" FieldName="TenTaiSan" Name="TenTaiSan" Width="200px" />
                                                         <dx:ListBoxColumn Caption="Số S/N" FieldName="SoSerialNumber" Name="SoSerialNumber" Width="100px" />
-                                                        <dx:ListBoxColumn Caption="Cấu hình" FieldName="CauHinh" Name="CauHinh" Width="150px" />
+
                                                         <%-- <dx:ListBoxColumn Caption="NSX" FieldName="TenNhaSanXuat" Name="TenNhaSanXuat" Width="50px" />
                                                         <dx:ListBoxColumn Caption="NCC" FieldName="TenNhaCungCap" Name="TenNhaCungCap" Width="50px" />--%>
                                                     </Columns>
@@ -633,9 +630,7 @@
                                                 <dx:ASPxLabel ID="lbSoSerialNumber" ClientInstanceName="lbSoSerialNumber" runat="server" Text="..." Font-Bold="true"></dx:ASPxLabel>
                                             </td>
                                             <td style="width: 100px">Cấu hình</td>
-                                            <td style="width: 150px">
-                                                <dx:ASPxLabel ID="lbCauHinhTaiSan" ClientInstanceName="lbCauHinhTaiSan" runat="server" Text="..." Font-Bold="true"></dx:ASPxLabel>
-                                            </td>
+                                            <td style="width: 150px"></td>
                                         </tr>
                                         <%-- <tr>
 
@@ -677,7 +672,7 @@
                                             </td>--%>
                                         </tr>
                                         <tr>
-                                            <td style="width: 100px">Trạng thái tài sản</td>
+                                            <%--<td style="width: 100px">Trạng thái tài sản</td>
                                             <td style="width: 700px" colspan="5">
                                                 <dx:ASPxComboBox ID="cbTrangThaiTaiSan" ClientInstanceName="cbTrangThaiTaiSan" runat="server" ValueField="ID" TextFormatString="{1}" Style="width: 100%" Font-Bold="true">
                                                     <Columns>
@@ -686,7 +681,7 @@
                                                     </Columns>
                                                     <ClearButton Visibility="Auto"></ClearButton>
                                                 </dx:ASPxComboBox>
-                                            </td>
+                                            </td>--%>
                                         </tr>
                                         <tr>
                                             <td>Ghi chú</td>

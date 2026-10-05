@@ -63,6 +63,16 @@ namespace WebRunDragon.Actions
                             success = DeleteTaiSan(id, sessionUserId, out message);
 
                         }
+                        else if (tableName == "DM_KHACH_HANG")
+                        {
+                            success = DataProcess.ProcessDanhMuc.getInstance().DeleteKhachHang(id, sessionUserId, out message);
+                            if (success)
+                            {
+                                var keyCache = "LoadDanhMuc4ComboFromCacheFromCache_dm_khach_hang_";
+                                BusinessMemCache cache = new BusinessMemCache();
+                                cache.RemoveMyCachedItem(keyCache);
+                            }
+                        }
                         else
                             success = DataProcess.ProcessDanhMuc.getInstance().DeleteDanhMucByIDCheckConstrainKey(id, tableName, sessionUserId, out message);
 

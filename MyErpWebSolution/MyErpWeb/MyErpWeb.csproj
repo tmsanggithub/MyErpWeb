@@ -146,6 +146,7 @@
     <Content Include="Forms\BCNhapKho.aspx" />
     <Content Include="Forms\BCTonKho.aspx" />
     <Content Include="Forms\DMDonViTinh.aspx" />
+    <Content Include="Forms\DMKhachHang.aspx" />
     <Content Include="Forms\DMKho.aspx" />
     <Content Include="Forms\DMLoaiTaiSan.aspx" />
     <Content Include="Forms\DMNhaCungCap.aspx" />
@@ -159,7 +160,6 @@
     <Content Include="Forms\QLDonHangBanCT.aspx" />
     <Content Include="Forms\DMConfig.aspx" />
     <Content Include="Forms\QLHangHoa.aspx" />
-    <Content Include="Forms\QLKiemKeKho.aspx" />
     <Content Include="Forms\QLNhapKho.aspx" />
     <Content Include="Forms\QLDonHangBan.aspx" />
     <Content Include="packages.config" />
@@ -455,6 +455,13 @@
     <Compile Include="Forms\DMDonViTinh.aspx.designer.cs">
       <DependentUpon>DMDonViTinh.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DMKhachHang.aspx.cs">
+      <DependentUpon>DMKhachHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DMKhachHang.aspx.designer.cs">
+      <DependentUpon>DMKhachHang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DMKho.aspx.cs">
       <DependentUpon>DMKho.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -566,13 +573,6 @@
     </Compile>
     <Compile Include="Forms\QLHangHoa.aspx.designer.cs">
       <DependentUpon>QLHangHoa.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\QLKiemKeKho.aspx.cs">
-      <DependentUpon>QLKiemKeKho.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\QLKiemKeKho.aspx.designer.cs">
-      <DependentUpon>QLKiemKeKho.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\QLNhapKho.aspx.cs">
       <DependentUpon>QLNhapKho.aspx</DependentUpon>

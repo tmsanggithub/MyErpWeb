@@ -135,11 +135,11 @@ namespace WebRunDragon.Actions
                             message = "Chưa nhập số lượng";
                             success = false;
                         }
-                        else if (Utils.NumberUtil.ParseToInt(context.Request.Form["TrangThaiTaiSan"]) <= 0)
-                        {
-                            message = "Chưa chọn trạng thái tài sản";
-                            success = false;
-                        }
+                        //else if (Utils.NumberUtil.ParseToInt(context.Request.Form["TrangThaiTaiSan"]) <= 0)
+                        //{
+                        //    message = "Chưa chọn trạng thái tài sản";
+                        //    success = false;
+                        //}
                         else if (Utils.NumberUtil.ParseToDecimal(context.Request.Form["DonGia"]) < 0)
                         {
                             message = "Đơn giá không được nhỏ hơn 0";

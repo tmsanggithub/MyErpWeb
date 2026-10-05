@@ -290,7 +290,7 @@ function clearFormDetail() {
     txtObjectDetailId.Set("hidden_value", "0");
     cbTaiSanNhapKho.SetValue("");
     lbSoSerialNumber.SetText("");
-    lbCauHinhTaiSan.SetText("");
+ 
     //lbDonViTinh.SetText("");
     //lbNhomTaiSan.SetText("");
     lbMaTaiSan.SetText("");
@@ -301,8 +301,8 @@ function clearFormDetail() {
     txtSoLuong.SetText(1);
    // txtDonGia.SetText(0);
    // txtThanhTien.SetText(0);
-    txtGhiChuChiTiet.SetText("");
-    cbTrangThaiTaiSan.SetValue("");
+   // txtGhiChuChiTiet.SetText("");
+  //  cbTrangThaiTaiSan.SetValue("");
     gridDanhSachTaiSan.PerformCallback(txtObjectId.Get("hidden_value"));
 }
 
@@ -312,10 +312,10 @@ function saveQLNhapKhoChiTiet() {
         alert("Vui lòng nhập số lượng");
         return;
     }
-    if (cbTrangThaiTaiSan.GetValue() == "0" || cbTrangThaiTaiSan.GetValue() == "") {
-        alert("Vui lòng chọn trạng thái tài sản");
-        return;
-    }
+    //if (cbTrangThaiTaiSan.GetValue() == "0" || cbTrangThaiTaiSan.GetValue() == "") {
+    //    alert("Vui lòng chọn trạng thái tài sản");
+    //    return;
+    //}
 
     btnSaveDetail.SetEnabled(false);
     var data = "mode=AddOrUpdateDetail";
@@ -325,7 +325,7 @@ function saveQLNhapKhoChiTiet() {
     data += "&SoLuong=" + txtSoLuong.GetValue();
     data += "&DonGia=0";// + txtDonGia.GetValue();
     data += "&ThanhTien=0";//+ txtThanhTien.GetValue();
-    data += "&TrangThaiTaiSan=" + cbTrangThaiTaiSan.GetValue();
+   // data += "&TrangThaiTaiSan=" + cbTrangThaiTaiSan.GetValue();
     data += "&GhiChuChiTiet=" + encodeURIComponent(txtGhiChuChiTiet.GetText());
 
     $.ajax({
@@ -368,7 +368,7 @@ function openEditFormDetail(row) {
                // txtDonGia.SetValue(data.entity.DonGia);
                // txtThanhTien.SetValue(data.entity.ThanhTien);
                 txtGhiChuChiTiet.SetText(data.entity.GhiChuChiTiet);
-                cbTrangThaiTaiSan.SetValue(data.entity.TrangThaiTaiSan);
+               // cbTrangThaiTaiSan.SetValue(data.entity.TrangThaiTaiSan);
                 popUpdateDetail.Show();
 
             }
@@ -418,7 +418,7 @@ function openChonTaiSanNhapKho(id, maTaiSan, soSerialNumber, cauHinh, tenNhaSanX
     //lbNhaSanXuat.SetText(tenNhaSanXuat);
     //lbNhaCungCap.SetText(tenNhaCungCap);
     lbSoSerialNumber.SetText(soSerialNumber);
-    lbCauHinhTaiSan.SetText(cauHinh);
+  
 
     // Eval("ID") %>','<%# Eval("MaTaiSan") %>','<%# Eval("SoSerialNumber") %>','<%# Eval("CauHinh") %>','<%# Eval("TenNhaSanXuat") %>','<%# Eval("TenNhaCungCap") %>')"
 
@@ -430,7 +430,6 @@ function cbTaiSanNhapKhoValueChanged() {
    // lbNhaSanXuat.SetText(cbTaiSanNhapKho.GetSelectedItem(1).GetColumnText("TenNhaSanXuat"));
    // lbNhaCungCap.SetText(cbTaiSanNhapKho.GetSelectedItem(1).GetColumnText("TenNhaCungCap"));
     lbSoSerialNumber.SetText(cbTaiSanNhapKho.GetSelectedItem(1).GetColumnText("SoSerialNumber"));
-    lbCauHinhTaiSan.SetText(cbTaiSanNhapKho.GetSelectedItem(1).GetColumnText("CauHinh"));
 
 }
 

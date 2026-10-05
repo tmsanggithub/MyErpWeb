@@ -24,6 +24,57 @@ namespace WebRunDragon.DataProcess
             return _instance;
         }
 
+        public DataTable TraCuuKhachHang(string key4Search, string userLogin)
+        {
+            try
+            {
+                string sql = @"select id, SoDienThoai, TenKhachHang, Email, DiaChi, PhuongXa, TinhThanhPho, GhiChu
+                                from dm_khach_hang
+                                where (isdeleted = 0 or isdeleted is null)
+                                and (@KeySearch = '' or SoDienThoai like '%' + @KeySearch + '%' or TenKhachHang like '%' + @KeySearch + '%')
+                                order by id desc";
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("@KeySearch", key4Search ?? "");
+                return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, sql, CommandType.Text, param);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".TraCuuKhachHang() Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                return null;
+            }
+        }
+
+        public bool DeleteKhachHang(int id, string userLoginId, out string message)
+        {
+            message = "";
+            try
+            {
+                string sql = "update dm_khach_hang set isdeleted=1, updated_by=@UserLogin, updated_time=GETDATE() where id=@Id";
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("Id", id);
+                param.Add("UserLogin", userLoginId);
+                int retCode = DatabaseManager.ExecuteUpdateSql(DatabaseManager.CNN_STRING_HELPDESK, sql, CommandType.Text, param);
+                if (retCode > 0)
+                {
+                    message = "Xóa thành công";
+                    return true;
+                }
+                else
+                {
+                    message = "Xóa thất bại";
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".DeleteKhachHang Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                message = "lổi Exception: " + ex.Message;
+                return false;
+            }
+        }
+
         public bool AddOrUpdateKhachHang(int id, string soDienThoai, string tenKhachHang, string email, string diaChi, string phuongXa, string tinhThanhPho, string ghiChu, string userLogin, out string message, out int idInsertNew)
         {
             message = ""; idInsertNew = id;
@@ -949,6 +1000,11 @@ namespace WebRunDragon.DataProcess
             {
                 sql = "select * from @TableName where id=@Id and (Is_Deleted=0 or Is_Deleted is null)".Replace("@TableName", tableName);
             }
+            else if (tableName.ToUpper() == "DM_KHACH_HANG")
+            {
+                sql = @"select id, SoDienThoai, TenKhachHang, Email, DiaChi, PhuongXa, TinhThanhPho, GhiChu
+                        from dm_khach_hang where id=@Id and (isdeleted=0 or isdeleted is null)";
+            }
             JArray array = DatabaseManager.GetJsonArraySql(DatabaseManager.CNN_STRING_HELPDESK, sql, CommandType.Text, param);
             if (array != null && array.Count > 0)
                 return (JObject)array[0];
@@ -1254,7 +1310,10 @@ delete from " + tableName + "  where ID=@Id ;";
             {
                 info.TableName = "DMNhaCungCap"; info.ID = "id"; info.MaDM = "MaNhaCungCap"; info.TenDM = "TenNhaCungCap";
             }
-
+            else if (tenDanhMuc.ToUpper() == "DMNhaSanXuat".ToUpper())
+            {
+                info.TableName = "DMNhaSanXuat"; info.ID = "id"; info.MaDM = "MaNhaSanXuat"; info.TenDM = "TenNhaSanXuat";
+            }
             else if (tenDanhMuc.ToUpper() == "dm_nhom_hang_hoa".ToUpper())
             {
                 info.TableName = "dm_nhom_hang_hoa"; info.ID = "id"; info.MaDM = "code"; info.TenDM = "name";

@@ -10,6 +10,7 @@ namespace WebRunDragon.Utils
         public static bool CanRead(string userId, string actionName)
         {
             if (actionName == "dm_run_group".ToUpper()) { actionName = "DMNhomChay".ToUpper(); }
+            if (actionName == "DM_KHACH_HANG") { actionName = "DMKhachHang".ToUpper(); }
             object xxx = HttpContext.Current.Session[Config.SysConfig.SESSION_USERINFO];
             if (xxx == null) return false;
             Entity.EnUserInfo staff = (Entity.EnUserInfo)xxx;
@@ -18,12 +19,13 @@ namespace WebRunDragon.Utils
             if (!staff.ListAccessRight.ContainsKey(actionName)) return false;
             Entity.EnAccessRightInfo access = staff.ListAccessRight[actionName];
             return access.CanRead > 0;
-            
+
         }
 
         public static bool CanCreate(string userId, string actionName)
         {
             if (actionName == "dm_run_group".ToUpper()) { actionName = "DMNhomChay".ToUpper(); }
+            if (actionName == "DM_KHACH_HANG") { actionName = "DMKhachHang".ToUpper(); }
             object xxx = HttpContext.Current.Session[Config.SysConfig.SESSION_USERINFO];
             if (xxx == null) return false;
             Entity.EnUserInfo staff = (Entity.EnUserInfo)xxx;
@@ -32,7 +34,7 @@ namespace WebRunDragon.Utils
             if (!staff.ListAccessRight.ContainsKey(actionName)) return false;
             Entity.EnAccessRightInfo access = staff.ListAccessRight[actionName];
             return access.CanCreate > 0;
-            
+
         }
 
         public static bool CanEdit(string userId, string actionName)
@@ -40,6 +42,7 @@ namespace WebRunDragon.Utils
             if (actionName == "dm_run_group".ToUpper()) { actionName = "DMNhomChay".ToUpper(); }
             if (actionName == "ql_activities".ToUpper()) { actionName = "DMHoatDong".ToUpper(); }
             if (actionName == "app_user_registed".ToUpper()) { actionName = "DMVanDongVien".ToUpper(); }
+            if (actionName == "DM_KHACH_HANG") { actionName = "DMKhachHang".ToUpper(); }
 
 
             object xxx = HttpContext.Current.Session[Config.SysConfig.SESSION_USERINFO];
@@ -56,6 +59,7 @@ namespace WebRunDragon.Utils
         public static bool CanDelete(string userId, string actionName)
         {
             if (actionName== "dm_run_group".ToUpper()) { actionName = "DMNhomChay".ToUpper(); }
+            if (actionName == "DM_KHACH_HANG") { actionName = "DMKhachHang".ToUpper(); }
             object xxx = HttpContext.Current.Session[Config.SysConfig.SESSION_USERINFO];
             if (xxx == null) return false;
             Entity.EnUserInfo staff = (Entity.EnUserInfo)xxx;
@@ -64,7 +68,7 @@ namespace WebRunDragon.Utils
             if (!staff.ListAccessRight.ContainsKey(actionName)) return false;
             Entity.EnAccessRightInfo access = staff.ListAccessRight[actionName];
             return access.CanDelete > 0;
-            
+
         }
 
         public static bool CanSpecialAction(string userId, string actionName)
@@ -97,6 +101,7 @@ namespace WebRunDragon.Utils
         public static bool CanApprove(string userId, string actionName)
         {
             if (actionName == "dm_run_group".ToUpper()) { actionName = "DMNhomChay".ToUpper(); }
+            if (actionName == "DM_KHACH_HANG") { actionName = "DMKhachHang".ToUpper(); }
             object xxx = HttpContext.Current.Session[Config.SysConfig.SESSION_USERINFO];
             if (xxx == null) return false;
             Entity.EnUserInfo staff = (Entity.EnUserInfo)xxx;
@@ -105,7 +110,7 @@ namespace WebRunDragon.Utils
             if (!staff.ListAccessRight.ContainsKey(actionName)) return false;
             Entity.EnAccessRightInfo access = staff.ListAccessRight[actionName];
             return access.CanApprove > 0;
-            
+
         }
 
         public static string GetUrl4FirstLoginSuccess(string lastUrl, Dictionary<string, Entity.EnAccessRightInfo> listAccessRight)

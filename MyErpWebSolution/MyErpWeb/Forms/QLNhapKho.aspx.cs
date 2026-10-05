@@ -55,8 +55,8 @@ namespace WebRunDragon.Forms
                 cbKhoNhap.DataBind();
                 cbTaiSanNhapKho.DataSource = DataProcess.ProcessDanhMuc.getInstance().LoadDanhMuc4ComboFromCache(DataProcess.ProcessDanhMuc.eTenDanhMuc.DMTaiSan + "", Utils.UserUtil.GetSessionUserId());
                 cbTaiSanNhapKho.DataBind();
-                cbTrangThaiTaiSan.DataSource = DataProcess.ProcessDanhMuc.getInstance().LoadDanhMuc4ComboFromCache(DataProcess.ProcessDanhMuc.eTenDanhMuc.DMTrangThaiTaiSan + "", Utils.UserUtil.GetSessionUserId());
-                cbTrangThaiTaiSan.DataBind();
+                //cbTrangThaiTaiSan.DataSource = DataProcess.ProcessDanhMuc.getInstance().LoadDanhMuc4ComboFromCache(DataProcess.ProcessDanhMuc.eTenDanhMuc.DMTrangThaiTaiSan + "", Utils.UserUtil.GetSessionUserId());
+                //cbTrangThaiTaiSan.DataBind();
                 cbNhanVienPhieu.Value = Utils.UserUtil.GetSessionUserId();
             }
             catch (Exception ex)
@@ -213,7 +213,8 @@ namespace WebRunDragon.Forms
                 DataTable dt = null;
                 if (idMasterNhapKho > 0)
                 {
-                    dt = DataProcess.ProcessDanhMuc.getInstance().DMTaiSan4ComboFromCache(Utils.UserUtil.GetSessionUserId());
+                    //   dt = DataProcess.ProcessDanhMuc.getInstance().DMTaiSan4ComboFromCache(Utils.UserUtil.GetSessionUserId());
+                    dt = DataProcess.ProcessNhapKho.getInstance().LayDanhSachTaiSan4ThemNhapKho(idMasterNhapKho, Utils.UserUtil.GetSessionUserId()); ;
                 }
                 Session["ssSearchTaiSan4ThemNhapKho"] = dt;
                 this.gridDanhSachTaiSan.DataBind();
@@ -342,7 +343,7 @@ namespace WebRunDragon.Forms
                     {
                         lbThongBaoImport.Text = "Mã Trạng thái không hợp lệ. các mã trạng thái cho phép là: MoiMua, DaQuaSuDung,  KhongSuDung";
                         return;
-                    }                  
+                    }
                     else if (maTSHopLe == null || maTSHopLe.Length == 0)
                     {
                         lbThongBaoImport.Text = "Mã tài sản " + r["MaTaiSan"] + " không hợp lệ";

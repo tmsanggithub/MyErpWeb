@@ -54,30 +54,12 @@
                                     <dx:GridViewDataTextColumn Caption="Nhóm tài sản" FieldName="TenNhomTaiSan" VisibleIndex="6" Width="150px">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Loại tài sản" FieldName="TenLoaiTaiSan" VisibleIndex="7" Width="150px">
-                                        <Settings AutoFilterCondition="Contains" />
-                                    </dx:GridViewDataTextColumn>
+                                 5
                                     <dx:GridViewDataTextColumn Caption="Số S/N" FieldName="SoSerialNumber" VisibleIndex="8" Width="150px">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Cấu hình" FieldName="CauHinh" VisibleIndex="9" Width="200px">
-                                        <Settings AutoFilterCondition="Contains" />
-                                    </dx:GridViewDataTextColumn>
+                                   
                                     <dx:GridViewDataTextColumn Caption="Nhà sản xuất" FieldName="TenNhaSanXuat" VisibleIndex="10" Width="150px">
-                                        <Settings AutoFilterCondition="Contains" />
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Năm sản xuất" FieldName="NamSanXuat" VisibleIndex="11" Width="100px" />
-                                    <dx:GridViewDataTextColumn Caption="Số phiếu bảo hành" FieldName="SoPhieuBaoHanh" VisibleIndex="12" Width="150px">
-                                        <Settings AutoFilterCondition="Contains" />
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Số tháng BH" FieldName="SoThangBaoHanh" VisibleIndex="13" Width="50px" />
-                                    <dx:GridViewDataTextColumn Caption="Hạn sử dụng(tháng)" FieldName="SoThangHanSuDung" VisibleIndex="14" Width="50px" />
-                                    <dx:GridViewDataTextColumn Caption="Tỷ lệ hao mòn" FieldName="TyLeHaoMon" VisibleIndex="15" Width="50px" />
-                                    <dx:GridViewDataTextColumn Caption="Nhà cung cấp" FieldName="TenNhaCungCap" VisibleIndex="16" Width="150px">
-                                        <Settings AutoFilterCondition="Contains" />
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Năm sử dụng" FieldName="NamDuaVaoSuDung" VisibleIndex="17" Width="100px" />
-                                    <dx:GridViewDataTextColumn Caption="Chứng nhận CO/CQ" FieldName="ChungNhanCOCQ" VisibleIndex="18" Width="150px">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Ghi chú" FieldName="GhiChu" VisibleIndex="19" Width="350px" />
