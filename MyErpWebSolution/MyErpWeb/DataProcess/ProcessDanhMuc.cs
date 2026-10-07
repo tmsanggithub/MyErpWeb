@@ -145,7 +145,7 @@ namespace WebRunDragon.DataProcess
                         {"@GhiChu", ghiChu ?? ""},
                         {"@UpdatedBy", userLogin ?? ""}
                     };
-                    string sql = "UPDATE dm_khach_hang SET SoDienThoai=@SoDienThoai, TenKhachHang=@TenKhachHang, Email=@Email, DiaChi=@DiaChi, PhuongXa=@PhuongXa, TinhThanhPho=@TinhThanhPho, GhiChu=@GhiChu, updated_by=@UpdatedBy, updated_time=GETDATE() WHERE id=@ID";
+                    string sql = "UPDATE dm_khach_hang SET SoDienThoai=@SoDienThoai, TenKhachHang=@TenKhachHang, Email=@Email, DiaChi=@DiaChi, PhuongXa=@PhuongXa, TinhThanhPho=@TinhThanhPho, GhiChu=@GhiChu, updatedby=@UpdatedBy, updatedtime=GETDATE() WHERE id=@ID";
                     int rows = DatabaseManager.ExecuteUpdateSql(DatabaseManager.CNN_STRING_HELPDESK, sql, System.Data.CommandType.Text, pUpd);
                     if (rows > 0)
                     {

@@ -429,6 +429,15 @@ namespace WebRunDragon.Forms
         protected global::DevExpress.Web.ASPxButton btnSaveThayDoi;
 
         /// <summary>
+        /// btnCancelThayDoi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton btnCancelThayDoi;
+
+        /// <summary>
         /// popConfirmDeleteDetail control.
         /// </summary>
         /// <remarks>

@@ -177,7 +177,7 @@
 
 
     <div>
-        <dx:ASPxPopupControl ClientInstanceName="popUpdateForm" ID="popUpdateForm" Width="900px" Height="600px"
+        <dx:ASPxPopupControl ClientInstanceName="popUpdateForm" ID="popUpdateForm" Width="900px" Height="800px"
             ScrollBars="Auto" HeaderText="Thông tin TaiSan" runat="server"
             PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter"
             AllowDragging="True" CloseAction="CloseButton" CloseOnEscape="True" Modal="True" Theme="PlasticBlue">
@@ -411,7 +411,7 @@
                                                                 </DataItemTemplate>
                                                             </dx:GridViewDataTextColumn>--%>
 
-                                                            <dx:GridViewDataTextColumn Caption="ID" FieldName="ID" VisibleIndex="0" Width="39px" />
+                                                            <%--<dx:GridViewDataTextColumn Caption="ID" FieldName="ID" VisibleIndex="0" Width="39px" />--%>
                                                             <dx:GridViewDataTextColumn Caption="Đơn vị" FieldName="TenDonViTinh" Width="200px" VisibleIndex="3" />
                                                             <dx:GridViewDataTextColumn Caption="Giá trị qui đổi" FieldName="GiaTriQuiDoiSoVoiDonViCoBan" Width="250px" VisibleIndex="4" />
                                                             <dx:GridViewDataTextColumn Caption="Đơn vị cơ bản" FieldName="TenDonViTinhCoBan" Width="100%" VisibleIndex="5" />
@@ -536,7 +536,7 @@
     </div>
 
     <div>
-        <dx:ASPxPopupControl ClientInstanceName="popUpdateDetail" ID="popUpdateDetail" Width="650px" Height="200px" HeaderText="Cập nhật chi tiết " runat="server"
+        <dx:ASPxPopupControl ClientInstanceName="popUpdateDetail" ID="popUpdateDetail" Width="650px" Height="150px" HeaderText="Cập nhật chi tiết " runat="server"
             PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter"
             AllowDragging="True" CloseAction="CloseButton" CloseOnEscape="True" Modal="True" Theme="PlasticBlue">
             <ContentCollection>
@@ -566,7 +566,8 @@
 
                             </td>
                         </tr>
-
+                        <tr style="height: 10px">
+                        </tr>
 
                         <tr>
                             <td></td>
@@ -583,8 +584,15 @@
                                                 <ClientSideEvents Click="function(s,e){SendApprovalThayDoiTaiSan();}" />
                                             </dx:ASPxButton>
                                         </td>--%>
+                                        <td>
+                                            <dx:ASPxButton Theme="Office2003Blue" ID="btnCancelThayDoi" ClientInstanceName="btnCancelSaveDetail" runat="server" AutoPostBack="False" Text="Đóng" Width="99px">
+                                                <ClientSideEvents Click="function(s,e){popUpdateDetail.Hide();}" />
+                                            </dx:ASPxButton>
+                                        </td>
+
                                     </tr>
                                     <tr>
+
                                         <%-- <td style="text-align: right">
                                             <dx:ASPxButton Theme="Office2003Blue" ID="btnApprovalThayDoi" ClientInstanceName="btnApprovalThayDoi" runat="server" AutoPostBack="False" Text="Duyệt thay đổi" Width="99px">
                                                 <ClientSideEvents Click="function(s,e){ApprovalThayDoiTaiSan();}" />
@@ -595,6 +603,8 @@
                                                 <ClientSideEvents Click="function(s,e){RejectThayDoiTaiSan();}" />
                                             </dx:ASPxButton>
                                         </td>--%>
+
+                                        <td></td>
                                     </tr>
                                 </table>
                             </td>
@@ -609,9 +619,7 @@
                             <td></td>
                             <td style="text-align: right">
 
-                                <dx:ASPxButton Theme="Office2003Blue" ID="btnCancelThayDoi" ClientInstanceName="btnCancelSaveDetail" runat="server" AutoPostBack="False" Text="Đóng" Width="99px">
-                                    <ClientSideEvents Click="function(s,e){popUpdateDetail.Hide();}" />
-                                </dx:ASPxButton>
+                             
 
                             </td>
 

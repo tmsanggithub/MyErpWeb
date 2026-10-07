@@ -267,7 +267,7 @@ namespace WebRunDragon.Actions
                 }
                 else if (mode == "GetThayDoiTaiSanDetail".ToUpper())
                 {
-                    JObject entity = DataProcess.ProcessDanhMuc.getInstance().GetDanhMucByID(id, "DMTaiSanCT");
+                    JObject entity = DataProcess.ProcessDanhMuc.getInstance().GetDanhMucByID(id, "DMTaiSanCTDonViTinh");
                     success = entity != null;
                     retObject["entity"] = entity;
                 }

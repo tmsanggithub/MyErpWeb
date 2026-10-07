@@ -448,7 +448,7 @@ function clearFormDetail(readEditDetail, objStatusDetail) {
     txtTenDonViCoBan.SetText("");
 
     txtTenDonViCoBan.SetText(cbDonViTinh.GetText());
-    gridDetails.PerformCallback(txtObjectId.Get("hidden_value"));
+    gridDetails.PerformCallback(0);
 
 
     btnSaveThayDoi.SetEnabled(false);
@@ -492,7 +492,7 @@ function saveQLTaiSanThayDoiCT() {
     data += "&tableName=DMTaiSanCT";
     data += "&ID=" + txtObjectDetailId.Get("hidden_value");
     data += "&IDMaster=" + txtObjectId.Get("hidden_value");
-    data += "&IdDonViTinh=" + cbDonViTinhCT.GetText();
+    data += "&IdDonViTinh=" + cbDonViTinhCT.GetValue();
     data += "&GiaTriQuiDoiSoVoiDonViCoBan=" + txtGiaTriQuiDoi.GetText();
 
     //data += "&NamSanXuat=" + deNamSanXuat.GetDate().toJSON();
@@ -513,7 +513,7 @@ function saveQLTaiSanThayDoiCT() {
                 alert("data.id:" + data.id);
                 txtObjectDetailId.Set("hidden_value", data.id);
 
-                // popUpdateDetail.Hide();
+                popUpdateDetail.Hide();
             }
             alert(data.message);
         }

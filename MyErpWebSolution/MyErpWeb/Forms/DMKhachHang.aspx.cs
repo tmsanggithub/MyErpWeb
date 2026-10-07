@@ -13,6 +13,11 @@ namespace WebRunDragon.Forms
         private static readonly log4net.ILog logger = log4net.LogManager.GetLogger(typeof(DMKhachHang));
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Set Vietnamese culture for Vietnamese text encoding
+            System.Globalization.CultureInfo vietnameseCulture = new System.Globalization.CultureInfo("vi-VN");
+            System.Threading.Thread.CurrentThread.CurrentCulture = vietnameseCulture;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = vietnameseCulture;
+
             if (!IsPostBack)
             {
                 if (Utils.ActionUtil.CanRead(Utils.UserUtil.GetSessionUserId(), typeof(Forms.DMKhachHang).Name.ToUpper())

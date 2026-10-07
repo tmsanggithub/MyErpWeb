@@ -78,31 +78,22 @@ namespace WebRunDragon.Forms
         protected global::DevExpress.Web.PopupControlContentControl PopupControlContentControl1;
 
         /// <summary>
-        /// txtcode control.
+        /// txtMaKho control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtcode;
+        protected global::DevExpress.Web.ASPxTextBox txtMaKho;
 
         /// <summary>
-        /// txtname control.
+        /// txtTenKho control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtname;
-
-        /// <summary>
-        /// txtdescription control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxMemo txtdescription;
+        protected global::DevExpress.Web.ASPxTextBox txtTenKho;
 
         /// <summary>
         /// cbMaChiNhanh control.
@@ -112,6 +103,15 @@ namespace WebRunDragon.Forms
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxComboBox cbMaChiNhanh;
+
+        /// <summary>
+        /// txtGhiChu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxMemo txtGhiChu;
 
         /// <summary>
         /// btnSaveEdit control.

@@ -216,6 +216,31 @@
             txtTenKho.SetText("");
             txtGhiChu.SetText("");
             txtObjectId.Set('hidden_value', "0");
+            if (readEdit == "ReadOnly") {
+
+            }
+            else if (readEdit == "NewOnly") {
+                // phụ thuộc vào Quyền: chỉ hiện nút save và sendApproval
+
+                btnSaveEdit.SetEnabled(true);
+
+            }
+            else if (readEdit == "EditOnly") {
+                // phụ thuộc vào Trạng thái và Quyền
+                //if (objStatus == "NEW" || objStatus == "EDIT" || objStatus == "RETURNED") {
+                btnSaveEdit.SetEnabled(true);
+
+                //}
+                //else { // các trạng thái còn lại ko enable
+
+                //}
+            }
+            else if (readEdit == "ApprovalOnly") {
+                //if (objStatus == "SENDAPPROVAL") {
+                //    btnDuyet.SetEnabled(true);
+                //    btnKhongDuyet.SetEnabled(true);
+                //}
+            }
         }
 
         function saveKho() {
