@@ -585,7 +585,27 @@ namespace WebRunDragon.DataProcess
             }
         }
 
+        internal JObject GetTaiSanByID(int id)
+        {
+            return DataProcess.ProcessCommonEntities.getInstance().GetEntityByID(id, ProcessDanhMuc.eTenDanhMuc.DMTaiSan + "");
+        }
+        internal DataTable GetTapTinDinhKemDMTaiSan(int idHopDong, string userLogin)
+        {
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("IDGiaiChay", idHopDong);
+                param.Add("UserLogin", userLogin);
 
+                return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, "SP_DMTaiSan_DSTapTinDinhKem", CommandType.StoredProcedure, param);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(className.ToString() + ".GetTapTinDinhKem() Error: ");
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                return null;
+            }
+        }
         #endregion
 
 
@@ -962,12 +982,12 @@ namespace WebRunDragon.DataProcess
         {
             try
             {
-                //Dictionary<string, object> param = new Dictionary<string, object>();
+                Dictionary<string, object> param = new Dictionary<string, object>();
                 //param.Add("TuNgay", tuNgay);
                 //param.Add("DenNgay", denNgay);
-                //param.Add("UserLogin", userLogin);
+                param.Add("UserLogin", userLogin);
                 //param.Add("IdGiaiChay", idGiaiChay);
-                return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, "select id,ma_hang_hoa, ten_hang_hoa, image_url, don_gia from dm_hang_hoa", CommandType.Text, null);
+                return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, "sp_QLDonHangBan_CT_DSTaiSan_For_BanHang", CommandType.StoredProcedure, param);
             }
             catch (Exception ex)
             {

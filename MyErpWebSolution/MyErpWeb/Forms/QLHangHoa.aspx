@@ -112,7 +112,7 @@
 
     <div>
 
-        <dx:ASPxPopupControl ClientInstanceName="popUpdateForm" ID="popUpdateForm" Width="1000px" Height="700px"
+        <dx:ASPxPopupControl ClientInstanceName="popUpdateForm" ID="popUpdateForm" Width="1000px" Height="650px"
             ScrollBars="Auto" HeaderText="Thông tin hàng hóa" runat="server"
             PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter"
             AllowDragging="True" CloseAction="CloseButton" CloseOnEscape="True" Modal="True" Theme="PlasticBlue">

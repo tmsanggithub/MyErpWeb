@@ -652,7 +652,7 @@ function cbKhachHang_EndCallback(s, e) {
 
 // customer popup helpers
 
-function OpenAdd(id, ma, ten, price) {
+function OpenAdd(id, ma, ten, price, id_kho_xuat) {
     try {
         // If we are editing an existing invoice (master id present), call server to persist detail
         var masterId = null;
@@ -683,7 +683,7 @@ function OpenAdd(id, ma, ten, price) {
                     DonGiaMua: price || 0,
                     GiaTriConLai: 0,
                     GiaTriThuHoi: 0,
-                    IDKhoXuat: 0,
+                    IDKhoXuat: id_kho_xuat,
                     PhuongAnXuLy: '',
                     GhiChuChiTiet: ''
                 },

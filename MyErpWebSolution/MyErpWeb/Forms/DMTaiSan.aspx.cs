@@ -1,11 +1,15 @@
-﻿using System;
+﻿using DevExpress.Web;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebRunDragon.Config;
+using WebRunDragon.DataProcess;
 
 namespace WebRunDragon.Forms
 {
@@ -226,5 +230,153 @@ namespace WebRunDragon.Forms
                 logger.Error(ex.Message, ex);
             }
         }
+
+
+
+        // dành cho upload file ======================
+        #region dành cho upload file 
+        protected void UploadControl_FilesUploadComplete(object sender, DevExpress.Web.FilesUploadCompleteEventArgs e)
+        {
+            Newtonsoft.Json.Linq.JObject result = new Newtonsoft.Json.Linq.JObject();
+            Newtonsoft.Json.Linq.JArray array = new Newtonsoft.Json.Linq.JArray();
+            bool success = false;
+            string message = "";
+            try
+            {
+                if (this.txtObjectId == null || !this.txtObjectId.Contains("hidden_value"))
+                {
+                    return;
+                }
+
+                int issueId = Utils.NumberUtil.ParseToInt(this.txtObjectId.Get("hidden_value"));
+                // int issueId =Utils.NumberUtil.ParseToInt(txtSoLuongCu.Text);
+                //if (issueId > 0)
+                //{
+                //    // chỉ update mới kiểm tra quyền
+                //    // thêm mới thì issueId = 0 vì lúc đó user chưa nhấn nút lưu
+                //    DataTable dtbPermission = DataProcess.ProcessYeuCauHoTRo.GetPermission(issueId, Utils.UserUtil.GetSessionUserId());
+                //    if ((int)dtbPermission.Rows[0]["CanUpload"] <= 0)
+                //    {
+                //        message = "Bạn không có quyền thực hiện chức năng này";
+                //        return;
+                //    }
+                //}
+                if (issueId > 0)
+                {
+
+                    JObject objHopDong = DataProcess.ProcessDanhMuc.getInstance().GetTaiSanByID(issueId);
+                    string currentStatus = objHopDong["TrangThai"] + "";
+                    if (currentStatus == "NEW" || currentStatus == "EDIT")
+                    {
+                        //UploadControl
+                        foreach (UploadedFile file in uplAttachment.UploadedFiles)
+                        {
+                            if (!string.IsNullOrEmpty(file.FileName) && file.IsValid)
+                            {
+                                /*
+                                 string folder = Config.SysConfig.ATTACHMENTS_FOLDER + "\\" + DateTime.Now.ToString("yyyyMM");
+                                 if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+
+                                 int lastIndexOf = file.FileName.LastIndexOf(".");
+                                 string localStore = folder + "\\" + file.FileName.Substring(0, lastIndexOf) + "." + DateTime.Now.ToString("yyyyMMdd.HHmmss") + "." + file.FileName.Substring(lastIndexOf + 1);
+                                 //  localStore = localStore.Replace(" ", "");
+                                 file.SaveAs(localStore, false);
+
+                                 int retCode = 0;
+                                 bool flag = DataProcess.ProcessHopDong.getInstance().AddOrUpdateAttachment(0, issueId, file.FileName, localStore, file.ContentType, file.ContentLength, file.FileName.Substring(lastIndexOf + 1), Utils.UserUtil.GetSessionUserId(), ref retCode);
+                                 */
+
+                                string folderSaveyyyyMM = string.Empty;
+                                string folderSaveDataBaseFull = string.Empty;
+                                string folderSaveDataBaseExt = string.Empty;
+                                string fileNameSaved = "";
+                                ProcessFiles.getInstance().GetFolderSaveFile(file.FileName, ProcessDanhMuc.eTenDanhMuc.DMTaiSan.ToString(), out folderSaveyyyyMM, out folderSaveDataBaseFull, out folderSaveDataBaseExt, out fileNameSaved);
+
+                                if (!Directory.Exists(folderSaveyyyyMM)) Directory.CreateDirectory(folderSaveyyyyMM);
+                                file.SaveAs(folderSaveDataBaseFull, false);
+                                int retCode = 0;
+                                bool flag = DataProcess.ProcessAttachment.AddOrUpdate(0, ProcessDanhMuc.eTenDanhMuc.DMTaiSan.ToString(), issueId, file.FileName, folderSaveDataBaseFull, file.ContentType, file.ContentLength, file.FileName.Substring(file.FileName.LastIndexOf(".") + 1), Utils.UserUtil.GetSessionUserId(), "", folderSaveDataBaseExt, ref retCode);
+
+                                // json return
+                                Newtonsoft.Json.Linq.JObject row = new Newtonsoft.Json.Linq.JObject();
+                                row["id"] = flag ? retCode : 0;
+                                row["file"] = file.FileName;
+                                row["retCode"] = retCode;
+                                row["success"] = flag;
+                                array.Add(row);
+                            }
+                        }
+                        success = true;
+                    }
+                    else
+                    {
+                        message = "Chỉ cho phép thêm tập tin khi mới tạo hoặc chỉnh sửa";
+                        success = false;
+                    }
+                }
+                else
+                {
+                    message = "Vui lòng lưu thông tin trước khi đính kèm tập tin";
+                    success = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+                logger.Error(ex);
+            }
+            finally
+            {
+                result["list"] = array;
+                result["success"] = success;
+                result["message"] = message;
+                e.CallbackData = result.ToString();
+            }
+
+        }
+        protected void gridAttachments_DataBinding(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable dtbAttachments = DataProcess.ProcessDanhMuc.getInstance().GetTapTinDinhKemDMTaiSan(Utils.NumberUtil.ParseToInt(txtObjectId["hidden_value"]), Utils.UserUtil.GetSessionUserId());
+                gridAttachments.DataSource = dtbAttachments;
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                logger.Error(ex);
+            }
+        }
+
+        protected void gridAttachments_CustomColumnDisplayText(object sender, ASPxGridViewColumnDisplayTextEventArgs e)
+        {
+            try
+            {
+                if (e.Column.FieldName == "FileSize")
+                {
+                    e.DisplayText = Utils.NumberUtil.FormatNumber(Math.Round(Utils.NumberUtil.ParseToDecimal(e.Value) / 1000, 0));
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                logger.Error(ex);
+            }
+        }
+
+        protected void gridAttachments_CustomCallback(object sender, ASPxGridViewCustomCallbackEventArgs e)
+        {
+            try
+            {
+                this.gridAttachments.DataBind();
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Exception message: " + ex.Message + ". Stack trace: " + ex.StackTrace);
+                logger.Error(ex);
+            }
+        }
+        #endregion
+        // =========================================
     }
 }

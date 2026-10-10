@@ -69,6 +69,24 @@ namespace WebRunDragon.Forms
         protected global::DevExpress.Web.ASPxGridView gridTaiSan;
 
         /// <summary>
+        /// txtObjectId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxHiddenField txtObjectId;
+
+        /// <summary>
+        /// txtObjectDetailId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxHiddenField txtObjectDetailId;
+
+        /// <summary>
         /// popUpdateForm control.
         /// </summary>
         /// <remarks>
@@ -294,6 +312,42 @@ namespace WebRunDragon.Forms
         protected global::DevExpress.Web.ASPxGridView gridDetails;
 
         /// <summary>
+        /// gridAttachments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxGridView gridAttachments;
+
+        /// <summary>
+        /// btnDownload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.GridViewCommandColumnCustomButton btnDownload;
+
+        /// <summary>
+        /// btnDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.GridViewCommandColumnCustomButton btnDelete;
+
+        /// <summary>
+        /// uplAttachment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxUploadControl uplAttachment;
+
+        /// <summary>
         /// txtGhiChuDuyetKhongDuyet control.
         /// </summary>
         /// <remarks>
@@ -474,21 +528,120 @@ namespace WebRunDragon.Forms
         protected global::DevExpress.Web.ASPxButton btnCancelDeleteDetail;
 
         /// <summary>
-        /// txtObjectId control.
+        /// ASPxPopupControl1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxHiddenField txtObjectId;
+        protected global::DevExpress.Web.ASPxPopupControl ASPxPopupControl1;
 
         /// <summary>
-        /// txtObjectDetailId control.
+        /// PopupControlContentControl21 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxHiddenField txtObjectDetailId;
+        protected global::DevExpress.Web.PopupControlContentControl PopupControlContentControl21;
+
+        /// <summary>
+        /// lblFileName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel lblFileName;
+
+        /// <summary>
+        /// lblCurrentUploadedFileLength control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel lblCurrentUploadedFileLength;
+
+        /// <summary>
+        /// ASPxProgressBar1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxProgressBar ASPxProgressBar1;
+
+        /// <summary>
+        /// lblUploadedFiles control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel lblUploadedFiles;
+
+        /// <summary>
+        /// lblUploadedFileLength control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel lblUploadedFileLength;
+
+        /// <summary>
+        /// ASPxProgressBar2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxProgressBar ASPxProgressBar2;
+
+        /// <summary>
+        /// lblProgressStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel lblProgressStatus;
+
+        /// <summary>
+        /// popConfirm4DeletingAttach control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxPopupControl popConfirm4DeletingAttach;
+
+        /// <summary>
+        /// PopupControlContentControl7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.PopupControlContentControl PopupControlContentControl7;
+
+        /// <summary>
+        /// btnDoDeleteAttach control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton btnDoDeleteAttach;
+
+        /// <summary>
+        /// hddAttachId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxHiddenField hddAttachId;
     }
 }

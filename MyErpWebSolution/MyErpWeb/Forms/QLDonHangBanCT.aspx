@@ -141,6 +141,10 @@
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Tên" FieldName="don_gia" VisibleIndex="3" Visible="false" Width="200px">
                                     </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Kho" FieldName="ma_kho" VisibleIndex="3" Width="100px">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="ID" FieldName="id_kho_xuat" VisibleIndex="1" Visible="false" Width="120px">
+                                    </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Hình ảnh" FieldName="image_url" VisibleIndex="4" Width="120px">
                                         <DataItemTemplate>
                                             <img src='<%# Eval("image_url") %>' style="max-width: 100px; max-height: 60px;" alt="Hình" />
@@ -148,7 +152,7 @@
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Chọn" VisibleIndex="5" Width="35px">
                                         <DataItemTemplate>
-                                            <div class="btn-add-item" style="display: <%#GetRight(1) %>; cursor: pointer !important;" onclick="OpenAdd('<%# Eval("id") %>','<%# Eval("ma_hang_hoa") %>','<%# Eval("ten_hang_hoa") %>','<%# Eval("don_gia") %>');" title="Chọn">
+                                            <div class="btn-add-item" style="display: <%#GetRight(1) %>; cursor: pointer !important;" onclick="OpenAdd('<%# Eval("id") %>','<%# Eval("ma_hang_hoa") %>','<%# Eval("ten_hang_hoa") %>','<%# Eval("don_gia") %>', '<%# Eval("id_kho_xuat") %>');" title="Chọn">
                                                 <img src="../Images/icon-add.png" style="cursor: pointer;" />
                                             </div>
                                         </DataItemTemplate>
@@ -211,6 +215,9 @@
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Tên" FieldName="ten_hang_hoa" VisibleIndex="3" Width="40%">
+                                        <Settings AutoFilterCondition="Contains" />
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Kho" FieldName="ma_kho" VisibleIndex="3" Width="10%">
                                         <Settings AutoFilterCondition="Contains" />
                                     </dx:GridViewDataTextColumn>
                                     <dx:GridViewDataTextColumn Caption="Số lượng" VisibleIndex="4" Width="10%">

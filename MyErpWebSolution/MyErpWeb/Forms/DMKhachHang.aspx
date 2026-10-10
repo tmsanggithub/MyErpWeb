@@ -101,7 +101,7 @@
         </asp:UpdatePanel>
     </div>
     <div>
-        <dx:ASPxPopupControl ClientInstanceName="popUpdateForm" ID="popUpdateForm" Width="550px" Height="450px"
+        <dx:ASPxPopupControl ClientInstanceName="popUpdateForm" ID="popUpdateForm" Width="550px" Height="400px"
             ScrollBars="Auto" HeaderText="Thông tin khách hàng" runat="server"
             PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter"
             AllowDragging="True" CloseAction="CloseButton" CloseOnEscape="True" Modal="True" Theme="PlasticBlue">

@@ -382,13 +382,14 @@ namespace WebRunDragon.DataProcess
                 var pInsert = new Dictionary<string, object>() {
                         { "@id_hoa_don_ban", IDDonHangBan },
                         { "@id_hang_hoa", idTaiSanChiTiet },
+                          { "@id_kho_xuat", idKhoXuat },
                         { "@so_luong", soLuong },
                         { "@don_gia", DonGiaMua },
                         { "@thanh_tien", soLuong * DonGiaMua },
                         { "@ghi_chu", GhiChuChiTiet ?? "" },
                         { "@createdby", userLogin }
                     };
-                string sqlInsert = "INSERT INTO ql_hoa_don_ban_ct (id_hoa_don_ban, id_hang_hoa, so_luong, don_gia, thanh_tien, ghi_chu, isdeleted, createdby, createdtime) OUTPUT INSERTED.id VALUES (@id_hoa_don_ban, @id_hang_hoa, @so_luong, @don_gia, @thanh_tien, @ghi_chu, 0, @createdby, GETDATE())";
+                string sqlInsert = "INSERT INTO ql_hoa_don_ban_ct (id_hoa_don_ban, id_hang_hoa, so_luong, don_gia, thanh_tien, ghi_chu, id_kho_xuat, isdeleted, createdby, createdtime) OUTPUT INSERTED.id VALUES (@id_hoa_don_ban, @id_hang_hoa, @so_luong, @don_gia, @thanh_tien, @ghi_chu,@id_kho_xuat, 0, @createdby, GETDATE())";
                 object objId = DatabaseManager.ExecuteScalarSql(DatabaseManager.CNN_STRING_HELPDESK, sqlInsert, System.Data.CommandType.Text, pInsert);
                 int newId = Utils.NumberUtil.ParseToInt(objId + "");
                 if (newId > 0)
@@ -439,18 +440,19 @@ namespace WebRunDragon.DataProcess
                 param.Add("@id", idMaster);
 
                 string sqlDetail = @"SELECT ct.id
-                                    ,ct.id_hoa_don_ban
-                                    ,ct.id_hang_hoa
-                                    ,ct.so_luong
-                                    ,ct.don_gia
-                                    ,ct.thanh_tien
-                                    ,ct.ghi_chu
-                                    ,hh.ma_hang_hoa
-                                    ,hh.ten_hang_hoa, mt.trang_thai
-                                FROM [dbo].[ql_hoa_don_ban_ct] ct
-								inner join ql_hoa_don_ban mt on mt.id=ct.id_hoa_don_ban
-                                LEFT JOIN [dbo].[dm_hang_hoa] hh ON hh.id = ct.id_hang_hoa
-                                WHERE ct.id_hoa_don_ban = @id AND ISNULL(ct.isdeleted,0)=0";
+    ,ct.id_hoa_don_ban
+    ,ct.id_hang_hoa
+    ,ct.so_luong
+    ,ct.don_gia
+    ,ct.thanh_tien
+    ,ct.ghi_chu
+    ,hh.MaTaiSan ma_hang_hoa
+    ,hh.TenTaiSan ten_hang_hoa, mt.trang_thai, ko.MaKho ma_kho
+FROM [dbo].[ql_hoa_don_ban_ct] ct
+inner join ql_hoa_don_ban mt on mt.id=ct.id_hoa_don_ban
+left join DMKho ko on ko.ID=ct.id_kho_xuat
+LEFT JOIN [dbo].[DMTaiSan] hh ON hh.id = ct.id_hang_hoa
+WHERE ct.id_hoa_don_ban = @id AND ISNULL(ct.isdeleted,0)=0";
 
                 return DatabaseManager.GetDataTableSql(DatabaseManager.CNN_STRING_HELPDESK, sqlDetail, CommandType.Text, param);
             }
